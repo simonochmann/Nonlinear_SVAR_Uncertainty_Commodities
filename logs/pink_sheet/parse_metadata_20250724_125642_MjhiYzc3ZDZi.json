@@ -1,0 +1,34 @@
+{
+  "id": "MjhiYzc3ZDZi",
+  "timestamp": "2025-07-24 12:56:42 CEST",
+  "user": "simonochmann",
+  "system": {
+    "hostname": "Mac",
+    "platform": "aarch64-apple-darwin20",
+    "version": "R version 4.4.3 (2025-02-28)"
+  },
+  "session": {
+    "pid": 11081,
+    "working_directory": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities"
+  },
+  "input_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/external/Monthly_Prices_Pink_Sheet.xlsx",
+  "input_hash": "0655d6e9f14c7543437e383cfcdc386b8a67da9a8f951a8fd41dc2f3072ff6ba",
+  "output_dir": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/raw",
+  "output_files": {
+    "long_csv": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/raw/commodity_prices_long.csv",
+    "wide_csv": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/raw/commodity_prices_wide.csv"
+  },
+  "output_hashes": {
+    "long_csv": "663d7130ee0833036685a02e31d2e6cd766c479148423bb4a59b55d876904b75",
+    "wide_csv": "83dc57daac6dc35ebf116db954a201985f39ef4c53c5503119e630613598773d"
+  },
+  "structure": {
+    "n_obs": 36156,
+    "n_vars": 3,
+    "n_commodities": 46,
+    "date_range": ["1960-01-01", "2025-06-01"],
+    "missing_pct": 0
+  },
+  "tags": [],
+  "note": ""
+}
