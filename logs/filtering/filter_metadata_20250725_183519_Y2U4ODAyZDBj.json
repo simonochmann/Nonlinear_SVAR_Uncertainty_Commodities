@@ -1,0 +1,36 @@
+{
+  "id": "Y2U4ODAyZDBj",
+  "timestamp": "2025-07-25 18:35:19 CEST",
+  "user": "simonochmann",
+  "system": {
+    "hostname": "Mac",
+    "platform": "aarch64-apple-darwin20",
+    "version": "R version 4.4.3 (2025-02-28)"
+  },
+  "session": {
+    "pid": 34786,
+    "working_directory": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities"
+  },
+  "output_dir": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/output/filtered",
+  "output_files": {
+    "long_csv": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/output/filtered/filtered_panel_long.csv",
+    "wide_csv": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/output/filtered/filtered_panel_wide.csv"
+  },
+  "output_hashes": {
+    "long_csv": "393a7ae7c024a6712d0f90b5a17b2135ec719a00c9887de0ae86fa52958d36f8",
+    "wide_csv": "decf76a4dcf7c03ac6e9b47da585c6d79488a3204da1ba172e96e46a0a4e1212"
+  },
+  "structure": {
+    "n_obs": 36156,
+    "n_vars": 5,
+    "n_commodities": 46,
+    "date_range": ["1960-01-01", "2025-06-01"],
+    "missing_pct": 0
+  },
+  "filtering": {
+    "min_obs": 180,
+    "volatility_method": "squared"
+  },
+  "tags": ["monthly", "macro", "filtered"],
+  "note": "Baseline filtering after long-format parse"
+}
