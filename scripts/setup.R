@@ -5,7 +5,7 @@ required_packages <- c(
   "dplyr", "tidyr", "readr", "lubridate",
   "zoo", "xts", "tsDyn", "vars", "svars", "ggplot2",
   "readxl", "glue", "janitor", "tibble", "stringdist", "stringr",
-  "digest"
+  "digest", "purrr", "jsonlite", "here", "base64enc"
   )
 
 # Install missing packages
