@@ -1,0 +1,29 @@
+{
+  "file_name": "tvar_input_vix.csv",
+  "file_path": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/tvar/tvar_input_vix.csv",
+  "tag": "vix",
+  "timestamp": "2025-07-30T20:07:09Z",
+  "sha256_column_names": "d3889085e1f1947b21abc4ba1adcf858fec8d202cd2f51dc1a4f82296d0c26f0",
+  "n_columns": 3,
+  "original_column_names": ["date", "oil", "value"],
+  "cleaned_column_names": ["date", "oil", "value"],
+  "renamed_columns": [
+    {
+      "from": "date",
+      "to": "date"
+    },
+    {
+      "from": "oil",
+      "to": "oil"
+    },
+    {
+      "from": "value",
+      "to": "value"
+    }
+  ],
+  "failed_numeric_coercion": {},
+  "session_info": {
+    "R_version": "R version 4.4.3 (2025-02-28)",
+    "platform": "aarch64-apple-darwin20"
+  }
+}

@@ -43,14 +43,20 @@ df_vol <- compute_volatility_proxy(df_returns, method = vol_method)
 n_after <- length(unique(df_vol$commodity))
 
 # 4. Save filtered panel (long + wide CSVs) 
-save_filtered_panel(df_vol, out_dir = out_dir)
+save_filtered_panel(df_vol, out_dir = out_dir, overwrite = TRUE)
 
-# 5. Log dropped + retained commodities 
-log_dropped_commodities(df, df_vol,
-                        out_file = file.path(out_dir, "dropped_commodities.csv"))
+# 5. Identify dropped commodities and prepare dropped_df
+dropped_df <- df |>
+  dplyr::group_by(commodity) |>
+  dplyr::summarise(n_obs = sum(!is.na(price)), .groups = "drop") |>
+  dplyr::filter(!commodity %in% unique(df_vol$commodity))
 
-log_retained_commodities(df_vol,
-                         out_file = file.path(out_dir, "retained_commodities.csv"))
+# 5.1 Log dropped commodities (CSV + JSON)
+log_dropped_commodities(dropped_df,
+                        out_dir = "logs/filtering",
+                        tags = tags,
+                        note = note
+)
 
 # 6. Write human-readable .log entry 
 log_filtering_activity(
