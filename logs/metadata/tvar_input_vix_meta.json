@@ -1,0 +1,12 @@
+{
+  "file_name": "tvar_input_vix.csv",
+  "file_path": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/tvar/tvar_input_vix.csv",
+  "tag": "vix",
+  "timestamp": "2025-07-30T20:07:09Z",
+  "sha256": "25a594b8a6f237699d3146766af6c88734a359cf963622244c0c010419c1f8a6",
+  "n_obs": 12,
+  "n_vars": 2,
+  "var_names": ["oil", "value"],
+  "date_range": ["2000-01-01", "2000-12-01"],
+  "na_share_table": [0, 0]
+}

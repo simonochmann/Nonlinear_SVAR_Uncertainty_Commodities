@@ -1,0 +1,5 @@
+timestamp,file,n_obs,n_vars,start_date,end_date,sha256,tag
+2025-07-30 21:53:46,/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/tvar/tvar_input_vix.csv,12,2,2000-01-01,2000-12-01,25a594b8a6f237699d3146766af6c88734a359cf963622244c0c010419c1f8a6,vix
+2025-07-30 21:54:29,/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/tvar/tvar_input_vix.csv,12,2,2000-01-01,2000-12-01,25a594b8a6f237699d3146766af6c88734a359cf963622244c0c010419c1f8a6,vix
+2025-07-30 22:01:00,/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/tvar/tvar_input_vix.csv,12,2,2000-01-01,2000-12-01,25a594b8a6f237699d3146766af6c88734a359cf963622244c0c010419c1f8a6,vix
+2025-07-30 22:07:09,/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/tvar/tvar_input_vix.csv,12,2,2000-01-01,2000-12-01,25a594b8a6f237699d3146766af6c88734a359cf963622244c0c010419c1f8a6,vix

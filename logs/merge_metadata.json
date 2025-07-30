@@ -1,0 +1,13 @@
+[
+  {
+    "timestamp": "2025-07-30 19:00:32",
+    "index_name": "VIX",
+    "rows_main": 12,
+    "rows_index": 12,
+    "rows_matched": 0,
+    "pct_matched": 0,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vix.csv",
+    "source_md5": "2701369153ff009ab9d11119ac36b9b3",
+    "merge_run_id": "merge_20250730_190032"
+  }
+]

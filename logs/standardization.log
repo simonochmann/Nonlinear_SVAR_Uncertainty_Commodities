@@ -1,0 +1,43 @@
+=== TVAR: Standardization Log ===
+Timestamp: 2025-07-30 22:00:51
+Tag: vix
+Hash (SHA-256) of column names: 98cb65f3ac10eb542ffeea8a3987fd6819ad0e0b4ac931cb40b79f8d16eacb3c
+
+Total columns: 3
+Renamed columns: 3
+→ Renamed:
+date → date
+oil → oil
+value → value
+
+Columns failed numeric coercion: 0
+
+==================================== TVAR: Standardization Log ===
+Timestamp: 2025-07-30 22:01:00
+Tag: vix
+Hash (SHA-256) of column names: 98cb65f3ac10eb542ffeea8a3987fd6819ad0e0b4ac931cb40b79f8d16eacb3c
+
+Total columns: 3
+Renamed columns: 3
+→ Renamed:
+date → date
+oil → oil
+value → value
+
+Columns failed numeric coercion: 0
+
+==================================== TVAR: Standardization Log ===
+Timestamp: 2025-07-30 22:07:09
+Tag: vix
+Hash (SHA-256) of column names: 98cb65f3ac10eb542ffeea8a3987fd6819ad0e0b4ac931cb40b79f8d16eacb3c
+
+Total columns: 3
+Renamed columns: 3
+→ Renamed:
+date → date
+oil → oil
+value → value
+
+Columns failed numeric coercion: 0
+
+=================================
