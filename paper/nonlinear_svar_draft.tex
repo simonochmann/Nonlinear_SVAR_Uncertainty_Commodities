@@ -1,0 +1,427 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+    \setmainfont[]{Arial}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+\pagestyle{plain}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsubsecindent}{1.5em}
+\cftsetpnumwidth {2.5em}
+\cftsetrmarg{3em}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\setstretch{1.5}
+\begin{center}
+\vspace*{2cm}
+{\LARGE \textbf{The Nonlinear Effects of Macroeconomic Uncertainty on\\ Commodity Price Volatility: A Replication and Extension of Joëts et al. (2017)}}\\[2cm]
+
+{\large Simon Ochmann}\\
+University of Bamberg\\
+Professorship for Economics, esp. Macroeconomics and International Finance\\
+Advanced Time Series Methods for Macroeconomic Analysis\\
+Prof. Dr. Christian R. Proaño and Maybrit Wächter, MSc\\[0.8cm]
+
+Matriculation Number: 2030461\\
+Address: Im Mannlehen 30, 96106 Ebern\\
+Place of Birth: Haßfurt, Germany\\[1.5cm]
+
+\today
+\end{center}
+
+\thispagestyle{empty}
+\newpage
+\pagenumbering{Roman}
+\setcounter{page}{2}
+
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Abstract}\label{abstract}
+
+This project revisits the nonlinear relationship between macroeconomic
+uncertainty and commodity price volatility by replicating and extending
+Joëts et al.~(2017).This study replicates Joëts et al.~(2017) by
+estimating a threshold VAR model over 1986--2015 using the CBOE S\&P 100
+Volatility Index (VXO), which covers the full replication sample. To
+extend the analysis through April 2025, the CBOE Volatility Index (VIX),
+based on the S\&P 500, is employed from 1990 onward due to the
+discontinuation of VXO after August 2020 and the broader market coverage
+of VIX. For the 1986--1989 period, only VXO is available and used.
+Additionally, the Jurado-Ludvigson-Ng (JLN) macroeconomic uncertainty
+index and the ECB's Composite Indicator of Systemic Stress (CISS) are
+incorporated over the full 1986--2025 sample to capture broader systemic
+uncertainty.To evaluate model robustness, results are benchmarked across
+linear and structural VAR frameworks, varying lag lengths, threshold
+parameters, and bootstrap confidence intervals. Furthermore, sensitivity
+analyses contrast volatility-based and predictability-based measures of
+uncertainty to ensure findings hold under alternative proxies. This
+approach clarifies the influence of uncertainty shocks on commodity
+markets in contemporary macro-financial conditions, enhancing the
+reliability of stress testing, risk management, and policy calibration
+frameworks.
+
+\section{Introduction and Motivation}\label{introduction-and-motivation}
+
+Understanding how macroeconomic uncertainty propagates through commodity
+markets is critical for modeling risk in today's structurally shifted
+macro-financial environment. Joëts et al.~(2017) examine this
+relationship using a threshold VAR (TVAR) model applied to 19 monthly
+commodity return series across energy, precious metals, agriculture, and
+industrial sectors. While the full dataset spans 1976 to 2015, the
+empirical analysis is restricted to the post-1986 period due to data
+availability for their primary uncertainty proxy---the implied
+volatility index on the CBOE S\&P 100 Volatility Index (VXO). Robustness
+checks are conducted using macro uncertainty indices from Jurado,
+Ludvigson, and Ng's dataset.
+
+This study utilizes a comprehensive dataset comprising monthly returns
+on 19 commodity price series across energy, precious metals,
+agricultural, and industrial metals markets, thereby capturing a wide
+spectrum of commodity asset classes sensitive to macroeconomic
+uncertainty.
+
+Traditional linear VAR models assume symmetric responses across economic
+states, limiting their ability to capture risk asymmetries during
+turbulent periods. As a result, they may underestimate downside risk and
+obscure key transmission channels. In contrast, TVAR models allow for
+regime shifts based on threshold variables. When combined with
+generalized impulse response functions (GIRFs), they permit the
+estimation of state-contingent responses to uncertainty shocks---better
+reflecting real-world volatility dynamics.
+
+Three key extensions are introduced to the original TVAR framework.
+First, the sample is extended through April 2025 to incorporate recent
+macro-financial volatility. Second, regime identification is refined
+using updated uncertainty proxies: the Jurado-Ludvigson-Ng (JLN) index,
+the ECB's Composite Indicator of Systemic Stress (CISS), and a hybrid
+volatility-based measure that uses VXO from 1986 to 1989 and VIX from
+1990 onward---ensuring continuous coverage beyond the original study's
+period. Third, TVAR results are benchmarked against linear and
+structural VAR models, with robustness tests conducted across lag
+orders, threshold values, and bootstrap intervals.
+
+The hypothesis is that uncertainty shocks---particularly those
+identified through macroeconomic and systemic stress proxies---have
+become more asymmetric and persistent since 2015, amplifying commodity
+price volatility more strongly in high-uncertainty regimes. This
+nonlinear propagation is expected to vary across commodity groups and
+may reveal structural shifts not captured by linear models or
+volatility-based proxies alone.
+
+\section{Methodology}\label{methodology}
+
+The empirical strategy follows Joëts et al.~(2017) and is structured
+around three modules: replication, extension, and validation.
+
+\subsection{Replication}\label{replication}
+
+The first step replicates the nonlinear framework of Joëts et
+al.~(2017), who estimate a threshold vector autoregressive (TVAR) model
+to analyze how uncertainty shocks affect commodity price volatility in
+different regimes. The TVAR allows for distinct autoregressive dynamics
+depending on whether an uncertainty measure crosses an estimated
+threshold value. The model is defined as:
+
+\[
+\mathbf{y}_t =
+\begin{cases}
+\mathbf{A}_1 \mathbf{y}_{t-1} + \dots + \mathbf{A}_p \mathbf{y}_{t-p} + \boldsymbol{\epsilon}_t, & \text{if } q_{t-d} \leq \theta \\\\
+\mathbf{B}_1 \mathbf{y}_{t-1} + \dots + \mathbf{B}_p \mathbf{y}_{t-p} + \boldsymbol{\epsilon}_t, & \text{if } q_{t-d} > \theta
+\end{cases}
+\]
+
+Here, \(\mathbf{y}_t\) is a vector of monthly log returns on 19 globally
+traded commodities, covering the energy, precious metals, agricultural,
+and industrial metals sectors. This matches the full cross-sectional
+scope of Joëts et al.~(2017) and allows for sector-specific analysis of
+regime-dependent volatility transmission. The commodities and their data
+spans are as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  Energy markets: WTI crude oil and Henry Hub natural gas (NYMEX),
+  Oct.~1978 -- Apr.~2015\\
+\item
+  Precious metals: Gold (COMEX), platinum (LME), silver (COMEX),
+  Feb.~1976 -- Apr.~2015\\
+\item
+  Agriculture: Cocoa (ICO), coffee (UNCTAD), corn (COMEX), cotton (IMF,
+  CIF Liverpool), lumber (IMF), soybeans (COMEX), sugar (COMEX), wheat
+  (MGEX), Feb.~1980 -- Apr.~2015\\
+\item
+  Industrial metals: Aluminium (LME), copper, lead, nickel, tin, zinc
+  (IMF/LME), Feb.~1980 -- Apr.~2015
+\end{itemize}
+
+All price series are transformed via first-logarithmic differences to
+compute monthly returns. The dataset is aligned to a common monthly
+frequency and standardized prior to estimation to ensure comparability
+across series. Where price series are discontinued or missing post-2015,
+proxy series or interpolated benchmarks (e.g., futures prices, UNCTAD
+Data Hub) will be used with proper documentation
+
+The threshold variable \(q_{t-d}\) is the lagged value of the VXO,
+smoothed using a three-period moving average to mitigate endogeneity.
+The threshold level \(\theta\) is estimated endogenously via grid
+search, with a 15\% trimming applied to ensure sufficient observations
+in both regimes. The lag order \(p = 3\) is chosen in line with the
+original study, based on standard information criteria. The delay
+parameter \(d\) is determined empirically and tested for robustness.
+
+Estimation is conducted using the \texttt{tsDyn} package in R. GIRFs,
+simulated via the \texttt{tvarGIRF} package, trace the average response
+to a one-standard-deviation shock conditional on regime. The replication
+sample spans January 1986 to April 2015, consistent with Joëts et
+al.~(2017).
+
+The baseline threshold variable is the VXO, available from 1986 to 1989.
+From 1990 onward, it is replaced by the VIX (based on S\&P 500 options)
+to ensure continuity in volatility-based regime identification. Both
+indices are obtained from the CBOE. These series are standardized and
+lagged with smoothing to define high-uncertainty regimes.
+
+\subsection{Extension}\label{extension}
+
+The analysis extends Joëts et al.~(2017) in two directions: (1) by
+expanding the sample and uncertainty proxies, and (2) by introducing
+methodological enhancements to improve robustness and interpretability.
+
+\subsubsection{Sample and Proxy
+Extension}\label{sample-and-proxy-extension}
+
+The baseline sample is extended through April 2025 to capture recent
+macro-financial volatility, including the COVID-19 shock and the
+inflation-driven tightening cycle of 2022--2024. Post-2015 data will be
+sourced from FRED, IMF Data, World Bank Pink Sheets, and ECB's Data
+Portal, subject to availability. Updated uncertainty proxies are
+incorporated as threshold variables: - VIX (1990--2025) - JLN
+(1986--2025) - CISS (1986--2025)
+
+TVARs are re-estimated over the appropriate sub-samples using a grid of
+lag lengths (\(p = 2\) to \(6\)) and delay parameters (\(d = 1\) to
+\(3\)), with thresholds \(\theta\) determined endogenously.
+
+\subsubsection{Methodological Enhancements (Prioritized
+vs.~Exploratory)}\label{methodological-enhancements-prioritized-vs.-exploratory}
+
+To balance ambition and feasibility, planned extensions are divided into
+core and exploratory tracks:
+
+\paragraph{Minimum Viable Enhancements (Planned Core
+Tasks)}\label{minimum-viable-enhancements-planned-core-tasks}
+
+\begin{itemize}
+\tightlist
+\item
+  Estimate and compare threshold regimes using VIX, JLN, and CISS.
+\item
+  Benchmark TVAR results against linear VAR and SVAR baselines.
+\item
+  Assess GIRF asymmetries across regimes for each proxy via
+  simulation-based mean-path comparisons. Quantile-based impulse
+  comparisons are considered exploratory
+\end{itemize}
+
+\paragraph{Exploratory Extensions
+(Time-Permitting)}\label{exploratory-extensions-time-permitting}
+
+\begin{itemize}
+\tightlist
+\item
+  Estimate TVARX specifications to incorporate global spillovers or
+  exogenous controls.
+\item
+  Experiment with alternative threshold specifications (e.g., rolling
+  volatility windows).
+\item
+  Explore quantile-specific GIRFs to assess tail risk amplification.
+\item
+  Implement fixed-design wild bootstrap methods for GIRF inference under
+  heteroskedasticity.
+\end{itemize}
+
+These extensions will be prioritized based on feasibility within the
+semester's timeframe.
+
+\subsection{Validation}\label{validation}
+
+To benchmark the value of nonlinear modeling, we compare TVAR results
+against both linear VAR and structural VAR (SVAR) baselines. The linear
+VAR is estimated on the same variable set and lag order. For the SVAR,
+we use recursive identification via Cholesky decomposition, ordering the
+uncertainty proxy last to isolate its shock. Impulse responses from the
+linear and structural models are contrasted with regime-contingent GIRFs
+to assess whether linear frameworks understate volatility transmission
+in high-risk environments.
+
+\subsection{Implementation and
+Reproducibility}\label{implementation-and-reproducibility}
+
+All empirical work will be implemented in R using a modular codebase.
+Estimation, simulation, and validation procedures are structured into
+separate scripts to ensure full transparency. The complete
+codebase---including data preprocessing routines and diagnostic outputs
+will be archived in a publicly accessible GitHub repository and fully
+documented for replication and future research.
+
+The empirical implementation will proceed in stages: the core TVAR
+replication and VIX-based extension will be prioritized initially.
+Incorporation of additional proxies (JLN, CISS) and advanced
+methodological enhancements will depend on feasibility and time
+constraints.
+
+\section{Research Contribution}\label{research-contribution}
+
+This study extends a pre-2020 nonlinear macro-financial model by
+incorporating more recent high-volatility episodes and modern
+uncertainty measures. It examines whether volatility spillovers from
+macroeconomic uncertainty have become more asymmetric and persistent in
+the post-2020 environment and whether standard linear frameworks
+systematically understate such risks
+
+Methodologically, the project enhances the original threshold VAR
+framework by integrating alternative threshold definitions, richer
+cross-sectional commodity data, and regime-specific impulse response
+analysis. The result is a modular and reproducible empirical pipeline
+that can be adapted for real-time macro risk monitoring by central
+banks, hedge funds, and international institutions
+
+By bridging macro uncertainty, commodity volatility, and nonlinear
+transmission dynamics, the study delivers both an empirical update and a
+practical decision-support tool for financial stability analysis under
+elevated uncertainty.
+
+\clearpage
+\phantomsection
+
+\section{Bibliography}\label{bibliography}
+
+\begin{itemize}
+\tightlist
+\item
+  Joëts, M., Mignon, V., \& Razafindrabe, T. (2017). Does the volatility
+  of commodity prices reflect macroeconomic uncertainty? Energy
+  Economics, 68, 313--326.
+\item
+  Kilian, L., \& Lütkepohl, H. (2017). Structural Vector Autoregressive
+  Analysis. Cambridge University Press.
+\item
+  Jurado, K., Ludvigson, S.C., \& Ng, S. (2015). Measuring Uncertainty.
+  American Economic Review, 105(3), 1177--1216.
+\item
+  Rossi, B., \& Sekhposyan, T. (2017). Macroeconomic uncertainty indices
+  based on nowcast and forecast error distributions. American Economic
+  Review, 107(5), 559--563.
+\item
+  Tsay, R.S. (1998). Testing and modeling multivariate threshold models.
+  Journal of the American Statistical Association, 93(443), 1188--1202.
+  now
+\item
+  Stock, J.H. and M.W. Watson (2001), Vector Autoregressions. Journal of
+  Economic Perspectives 15(4), 101-115.
+\end{itemize}
+
+\section{Software and Packages}\label{software-and-packages}
+
+\begin{itemize}
+\tightlist
+\item
+  R version 4.4.3
+\item
+  Packages used:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{tsDyn} -- for threshold VAR estimation
+  \item
+    \texttt{tvarGIRF} -- for simulating generalized impulse response
+    functions in TVARs
+  \item
+    \texttt{svars} -- for structural VAR identification
+  \item
+    \texttt{vars} -- for standard VAR estimation and diagnostics
+  \item
+    \texttt{ggplot2} -- for plotting and visualization
+  \end{itemize}
+\end{itemize}
+
+\end{document}
