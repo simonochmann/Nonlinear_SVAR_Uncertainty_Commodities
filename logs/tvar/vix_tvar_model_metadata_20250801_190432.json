@@ -1,0 +1,14 @@
+{
+  "timestamp": "20250801_190432",
+  "prefix": "vix_",
+  "hash": "f0a6e9cc6dacc52908281aca70cb871139e4b4723a2f9987a1d8b797b2f3756b",
+  "rds_file": "vix_tvar_model_20250801_190432.rds",
+  "input_vars": ["oil", "value"],
+  "lag_order": 1,
+  "threshold_var": "threshold_var",
+  "threshold_val": 0.0048,
+  "tag": null,
+  "obs_total": 99,
+  "regimes": ["low", "high"],
+  "input_snapshot": "vix_tvar_input_20250801_190432.csv"
+}
