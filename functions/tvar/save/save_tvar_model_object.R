@@ -57,7 +57,7 @@ save_tvar_model_object <- function(model_object, prefix = "", verbose = TRUE) {
     input_csv <- file.path(dir_logs, paste0(prefix, "tvar_input_", timestamp, ".csv"))
     readr::write_csv(model_object$metadata$input_df, input_csv)
     metadata$input_snapshot <- basename(input_csv)
-    if (verbose) message("📊 Input snapshot saved to: ", input_csv)
+    if (verbose) message("Input snapshot saved to: ", input_csv)
   }
   
   jsonlite::write_json(metadata, path = json_path, pretty = TRUE, auto_unbox = TRUE)
