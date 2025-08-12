@@ -26,7 +26,7 @@ tvar_model <- estimate_tvar_model(
   df             = df_tvar,
   threshold_info = threshold_info,
   lag            = 1,
-  verbose        = FALSE
+  verbose        = TRUE
 )
 
 # Validate + Save

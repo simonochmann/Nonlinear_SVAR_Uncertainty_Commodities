@@ -24,7 +24,23 @@ log_filtering_metadata_json <- function(df,
                                         note = "",
                                         verbose = TRUE) {
   stopifnot(is.data.frame(df))
-  stopifnot(all(c("date", "commodity", "price") %in% names(df)))
+  
+  # Accept either lean (date, commodity, price) or canonical (date, commodity_name, price)
+  requireNamespace("dplyr"); requireNamespace("rlang")
+  if (!all(c("date", "commodity", "price") %in% names(df))) {
+    if (all(c("date", "commodity_name", "price") %in% names(df))) {
+      df <- dplyr::rename(df, commodity = "commodity_name")
+    } else {
+      stop("log_filtering_metadata_json(): df must contain either ",
+           "(date, commodity, price) or (date, commodity_name, price).")
+    }
+  }
+  
+  # Light type guards (do not fail if we can coerce sanely)
+  if (!inherits(df$date, "Date")) df$date <- as.Date(df$date)
+  df$commodity <- as.character(df$commodity)
+  df$price <- suppressWarnings(as.numeric(df$price))
+  
   stopifnot(dir.exists(out_dir))
   
   requireNamespace("digest")

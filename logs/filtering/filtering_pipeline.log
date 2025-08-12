@@ -20,3 +20,102 @@ Tags            : monthly, macro, filtered
 Note            : Baseline filtering after long-format parse
 ────────────────────────────
 
+── FILTERING PIPELINE LOG ──
+Timestamp        : 2025-08-12 10:34:41 CEST
+Total Commodities: 71
+Retained         : 18 (25.35%)
+Min Obs Required : 180
+Volatility Method: squared
+Output Directory : /Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/processed
+Tags            : monthly, macro, filtered
+Note            : Baseline filtering after long-format parse
+────────────────────────────
+
+── FILTERING PIPELINE LOG ──
+Timestamp        : 2025-08-12 10:41:48 CEST
+Total Commodities: 71
+Retained         : 18 (25.35%)
+Min Obs Required : 180
+Volatility Method: squared
+Output Directory : /Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/processed
+Tags            : monthly, macro, filtered
+Note            : Baseline filtering after long-format parse
+────────────────────────────
+
+── FILTERING PIPELINE LOG ──
+Timestamp        : 2025-08-12 10:58:14 CEST
+Total Commodities: 71
+Retained         : 18 (25.35%)
+Min Obs Required : 180
+Volatility Method: squared
+Output Directory : /Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/processed
+Tags            : monthly, macro, filtered
+Note            : Baseline filtering after long-format parse
+────────────────────────────
+
+── FILTERING PIPELINE LOG ──
+Timestamp        : 2025-08-12 11:33:23 CEST
+Total Commodities: 71
+Retained         : 18 (25.35%)
+Min Obs Required : 180
+Volatility Method: squared
+Output Directory : /Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/processed
+Tags            : monthly, macro, filtered
+Note            : Baseline filtering after long-format parse
+────────────────────────────
+
+── FILTERING PIPELINE LOG ──
+Timestamp        : 2025-08-12 11:40:07 CEST
+Total Commodities: 71
+Retained         : 18 (25.35%)
+Min Obs Required : 180
+Volatility Method: squared
+Output Directory : /Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/processed
+Tags            : monthly, macro, filtered
+Note            : Baseline filtering after long-format parse
+────────────────────────────
+
+── FILTERING PIPELINE LOG ──
+Timestamp        : 2025-08-12 11:43:31 CEST
+Total Commodities: 71
+Retained         : 18 (25.35%)
+Min Obs Required : 180
+Volatility Method: squared
+Output Directory : /Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/processed
+Tags            : monthly, macro, filtered
+Note            : Baseline filtering after long-format parse
+────────────────────────────
+
+── FILTERING PIPELINE LOG ──
+Timestamp        : 2025-08-12 11:50:15 CEST
+Total Commodities: 71
+Retained         : 18 (25.35%)
+Min Obs Required : 180
+Volatility Method: squared
+Output Directory : /Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/processed
+Tags            : monthly, macro, filtered
+Note            : Baseline filtering after long-format parse
+────────────────────────────
+
+── FILTERING PIPELINE LOG ──
+Timestamp        : 2025-08-12 11:55:42 CEST
+Total Commodities: 71
+Retained         : 18 (25.35%)
+Min Obs Required : 180
+Volatility Method: squared
+Output Directory : /Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/processed
+Tags            : monthly, macro, filtered
+Note            : Baseline filtering after long-format parse
+────────────────────────────
+
+── FILTERING PIPELINE LOG ──
+Timestamp        : 2025-08-12 11:58:21 CEST
+Total Commodities: 71
+Retained         : 18 (25.35%)
+Min Obs Required : 180
+Volatility Method: squared
+Output Directory : /Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/processed
+Tags            : monthly, macro, filtered
+Note            : Baseline filtering after long-format parse
+────────────────────────────
+

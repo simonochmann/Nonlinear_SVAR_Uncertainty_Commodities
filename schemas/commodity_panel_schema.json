@@ -1,0 +1,5 @@
+{
+  "columns": ["date", "commodity_id", "commodity_name", "unit", "price", "ln_price", "ret", "vol_proxy"],
+  "types": ["Date", "chr", "chr", "chr", "num", "num", "num", "num"],
+  "key": ["commodity_id", "date"]
+}
