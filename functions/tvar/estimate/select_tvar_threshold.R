@@ -67,10 +67,11 @@ select_tvar_threshold <- function(df,
   }
   
   return(list(
-    values       = threshold,
-    mean         = mean(threshold, na.rm = TRUE),
-    sd           = sd(threshold, na.rm = TRUE),
-    split_rule   = split_rule,
-    valid_split  = valid_split
+    values        = threshold,
+    mean          = mean(threshold, na.rm = TRUE),
+    sd            = sd(threshold, na.rm = TRUE),
+    split_rule    = split_rule,
+    valid_split   = valid_split,
+    variable_name = threshold_var
   ))
 }

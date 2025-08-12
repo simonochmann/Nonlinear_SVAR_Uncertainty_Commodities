@@ -1,0 +1,110 @@
+{
+  "horizon": {},
+  "n_draws": {},
+  "ci_level": {},
+  "shock_type": {},
+  "shock_size": {},
+  "timestamp": "2025-08-07 13:08:46",
+  "irf_pairs": [
+    {
+      "regime": "low",
+      "impulse": "oil",
+      "response": "oil"
+    },
+    {
+      "regime": "low",
+      "impulse": "oil",
+      "response": "value"
+    },
+    {
+      "regime": "low",
+      "impulse": "value",
+      "response": "oil"
+    },
+    {
+      "regime": "low",
+      "impulse": "value",
+      "response": "value"
+    },
+    {
+      "regime": "low",
+      "impulse": "oil",
+      "response": "oil"
+    },
+    {
+      "regime": "low",
+      "impulse": "oil",
+      "response": "value"
+    },
+    {
+      "regime": "low",
+      "impulse": "oil",
+      "response": "oil"
+    },
+    {
+      "regime": "low",
+      "impulse": "oil",
+      "response": "value"
+    },
+    {
+      "regime": "low",
+      "impulse": "value",
+      "response": "oil"
+    },
+    {
+      "regime": "low",
+      "impulse": "value",
+      "response": "value"
+    },
+    {
+      "regime": "high",
+      "impulse": "oil",
+      "response": "oil"
+    },
+    {
+      "regime": "high",
+      "impulse": "oil",
+      "response": "value"
+    },
+    {
+      "regime": "high",
+      "impulse": "value",
+      "response": "oil"
+    },
+    {
+      "regime": "high",
+      "impulse": "value",
+      "response": "value"
+    },
+    {
+      "regime": "high",
+      "impulse": "oil",
+      "response": "oil"
+    },
+    {
+      "regime": "high",
+      "impulse": "oil",
+      "response": "value"
+    },
+    {
+      "regime": "high",
+      "impulse": "oil",
+      "response": "oil"
+    },
+    {
+      "regime": "high",
+      "impulse": "oil",
+      "response": "value"
+    },
+    {
+      "regime": "high",
+      "impulse": "value",
+      "response": "oil"
+    },
+    {
+      "regime": "high",
+      "impulse": "value",
+      "response": "value"
+    }
+  ]
+}

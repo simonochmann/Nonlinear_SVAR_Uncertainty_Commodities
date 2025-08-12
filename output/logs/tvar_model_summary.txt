@@ -1,0 +1,9 @@
+### Threshold TVAR Summary
+
+- **Regime Variable**: `threshold_var`
+- **Threshold Value**: `0.0048` (Quantile: 50%)
+
+| Regime | Obs | R² | AIC | BIC |
+|--------|-----|-----|------|------|
+| low | 49 | 0.066 | 196.081 | 203.648 |
+| high | 48 | 0.271 | 226.655 | 234.14 |
