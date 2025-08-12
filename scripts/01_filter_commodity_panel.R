@@ -74,13 +74,13 @@ df_filtered <- filter_complete_series(df_keep, min_obs = MIN_OBS)
 # Compute log returns
 df_returns <- compute_log_returns(df_filtered)
 
-# --- Normalize AFTER compute_log_returns, but KEEP log_return -----------------
+# Normalize after compute_log_returns, but keep log_return 
 # Ensure ln_price exists
 if (!"ln_price" %in% names(df_returns)) {
   df_returns <- dplyr::mutate(df_returns, ln_price = log(price))
 }
 
-# Ensure ret exists (we'll map to canonical later), but DO NOT drop log_return
+# Ensure ret exists, but do not drop log_return
 if (!"ret" %in% names(df_returns)) {
   # Prefer log_return if present; otherwise compute from ln_price
   if ("log_return" %in% names(df_returns)) {
@@ -94,7 +94,7 @@ if (!"ret" %in% names(df_returns)) {
   }
 }
 
-# Keep a stable set of columns BUT include log_return (needed for vol step!)
+# stable set of columns but include log_return 
 df_returns <- df_returns %>%
   dplyr::select(date, commodity, price, ln_price, ret, log_return) %>%
   dplyr::arrange(commodity, date)
@@ -102,7 +102,7 @@ df_returns <- df_returns %>%
 # Compute volatility proxy (requires log_return present)
 df_vol <- compute_volatility_proxy(df_returns, method = VOL_METHOD)
 
-# --- Canonicalize to downstream schema ---------------------------------------
+# Canonicalize to downstream schema 
 filtered_panel <- df_vol %>%
   dplyr::mutate(
     # Canonical mappings
@@ -116,21 +116,21 @@ filtered_panel <- df_vol %>%
   ) %>%
   dplyr::arrange(commodity_id, date)
 
-# --- Save canonical output for 02_merge_uncertainty_index.R -------------------
+# Save canonical output for 02_merge_uncertainty_index.R 
 CLEAN_DIR <- here::here("data", "clean")
 dir.create(CLEAN_DIR, recursive = TRUE, showWarnings = FALSE)
 OUT_FILE_CANON <- here::here("data", "clean", "commodity_panel.csv")
 readr::write_csv(filtered_panel, OUT_FILE_CANON)
 
-# --- (Optional) keep your processed outputs as before -------------------------
+# keep processed outputs as before 
 paths <- save_filtered_panel(
-  df_vol,              # keeps your original processed artifact if you need it
+  df_vol,              
   out_dir = OUT_DIR,
   overwrite = TRUE,
   return_paths = TRUE
 )
 
-# --- Retained vs dropped (from canonical object) ------------------------------
+# Retained vs dropped (from canonical object) 
 retained <- sort(unique(filtered_panel$commodity_name))
 dropped  <- setdiff(sort(unique(df_keep$commodity)), retained)
 
@@ -148,7 +148,7 @@ dropped_df <- df_keep %>%
   dplyr::summarise(n_obs = sum(!is.na(price)), .groups = "drop") %>%
   dplyr::filter(commodity %in% dropped)
 
-# --- Logs ---------------------------------------------------------------------
+# Logs 
 try({
   log_dropped_commodities(
     dropped_df,
@@ -193,7 +193,7 @@ cat("Processed panel(s) saved to: ", paste(paths, collapse = ", "), "\n")
 # Validate canonical object
 validate_filtered_panel(filtered_panel)
 
-# --- Schema snapshot: write once, then validate on every run ------------------
+# Schema snapshot
 schema_dir  <- here::here("schemas")
 schema_path <- here::here("schemas", "commodity_panel_schema.json")
 dir.create(schema_dir, recursive = TRUE, showWarnings = FALSE)

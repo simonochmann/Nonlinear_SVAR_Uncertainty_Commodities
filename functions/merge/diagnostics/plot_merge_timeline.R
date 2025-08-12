@@ -13,58 +13,94 @@
 #' @examples
 #' plot_merge_timeline(list(ciss = df_ciss, vix = df_vix))
 plot_merge_timeline <- function(index_list,
-                                title = "Uncertainty Index Timeline",
-                                core_range = c(as.Date("2000-01-01"), as.Date("2020-12-31"))) {
-  stopifnot(is.list(index_list), !is.null(names(index_list)))
+                                start = NULL,
+                                end   = NULL,
+                                scale = c("none","z","index100","minmax"),
+                                overlap_only = FALSE,
+                                save_path = NULL,
+                                show = TRUE) {
+  scale <- match.arg(scale)
   
-  # Extract metadata
-  timeline_df <- purrr::imap_dfr(index_list, ~{
-    tibble::tibble(
-      index = .y,
-      start = min(.x$date, na.rm = TRUE),
-      end = max(.x$date, na.rm = TRUE),
-      n = nrow(.x)
+  stopifnot(is.list(index_list), length(index_list) >= 1)
+  
+  # Build tidy df strictly from what we were passed
+  tidy <- purrr::imap_dfr(index_list, function(df, nm) {
+    stopifnot(is.data.frame(df), "date" %in% names(df), nm %in% names(df))
+    tibble::tibble(index = nm,
+                   date  = as.Date(df$date),
+                   value = as.numeric(df[[nm]]))
+  }) |> dplyr::filter(!is.na(value))
+  
+  # explicit window
+  if (!is.null(start)) tidy <- dplyr::filter(tidy, date >= as.Date(start))
+  if (!is.null(end))   tidy <- dplyr::filter(tidy, date <= as.Date(end))
+  
+  # Limit to common overlap if requested
+  if (overlap_only && n_distinct(tidy$index) > 1) {
+    rng <- tidy |>
+      dplyr::group_by(index) |>
+      dplyr::summarise(dmin = min(date), dmax = max(date), .groups = "drop")
+    ov_start <- max(rng$dmin); ov_end <- min(rng$dmax)
+    tidy <- dplyr::filter(tidy, date >= ov_start, date <= ov_end)
+  }
+  
+  # Scale
+  scaled <- dplyr::group_by(tidy, index)
+  
+  if (scale == "z") {
+    scaled <- dplyr::mutate(
+      scaled,
+      m = mean(value, na.rm = TRUE),
+      s = stats::sd(value, na.rm = TRUE),
+      value_plot = dplyr::if_else(is.finite(s) & s > 0, (value - m)/s, NA_real_)
     )
+  } else if (scale == "index100") {
+    scaled <- dplyr::arrange(scaled, date) |>
+      dplyr::mutate(base = dplyr::first(value[!is.na(value)]),
+                    value_plot = dplyr::if_else(is.finite(base) & base != 0,
+                                                100 * value / base, NA_real_))
+  } else if (scale == "minmax") {
+    scaled <- dplyr::mutate(
+      scaled,
+      lo = min(value, na.rm = TRUE),
+      hi = max(value, na.rm = TRUE),
+      rng = hi - lo,
+      value_plot = dplyr::if_else(is.finite(rng) & rng > 0, (value - lo)/rng, NA_real_)
+    )
+  } else {
+    scaled <- dplyr::mutate(scaled, value_plot = value)
+  }
+  
+  scaled <- dplyr::ungroup(scaled)
+  
+  # Sanity print so we see what’s plotted
+  rng <- range(scaled$date, na.rm = TRUE)
+  message(sprintf("plot_merge_timeline(): %s → %s | n=%d | scale=%s | indices: %s",
+                  format(rng[1]), format(rng[2]), nrow(scaled), scale,
+                  paste(unique(scaled$index), collapse = ", ")))
+  
+  # Quick check: show head stats to ensure not constant
+  suppressMessages({
+    dbg <- scaled |>
+      dplyr::group_by(index) |>
+      dplyr::summarise(var_plot = stats::var(value_plot, na.rm = TRUE), .groups = "drop")
+    print(dbg)
   })
   
-  # Add rich label
-  timeline_df <- timeline_df |>
-    dplyr::mutate(label = glue::glue("{index} (n={n})"))
+  p <- ggplot2::ggplot(scaled, ggplot2::aes(date, value_plot, color = index)) +
+    ggplot2::geom_line(linewidth = 0.6) +
+    ggplot2::labs(x = NULL,
+                  y = if (scale == "none") NULL else paste0("scaled (", scale, ")"),
+                  title = "Uncertainty index timeline") +
+    ggplot2::theme_minimal() +
+    ggplot2::theme(legend.position = "bottom")
   
-  # Plot
-  p <- ggplot2::ggplot(timeline_df, ggplot2::aes(y = label)) +
-    # Optional shaded core range
-    {
-      if (!is.null(core_range)) ggplot2::annotate(
-        "rect",
-        xmin = core_range[1], xmax = core_range[2],
-        ymin = -Inf, ymax = Inf,
-        fill = "grey90", alpha = 0.4
-      )
-    } +
-    # Timeline segments
-    ggplot2::geom_segment(ggplot2::aes(x = start, xend = end, yend = label),
-                          size = 3, color = "#4682B4") +
-    # Start and end points
-    ggplot2::geom_point(ggplot2::aes(x = start), size = 2.3, shape = 21, fill = "white", stroke = 1) +
-    ggplot2::geom_point(ggplot2::aes(x = end), size = 2.3, shape = 21, fill = "white", stroke = 1) +
-    # Start and end labels
-    ggplot2::geom_text(ggplot2::aes(x = start, label = format(start, "%Y")),
-                       hjust = 1.1, vjust = 0.4, size = 3.2, color = "black") +
-    ggplot2::geom_text(ggplot2::aes(x = end, label = format(end, "%Y")),
-                       hjust = -0.1, vjust = 0.4, size = 3.2, color = "black") +
-    # Final polish
-    ggplot2::labs(
-      title = title,
-      subtitle = glue::glue("Time coverage across {nrow(timeline_df)} indices"),
-      x = "Date", y = NULL
-    ) +
-    ggplot2::theme_minimal(base_size = 11) +
-    ggplot2::theme(
-      panel.grid.major.y = ggplot2::element_blank(),
-      plot.title = ggplot2::element_text(face = "bold"),
-      axis.text.y = ggplot2::element_text(face = "bold")
-    )
+  if (!is.null(save_path)) {
+    dir.create(dirname(save_path), recursive = TRUE, showWarnings = FALSE)
+    ggplot2::ggsave(save_path, p, width = 9, height = 4, dpi = 150)
+    message("Saved timeline plot to: ", save_path)
+  }
   
-  return(p)
+  if (isTRUE(show)) print(p)
+  invisible(p)
 }
