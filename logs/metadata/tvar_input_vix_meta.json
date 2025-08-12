@@ -2,11 +2,11 @@
   "file_name": "tvar_input_vix.csv",
   "file_path": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/tvar/tvar_input_vix.csv",
   "tag": "vix",
-  "timestamp": "2025-07-31T18:02:46Z",
-  "sha256": "25a594b8a6f237699d3146766af6c88734a359cf963622244c0c010419c1f8a6",
-  "n_obs": 12,
-  "n_vars": 2,
-  "var_names": ["oil", "value"],
-  "date_range": ["2000-01-01", "2000-12-01"],
-  "na_share_table": [0, 0]
+  "timestamp": "2025-08-12T13:25:38Z",
+  "sha256": "208d2254997e7008da069f2de410c2fc8dfe2720d9f4a794c36f8f8a243aa6d0",
+  "n_obs": 7668,
+  "n_vars": 8,
+  "var_names": ["commodity_id", "commodity_name", "unit", "price", "ln_price", "ret", "vol_proxy", "VIX"],
+  "date_range": ["1990-01-01", "2025-06-01"],
+  "na_share_table": [0, 0, 1, 0, 0, 0, 0, 0]
 }
