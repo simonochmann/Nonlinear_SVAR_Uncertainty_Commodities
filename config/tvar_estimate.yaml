@@ -1,0 +1,17 @@
+indexes: ["VIX","VXO","JLN"]
+commodities: null          # or e.g. ["GOLD","WTI"] or [101,205]
+lags_set: [2,3,4,5,6]
+delays_set: [1,2,3]
+trim: 0.15
+ngrid: 100
+criterion: "BIC"          # or "AIC"
+min_regime_share: 0.15
+use_given_split: false
+smooth_ma: 3              # 1 = no smoothing
+window:
+  start: "1990-01-01"     # or null
+  end: null
+out_dir: "data/models/tvar"
+verbose: true
+overwrite: false
+max_commodities: null     # e.g. 5 while testing
