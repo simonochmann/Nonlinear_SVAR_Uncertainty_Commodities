@@ -9,5 +9,282 @@
     "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vix.csv",
     "source_md5": "2701369153ff009ab9d11119ac36b9b3",
     "merge_run_id": "merge_20250730_190032"
+  },
+  {
+    "timestamp": "2025-08-12 12:16:42",
+    "index_name": "VIX",
+    "rows_main": 13884,
+    "rows_index": 12,
+    "rows_matched": 216,
+    "pct_matched": 1.56,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vix.csv",
+    "source_md5": "2701369153ff009ab9d11119ac36b9b3",
+    "merge_run_id": "merge_20250812_121642"
+  },
+  {
+    "timestamp": "2025-08-12 12:35:57",
+    "index_name": "VIX",
+    "rows_main": 13884,
+    "rows_index": 12,
+    "rows_matched": 216,
+    "pct_matched": 1.56,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vix.csv",
+    "source_md5": "2701369153ff009ab9d11119ac36b9b3",
+    "merge_run_id": "merge_20250812_123557"
+  },
+  {
+    "timestamp": "2025-08-12 12:46:59",
+    "index_name": "VIX",
+    "rows_main": 13884,
+    "rows_index": 427,
+    "rows_matched": 7668,
+    "pct_matched": 55.23,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vix.csv",
+    "source_md5": "a1369d6c8ba53ab702c5c3829c447b60",
+    "merge_run_id": "merge_20250812_124659"
+  },
+  {
+    "timestamp": "2025-08-12 12:46:59",
+    "index_name": "VXO",
+    "rows_main": 13884,
+    "rows_index": 429,
+    "rows_matched": 7722,
+    "pct_matched": 55.62,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vxo.csv",
+    "source_md5": "a7125ac3235726b32b1d7b554f22ca08",
+    "merge_run_id": "merge_20250812_124659"
+  },
+  {
+    "timestamp": "2025-08-12 12:46:59",
+    "index_name": "JLN",
+    "rows_main": 13884,
+    "rows_index": 778,
+    "rows_matched": 13746,
+    "pct_matched": 99.01,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/jln.csv",
+    "source_md5": "393d1b4119184ac1896d248355def3f0",
+    "merge_run_id": "merge_20250812_124659"
+  },
+  {
+    "timestamp": "2025-08-12 13:01:33",
+    "index_name": "VIX",
+    "rows_main": 13884,
+    "rows_index": 427,
+    "rows_matched": 7668,
+    "pct_matched": 55.23,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vix.csv",
+    "source_md5": "a1369d6c8ba53ab702c5c3829c447b60",
+    "merge_run_id": "merge_20250812_130133"
+  },
+  {
+    "timestamp": "2025-08-12 13:01:34",
+    "index_name": "VXO",
+    "rows_main": 13884,
+    "rows_index": 429,
+    "rows_matched": 7722,
+    "pct_matched": 55.62,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vxo.csv",
+    "source_md5": "a7125ac3235726b32b1d7b554f22ca08",
+    "merge_run_id": "merge_20250812_130134"
+  },
+  {
+    "timestamp": "2025-08-12 13:01:34",
+    "index_name": "JLN",
+    "rows_main": 13884,
+    "rows_index": 778,
+    "rows_matched": 13746,
+    "pct_matched": 99.01,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/jln.csv",
+    "source_md5": "393d1b4119184ac1896d248355def3f0",
+    "merge_run_id": "merge_20250812_130134"
+  },
+  {
+    "timestamp": "2025-08-12 13:08:18",
+    "index_name": "VIX",
+    "rows_main": 13884,
+    "rows_index": 427,
+    "rows_matched": 7668,
+    "pct_matched": 55.23,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vix.csv",
+    "source_md5": "a1369d6c8ba53ab702c5c3829c447b60",
+    "merge_run_id": "merge_20250812_130818"
+  },
+  {
+    "timestamp": "2025-08-12 13:08:18",
+    "index_name": "VXO",
+    "rows_main": 13884,
+    "rows_index": 429,
+    "rows_matched": 7722,
+    "pct_matched": 55.62,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vxo.csv",
+    "source_md5": "a7125ac3235726b32b1d7b554f22ca08",
+    "merge_run_id": "merge_20250812_130818"
+  },
+  {
+    "timestamp": "2025-08-12 13:08:18",
+    "index_name": "JLN",
+    "rows_main": 13884,
+    "rows_index": 778,
+    "rows_matched": 13746,
+    "pct_matched": 99.01,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/jln.csv",
+    "source_md5": "393d1b4119184ac1896d248355def3f0",
+    "merge_run_id": "merge_20250812_130818"
+  },
+  {
+    "timestamp": "2025-08-12 13:12:34",
+    "index_name": "VIX",
+    "rows_main": 13884,
+    "rows_index": 427,
+    "rows_matched": 7668,
+    "pct_matched": 55.23,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vix.csv",
+    "source_md5": "a1369d6c8ba53ab702c5c3829c447b60",
+    "merge_run_id": "merge_20250812_131234"
+  },
+  {
+    "timestamp": "2025-08-12 13:12:34",
+    "index_name": "VXO",
+    "rows_main": 13884,
+    "rows_index": 429,
+    "rows_matched": 7722,
+    "pct_matched": 55.62,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vxo.csv",
+    "source_md5": "a7125ac3235726b32b1d7b554f22ca08",
+    "merge_run_id": "merge_20250812_131234"
+  },
+  {
+    "timestamp": "2025-08-12 13:12:35",
+    "index_name": "JLN",
+    "rows_main": 13884,
+    "rows_index": 778,
+    "rows_matched": 13746,
+    "pct_matched": 99.01,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/jln.csv",
+    "source_md5": "393d1b4119184ac1896d248355def3f0",
+    "merge_run_id": "merge_20250812_131235"
+  },
+  {
+    "timestamp": "2025-08-12 13:16:33",
+    "index_name": "VIX",
+    "rows_main": 13884,
+    "rows_index": 427,
+    "rows_matched": 7668,
+    "pct_matched": 55.23,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vix.csv",
+    "source_md5": "a1369d6c8ba53ab702c5c3829c447b60",
+    "merge_run_id": "merge_20250812_131633"
+  },
+  {
+    "timestamp": "2025-08-12 13:16:33",
+    "index_name": "VXO",
+    "rows_main": 13884,
+    "rows_index": 429,
+    "rows_matched": 7722,
+    "pct_matched": 55.62,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vxo.csv",
+    "source_md5": "a7125ac3235726b32b1d7b554f22ca08",
+    "merge_run_id": "merge_20250812_131633"
+  },
+  {
+    "timestamp": "2025-08-12 13:16:33",
+    "index_name": "JLN",
+    "rows_main": 13884,
+    "rows_index": 778,
+    "rows_matched": 13746,
+    "pct_matched": 99.01,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/jln.csv",
+    "source_md5": "393d1b4119184ac1896d248355def3f0",
+    "merge_run_id": "merge_20250812_131633"
+  },
+  {
+    "timestamp": "2025-08-12 14:26:50",
+    "index_name": "VIX",
+    "rows_main": 13884,
+    "rows_index": 427,
+    "rows_matched": 7668,
+    "pct_matched": 55.23,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vix.csv",
+    "source_md5": "a1369d6c8ba53ab702c5c3829c447b60",
+    "merge_run_id": "merge_20250812_142650"
+  },
+  {
+    "timestamp": "2025-08-12 14:26:50",
+    "index_name": "VXO",
+    "rows_main": 13884,
+    "rows_index": 429,
+    "rows_matched": 7722,
+    "pct_matched": 55.62,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vxo.csv",
+    "source_md5": "a7125ac3235726b32b1d7b554f22ca08",
+    "merge_run_id": "merge_20250812_142650"
+  },
+  {
+    "timestamp": "2025-08-12 14:26:50",
+    "index_name": "JLN",
+    "rows_main": 13884,
+    "rows_index": 778,
+    "rows_matched": 13746,
+    "pct_matched": 99.01,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/jln.csv",
+    "source_md5": "393d1b4119184ac1896d248355def3f0",
+    "merge_run_id": "merge_20250812_142650"
+  },
+  {
+    "timestamp": "2025-08-12 14:36:40",
+    "index_name": "VIX",
+    "rows_main": 13884,
+    "rows_index": 427,
+    "rows_matched": 7668,
+    "pct_matched": 55.23,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vix.csv",
+    "source_md5": "a1369d6c8ba53ab702c5c3829c447b60",
+    "merge_run_id": "merge_20250812_143640",
+    "input_hashes": {
+      "main_panel": "607c94f72b72ec455b521c8252497cb54084d7a64e70e5c0ae7e830da2a5af16",
+      "index_csv": "3ab50659c30ff3eea00cb244ccfc79b876621ba316d232d14147c23e26ea6a9a"
+    },
+    "aggregation": {
+      "anchor": "start",
+      "method": "mean"
+    }
+  },
+  {
+    "timestamp": "2025-08-12 14:36:40",
+    "index_name": "VXO",
+    "rows_main": 13884,
+    "rows_index": 429,
+    "rows_matched": 7722,
+    "pct_matched": 55.62,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/vxo.csv",
+    "source_md5": "a7125ac3235726b32b1d7b554f22ca08",
+    "merge_run_id": "merge_20250812_143640",
+    "input_hashes": {
+      "main_panel": "607c94f72b72ec455b521c8252497cb54084d7a64e70e5c0ae7e830da2a5af16",
+      "index_csv": "a7052538349eebddc1a05c06fcb11a52aec90f182941e72897904b5ad06fc1eb"
+    },
+    "aggregation": {
+      "anchor": "start",
+      "method": "mean"
+    }
+  },
+  {
+    "timestamp": "2025-08-12 14:36:40",
+    "index_name": "JLN",
+    "rows_main": 13884,
+    "rows_index": 778,
+    "rows_matched": 13746,
+    "pct_matched": 99.01,
+    "source_file": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/uncertainty/jln.csv",
+    "source_md5": "393d1b4119184ac1896d248355def3f0",
+    "merge_run_id": "merge_20250812_143640",
+    "input_hashes": {
+      "main_panel": "607c94f72b72ec455b521c8252497cb54084d7a64e70e5c0ae7e830da2a5af16",
+      "index_csv": "febba1cd03f57c477aba61bf1d8a1673fe9b886f797442db7c1e1ce1fd1858f1"
+    },
+    "aggregation": {
+      "anchor": "start",
+      "method": "mean"
+    }
   }
 ]
