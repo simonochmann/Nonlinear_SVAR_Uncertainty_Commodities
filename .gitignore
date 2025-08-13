@@ -1,0 +1,22 @@
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+
+# macOS
+.DS_Store
+
+# Backups & logs
+*.bak
+*.log
+
+# Generated TVAR artifacts (don’t version)
+data/models/**
+!data/models/README.md
+# Explicitly ignore run-time CSV logs too
+data/models/tvar/tvar_summary.csv
+data/models/tvar/tvar_errors.csv
+
+# Binary model files anywhere
+*.rds
