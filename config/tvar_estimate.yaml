@@ -1,7 +1,7 @@
 indexes: ["VIX","VXO","JLN"]
 commodities: null          # or e.g. ["GOLD","WTI"] or [101,205]
-lags_set: [2,3,4,5,6]
-delays_set: [1,2,3]
+lags_set: [2,3,4]
+delays_set: [1,2]
 trim: 0.15
 ngrid: 100
 criterion: "BIC"          # or "AIC"
@@ -13,5 +13,9 @@ window:
   end: null
 out_dir: "data/models/tvar"
 verbose: true
-overwrite: false
+overwrite: true
 max_commodities: null     # e.g. 5 while testing
+require_both_stable: true
+min_obs_per_regime: 60   # tighten if you want
+standardize_y: true
+report_theta_percentile: true
