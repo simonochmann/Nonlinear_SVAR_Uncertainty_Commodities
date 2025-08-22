@@ -1,19 +1,8 @@
-indexes: ["VIX","VXO","JLN"]
-
-# Expected cadence for validation
-expected_frequency: "monthly"
-
-# Drivers required for the common-sample filter (names after standardization)
-required_vars: ["ret","vol_proxy"]
-
-# How many missing values are allowed across the drivers *per row*
-# 0 = strict complete-case, 1 = allow one NA among ret/vol_proxy/index, etc.
+indexes: [VIX, VXO, JLN]
+expected_frequency: monthly
+required_vars: [ret, vol_proxy]
 missing_allowed: 0
-
-# Optional time window to restrict the sample (use null to ignore)
 window:
-  start: "1990-01-01"   # or null
+  start: 1986-01-01   # adjust if you want a shorter sample
   end: null
-
-# Where to write the TVAR input CSVs
 out_dir: "data/tvar"

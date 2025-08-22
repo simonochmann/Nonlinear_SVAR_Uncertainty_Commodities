@@ -2,7 +2,7 @@
   "file_name": "tvar_input_vix.csv",
   "file_path": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/tvar/tvar_input_vix.csv",
   "tag": "vix",
-  "timestamp": "2025-08-12T13:25:38Z",
+  "timestamp": "2025-08-22T10:55:36Z",
   "sha256_column_names": "4ec32a3927afe9262ce50eeae871775924cc9cf6e3faae2f17365639579486be",
   "n_columns": 9,
   "original_column_names": ["date", "commodity_id", "commodity_name", "unit", "price", "ln_price", "ret", "vol_proxy", "VIX"],

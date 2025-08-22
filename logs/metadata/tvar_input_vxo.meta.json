@@ -2,7 +2,7 @@
   "file_name": "tvar_input_vxo.csv",
   "file_path": "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/tvar/tvar_input_vxo.csv",
   "tag": "vxo",
-  "timestamp": "2025-08-12T13:25:38Z",
+  "timestamp": "2025-08-22T10:55:36Z",
   "sha256_column_names": "feee06cdb4f93070fe1c9f1be5f8d4cf05e320f6c7204cc0a7f7d59ba259c82d",
   "n_columns": 9,
   "original_column_names": ["date", "commodity_id", "commodity_name", "unit", "price", "ln_price", "ret", "vol_proxy", "VXO"],

@@ -1,0 +1,11 @@
+name: "unit-shock-crude_wti"
+type: path
+regime: combined
+horizon: 24
+shocks:
+  crude_wti: 1     # 1 unit at t=1
+schedule:
+  - impulse: crude_wti
+    t_start: 1
+    t_end: 1
+    size: 1

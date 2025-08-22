@@ -9,13 +9,13 @@ min_regime_share: 0.15
 use_given_split: false
 smooth_ma: 3              # 1 = no smoothing
 window:
-  start: "1990-01-01"     # or null
+  start: 1990-01-01    # or null
   end: null
 out_dir: "data/models/tvar"
 verbose: true
 overwrite: true
 max_commodities: null     # e.g. 5 while testing
 require_both_stable: true
-min_obs_per_regime: 60   # tighten if you want
+min_obs_per_regime: 40   # tighten if you want
 standardize_y: true
 report_theta_percentile: true

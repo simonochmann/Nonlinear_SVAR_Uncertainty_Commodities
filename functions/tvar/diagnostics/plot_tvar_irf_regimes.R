@@ -1,73 +1,55 @@
+# functions/tvar/diagnostics/plot_tvar_irf_regimes.R
+# Plots IRFs by regime using model$irf summary; returns ggplot object
+
 plot_tvar_irf_regimes <- function(
     model,
     impulse,
     response,
-    horizon = 10,
-    ci_level = 0.95,
+    horizon = NULL,      # default: take from model$irf
+    ci_level = NULL,     # default: take from model$irf
     save_path = NULL,
-    title = NULL,
-    subtitle = NULL,
-    colors = c("low" = "#1f77b4", "high" = "#d62728"),
-    verbose = FALSE,
-    return_data = FALSE
+    verbose = TRUE
 ) {
-  # Validate input
-  stopifnot("irf" %in% names(model))
-  stopifnot(all(c("low", "high") %in% names(model$irf)))
-  stopifnot(is.character(impulse), is.character(response))
+  if (is.null(model$irf)) stop("model$irf not found. Run compute_tvar_irf or orchestrator first.")
+  irf <- model$irf
+  if (is.null(horizon))  horizon  <- irf$settings$horizon
+  if (is.null(ci_level)) ci_level <- irf$settings$ci_level
   
-  # Extract IRF arrays
-  get_irf_df <- function(regime) {
-    irf_array <- model$irf[[regime]]
-    if (!(impulse %in% names(irf_array))) {
-      stop(glue::glue("Impulse variable '{impulse}' not found in regime '{regime}' IRFs."))
-    }
-    if (!(response %in% dimnames(irf_array[[impulse]])[[2]])) {
-      stop(glue::glue("Response variable '{response}' not found in impulse '{impulse}' IRF for regime '{regime}'."))
-    }
-    draws <- irf_array[[impulse]][, response, 1:horizon, drop = FALSE]
-    irf_df <- tibble::tibble(value = as.vector(draws)) |>
-      dplyr::mutate(h = rep(seq_len(horizon), each = dim(draws)[1]),
-                    regime = regime)
-    return(irf_df)
+  get_series <- function(sm, imp, resp) {
+    imp_i  <- match(imp, irf$settings$impulses)
+    resp_i <- match(resp, irf$settings$responses)
+    if (is.na(imp_i) || is.na(resp_i)) stop("Impulse/response not found in IRF settings.")
+    M <- sm[, , resp_i, imp_i, drop = FALSE]  # q x h x 1 x 1
+    data.frame(
+      h = 0:horizon,
+      q_lo = M[1, , 1, 1],
+      q_med = M[2, , 1, 1],
+      q_hi = M[3, , 1, 1]
+    )
   }
   
-  df_irf <- dplyr::bind_rows(get_irf_df("low"), get_irf_df("high"))
+  df_low  <- get_series(irf$regimes$low$summary,  impulse, response)  |> dplyr::mutate(regime = "low")
+  df_high <- get_series(irf$regimes$high$summary, impulse, response)  |> dplyr::mutate(regime = "high")
+  df <- dplyr::bind_rows(df_low, df_high)
   
-  # Summarize IRF draws
-  df_summary <- df_irf |>
-    dplyr::group_by(regime, h) |>
-    dplyr::summarise(
-      lower = quantile(value, probs = (1 - ci_level)/2, na.rm = TRUE),
-      upper = quantile(value, probs = 1 - (1 - ci_level)/2, na.rm = TRUE),
-      median = median(value, na.rm = TRUE),
-      .groups = "drop"
-    )
-  
-  # Plot
-  p <- ggplot2::ggplot(df_summary, ggplot2::aes(x = h, y = median, fill = regime, color = regime)) +
-    ggplot2::geom_ribbon(ggplot2::aes(ymin = lower, ymax = upper), alpha = 0.2, color = NA) +
-    ggplot2::geom_line(linewidth = 1) +
-    ggplot2::geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
-    ggplot2::facet_wrap(~ regime, scales = "free_y") +
-    ggplot2::scale_color_manual(values = colors) +
-    ggplot2::scale_fill_manual(values = colors) +
+  p <- ggplot2::ggplot(df, ggplot2::aes(x = h, y = q_med, ymin = q_lo, ymax = q_hi)) +
+    ggplot2::geom_ribbon(alpha = 0.2) +
+    ggplot2::geom_line(linewidth = 0.7) +
+    ggplot2::facet_wrap(~ regime, nrow = 1) +
+    ggplot2::geom_hline(yintercept = 0, linetype = "dashed") +
     ggplot2::labs(
-      title = title %||% glue::glue("IRF: '{impulse}' Shock → '{response}' Response by Regime"),
-      subtitle = subtitle %||% glue::glue("{round(ci_level * 100)}% CI over {horizon} horizons"),
+      title = glue::glue("IRFs: {impulse} → {response}"),
+      subtitle = glue::glue("{round(ci_level*100)}% bands, horizon = {horizon}"),
       x = "Horizon",
-      y = "Impulse Response"
+      y = "Response"
     ) +
-    ggplot2::theme_minimal(base_size = 14) +
-    ggplot2::theme(legend.position = "none")
+    ggplot2::theme_minimal(base_size = 12)
   
   if (!is.null(save_path)) {
-    ggplot2::ggsave(filename = save_path, plot = p, width = 9, height = 5.5)
-    if (verbose) message(glue::glue("Saved IRF regime plot to: {save_path}"))
-  } else {
-    print(p)
+    fs::dir_create(dirname(save_path))
+    ggplot2::ggsave(save_path, p, width = 10, height = 4, dpi = 300)
+    if (isTRUE(verbose)) message("Saved IRF regime plot to: ", save_path)
   }
   
-  if (return_data) return(df_summary)
-  invisible(p)
+  return(p)
 }

@@ -1,0 +1,19 @@
+type: girf
+name: GIRF — aluminium to uncertainty shock
+description: 'Generalized IRF: one-sigma structural shock to ''aluminium''.'
+horizon: 24
+B: 2000
+seed: 20250102
+impulse: aluminium
+shock_size: 1.0
+units: sigma
+start_state: mix
+identification:
+  type: chol
+  ordering:
+  - crude_wti
+  - ngas_us
+hysteresis:
+  band_sd: 0.15
+bands:
+  ci_level: 0.9

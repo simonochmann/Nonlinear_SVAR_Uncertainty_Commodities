@@ -1,0 +1,67 @@
+data:
+  raw_dir: data/raw
+  parsed_dir: data/parsed
+  processed_dir: data/processed
+  pink_sheet:
+    excel: data/raw/pinksheet/Commodity Price Data.xlsx
+    tidy_dir: data/parsed/commodities
+  fred:
+    dir: data/raw/fred
+    tidy_dir: data/parsed/fred
+    vix_csv: data/parsed/fred/vix.csv
+    vxo_csv: data/parsed/fred/vxo.csv
+  jln:
+    csv: data/parsed/jln/jln_uncertainty.csv
+  filtered_panel_csv: data/processed/panel_filtered.csv
+  merged_uncertainty_csv: data/processed/uncertainty.csv
+  merged_dataset_csv: data/processed/merged_panel.csv
+  tvar_input_rds: data/tvar/tvar_input_dataset.rds
+uncertainty:
+  active: vxo
+  sources:
+    vix: data/parsed/fred/vix.csv
+    vxo: data/parsed/fred/vxo.csv
+    jln: data/parsed/jln/jln_uncertainty.csv
+models:
+  dir: models/tvar
+  tvar_model_rds: models/tvar/jln_tvar_model_latest.rds
+  save_pattern: models/tvar/{uncert}_tvar_model_{timestamp}_{notes}.rds
+  default_save_notes: withRegim_wr
+irf:
+  horizon: 48
+  regimes:
+  - combined
+  - low
+  - high
+  identification_default: cholesky
+  bands:
+    compute: yes
+    draws: 1000
+    ci_levels:
+    - 0.9
+    - 0.95
+    method: percentile
+    center: mean
+figures:
+  tvar_dir: figures/tvar
+  irf_dir: figures/tvar/irf
+  regime_dir: figures/tvar/regime
+  scenarios_dir: figures/scenarios
+logs:
+  tvar_dir: logs/tvar
+  model_summary_dir: logs/tvar/model_summary
+  irf_meta_dir: logs/tvar/irf
+  regime_dir: logs/tvar/regime
+  scenarios_dir: logs/scenarios
+scenarios:
+  dir: config/scenarios
+  out_dir: data/scenarios
+  fig_dir: figures/scenarios
+  log_dir: logs/scenarios
+exports:
+  artifacts_dir: artifacts
+  release_readme: RELEASE.md
+seeds:
+  master: 20240817
+  tvar_bootstrap: 20240501
+  irf_bootstrap: 20240501

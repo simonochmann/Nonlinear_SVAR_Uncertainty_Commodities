@@ -1,30 +1,5 @@
-#' Estimate Threshold VAR (TVAR) Model with Grid Selection
-#'
-#' Fits separate VAR(p) models for each regime defined by a threshold split.
-#' Selects (p, delay, theta) on a grid using summed BIC across equations/regimes,
-#' with trimming and minimum regime share constraints.
-#'
-#' @param df           Data frame with a Date column `date` and k numeric variables (e.g., ret, vol_proxy).
-#' @param th_series    Numeric vector (same length as df) with the threshold series q_t (before delay).
-#' @param threshold_info Optional list from `select_tvar_threshold()`; if it contains
-#'                       $split, that split value is used when `use_given_split = TRUE`.
-#' @param lags_set     Integer vector of VAR lags p to try (default 2:6).
-#' @param delays_set   Integer vector of delays d for q_{t-d} (default 1:3).
-#' @param trim         Trimming proportion for split search (default 0.15).
-#' @param ngrid        Number of candidate splits to evaluate (default 100).
-#' @param criterion    Selection criterion ("BIC" or "AIC"; default "BIC").
-#' @param min_regime_share Minimum share per regime (0-1) required at the selected split (default 0.15).
-#' @param use_given_split If TRUE and threshold_info$split is present, do not search theta; use the provided split.
-#' @param standardize_y If TRUE, standardize Y columns (mean 0, sd 1) before estimation. Threshold stays in raw units.
-#' @param verbose      Print progress and brief summaries (default TRUE).
-#'
-#' @return A list:
-#'   - regimes: list(low=..., high=...) each with A, intercept, residuals, Sigma, Y, X, n_obs, AIC, BIC, etc.
-#'   - threshold_value: selected theta (raw units)
-#'   - regime_variable: tag from threshold_info$tag if present, else NA
-#'   - spec: list(p, delay, criterion, theta)
-#'   - regime_share: c(low=., high=.)
-#'   - metadata: variables, lag, total_obs_used, total_obs_full, y_means, y_sds, standardized
+#' Estimate Threshold VAR (TVAR) Model with Grid / Fixed Split
+#' (robust to extra args; supports require_both_stable and threshold_value alias)
 estimate_tvar_model <- function(
     df,
     th_series,
@@ -35,13 +10,47 @@ estimate_tvar_model <- function(
     ngrid            = 100,
     criterion        = c("BIC","AIC"),
     min_regime_share = 0.15,
+    min_obs_per_regime = 30,
     use_given_split  = FALSE,
+    require_both_stable = FALSE,
     standardize_y    = FALSE,
-    verbose          = TRUE
+    report_theta_percentile = TRUE,
+    verbose          = TRUE,
+    ...
 ) {
   criterion <- match.arg(criterion)
   
-  # basic checks
+  # small helper so we don't depend on rlang
+  `%||%` <- function(x, y) if (!is.null(x)) x else y
+  
+  # resolve theta from threshold_info allowing multiple aliases
+  resolve_split <- function(info) {
+    if (is.null(info)) return(NULL)
+    if (!is.null(info$split))            return(info$split)
+    if (!is.null(info$threshold_value))  return(info$threshold_value)
+    if (!is.null(info$theta))            return(info$theta)
+    if (!is.null(info$theta_value))      return(info$theta_value)
+    NULL
+  }
+  
+  # stability (roots inside unit circle) via companion form
+  var_stability <- function(A, k, p) {
+    A_blocks <- lapply(seq_len(p), function(L) A[, ((L-1)*k + 1):(L*k), drop = FALSE])
+    top <- do.call(cbind, A_blocks)
+    if (p == 1L) {
+      comp <- top
+    } else {
+      comp <- rbind(
+        top,
+        cbind(diag(k*(p-1)), matrix(0, nrow = k*(p-1), ncol = k))
+      )
+    }
+    ev <- eigen(comp, only.values = TRUE)$values
+    rho <- max(Mod(ev))
+    list(stable = (is.finite(rho) && rho < 1), rho = as.numeric(rho))
+  }
+  
+  # ----------------- basic checks and prep -----------------
   stopifnot("date" %in% names(df))
   vars <- setdiff(names(df), "date")
   if (length(vars) < 2) stop("Need at least two y-variables in df (besides 'date').")
@@ -60,16 +69,14 @@ estimate_tvar_model <- function(
     df_work[vars] <- sweep(sweep(df_work[vars], 2, y_means, "-"), 2, y_sds, "/")
   }
   
-  # build lagged matrices on STANDARDIZED (or raw) Y
   Y0   <- as.matrix(df_work[vars])
   N0   <- nrow(Y0)
   k    <- ncol(Y0)
   pmax <- max(lags_set)
   dmax <- max(delays_set)
-  
   if (N0 <= (pmax + dmax + 5)) stop("Too few observations for requested pmax/delay.")
   
-  # Embed once: rows correspond to t = (pmax+1) ... N0
+  # Embed once for speed; rows correspond to t = (pmax+1) ... N0
   Z <- stats::embed(Y0, pmax + 1)
   Y_full <- Z[, 1:k, drop = FALSE]
   colnames(Y_full) <- vars
@@ -85,7 +92,7 @@ estimate_tvar_model <- function(
   }
   X_full <- do.call(cbind, X_blocks)
   
-  # Helper: lag threshold by 'd' so we use q_{t-d} to split regimes at time t 
+  # Helper: lag threshold by 'd' so we use q_{t-d} to split regimes at time t
   lag_threshold_for_Y <- function(d) {
     th_lag <- c(rep(NA_real_, d), th_series[1:(N0 - d)])
     th_lag[(pmax + 1):N0]  # align with rows of Y_full/X_full
@@ -106,7 +113,7 @@ estimate_tvar_model <- function(
     if (crit == "BIC") sum(n*log(sigma2) + kpar*log(n)) else sum(n*log(sigma2) + 2*kpar)
   }
   
-  # grid search over (delay, theta, p)
+  # ----------------- grid search over (delay, theta, p) -----------------
   best_score <- Inf
   best_spec  <- NULL
   best_env   <- NULL
@@ -121,15 +128,15 @@ estimate_tvar_model <- function(
     Xd  <- X_full[keep, , drop = FALSE]
     thd <- thY[keep]
     
-    # candidate theta grid (trimmed quantiles)
     theta_grid <- NULL
     if (!isTRUE(use_given_split)) {
       probs <- seq(trim, 1 - trim, length.out = ngrid)
       theta_grid <- unique(stats::quantile(thd, probs = probs, na.rm = TRUE, type = 8))
     } else {
-      if (is.null(threshold_info) || is.null(threshold_info$split))
-        stop("use_given_split=TRUE but threshold_info$split is missing.")
-      theta_grid <- threshold_info$split
+      theta_fix <- resolve_split(threshold_info)
+      if (is.null(theta_fix))
+        stop("use_given_split=TRUE but no split found in threshold_info (tried $split, $threshold_value, $theta, $theta_value).")
+      theta_grid <- theta_fix
     }
     
     for (theta in theta_grid) {
@@ -140,11 +147,11 @@ estimate_tvar_model <- function(
       
       idx_lo <- which(reg_low)
       idx_hi <- which(!reg_low)
+      if (length(idx_lo) < min_obs_per_regime || length(idx_hi) < min_obs_per_regime) next
       
       for (p in lags_set) {
         rhs_names_p <- unlist(lapply(1:p, function(L) paste0(vars, "_L", L)))
         if (!all(rhs_names_p %in% colnames(Xd))) next
-        
         Xp <- Xd[, rhs_names_p, drop = FALSE]
         
         score_lo <- ic_sum(Yd[idx_lo, , drop = FALSE], Xp[idx_lo, , drop = FALSE], criterion)
@@ -164,9 +171,10 @@ estimate_tvar_model <- function(
     }
   }
   
-  if (is.null(best_spec)) stop("No admissible (p, delay, theta) satisfied min_regime_share and data length.")
+  if (is.null(best_spec))
+    stop("No admissible (p, delay, theta) satisfied min_regime_share / min_obs_per_regime.")
   
-  # final fit with selected spec
+  # ----------------- final fit with selected spec -----------------
   p        <- best_spec$p
   delay    <- best_spec$delay
   theta    <- best_spec$theta
@@ -184,8 +192,7 @@ estimate_tvar_model <- function(
     Xc <- cbind(Intercept = 1, as.matrix(Xreg))
     A_names <- unlist(lapply(1:p, function(L) paste0(vars, "_L", L)))
     
-    A   <- matrix(NA_real_, nrow = k, ncol = k * p,
-                  dimnames = list(vars, A_names))
+    A   <- matrix(NA_real_, nrow = k, ncol = k * p, dimnames = list(vars, A_names))
     intercept <- numeric(k); names(intercept) <- vars
     fitted    <- matrix(NA_real_, nrow = n, ncol = k, dimnames = list(NULL, vars))
     resid     <- matrix(NA_real_, nrow = n, ncol = k, dimnames = list(NULL, vars))
@@ -227,29 +234,40 @@ estimate_tvar_model <- function(
   low_fit  <- fit_regime(idx_lo)
   high_fit <- fit_regime(idx_hi)
   
+  # stability check
+  stab_lo <- var_stability(low_fit$A,  k, p)
+  stab_hi <- var_stability(high_fit$A, k, p)
+  if (require_both_stable && (!stab_lo$stable || !stab_hi$stable)) {
+    stop(sprintf("Selected TVAR is unstable: max |λ| low=%.3f, high=%.3f. ",
+                 stab_lo$rho, stab_hi$rho),
+         call. = FALSE)
+  } else {
+    if (verbose && (!stab_lo$stable || !stab_hi$stable)) {
+      warning(sprintf("Unstable regime(s): max |λ| low=%.3f, high=%.3f (continuing).",
+                      stab_lo$rho, stab_hi$rho), call. = FALSE)
+    }
+  }
+  
   if (verbose) {
     message(sprintf("Selected p=%d, delay=%d, θ=%.3f | shares: low=%.2f, high=%.2f",
                     p, delay, theta, best_spec$share_low, best_spec$share_high))
     message(sprintf("Obs per regime: low=%d, high=%d", low_fit$n_obs, high_fit$n_obs))
   }
   
-  regime_tag <- if (!is.null(threshold_info) && !is.null(threshold_info$tag)) {
-    threshold_info$tag
-  } else NA_character_
-  
-  regimes <- list(low = low_fit, high = high_fit)
-  
-  theta_pct <- stats::ecdf(best_env$thd)(best_spec$theta)
+  regime_tag <- threshold_info$tag %||% NA_character_
+  theta_pct  <- stats::ecdf(best_env$thd)(best_spec$theta)
   
   res <- list(
-    regimes          = regimes,
-    threshold_value  = theta,                 
+    regimes          = list(low = low_fit, high = high_fit),
+    threshold_value  = theta,
     regime_share     = c(low = best_spec$share_low, high = best_spec$share_high),
-    theta_percentile = as.numeric(theta_pct), 
+    theta_percentile = if (report_theta_percentile) as.numeric(theta_pct) else NA_real_,
+    stability        = list(low = stab_lo, high = stab_hi),
     metadata = list(
       lag           = p,
+      delay         = delay,
       variables     = vars,
-      threshold_tag = threshold_info$tag %||% NA,
+      threshold_tag = regime_tag,
       total_obs_full= nrow(df),
       total_obs_used= nrow(Yd),
       y_means       = y_means,

@@ -1,0 +1,12 @@
+name: "girf-ngas-1sigma"
+type: girf
+regime: combined
+horizon: 24
+impulse: "ngas_us"
+size: 1         # 1σ
+units: sigma
+identification:
+  method: chol  # simple Cholesky; ordering is auto-canonicalized in code
+bands:
+  draws: 500
+  ci_level: 0.90

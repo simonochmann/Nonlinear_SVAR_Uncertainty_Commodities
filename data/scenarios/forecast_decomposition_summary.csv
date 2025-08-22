@@ -1,0 +1,91 @@
+uncertainty,scenario,regime,variable,max_abs_delta,t_of_max
+vxo,GIRF — aluminium to uncertainty shock,combined,aluminium,1,2
+vxo,GIRF — aluminium to uncertainty shock,combined,cocoa,0.37679508612917345,3
+vxo,GIRF — aluminium to uncertainty shock,combined,coffee_arabic,0.2533730345934529,6
+vxo,GIRF — aluminium to uncertainty shock,combined,copper,0.2728696809641007,12
+vxo,GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,0.34510707418652176,6
+vxo,GIRF — aluminium to uncertainty shock,combined,crude_wti,0.4522276060619709,10
+vxo,GIRF — aluminium to uncertainty shock,combined,gold,0.4394142527142065,5
+vxo,GIRF — aluminium to uncertainty shock,combined,lead,0.29979242332551753,5
+vxo,GIRF — aluminium to uncertainty shock,combined,maize,0.36346200838208,6
+vxo,GIRF — aluminium to uncertainty shock,combined,ngas_us,0.2932868670763848,10
+vxo,GIRF — aluminium to uncertainty shock,combined,nickel,0.24698729892014928,5
+vxo,GIRF — aluminium to uncertainty shock,combined,platinum,0.3740363658968008,6
+vxo,GIRF — aluminium to uncertainty shock,combined,silver,0.31928852928155355,6
+vxo,GIRF — aluminium to uncertainty shock,combined,soybeans,0.2808129495413719,3
+vxo,GIRF — aluminium to uncertainty shock,combined,sugar_wld,0.4949543117322361,10
+vxo,GIRF — aluminium to uncertainty shock,combined,tin,0.4182113129182532,10
+vxo,GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,0.2691395719452033,6
+vxo,GIRF — aluminium to uncertainty shock,combined,zinc,0.12978953744094157,5
+vxo,Oil supply spike,combined,aluminium,0.2980799213243439,6
+vxo,Oil supply spike,combined,cocoa,0.15925214090701856,7
+vxo,Oil supply spike,combined,coffee_arabic,0.10944269389616552,10
+vxo,Oil supply spike,combined,copper,0.3046574049811767,6
+vxo,Oil supply spike,combined,cotton_a_indx,0.12648505281369732,6
+vxo,Oil supply spike,combined,crude_wti,2,2
+vxo,Oil supply spike,combined,gold,0.18712258334023735,3
+vxo,Oil supply spike,combined,lead,0.2463339845038953,4
+vxo,Oil supply spike,combined,maize,0.09549673611633562,9
+vxo,Oil supply spike,combined,ngas_us,0.32541732927528727,4
+vxo,Oil supply spike,combined,nickel,0.2516737723359531,6
+vxo,Oil supply spike,combined,platinum,0.20185791401436887,6
+vxo,Oil supply spike,combined,silver,0.3395610008467846,3
+vxo,Oil supply spike,combined,soybeans,0.3090700347618355,4
+vxo,Oil supply spike,combined,sugar_wld,0.1608649675068989,7
+vxo,Oil supply spike,combined,tin,0.2093911813494694,6
+vxo,Oil supply spike,combined,wheat_us_hrw,0.1965944080476049,4
+vxo,Oil supply spike,combined,zinc,0.262832056560683,6
+vxo,girf-ngas-1sigma,combined,aluminium,0.3127613718596133,7
+vxo,girf-ngas-1sigma,combined,cocoa,0.25410805289029637,6
+vxo,girf-ngas-1sigma,combined,coffee_arabic,0.10257369299762951,7
+vxo,girf-ngas-1sigma,combined,copper,0.2207411158983391,10
+vxo,girf-ngas-1sigma,combined,cotton_a_indx,0.3272929424137099,3
+vxo,girf-ngas-1sigma,combined,crude_wti,0.34711749667891445,7
+vxo,girf-ngas-1sigma,combined,gold,0.2918685242072995,5
+vxo,girf-ngas-1sigma,combined,lead,0.28672102808568317,4
+vxo,girf-ngas-1sigma,combined,maize,0.24266468108707095,6
+vxo,girf-ngas-1sigma,combined,ngas_us,1,2
+vxo,girf-ngas-1sigma,combined,nickel,0.17321986916672452,11
+vxo,girf-ngas-1sigma,combined,platinum,0.18997383070618373,10
+vxo,girf-ngas-1sigma,combined,silver,0.29257736607114826,6
+vxo,girf-ngas-1sigma,combined,soybeans,0.2009196621797774,7
+vxo,girf-ngas-1sigma,combined,sugar_wld,0.376247482215799,5
+vxo,girf-ngas-1sigma,combined,tin,0.2948293001709204,7
+vxo,girf-ngas-1sigma,combined,wheat_us_hrw,0.18792308948255956,6
+vxo,girf-ngas-1sigma,combined,zinc,0.15646215208775124,11
+vxo,one_sigma_supply_shock,combined,aluminium,0.5,2
+vxo,one_sigma_supply_shock,combined,cocoa,0.23615101728962096,7
+vxo,one_sigma_supply_shock,combined,coffee_arabic,0.1818034539927478,9
+vxo,one_sigma_supply_shock,combined,copper,1,2
+vxo,one_sigma_supply_shock,combined,cotton_a_indx,0.38442253054983955,3
+vxo,one_sigma_supply_shock,combined,crude_wti,0.39235693776460856,7
+vxo,one_sigma_supply_shock,combined,gold,0.17047407706556006,6
+vxo,one_sigma_supply_shock,combined,lead,0.4161870194363415,4
+vxo,one_sigma_supply_shock,combined,maize,0.11433812832680164,7
+vxo,one_sigma_supply_shock,combined,ngas_us,0.290473158891372,3
+vxo,one_sigma_supply_shock,combined,nickel,0.34832440565463024,5
+vxo,one_sigma_supply_shock,combined,platinum,0.5368185197534248,3
+vxo,one_sigma_supply_shock,combined,silver,0.2869515586935627,3
+vxo,one_sigma_supply_shock,combined,soybeans,0.19814099347844416,6
+vxo,one_sigma_supply_shock,combined,sugar_wld,0.4075455436120134,5
+vxo,one_sigma_supply_shock,combined,tin,0.6047903066184069,3
+vxo,one_sigma_supply_shock,combined,wheat_us_hrw,0.26436608458787764,9
+vxo,one_sigma_supply_shock,combined,zinc,0.4281332823464655,3
+vxo,unit-shock-crude_wti,combined,aluminium,0.2980799213243439,6
+vxo,unit-shock-crude_wti,combined,cocoa,0.15925214090701856,7
+vxo,unit-shock-crude_wti,combined,coffee_arabic,0.10944269389616552,10
+vxo,unit-shock-crude_wti,combined,copper,0.3046574049811767,6
+vxo,unit-shock-crude_wti,combined,cotton_a_indx,0.12648505281369732,6
+vxo,unit-shock-crude_wti,combined,crude_wti,2,2
+vxo,unit-shock-crude_wti,combined,gold,0.18712258334023735,3
+vxo,unit-shock-crude_wti,combined,lead,0.2463339845038953,4
+vxo,unit-shock-crude_wti,combined,maize,0.09549673611633562,9
+vxo,unit-shock-crude_wti,combined,ngas_us,0.32541732927528727,4
+vxo,unit-shock-crude_wti,combined,nickel,0.2516737723359531,6
+vxo,unit-shock-crude_wti,combined,platinum,0.20185791401436887,6
+vxo,unit-shock-crude_wti,combined,silver,0.3395610008467846,3
+vxo,unit-shock-crude_wti,combined,soybeans,0.3090700347618355,4
+vxo,unit-shock-crude_wti,combined,sugar_wld,0.1608649675068989,7
+vxo,unit-shock-crude_wti,combined,tin,0.2093911813494694,6
+vxo,unit-shock-crude_wti,combined,wheat_us_hrw,0.1965944080476049,4
+vxo,unit-shock-crude_wti,combined,zinc,0.262832056560683,6
