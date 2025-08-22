@@ -1,0 +1,20 @@
+name: R tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: |
+            any::testthat
+            any::dplyr
+            any::ggplot2
+            any::fs
+            any::jsonlite
+            any::glue
+      - name: Run tests
+        run: Rscript tests/testthat.R
+

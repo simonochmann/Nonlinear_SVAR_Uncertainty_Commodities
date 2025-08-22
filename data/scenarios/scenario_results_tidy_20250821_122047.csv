@@ -1,0 +1,1729 @@
+t,variable,value,scenario,is_baseline,regime,uncertainty,value_lo,value_hi
+1,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,aluminium,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,cocoa,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,coffee_arabic,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,copper,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,crude_wti,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,gold,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,lead,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,maize,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,ngas_us,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,nickel,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,platinum,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,silver,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,soybeans,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,sugar_wld,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,tin,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+2,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+3,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+4,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+5,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+6,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+7,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+8,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+9,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+10,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+11,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+12,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+13,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+14,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+15,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+16,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+17,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+18,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+19,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+20,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+21,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+22,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+23,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+24,zinc,0,GIRF — aluminium to uncertainty shock,TRUE,combined,jln,NA,NA
+1,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,aluminium,1,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,aluminium,0.14142108124163222,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,aluminium,0.03154380878755716,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,aluminium,0.012112265437411604,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,aluminium,0.00469075209686058,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,aluminium,0.00137659352662869,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,aluminium,-6.501521323368654e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,aluminium,-5.038921285836703e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,aluminium,-5.058253678030179e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,aluminium,-3.7609064070702784e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,aluminium,-2.4108796941672497e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,aluminium,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,cocoa,-0.016157121481406578,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,cocoa,0.013347885664161842,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,cocoa,-5.596827618495597e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,cocoa,-0.0037357702632069348,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,cocoa,-0.00269821526406457,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,cocoa,-0.0016034362987753948,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,cocoa,-9.14401491155583e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,cocoa,-4.872044599848565e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,cocoa,-2.3555800403919825e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,cocoa,-1.0029990707704012e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,cocoa,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,coffee_arabic,0.011391146326280362,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,coffee_arabic,0.00786876698318399,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,coffee_arabic,0.005963825379506436,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,coffee_arabic,0.00241204889014286,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,coffee_arabic,7.037581311544015e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,coffee_arabic,1.906851218593249e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,coffee_arabic,-1.725605178257568e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,coffee_arabic,-1.5874669412641406e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,coffee_arabic,-1.0194686551726364e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,coffee_arabic,-5.663140372714905e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,coffee_arabic,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,copper,0.021786095044570058,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,copper,0.032664031376472565,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,copper,0.01575734696537213,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,copper,0.005222779571300035,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,copper,9.49065024730405e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,copper,-4.2681713585831507e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,copper,-6.829160545708881e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,copper,-5.844591965501575e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,copper,-4.117156910944183e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,copper,-2.5947556611484484e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,copper,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,cotton_a_indx,0.10089666224974993,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,cotton_a_indx,0.06743541717821246,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,cotton_a_indx,0.03288493686978291,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,cotton_a_indx,0.012661487935256635,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,cotton_a_indx,0.003806191812160685,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,cotton_a_indx,6.344151918497801e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,cotton_a_indx,-3.0999080607122e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,cotton_a_indx,-4.556222055761158e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,cotton_a_indx,-3.677546238302254e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,cotton_a_indx,-2.481906554586615e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,cotton_a_indx,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,crude_wti,-0.11562255935012286,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,crude_wti,-0.0053087320007665995,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,crude_wti,0.013692045222450766,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,crude_wti,0.00826100203982201,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,crude_wti,0.003464047266484568,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,crude_wti,0.0011635211862219804,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,crude_wti,2.0897916229900147e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,crude_wti,-1.208051597564172e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,crude_wti,-1.8078920534193448e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,crude_wti,-1.4657788216804906e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,crude_wti,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,gold,0.015706725267875823,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,gold,-0.019252535980468947,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,gold,-0.013833145798564615,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,gold,-0.007083177514060675,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,gold,-0.0032418271171815987,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,gold,-0.0014756731889790512,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,gold,-6.55470120662068e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,gold,-2.6729728504614587e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,gold,-8.686530087415341e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,gold,-9.394250000751592e-6,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,gold,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,lead,-0.09978151456382013,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,lead,-0.005919130484786657,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,lead,0.004302892173415203,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,lead,0.00106825183956708,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,lead,-6.1936450301335e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,lead,-9.98081618143402e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,lead,-8.302369031763416e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,lead,-5.772223527029663e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,lead,-3.681098735366302e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,lead,-2.1989468923078355e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,lead,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,maize,-0.06290894631360443,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,maize,-0.016779273136794965,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,maize,0.002050337152370319,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,maize,0.0038697734116433847,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,maize,0.001698883575071005,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,maize,0.00059343379492020495,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,maize,2.1518770288066506e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,maize,8.560826586656421e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,maize,3.9999443805397984e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,maize,2.101253615277556e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,maize,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,ngas_us,0.07789907188496537,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,ngas_us,0.010809636944782479,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,ngas_us,0.003789981719431985,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,ngas_us,0.00339088467203747,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,ngas_us,0.002484914626332135,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,ngas_us,0.001468114868212213,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,ngas_us,8.147786846927352e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,ngas_us,4.331461385635207e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,ngas_us,2.1714218683792212e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,ngas_us,1.028044584451176e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,ngas_us,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,nickel,0.047952036905208884,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,nickel,0.0016190489052122503,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,nickel,-0.004092343434361905,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,nickel,-0.0014442639967765147,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,nickel,-5.548859354875165e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,nickel,-3.302017362267215e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,nickel,-2.2203159278325638e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,nickel,-1.3409792931035996e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,nickel,-6.699550486531894e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,nickel,-2.5430003501292476e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,nickel,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,platinum,0.015458984009000485,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,platinum,-0.0011279007785899003,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,platinum,0.0026007278659112153,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,platinum,3.5817350052151365e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,platinum,-5.148104129622399e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,platinum,-5.654217975554659e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,platinum,-4.173111909347661e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,platinum,-2.6098265157927067e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,platinum,-1.4158995532772284e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,platinum,-6.53752390008608e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,platinum,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,silver,0.02793456298790397,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,silver,0.0025784354785957156,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,silver,-0.0030111063407804103,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,silver,-0.0034486816994988485,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,silver,-0.0023594152397193482,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,silver,-0.0015312280470848373,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,silver,-9.777599234953454e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,silver,-5.895756100775144e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,silver,-3.276018100085148e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,silver,-1.654500463890308e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,silver,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,soybeans,-0.011132245734481716,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,soybeans,-0.02367890016992011,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,soybeans,-0.011434956134335615,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,soybeans,-0.004114062538359615,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,soybeans,-0.00148761079665812,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,soybeans,-5.329205747863568e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,soybeans,-1.3744058492626477e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,soybeans,3.974123756834654e-6,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,soybeans,4.038899615253063e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,soybeans,3.977442541061988e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,soybeans,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,sugar_wld,0.06988102585827238,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,sugar_wld,0.06275672195290298,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,sugar_wld,0.02558461481632392,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,sugar_wld,0.008661436676048226,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,sugar_wld,0.002445375738923965,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,sugar_wld,3.4022947912085535e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,sugar_wld,-2.694443390188854e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,sugar_wld,-3.4212645261311365e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,sugar_wld,-2.6471171823265526e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,sugar_wld,-1.7357743716506598e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,sugar_wld,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,tin,0.022014069531482376,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,tin,0.028950785320621796,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,tin,0.014854255897557829,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,tin,0.006347467688903115,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,tin,0.0028952033679498345,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,tin,0.00135995839830043,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,tin,5.682143566293049e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,tin,1.7425661810523997e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,tin,4.1816789373152964e-6,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,tin,-4.878155456595627e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,tin,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,wheat_us_hrw,0.06824839992087336,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,wheat_us_hrw,6.357012726220315e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,wheat_us_hrw,-0.0022130606900024503,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,wheat_us_hrw,-0.0011572845598272,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,wheat_us_hrw,-8.299666128801298e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,wheat_us_hrw,-3.7474710061586496e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,wheat_us_hrw,-1.090352799710432e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,wheat_us_hrw,-1.160453216016925e-5,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,wheat_us_hrw,8.070332724063019e-6,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,wheat_us_hrw,4.359739377111833e-6,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,wheat_us_hrw,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+2,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+3,zinc,0.048982793489557336,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+4,zinc,0.06085862719860208,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+5,zinc,0.029529931243155793,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+6,zinc,0.01107544490473515,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+7,zinc,0.0034500081649103793,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+8,zinc,5.252484466904178e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+9,zinc,-3.308241888242846e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+10,zinc,-4.36410985471082e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+11,zinc,-3.368380715104522e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+12,zinc,-2.193936615035249e-4,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+13,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+14,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+15,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+16,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+17,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+18,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+19,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+20,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+21,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+22,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+23,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+24,zinc,0,GIRF — aluminium to uncertainty shock,FALSE,combined,jln,NA,NA
+1,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,aluminium,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,cocoa,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,coffee_arabic,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,copper,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,cotton_a_indx,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,crude_wti,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,gold,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,lead,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,maize,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,ngas_us,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,nickel,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,platinum,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,silver,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,soybeans,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,sugar_wld,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,tin,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,wheat_us_hrw,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+2,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+3,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+4,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+5,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+6,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+7,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+8,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+9,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+10,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+11,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+12,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+13,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+14,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+15,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+16,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+17,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+18,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+19,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+20,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+21,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+22,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+23,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+24,zinc,0,Oil supply spike,TRUE,combined,jln,NA,NA
+1,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,aluminium,-0.009857209986621991,Oil supply spike,FALSE,combined,jln,NA,NA
+4,aluminium,0.008188501660533611,Oil supply spike,FALSE,combined,jln,NA,NA
+5,aluminium,0.03807269611230404,Oil supply spike,FALSE,combined,jln,NA,NA
+6,aluminium,0.030706705681992272,Oil supply spike,FALSE,combined,jln,NA,NA
+7,aluminium,0.017427077120892427,Oil supply spike,FALSE,combined,jln,NA,NA
+8,aluminium,0.007851262056773105,Oil supply spike,FALSE,combined,jln,NA,NA
+9,aluminium,0.0026408717053046306,Oil supply spike,FALSE,combined,jln,NA,NA
+10,aluminium,3.585881141328376e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+11,aluminium,-3.840572596251077e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,aluminium,-4.741954222863986e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,aluminium,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,cocoa,0.1310744373101725,Oil supply spike,FALSE,combined,jln,NA,NA
+4,cocoa,0.05056843604180246,Oil supply spike,FALSE,combined,jln,NA,NA
+5,cocoa,0.01521777176387655,Oil supply spike,FALSE,combined,jln,NA,NA
+6,cocoa,0.00382387697469144,Oil supply spike,FALSE,combined,jln,NA,NA
+7,cocoa,-0.0021034356921790544,Oil supply spike,FALSE,combined,jln,NA,NA
+8,cocoa,-0.00384581064113068,Oil supply spike,FALSE,combined,jln,NA,NA
+9,cocoa,-0.0033315953991507165,Oil supply spike,FALSE,combined,jln,NA,NA
+10,cocoa,-0.0022126098487076115,Oil supply spike,FALSE,combined,jln,NA,NA
+11,cocoa,-0.0012456017719288941,Oil supply spike,FALSE,combined,jln,NA,NA
+12,cocoa,-6.140328168017578e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,cocoa,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,coffee_arabic,-0.12032466915901495,Oil supply spike,FALSE,combined,jln,NA,NA
+4,coffee_arabic,-0.0392284920209795,Oil supply spike,FALSE,combined,jln,NA,NA
+5,coffee_arabic,0.0061561480019084475,Oil supply spike,FALSE,combined,jln,NA,NA
+6,coffee_arabic,0.00772070126655749,Oil supply spike,FALSE,combined,jln,NA,NA
+7,coffee_arabic,0.002174492472661812,Oil supply spike,FALSE,combined,jln,NA,NA
+8,coffee_arabic,2.2739550804740495e-5,Oil supply spike,FALSE,combined,jln,NA,NA
+9,coffee_arabic,-1.598689678008643e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+10,coffee_arabic,-1.8447059911271244e-5,Oil supply spike,FALSE,combined,jln,NA,NA
+11,coffee_arabic,5.721550975380384e-5,Oil supply spike,FALSE,combined,jln,NA,NA
+12,coffee_arabic,6.379222885802123e-5,Oil supply spike,FALSE,combined,jln,NA,NA
+13,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,coffee_arabic,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,copper,-0.0703984020296041,Oil supply spike,FALSE,combined,jln,NA,NA
+4,copper,-0.015804041782232908,Oil supply spike,FALSE,combined,jln,NA,NA
+5,copper,0.018697843753983978,Oil supply spike,FALSE,combined,jln,NA,NA
+6,copper,0.01943917444100679,Oil supply spike,FALSE,combined,jln,NA,NA
+7,copper,0.012253095837525825,Oil supply spike,FALSE,combined,jln,NA,NA
+8,copper,0.005356189096300732,Oil supply spike,FALSE,combined,jln,NA,NA
+9,copper,0.0013744321822105154,Oil supply spike,FALSE,combined,jln,NA,NA
+10,copper,-2.641013145148471e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+11,copper,-6.635283161544273e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,copper,-5.802211220360855e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,copper,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,cotton_a_indx,0.08563451138792998,Oil supply spike,FALSE,combined,jln,NA,NA
+4,cotton_a_indx,0.07867069458369352,Oil supply spike,FALSE,combined,jln,NA,NA
+5,cotton_a_indx,0.023749758286866922,Oil supply spike,FALSE,combined,jln,NA,NA
+6,cotton_a_indx,0.00637155896040262,Oil supply spike,FALSE,combined,jln,NA,NA
+7,cotton_a_indx,0.0014731987800808404,Oil supply spike,FALSE,combined,jln,NA,NA
+8,cotton_a_indx,9.105857552476199e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+9,cotton_a_indx,0.0010020614698709961,Oil supply spike,FALSE,combined,jln,NA,NA
+10,cotton_a_indx,8.720753984025461e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+11,cotton_a_indx,5.811744910287671e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,cotton_a_indx,3.106749745694755e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,cotton_a_indx,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,crude_wti,-2,Oil supply spike,FALSE,combined,jln,NA,NA
+3,crude_wti,-0.3260631337951445,Oil supply spike,FALSE,combined,jln,NA,NA
+4,crude_wti,-4.938479446172893e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+5,crude_wti,0.04037872398373592,Oil supply spike,FALSE,combined,jln,NA,NA
+6,crude_wti,0.02695365998329053,Oil supply spike,FALSE,combined,jln,NA,NA
+7,crude_wti,0.012817945214783365,Oil supply spike,FALSE,combined,jln,NA,NA
+8,crude_wti,0.004836028261494101,Oil supply spike,FALSE,combined,jln,NA,NA
+9,crude_wti,0.0012938114524160631,Oil supply spike,FALSE,combined,jln,NA,NA
+10,crude_wti,-8.535250417872852e-6,Oil supply spike,FALSE,combined,jln,NA,NA
+11,crude_wti,-3.473919487850432e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,crude_wti,-3.391276101484456e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,crude_wti,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,gold,-0.008992778848738357,Oil supply spike,FALSE,combined,jln,NA,NA
+4,gold,0.06723712517219937,Oil supply spike,FALSE,combined,jln,NA,NA
+5,gold,0.046733964803352956,Oil supply spike,FALSE,combined,jln,NA,NA
+6,gold,0.01312222604565712,Oil supply spike,FALSE,combined,jln,NA,NA
+7,gold,-0.001016334671887231,Oil supply spike,FALSE,combined,jln,NA,NA
+8,gold,-0.003798623327256304,Oil supply spike,FALSE,combined,jln,NA,NA
+9,gold,-0.0030466673742266474,Oil supply spike,FALSE,combined,jln,NA,NA
+10,gold,-0.0017741688319253058,Oil supply spike,FALSE,combined,jln,NA,NA
+11,gold,-8.529045688765561e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,gold,-3.443151092568221e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,gold,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,lead,-0.011497248808737858,Oil supply spike,FALSE,combined,jln,NA,NA
+4,lead,0.00405871732622759,Oil supply spike,FALSE,combined,jln,NA,NA
+5,lead,0.03546491527807942,Oil supply spike,FALSE,combined,jln,NA,NA
+6,lead,0.0230125451008602,Oil supply spike,FALSE,combined,jln,NA,NA
+7,lead,0.01089392106861084,Oil supply spike,FALSE,combined,jln,NA,NA
+8,lead,0.0037614323848228002,Oil supply spike,FALSE,combined,jln,NA,NA
+9,lead,6.579986432772314e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+10,lead,-3.4355660179179344e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+11,lead,-5.014523313827536e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,lead,-4.0505093908723176e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,lead,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,maize,0.06121002321449532,Oil supply spike,FALSE,combined,jln,NA,NA
+4,maize,0.11621408000384362,Oil supply spike,FALSE,combined,jln,NA,NA
+5,maize,0.0480071259974623,Oil supply spike,FALSE,combined,jln,NA,NA
+6,maize,0.01358541230039526,Oil supply spike,FALSE,combined,jln,NA,NA
+7,maize,0.004429450740578415,Oil supply spike,FALSE,combined,jln,NA,NA
+8,maize,0.0018290593487552656,Oil supply spike,FALSE,combined,jln,NA,NA
+9,maize,9.826949032466126e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+10,maize,5.891840403425402e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+11,maize,3.2614218578976337e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,maize,1.62824743141623e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,maize,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,ngas_us,-0.10278651791911876,Oil supply spike,FALSE,combined,jln,NA,NA
+4,ngas_us,-0.014596920724671,Oil supply spike,FALSE,combined,jln,NA,NA
+5,ngas_us,0.00633227672195957,Oil supply spike,FALSE,combined,jln,NA,NA
+6,ngas_us,-0.0011661468002704426,Oil supply spike,FALSE,combined,jln,NA,NA
+7,ngas_us,-8.674704296818801e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+8,ngas_us,8.212637398906898e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+9,ngas_us,0.0012104299459927957,Oil supply spike,FALSE,combined,jln,NA,NA
+10,ngas_us,9.428155406630713e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+11,ngas_us,5.763185290146669e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,ngas_us,2.9738170579090894e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,ngas_us,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,nickel,0.07255800546840187,Oil supply spike,FALSE,combined,jln,NA,NA
+4,nickel,0.044709873886776726,Oil supply spike,FALSE,combined,jln,NA,NA
+5,nickel,0.02128916350894795,Oil supply spike,FALSE,combined,jln,NA,NA
+6,nickel,0.00977469706583643,Oil supply spike,FALSE,combined,jln,NA,NA
+7,nickel,0.002765215589754992,Oil supply spike,FALSE,combined,jln,NA,NA
+8,nickel,-9.232087468153138e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+9,nickel,-0.00174606653254972,Oil supply spike,FALSE,combined,jln,NA,NA
+10,nickel,-0.0013417745413927067,Oil supply spike,FALSE,combined,jln,NA,NA
+11,nickel,-7.791609363231473e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,nickel,-3.868628926740025e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,nickel,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,platinum,0.04973260462743065,Oil supply spike,FALSE,combined,jln,NA,NA
+4,platinum,0.05721263920541142,Oil supply spike,FALSE,combined,jln,NA,NA
+5,platinum,0.04217776024072779,Oil supply spike,FALSE,combined,jln,NA,NA
+6,platinum,0.014486395097511744,Oil supply spike,FALSE,combined,jln,NA,NA
+7,platinum,3.145701803664001e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+8,platinum,-0.0033916030881928697,Oil supply spike,FALSE,combined,jln,NA,NA
+9,platinum,-0.003058283390619147,Oil supply spike,FALSE,combined,jln,NA,NA
+10,platinum,-0.0019115344581467951,Oil supply spike,FALSE,combined,jln,NA,NA
+11,platinum,-9.880516341148077e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,platinum,-4.420516706214654e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,platinum,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,silver,0.09427761410916724,Oil supply spike,FALSE,combined,jln,NA,NA
+4,silver,0.10476742227907165,Oil supply spike,FALSE,combined,jln,NA,NA
+5,silver,0.06307994707617756,Oil supply spike,FALSE,combined,jln,NA,NA
+6,silver,0.023395801790963767,Oil supply spike,FALSE,combined,jln,NA,NA
+7,silver,0.00370472320685873,Oil supply spike,FALSE,combined,jln,NA,NA
+8,silver,-0.002530099035225419,Oil supply spike,FALSE,combined,jln,NA,NA
+9,silver,-0.003191201274530184,Oil supply spike,FALSE,combined,jln,NA,NA
+10,silver,-0.0022359012645997035,Oil supply spike,FALSE,combined,jln,NA,NA
+11,silver,-0.0012370452843115157,Oil supply spike,FALSE,combined,jln,NA,NA
+12,silver,-5.847094157240622e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,silver,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,soybeans,0.05221359822723618,Oil supply spike,FALSE,combined,jln,NA,NA
+4,soybeans,0.04622496425174863,Oil supply spike,FALSE,combined,jln,NA,NA
+5,soybeans,0.02528903727240088,Oil supply spike,FALSE,combined,jln,NA,NA
+6,soybeans,0.0064061371127103,Oil supply spike,FALSE,combined,jln,NA,NA
+7,soybeans,0.0011380914003310191,Oil supply spike,FALSE,combined,jln,NA,NA
+8,soybeans,-4.865958208585114e-5,Oil supply spike,FALSE,combined,jln,NA,NA
+9,soybeans,-1.4307707512068943e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+10,soybeans,-2.67122582825185e-5,Oil supply spike,FALSE,combined,jln,NA,NA
+11,soybeans,6.168708011346893e-5,Oil supply spike,FALSE,combined,jln,NA,NA
+12,soybeans,8.965233604326619e-5,Oil supply spike,FALSE,combined,jln,NA,NA
+13,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,soybeans,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,sugar_wld,-0.027466287467101138,Oil supply spike,FALSE,combined,jln,NA,NA
+4,sugar_wld,-0.0010709874072699702,Oil supply spike,FALSE,combined,jln,NA,NA
+5,sugar_wld,0.01163373623971196,Oil supply spike,FALSE,combined,jln,NA,NA
+6,sugar_wld,0.008356517160643867,Oil supply spike,FALSE,combined,jln,NA,NA
+7,sugar_wld,0.0019508522831170297,Oil supply spike,FALSE,combined,jln,NA,NA
+8,sugar_wld,-3.6002993798431077e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+9,sugar_wld,-6.02243021976134e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+10,sugar_wld,-4.488724190128176e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+11,sugar_wld,-3.229333469900015e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,sugar_wld,-2.3555656180646365e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,sugar_wld,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,tin,0.02524499413192401,Oil supply spike,FALSE,combined,jln,NA,NA
+4,tin,0.017818432854755494,Oil supply spike,FALSE,combined,jln,NA,NA
+5,tin,0.04061526319476076,Oil supply spike,FALSE,combined,jln,NA,NA
+6,tin,0.04383810256380716,Oil supply spike,FALSE,combined,jln,NA,NA
+7,tin,0.03092379628585688,Oil supply spike,FALSE,combined,jln,NA,NA
+8,tin,0.01778240692038045,Oil supply spike,FALSE,combined,jln,NA,NA
+9,tin,0.008806905979356069,Oil supply spike,FALSE,combined,jln,NA,NA
+10,tin,0.0037865969400468534,Oil supply spike,FALSE,combined,jln,NA,NA
+11,tin,0.0013791372564906138,Oil supply spike,FALSE,combined,jln,NA,NA
+12,tin,3.8243677437461033e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,tin,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,wheat_us_hrw,-0.10923544824083767,Oil supply spike,FALSE,combined,jln,NA,NA
+4,wheat_us_hrw,-0.0059541284769628194,Oil supply spike,FALSE,combined,jln,NA,NA
+5,wheat_us_hrw,0.007182663660046291,Oil supply spike,FALSE,combined,jln,NA,NA
+6,wheat_us_hrw,0.0094162243846588,Oil supply spike,FALSE,combined,jln,NA,NA
+7,wheat_us_hrw,0.00691584619677174,Oil supply spike,FALSE,combined,jln,NA,NA
+8,wheat_us_hrw,0.00419261930717636,Oil supply spike,FALSE,combined,jln,NA,NA
+9,wheat_us_hrw,0.00232219158249443,Oil supply spike,FALSE,combined,jln,NA,NA
+10,wheat_us_hrw,0.001145786101124337,Oil supply spike,FALSE,combined,jln,NA,NA
+11,wheat_us_hrw,4.886559773853649e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,wheat_us_hrw,1.7943919447625242e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,wheat_us_hrw,0,Oil supply spike,FALSE,combined,jln,NA,NA
+1,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+2,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+3,zinc,0.19689070426183433,Oil supply spike,FALSE,combined,jln,NA,NA
+4,zinc,0.04907167373344334,Oil supply spike,FALSE,combined,jln,NA,NA
+5,zinc,0.012737047032527697,Oil supply spike,FALSE,combined,jln,NA,NA
+6,zinc,-2.973592078176976e-5,Oil supply spike,FALSE,combined,jln,NA,NA
+7,zinc,3.740971895936987e-5,Oil supply spike,FALSE,combined,jln,NA,NA
+8,zinc,3.6061364320304993e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+9,zinc,3.721790101052398e-5,Oil supply spike,FALSE,combined,jln,NA,NA
+10,zinc,-3.1215128788701413e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+11,zinc,-4.512389541749434e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+12,zinc,-4.228675234112996e-4,Oil supply spike,FALSE,combined,jln,NA,NA
+13,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+14,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+15,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+16,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+17,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+18,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+19,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+20,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+21,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+22,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+23,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA
+24,zinc,0,Oil supply spike,FALSE,combined,jln,NA,NA

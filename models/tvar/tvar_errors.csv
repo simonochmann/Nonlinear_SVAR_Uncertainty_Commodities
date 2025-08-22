@@ -1,0 +1,13 @@
+index,commodity_id,stage,message,run_at
+VIX,PANEL,validate_all,Unstable or too few obs in a regime — not saving.,2025-08-20T19:38:09Z
+VXO,PANEL,validate_all,Unstable or too few obs in a regime — not saving.,2025-08-20T19:38:19Z
+JLN,PANEL,validate_all,Unstable or too few obs in a regime — not saving.,2025-08-20T19:38:30Z
+VIX,PANEL,estimate_all,"Error in estimate_tvar_model(df = df_use, th_series = th_use, threshold_info = NULL,  : 
+  use_given_split=TRUE but threshold_info$split is missing.
+",2025-08-20T19:48:19Z
+VXO,PANEL,estimate_all,"Error in estimate_tvar_model(df = df_use, th_series = th_use, threshold_info = NULL,  : 
+  use_given_split=TRUE but threshold_info$split is missing.
+",2025-08-20T19:48:19Z
+JLN,PANEL,estimate_all,"Error in estimate_tvar_model(df = df_use, th_series = th_use, threshold_info = NULL,  : 
+  use_given_split=TRUE but threshold_info$split is missing.
+",2025-08-20T19:48:19Z

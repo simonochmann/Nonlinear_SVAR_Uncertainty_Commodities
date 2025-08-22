@@ -1,29 +1,35 @@
-#' Validate a TVAR coefficient matrix
-#'
-#' @param A A matrix of dimensions (k × k × p) = (k × (k × p))
-#' @param expected_k Number of endogenous variables
-#' @param expected_p Number of lags
-#'
-#' @return TRUE if valid; otherwise, stops with an informative error
-validate_tvar_coefficient_matrix <- function(A, expected_k = NULL, expected_p = NULL) {
-  if (!is.matrix(A)) {
-    stop("A is not a matrix.")
+# functions/tvar/validate/validate_tvar_coefficient_matrix.R
+# Extended validation: dimensions, stability (eigenvalues), NA checks
+
+validate_tvar_coefficient_matrix <- function(A, Sigma = NULL, tol = 1 - 1e-6, expected_k = NULL, expected_p = NULL) {
+  if (is.null(A)) stop("A is NULL")
+  if (!is.matrix(A)) stop("A must be a matrix")
+  k <- if (is.null(Sigma)) NA_integer_ else ncol(Sigma)
+  # Infer k,p from A if Sigma not given
+  if (is.na(k)) {
+    # try square-root inference assuming A = [A1 ... Ap] with k rows
+    k <- nrow(A)
   }
+  p <- ncol(A) / k
+  if (p %% 1 != 0) stop("Columns of A not divisible by k — inconsistent dimensions")
   
-  dims <- dim(A)
-  if (length(dims) != 2) {
-    stop("A must be a 2-dimensional matrix.")
-  }
+  if (!is.null(expected_k) && expected_k != k) warning("expected_k != inferred k")
+  if (!is.null(expected_p) && expected_p != p) warning("expected_p != inferred p")
   
-  k <- dims[1]
-  kp <- dims[2]
+  if (any(!is.finite(A))) stop("A contains non-finite values")
   
-  if (!is.null(expected_k) && k != expected_k) {
-    stop(glue::glue("Number of rows in A (={k}) does not match expected_k (={expected_k})"))
-  }
+  # Stability: spectral radius of companion matrix
+  comp <- matrix(0, nrow = k * p, ncol = k * p)
+  comp[1:k, ] <- A
+  if (p > 1) comp[(k + 1):(k * p), 1:(k * (p - 1))] <- diag(k * (p - 1))
+  rho <- max(Mod(eigen(comp, only.values = TRUE)$values))
   
-  if (!is.null(expected_p) && kp != expected_k * expected_p) {
-    stop(glue::glue("Number of columns in A (={kp}) does not match expected_k × expected_p (={expected_k}×{expected_p}={expected_k * expected_p})"))
+  if (rho >= 1 - 1e-10) warning(glue::glue("Unstable VAR dynamics: spectral radius ~ {round(rho, 6)}"))
+  
+  if (!is.null(Sigma)) {
+    if (!is.matrix(Sigma) || nrow(Sigma) != ncol(Sigma)) stop("Sigma must be square matrix")
+    if (any(!is.finite(Sigma))) stop("Sigma contains non-finite values")
+    if (any(abs(Sigma - t(Sigma)) > 1e-10)) warning("Sigma not exactly symmetric")
   }
   
   return(TRUE)

@@ -1,0 +1,2161 @@
+scenario,regime,variable,t,sum_contrib,uncertainty,delta,residual
+GIRF — aluminium to uncertainty shock,combined,aluminium,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,2,1,vxo,1,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,3,0.16165673155115529,vxo,0.16165673155115534,5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,aluminium,4,-0.10591482172150041,vxo,-0.10591482172150044,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,aluminium,5,-0.14705754752055225,vxo,-0.14705754752055225,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,6,0.04483946757485406,vxo,0.04483946757485406,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,7,-0.18596169517460004,vxo,-0.18596169517460007,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,aluminium,8,0.07231402248069498,vxo,0.07231402248069498,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,9,0.3000944259765991,vxo,0.3000944259765991,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,10,0.2875115543725591,vxo,0.28751155437255904,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,aluminium,11,-0.12640121827340797,vxo,-0.12640121827340797,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,12,-0.16223647537716326,vxo,-0.1622364753771633,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,aluminium,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,aluminium,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,3,-0.37679508612917345,vxo,-0.37679508612917345,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,4,0.2237250721608831,vxo,0.22372507216088308,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,cocoa,5,0.31843429450907706,vxo,0.318434294509077,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,cocoa,6,0.1817579941636595,vxo,0.1817579941636595,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,7,-0.09629273343681538,vxo,-0.09629273343681535,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,cocoa,8,-0.07526885136689665,vxo,-0.07526885136689664,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,cocoa,9,-0.046454865739198097,vxo,-0.046454865739198103,-6.938893903907228e-18
+GIRF — aluminium to uncertainty shock,combined,cocoa,10,0.05763970966135823,vxo,0.05763970966135823,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,11,-0.15906249966180178,vxo,-0.15906249966180183,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,cocoa,12,-0.20431512338083962,vxo,-0.20431512338083957,5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,cocoa,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cocoa,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,3,-0.03780158823877827,vxo,-0.03780158823877828,-6.938893903907228e-18
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,4,0.0727149598932749,vxo,0.07271495989327487,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,5,-0.017118459806205417,vxo,-0.01711845980620541,6.938893903907228e-18
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,6,0.25337303459345295,vxo,0.2533730345934529,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,7,-0.014351174102518386,vxo,-0.01435117410251839,-3.469446951953614e-18
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,8,-0.12648685849813962,vxo,-0.1264868584981396,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,9,-0.008032255028506163,vxo,-0.00803225502850616,3.469446951953614e-18
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,10,0.06781835117616172,vxo,0.06781835117616171,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,11,-0.06128407773787035,vxo,-0.06128407773787033,2.0816681711721685e-17
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,12,0.016215005651207485,vxo,0.01621500565120748,-3.469446951953614e-18
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,coffee_arabic,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,3,0.07601747397851354,vxo,0.07601747397851354,0
+GIRF — aluminium to uncertainty shock,combined,copper,4,-0.0033216763148290005,vxo,-0.003321676314829,4.336808689942018e-19
+GIRF — aluminium to uncertainty shock,combined,copper,5,-0.1624033399574398,vxo,-0.16240333995743983,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,copper,6,0.12551057591132592,vxo,0.12551057591132592,0
+GIRF — aluminium to uncertainty shock,combined,copper,7,-0.0534382478853138,vxo,-0.05343824788531378,2.0816681711721685e-17
+GIRF — aluminium to uncertainty shock,combined,copper,8,0.11159467533358357,vxo,0.1115946753335836,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,copper,9,0.20017457414800502,vxo,0.20017457414800505,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,copper,10,0.2292656642686498,vxo,0.22926566426864983,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,copper,11,-0.10984873512912724,vxo,-0.10984873512912724,0
+GIRF — aluminium to uncertainty shock,combined,copper,12,-0.27286968096410075,vxo,-0.2728696809641007,5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,copper,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,copper,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,3,-0.13621612524335988,vxo,-0.13621612524335985,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,4,-0.0796183862091924,vxo,-0.07961838620919243,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,5,0.11122089222484074,vxo,0.1112208922248408,5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,6,0.34510707418652176,vxo,0.34510707418652176,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,7,-0.04581597512042657,vxo,-0.04581597512042659,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,8,-0.1770483752898792,vxo,-0.1770483752898792,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,9,0.1027066690649864,vxo,0.1027066690649864,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,10,0.02256334778570364,vxo,0.02256334778570365,1.0408340855860843e-17
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,11,-0.09445839842421495,vxo,-0.09445839842421493,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,12,-0.014484278228733933,vxo,-0.01448427822873393,1.734723475976807e-18
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,cotton_a_indx,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,3,0.06346667955607917,vxo,0.06346667955607915,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,crude_wti,4,0.11183338810597801,vxo,0.11183338810597804,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,crude_wti,5,-0.25507354041234737,vxo,-0.2550735404123474,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,crude_wti,6,-0.178659661995492,vxo,-0.17865966199549205,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,crude_wti,7,-0.015202361127869725,vxo,-0.01520236112786972,5.204170427930421e-18
+GIRF — aluminium to uncertainty shock,combined,crude_wti,8,0.09780024100688536,vxo,0.09780024100688532,-4.163336342344337e-17
+GIRF — aluminium to uncertainty shock,combined,crude_wti,9,0.1049664753929527,vxo,0.1049664753929527,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,10,0.4522276060619709,vxo,0.4522276060619709,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,11,0.1018553055848318,vxo,0.1018553055848318,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,12,-0.3775565764834667,vxo,-0.3775565764834666,1.1102230246251565e-16
+GIRF — aluminium to uncertainty shock,combined,crude_wti,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,crude_wti,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,3,0.2075425171654332,vxo,0.2075425171654332,0
+GIRF — aluminium to uncertainty shock,combined,gold,4,-0.15537088729364543,vxo,-0.15537088729364543,0
+GIRF — aluminium to uncertainty shock,combined,gold,5,-0.43941425271420653,vxo,-0.4394142527142065,5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,gold,6,0.09073202018358914,vxo,0.09073202018358915,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,gold,7,0.4116089145038566,vxo,0.4116089145038567,1.1102230246251565e-16
+GIRF — aluminium to uncertainty shock,combined,gold,8,-0.09250713011974834,vxo,-0.09250713011974836,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,gold,9,-0.12482479963997511,vxo,-0.1248247996399751,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,gold,10,0.1510415100979669,vxo,0.15104151009796693,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,gold,11,0.05903456852525672,vxo,0.05903456852525671,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,gold,12,-0.31332581307498253,vxo,-0.3133258130749825,5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,gold,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,gold,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,3,0.09106937442022857,vxo,0.09106937442022855,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,lead,4,0.1368688860628291,vxo,0.13686888606282913,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,lead,5,-0.2997924233255176,vxo,-0.29979242332551753,5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,lead,6,0.14033002414524798,vxo,0.140330024145248,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,lead,7,-0.11312545926309461,vxo,-0.1131254592630946,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,lead,8,0.056839461307886884,vxo,0.05683946130788688,-6.938893903907228e-18
+GIRF — aluminium to uncertainty shock,combined,lead,9,-0.05447707095550245,vxo,-0.05447707095550246,-6.938893903907228e-18
+GIRF — aluminium to uncertainty shock,combined,lead,10,0.17272246675474576,vxo,0.1727224667547457,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,lead,11,0.08190593991052192,vxo,0.08190593991052188,-4.163336342344337e-17
+GIRF — aluminium to uncertainty shock,combined,lead,12,-0.050783815774240376,vxo,-0.05078381577424037,6.938893903907228e-18
+GIRF — aluminium to uncertainty shock,combined,lead,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,lead,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,3,-0.24010742242940886,vxo,-0.24010742242940888,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,maize,4,-0.08750409691709869,vxo,-0.08750409691709868,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,maize,5,0.09367543667727388,vxo,0.0936754366772739,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,maize,6,0.36346200838208,vxo,0.36346200838208,0
+GIRF — aluminium to uncertainty shock,combined,maize,7,-0.020353690034066785,vxo,-0.02035369003406678,3.469446951953614e-18
+GIRF — aluminium to uncertainty shock,combined,maize,8,-0.3160427284582952,vxo,-0.3160427284582952,0
+GIRF — aluminium to uncertainty shock,combined,maize,9,-0.09614748964358354,vxo,-0.09614748964358352,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,maize,10,0.30603519563120185,vxo,0.30603519563120185,0
+GIRF — aluminium to uncertainty shock,combined,maize,11,-0.056152166211731414,vxo,-0.05615216621173141,6.938893903907228e-18
+GIRF — aluminium to uncertainty shock,combined,maize,12,-0.17014723364420295,vxo,-0.17014723364420292,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,maize,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,maize,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,3,-0.17491988230855376,vxo,-0.1749198823085538,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,ngas_us,4,0.19665686718300926,vxo,0.1966568671830093,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,ngas_us,5,-0.03239538109010193,vxo,-0.03239538109010193,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,6,0.006961141849713528,vxo,0.00696114184971353,1.734723475976807e-18
+GIRF — aluminium to uncertainty shock,combined,ngas_us,7,0.06337909792065244,vxo,0.06337909792065244,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,8,-0.08876313929607628,vxo,-0.08876313929607627,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,ngas_us,9,-0.08658203008307686,vxo,-0.08658203008307687,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,ngas_us,10,0.2932868670763848,vxo,0.2932868670763848,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,11,0.07441805437386428,vxo,0.07441805437386427,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,ngas_us,12,-0.25043582053889585,vxo,-0.25043582053889585,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,ngas_us,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,3,0.11253433964860798,vxo,0.112534339648608,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,nickel,4,0.0036902229901555994,vxo,0.0036902229901556,4.336808689942018e-19
+GIRF — aluminium to uncertainty shock,combined,nickel,5,-0.24698729892014917,vxo,-0.24698729892014928,-1.1102230246251565e-16
+GIRF — aluminium to uncertainty shock,combined,nickel,6,0.20930054498078302,vxo,0.209300544980783,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,nickel,7,0.01912081192605031,vxo,0.01912081192605031,0
+GIRF — aluminium to uncertainty shock,combined,nickel,8,0.051572983442211645,vxo,0.05157298344221164,-6.938893903907228e-18
+GIRF — aluminium to uncertainty shock,combined,nickel,9,-0.03558069419920737,vxo,-0.03558069419920737,0
+GIRF — aluminium to uncertainty shock,combined,nickel,10,0.05076228095348836,vxo,0.05076228095348836,0
+GIRF — aluminium to uncertainty shock,combined,nickel,11,0.018277741382281033,vxo,0.01827774138228103,-3.469446951953614e-18
+GIRF — aluminium to uncertainty shock,combined,nickel,12,0.08407390813510955,vxo,0.08407390813510954,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,nickel,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,nickel,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,3,-0.08251275353933016,vxo,-0.08251275353933014,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,platinum,4,0.028564316095018073,vxo,0.02856431609501808,6.938893903907228e-18
+GIRF — aluminium to uncertainty shock,combined,platinum,5,-0.18564011981792372,vxo,-0.1856401198179237,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,platinum,6,0.3740363658968008,vxo,0.3740363658968008,0
+GIRF — aluminium to uncertainty shock,combined,platinum,7,0.2061846431994398,vxo,0.2061846431994398,0
+GIRF — aluminium to uncertainty shock,combined,platinum,8,-0.076819064413435,vxo,-0.076819064413435,0
+GIRF — aluminium to uncertainty shock,combined,platinum,9,-0.24525826997708658,vxo,-0.24525826997708652,5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,platinum,10,0.1570596357999,vxo,0.1570596357999,0
+GIRF — aluminium to uncertainty shock,combined,platinum,11,0.1057574507708107,vxo,0.10575745077081068,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,platinum,12,-0.24347564901061172,vxo,-0.24347564901061175,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,platinum,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,platinum,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,3,0.13367723365863943,vxo,0.13367723365863943,0
+GIRF — aluminium to uncertainty shock,combined,silver,4,0.0025638472950224194,vxo,0.00256384729502242,4.336808689942018e-19
+GIRF — aluminium to uncertainty shock,combined,silver,5,-0.23667632008471023,vxo,-0.23667632008471023,0
+GIRF — aluminium to uncertainty shock,combined,silver,6,0.3192885292815535,vxo,0.31928852928155355,5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,silver,7,0.31573596599819215,vxo,0.3157359659981921,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,silver,8,-0.26938927439432536,vxo,-0.26938927439432536,0
+GIRF — aluminium to uncertainty shock,combined,silver,9,-0.31278335681913877,vxo,-0.31278335681913877,0
+GIRF — aluminium to uncertainty shock,combined,silver,10,0.18595698407391806,vxo,0.18595698407391803,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,silver,11,0.1439536233975403,vxo,0.1439536233975403,0
+GIRF — aluminium to uncertainty shock,combined,silver,12,-0.1997207146234145,vxo,-0.19972071462341456,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,silver,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,silver,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,3,-0.28081294954137187,vxo,-0.2808129495413719,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,soybeans,4,-0.02546513078167957,vxo,-0.02546513078167957,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,5,0.10870587462256527,vxo,0.10870587462256528,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,soybeans,6,0.14861750329437864,vxo,0.14861750329437864,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,7,-0.24915967174074566,vxo,-0.2491596717407457,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,soybeans,8,-0.1178215057859495,vxo,-0.1178215057859495,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,9,0.1841486732215444,vxo,0.18414867322154435,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,soybeans,10,0.2699480791463187,vxo,0.26994807914631863,-5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,soybeans,11,-0.23373060587805947,vxo,-0.23373060587805944,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,soybeans,12,-5.455591545096997e-4,vxo,-5.455591545096997e-4,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,soybeans,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,3,-0.11329566238215587,vxo,-0.11329566238215588,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,4,0.15808347584740726,vxo,0.15808347584740726,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,5,0.14417585228653687,vxo,0.14417585228653687,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,6,0.16759677897216504,vxo,0.16759677897216502,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,7,-0.16738299901838835,vxo,-0.16738299901838835,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,8,-0.45439394122376253,vxo,-0.4543939412237624,1.1102230246251565e-16
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,9,0.07262907043556173,vxo,0.07262907043556172,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,10,0.4949543117322362,vxo,0.4949543117322361,-1.1102230246251565e-16
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,11,0.04841196578244589,vxo,0.04841196578244589,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,12,-0.20054058713579742,vxo,-0.20054058713579745,-2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,sugar_wld,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,3,-0.10687430184198402,vxo,-0.10687430184198402,0
+GIRF — aluminium to uncertainty shock,combined,tin,4,3.666284893506502e-4,vxo,3.666284893506502e-4,0
+GIRF — aluminium to uncertainty shock,combined,tin,5,-0.08111350848132978,vxo,-0.08111350848132978,0
+GIRF — aluminium to uncertainty shock,combined,tin,6,0.3987715192772063,vxo,0.39877151927720633,5.551115123125783e-17
+GIRF — aluminium to uncertainty shock,combined,tin,7,-0.057722582211946115,vxo,-0.05772258221194613,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,tin,8,-0.2350528645718801,vxo,-0.23505286457188007,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,tin,9,0.09562067744191399,vxo,0.095620677441914,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,tin,10,0.4182113129182532,vxo,0.4182113129182532,0
+GIRF — aluminium to uncertainty shock,combined,tin,11,-0.10917339770708519,vxo,-0.10917339770708516,2.7755575615628914e-17
+GIRF — aluminium to uncertainty shock,combined,tin,12,-0.33037772936128157,vxo,-0.33037772936128157,0
+GIRF — aluminium to uncertainty shock,combined,tin,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,tin,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,3,0.03494490153669614,vxo,0.03494490153669614,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,4,-0.1327446832531523,vxo,-0.1327446832531523,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,5,0.03645865121155442,vxo,0.03645865121155443,6.938893903907228e-18
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,6,0.2691395719452033,vxo,0.2691395719452033,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,7,0.06993699936828641,vxo,0.0699369993682864,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,8,-0.17650068061314125,vxo,-0.17650068061314125,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,9,-0.11116625787248402,vxo,-0.111166257872484,1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,10,0.13062903193473,vxo,0.13062903193473,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,11,-0.09835556442615637,vxo,-0.09835556442615637,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,12,-0.026107867186282684,vxo,-0.02610786718628268,3.469446951953614e-18
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,wheat_us_hrw,24,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,1,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,2,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,3,0.06763766889024786,vxo,0.06763766889024786,0
+GIRF — aluminium to uncertainty shock,combined,zinc,4,0.07665822043988907,vxo,0.07665822043988905,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,zinc,5,-0.12978953744094157,vxo,-0.12978953744094157,0
+GIRF — aluminium to uncertainty shock,combined,zinc,6,0.09085558056721954,vxo,0.09085558056721953,-1.3877787807814457e-17
+GIRF — aluminium to uncertainty shock,combined,zinc,7,-0.029094477398350985,vxo,-0.02909447739835099,-6.938893903907228e-18
+GIRF — aluminium to uncertainty shock,combined,zinc,8,0.06001142847539988,vxo,0.06001142847539988,0
+GIRF — aluminium to uncertainty shock,combined,zinc,9,-0.07499239175319751,vxo,-0.07499239175319751,0
+GIRF — aluminium to uncertainty shock,combined,zinc,10,0.08309853138873485,vxo,0.08309853138873485,0
+GIRF — aluminium to uncertainty shock,combined,zinc,11,0.0966557870170174,vxo,0.0966557870170174,0
+GIRF — aluminium to uncertainty shock,combined,zinc,12,-0.03841453284461602,vxo,-0.03841453284461602,0
+GIRF — aluminium to uncertainty shock,combined,zinc,13,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,14,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,15,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,16,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,17,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,18,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,19,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,20,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,21,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,22,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,23,0,vxo,0,0
+GIRF — aluminium to uncertainty shock,combined,zinc,24,0,vxo,0,0
+Oil supply spike,combined,aluminium,1,0,vxo,0,0
+Oil supply spike,combined,aluminium,2,0,vxo,0,0
+Oil supply spike,combined,aluminium,3,-0.12691097289387968,vxo,-0.12691097289387968,0
+Oil supply spike,combined,aluminium,4,0.042891779142441924,vxo,0.04289177914244194,1.3877787807814457e-17
+Oil supply spike,combined,aluminium,5,0.05229319053137305,vxo,0.05229319053137304,-1.3877787807814457e-17
+Oil supply spike,combined,aluminium,6,0.29807992132434386,vxo,0.2980799213243439,5.551115123125783e-17
+Oil supply spike,combined,aluminium,7,0.22318951025058723,vxo,0.22318951025058725,2.7755575615628914e-17
+Oil supply spike,combined,aluminium,8,0.10718548685497256,vxo,0.10718548685497252,-4.163336342344337e-17
+Oil supply spike,combined,aluminium,9,-0.03532440245864624,vxo,-0.03532440245864624,0
+Oil supply spike,combined,aluminium,10,0.03335259422616513,vxo,0.03335259422616513,0
+Oil supply spike,combined,aluminium,11,-0.029626535042857595,vxo,-0.0296265350428576,-3.469446951953614e-18
+Oil supply spike,combined,aluminium,12,-0.090440321573424,vxo,-0.09044032157342403,-2.7755575615628914e-17
+Oil supply spike,combined,aluminium,13,0,vxo,0,0
+Oil supply spike,combined,aluminium,14,0,vxo,0,0
+Oil supply spike,combined,aluminium,15,0,vxo,0,0
+Oil supply spike,combined,aluminium,16,0,vxo,0,0
+Oil supply spike,combined,aluminium,17,0,vxo,0,0
+Oil supply spike,combined,aluminium,18,0,vxo,0,0
+Oil supply spike,combined,aluminium,19,0,vxo,0,0
+Oil supply spike,combined,aluminium,20,0,vxo,0,0
+Oil supply spike,combined,aluminium,21,0,vxo,0,0
+Oil supply spike,combined,aluminium,22,0,vxo,0,0
+Oil supply spike,combined,aluminium,23,0,vxo,0,0
+Oil supply spike,combined,aluminium,24,0,vxo,0,0
+Oil supply spike,combined,cocoa,1,0,vxo,0,0
+Oil supply spike,combined,cocoa,2,0,vxo,0,0
+Oil supply spike,combined,cocoa,3,0.06951378193300776,vxo,0.06951378193300778,1.3877787807814457e-17
+Oil supply spike,combined,cocoa,4,0.035601871439675956,vxo,0.03560187143967595,-6.938893903907228e-18
+Oil supply spike,combined,cocoa,5,-0.03573759615104388,vxo,-0.03573759615104387,1.3877787807814457e-17
+Oil supply spike,combined,cocoa,6,0.1392757384732097,vxo,0.13927573847320973,2.7755575615628914e-17
+Oil supply spike,combined,cocoa,7,-0.15925214090701859,vxo,-0.15925214090701856,2.7755575615628914e-17
+Oil supply spike,combined,cocoa,8,-0.013763012909637998,vxo,-0.013763012909638,-1.734723475976807e-18
+Oil supply spike,combined,cocoa,9,0.009967551252717267,vxo,0.00996755125271727,3.469446951953614e-18
+Oil supply spike,combined,cocoa,10,0.09535751145700293,vxo,0.09535751145700296,2.7755575615628914e-17
+Oil supply spike,combined,cocoa,11,0.10864668788829654,vxo,0.10864668788829658,4.163336342344337e-17
+Oil supply spike,combined,cocoa,12,0.030241125444549502,vxo,0.0302411254445495,-3.469446951953614e-18
+Oil supply spike,combined,cocoa,13,0,vxo,0,0
+Oil supply spike,combined,cocoa,14,0,vxo,0,0
+Oil supply spike,combined,cocoa,15,0,vxo,0,0
+Oil supply spike,combined,cocoa,16,0,vxo,0,0
+Oil supply spike,combined,cocoa,17,0,vxo,0,0
+Oil supply spike,combined,cocoa,18,0,vxo,0,0
+Oil supply spike,combined,cocoa,19,0,vxo,0,0
+Oil supply spike,combined,cocoa,20,0,vxo,0,0
+Oil supply spike,combined,cocoa,21,0,vxo,0,0
+Oil supply spike,combined,cocoa,22,0,vxo,0,0
+Oil supply spike,combined,cocoa,23,0,vxo,0,0
+Oil supply spike,combined,cocoa,24,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,1,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,2,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,3,-0.052889075052486315,vxo,-0.05288907505248632,-6.938893903907228e-18
+Oil supply spike,combined,coffee_arabic,4,-0.0755890088898577,vxo,-0.0755890088898577,0
+Oil supply spike,combined,coffee_arabic,5,-0.015871466936492214,vxo,-0.01587146693649221,3.469446951953614e-18
+Oil supply spike,combined,coffee_arabic,6,0.1014721913172119,vxo,0.10147219131721189,-1.3877787807814457e-17
+Oil supply spike,combined,coffee_arabic,7,0.00406866137527591,vxo,0.00406866137527591,0
+Oil supply spike,combined,coffee_arabic,8,-0.06518519199646372,vxo,-0.06518519199646369,2.7755575615628914e-17
+Oil supply spike,combined,coffee_arabic,9,-0.0032888841521669303,vxo,-0.00328888415216693,4.336808689942018e-19
+Oil supply spike,combined,coffee_arabic,10,0.10944269389616551,vxo,0.10944269389616552,1.3877787807814457e-17
+Oil supply spike,combined,coffee_arabic,11,-0.005038894945600911,vxo,-0.0050388949456009104,8.673617379884035e-19
+Oil supply spike,combined,coffee_arabic,12,-0.020358075242278298,vxo,-0.02035807524227829,6.938893903907228e-18
+Oil supply spike,combined,coffee_arabic,13,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,14,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,15,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,16,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,17,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,18,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,19,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,20,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,21,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,22,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,23,0,vxo,0,0
+Oil supply spike,combined,coffee_arabic,24,0,vxo,0,0
+Oil supply spike,combined,copper,1,0,vxo,0,0
+Oil supply spike,combined,copper,2,0,vxo,0,0
+Oil supply spike,combined,copper,3,-0.0200139779194014,vxo,-0.0200139779194014,0
+Oil supply spike,combined,copper,4,0.18317147459873143,vxo,0.18317147459873143,0
+Oil supply spike,combined,copper,5,0.12365089148338891,vxo,0.12365089148338892,1.3877787807814457e-17
+Oil supply spike,combined,copper,6,0.3046574049811767,vxo,0.3046574049811767,0
+Oil supply spike,combined,copper,7,0.1732921054386584,vxo,0.17329210543865836,-2.7755575615628914e-17
+Oil supply spike,combined,copper,8,0.08825162438274081,vxo,0.08825162438274081,0
+Oil supply spike,combined,copper,9,-0.08608684968500241,vxo,-0.08608684968500241,0
+Oil supply spike,combined,copper,10,-0.013245398002732518,vxo,-0.01324539800273252,-1.734723475976807e-18
+Oil supply spike,combined,copper,11,-0.017693381425773324,vxo,-0.01769338142577332,3.469446951953614e-18
+Oil supply spike,combined,copper,12,-0.05722862800130221,vxo,-0.05722862800130222,-6.938893903907228e-18
+Oil supply spike,combined,copper,13,0,vxo,0,0
+Oil supply spike,combined,copper,14,0,vxo,0,0
+Oil supply spike,combined,copper,15,0,vxo,0,0
+Oil supply spike,combined,copper,16,0,vxo,0,0
+Oil supply spike,combined,copper,17,0,vxo,0,0
+Oil supply spike,combined,copper,18,0,vxo,0,0
+Oil supply spike,combined,copper,19,0,vxo,0,0
+Oil supply spike,combined,copper,20,0,vxo,0,0
+Oil supply spike,combined,copper,21,0,vxo,0,0
+Oil supply spike,combined,copper,22,0,vxo,0,0
+Oil supply spike,combined,copper,23,0,vxo,0,0
+Oil supply spike,combined,copper,24,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,1,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,2,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,3,-0.019364593741073126,vxo,-0.01936459374107313,-3.469446951953614e-18
+Oil supply spike,combined,cotton_a_indx,4,0.07079391194440542,vxo,0.07079391194440542,0
+Oil supply spike,combined,cotton_a_indx,5,0.006407309020752357,vxo,0.00640730902075236,2.6020852139652106e-18
+Oil supply spike,combined,cotton_a_indx,6,0.12648505281369732,vxo,0.12648505281369732,0
+Oil supply spike,combined,cotton_a_indx,7,0.08397742468132978,vxo,0.08397742468132978,0
+Oil supply spike,combined,cotton_a_indx,8,-0.02005414974908392,vxo,-0.02005414974908392,0
+Oil supply spike,combined,cotton_a_indx,9,0.0091455934588178,vxo,0.0091455934588178,0
+Oil supply spike,combined,cotton_a_indx,10,0.027753360252837308,vxo,0.02775336025283731,3.469446951953614e-18
+Oil supply spike,combined,cotton_a_indx,11,0.08851821276389416,vxo,0.08851821276389414,-1.3877787807814457e-17
+Oil supply spike,combined,cotton_a_indx,12,0.01104482523976922,vxo,0.01104482523976922,0
+Oil supply spike,combined,cotton_a_indx,13,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,14,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,15,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,16,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,17,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,18,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,19,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,20,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,21,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,22,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,23,0,vxo,0,0
+Oil supply spike,combined,cotton_a_indx,24,0,vxo,0,0
+Oil supply spike,combined,crude_wti,1,0,vxo,0,0
+Oil supply spike,combined,crude_wti,2,-2,vxo,-2,0
+Oil supply spike,combined,crude_wti,3,-0.3079404218853978,vxo,-0.3079404218853978,0
+Oil supply spike,combined,crude_wti,4,0.23248198954266558,vxo,0.23248198954266555,-2.7755575615628914e-17
+Oil supply spike,combined,crude_wti,5,-0.055278481842854964,vxo,-0.05527848184285497,-6.938893903907228e-18
+Oil supply spike,combined,crude_wti,6,0.14670174388707086,vxo,0.14670174388707083,-2.7755575615628914e-17
+Oil supply spike,combined,crude_wti,7,0.22567290354379288,vxo,0.2256729035437928,-8.326672684688674e-17
+Oil supply spike,combined,crude_wti,8,0.2131762681059444,vxo,0.2131762681059443,-8.326672684688674e-17
+Oil supply spike,combined,crude_wti,9,-0.09980268072172824,vxo,-0.09980268072172822,1.3877787807814457e-17
+Oil supply spike,combined,crude_wti,10,-0.08285632746148815,vxo,-0.08285632746148815,0
+Oil supply spike,combined,crude_wti,11,-0.012102198325699138,vxo,-0.01210219832569914,-1.734723475976807e-18
+Oil supply spike,combined,crude_wti,12,-0.07017825719250584,vxo,-0.07017825719250584,0
+Oil supply spike,combined,crude_wti,13,0,vxo,0,0
+Oil supply spike,combined,crude_wti,14,0,vxo,0,0
+Oil supply spike,combined,crude_wti,15,0,vxo,0,0
+Oil supply spike,combined,crude_wti,16,0,vxo,0,0
+Oil supply spike,combined,crude_wti,17,0,vxo,0,0
+Oil supply spike,combined,crude_wti,18,0,vxo,0,0
+Oil supply spike,combined,crude_wti,19,0,vxo,0,0
+Oil supply spike,combined,crude_wti,20,0,vxo,0,0
+Oil supply spike,combined,crude_wti,21,0,vxo,0,0
+Oil supply spike,combined,crude_wti,22,0,vxo,0,0
+Oil supply spike,combined,crude_wti,23,0,vxo,0,0
+Oil supply spike,combined,crude_wti,24,0,vxo,0,0
+Oil supply spike,combined,gold,1,0,vxo,0,0
+Oil supply spike,combined,gold,2,0,vxo,0,0
+Oil supply spike,combined,gold,3,0.18712258334023735,vxo,0.18712258334023735,0
+Oil supply spike,combined,gold,4,-0.11436975615356526,vxo,-0.11436975615356525,1.3877787807814457e-17
+Oil supply spike,combined,gold,5,-0.10731564754650372,vxo,-0.10731564754650372,0
+Oil supply spike,combined,gold,6,0.11798005020691796,vxo,0.117980050206918,4.163336342344337e-17
+Oil supply spike,combined,gold,7,0.17741079590448078,vxo,0.1774107959044808,2.7755575615628914e-17
+Oil supply spike,combined,gold,8,-0.0318514028633789,vxo,-0.0318514028633789,0
+Oil supply spike,combined,gold,9,-0.11153809370310462,vxo,-0.11153809370310463,-1.3877787807814457e-17
+Oil supply spike,combined,gold,10,-0.03881599247718821,vxo,-0.03881599247718822,-6.938893903907228e-18
+Oil supply spike,combined,gold,11,0.11011181662499663,vxo,0.11011181662499664,1.3877787807814457e-17
+Oil supply spike,combined,gold,12,-0.05372239782935636,vxo,-0.05372239782935634,2.0816681711721685e-17
+Oil supply spike,combined,gold,13,0,vxo,0,0
+Oil supply spike,combined,gold,14,0,vxo,0,0
+Oil supply spike,combined,gold,15,0,vxo,0,0
+Oil supply spike,combined,gold,16,0,vxo,0,0
+Oil supply spike,combined,gold,17,0,vxo,0,0
+Oil supply spike,combined,gold,18,0,vxo,0,0
+Oil supply spike,combined,gold,19,0,vxo,0,0
+Oil supply spike,combined,gold,20,0,vxo,0,0
+Oil supply spike,combined,gold,21,0,vxo,0,0
+Oil supply spike,combined,gold,22,0,vxo,0,0
+Oil supply spike,combined,gold,23,0,vxo,0,0
+Oil supply spike,combined,gold,24,0,vxo,0,0
+Oil supply spike,combined,lead,1,0,vxo,0,0
+Oil supply spike,combined,lead,2,0,vxo,0,0
+Oil supply spike,combined,lead,3,0.026803055844030664,vxo,0.02680305584403066,-3.469446951953614e-18
+Oil supply spike,combined,lead,4,0.2463339845038953,vxo,0.2463339845038953,0
+Oil supply spike,combined,lead,5,-0.17832569971208584,vxo,-0.1783256997120858,2.7755575615628914e-17
+Oil supply spike,combined,lead,6,0.13266037134499292,vxo,0.13266037134499298,5.551115123125783e-17
+Oil supply spike,combined,lead,7,0.03874316188682278,vxo,0.03874316188682279,6.938893903907228e-18
+Oil supply spike,combined,lead,8,0.15593589767705207,vxo,0.15593589767705207,0
+Oil supply spike,combined,lead,9,-0.0400657882753951,vxo,-0.0400657882753951,0
+Oil supply spike,combined,lead,10,0.042152099219989976,vxo,0.04215209921998997,-6.938893903907228e-18
+Oil supply spike,combined,lead,11,0.04016814700925203,vxo,0.04016814700925203,0
+Oil supply spike,combined,lead,12,-0.0741172170029357,vxo,-0.0741172170029357,0
+Oil supply spike,combined,lead,13,0,vxo,0,0
+Oil supply spike,combined,lead,14,0,vxo,0,0
+Oil supply spike,combined,lead,15,0,vxo,0,0
+Oil supply spike,combined,lead,16,0,vxo,0,0
+Oil supply spike,combined,lead,17,0,vxo,0,0
+Oil supply spike,combined,lead,18,0,vxo,0,0
+Oil supply spike,combined,lead,19,0,vxo,0,0
+Oil supply spike,combined,lead,20,0,vxo,0,0
+Oil supply spike,combined,lead,21,0,vxo,0,0
+Oil supply spike,combined,lead,22,0,vxo,0,0
+Oil supply spike,combined,lead,23,0,vxo,0,0
+Oil supply spike,combined,lead,24,0,vxo,0,0
+Oil supply spike,combined,maize,1,0,vxo,0,0
+Oil supply spike,combined,maize,2,0,vxo,0,0
+Oil supply spike,combined,maize,3,-0.011307012225441698,vxo,-0.0113070122254417,-1.734723475976807e-18
+Oil supply spike,combined,maize,4,0.015785360110044114,vxo,0.01578536011004411,-3.469446951953614e-18
+Oil supply spike,combined,maize,5,-0.08774227429407769,vxo,-0.08774227429407769,0
+Oil supply spike,combined,maize,6,0.051071886261944074,vxo,0.05107188626194407,-6.938893903907228e-18
+Oil supply spike,combined,maize,7,0.06488495302568421,vxo,0.0648849530256842,-1.3877787807814457e-17
+Oil supply spike,combined,maize,8,0.01187467209320656,vxo,0.01187467209320656,0
+Oil supply spike,combined,maize,9,-0.09549673611633563,vxo,-0.09549673611633562,1.3877787807814457e-17
+Oil supply spike,combined,maize,10,0.09081891511951155,vxo,0.09081891511951153,-2.7755575615628914e-17
+Oil supply spike,combined,maize,11,0.08232389431734881,vxo,0.08232389431734878,-2.7755575615628914e-17
+Oil supply spike,combined,maize,12,0.004840612340535611,vxo,0.00484061234053561,-8.673617379884035e-19
+Oil supply spike,combined,maize,13,0,vxo,0,0
+Oil supply spike,combined,maize,14,0,vxo,0,0
+Oil supply spike,combined,maize,15,0,vxo,0,0
+Oil supply spike,combined,maize,16,0,vxo,0,0
+Oil supply spike,combined,maize,17,0,vxo,0,0
+Oil supply spike,combined,maize,18,0,vxo,0,0
+Oil supply spike,combined,maize,19,0,vxo,0,0
+Oil supply spike,combined,maize,20,0,vxo,0,0
+Oil supply spike,combined,maize,21,0,vxo,0,0
+Oil supply spike,combined,maize,22,0,vxo,0,0
+Oil supply spike,combined,maize,23,0,vxo,0,0
+Oil supply spike,combined,maize,24,0,vxo,0,0
+Oil supply spike,combined,ngas_us,1,0,vxo,0,0
+Oil supply spike,combined,ngas_us,2,0,vxo,0,0
+Oil supply spike,combined,ngas_us,3,-0.12634579893834025,vxo,-0.12634579893834022,2.7755575615628914e-17
+Oil supply spike,combined,ngas_us,4,-0.3254173292752872,vxo,-0.32541732927528727,-5.551115123125783e-17
+Oil supply spike,combined,ngas_us,5,-0.12585155962639571,vxo,-0.12585155962639571,0
+Oil supply spike,combined,ngas_us,6,0.15400506249153587,vxo,0.1540050624915359,2.7755575615628914e-17
+Oil supply spike,combined,ngas_us,7,0.021156385335166054,vxo,0.02115638533516605,-3.469446951953614e-18
+Oil supply spike,combined,ngas_us,8,0.0969872263255816,vxo,0.0969872263255816,0
+Oil supply spike,combined,ngas_us,9,-0.06305389101735001,vxo,-0.06305389101735001,0
+Oil supply spike,combined,ngas_us,10,-0.010955117543645842,vxo,-0.01095511754364584,1.734723475976807e-18
+Oil supply spike,combined,ngas_us,11,0.11798513725645221,vxo,0.1179851372564522,-1.3877787807814457e-17
+Oil supply spike,combined,ngas_us,12,-0.00362702521160995,vxo,-0.00362702521160995,0
+Oil supply spike,combined,ngas_us,13,0,vxo,0,0
+Oil supply spike,combined,ngas_us,14,0,vxo,0,0
+Oil supply spike,combined,ngas_us,15,0,vxo,0,0
+Oil supply spike,combined,ngas_us,16,0,vxo,0,0
+Oil supply spike,combined,ngas_us,17,0,vxo,0,0
+Oil supply spike,combined,ngas_us,18,0,vxo,0,0
+Oil supply spike,combined,ngas_us,19,0,vxo,0,0
+Oil supply spike,combined,ngas_us,20,0,vxo,0,0
+Oil supply spike,combined,ngas_us,21,0,vxo,0,0
+Oil supply spike,combined,ngas_us,22,0,vxo,0,0
+Oil supply spike,combined,ngas_us,23,0,vxo,0,0
+Oil supply spike,combined,ngas_us,24,0,vxo,0,0
+Oil supply spike,combined,nickel,1,0,vxo,0,0
+Oil supply spike,combined,nickel,2,0,vxo,0,0
+Oil supply spike,combined,nickel,3,-0.009709257643316297,vxo,-0.0097092576433163,-3.469446951953614e-18
+Oil supply spike,combined,nickel,4,0.07124244998616108,vxo,0.07124244998616108,0
+Oil supply spike,combined,nickel,5,0.0032934958125293195,vxo,0.00329349581252932,4.336808689942018e-19
+Oil supply spike,combined,nickel,6,0.2516737723359531,vxo,0.2516737723359531,0
+Oil supply spike,combined,nickel,7,0.1168742891145433,vxo,0.11687428911454328,-1.3877787807814457e-17
+Oil supply spike,combined,nickel,8,0.006594608493824171,vxo,0.00659460849382417,-8.673617379884035e-19
+Oil supply spike,combined,nickel,9,-0.07823821782937916,vxo,-0.07823821782937915,1.3877787807814457e-17
+Oil supply spike,combined,nickel,10,0.07255391560995014,vxo,0.07255391560995016,1.3877787807814457e-17
+Oil supply spike,combined,nickel,11,0.026263468067168318,vxo,0.02626346806716832,3.469446951953614e-18
+Oil supply spike,combined,nickel,12,-0.053312453907093535,vxo,-0.05331245390709354,-6.938893903907228e-18
+Oil supply spike,combined,nickel,13,0,vxo,0,0
+Oil supply spike,combined,nickel,14,0,vxo,0,0
+Oil supply spike,combined,nickel,15,0,vxo,0,0
+Oil supply spike,combined,nickel,16,0,vxo,0,0
+Oil supply spike,combined,nickel,17,0,vxo,0,0
+Oil supply spike,combined,nickel,18,0,vxo,0,0
+Oil supply spike,combined,nickel,19,0,vxo,0,0
+Oil supply spike,combined,nickel,20,0,vxo,0,0
+Oil supply spike,combined,nickel,21,0,vxo,0,0
+Oil supply spike,combined,nickel,22,0,vxo,0,0
+Oil supply spike,combined,nickel,23,0,vxo,0,0
+Oil supply spike,combined,nickel,24,0,vxo,0,0
+Oil supply spike,combined,platinum,1,0,vxo,0,0
+Oil supply spike,combined,platinum,2,0,vxo,0,0
+Oil supply spike,combined,platinum,3,0.10443928434772003,vxo,0.10443928434772004,1.3877787807814457e-17
+Oil supply spike,combined,platinum,4,0.1971961118704813,vxo,0.19719611187048136,5.551115123125783e-17
+Oil supply spike,combined,platinum,5,-0.08439409876325646,vxo,-0.08439409876325646,0
+Oil supply spike,combined,platinum,6,0.20185791401436884,vxo,0.20185791401436887,2.7755575615628914e-17
+Oil supply spike,combined,platinum,7,0.05062612874635156,vxo,0.05062612874635157,6.938893903907228e-18
+Oil supply spike,combined,platinum,8,0.054299366653909754,vxo,0.05429936665390976,6.938893903907228e-18
+Oil supply spike,combined,platinum,9,-0.10335112990838899,vxo,-0.10335112990838898,1.3877787807814457e-17
+Oil supply spike,combined,platinum,10,-0.041107403098139476,vxo,-0.04110740309813947,6.938893903907228e-18
+Oil supply spike,combined,platinum,11,0.1335648806000087,vxo,0.1335648806000087,0
+Oil supply spike,combined,platinum,12,0.042616854881364394,vxo,0.0426168548813644,6.938893903907228e-18
+Oil supply spike,combined,platinum,13,0,vxo,0,0
+Oil supply spike,combined,platinum,14,0,vxo,0,0
+Oil supply spike,combined,platinum,15,0,vxo,0,0
+Oil supply spike,combined,platinum,16,0,vxo,0,0
+Oil supply spike,combined,platinum,17,0,vxo,0,0
+Oil supply spike,combined,platinum,18,0,vxo,0,0
+Oil supply spike,combined,platinum,19,0,vxo,0,0
+Oil supply spike,combined,platinum,20,0,vxo,0,0
+Oil supply spike,combined,platinum,21,0,vxo,0,0
+Oil supply spike,combined,platinum,22,0,vxo,0,0
+Oil supply spike,combined,platinum,23,0,vxo,0,0
+Oil supply spike,combined,platinum,24,0,vxo,0,0
+Oil supply spike,combined,silver,1,0,vxo,0,0
+Oil supply spike,combined,silver,2,0,vxo,0,0
+Oil supply spike,combined,silver,3,0.3395610008467846,vxo,0.3395610008467846,0
+Oil supply spike,combined,silver,4,0.0771008200587985,vxo,0.07710082005879848,-1.3877787807814457e-17
+Oil supply spike,combined,silver,5,-0.04785029237928055,vxo,-0.04785029237928054,6.938893903907228e-18
+Oil supply spike,combined,silver,6,0.10983386022392323,vxo,0.10983386022392325,1.3877787807814457e-17
+Oil supply spike,combined,silver,7,0.09146305684002481,vxo,0.0914630568400248,-1.3877787807814457e-17
+Oil supply spike,combined,silver,8,0.048262725327886676,vxo,0.04826272532788667,-6.938893903907228e-18
+Oil supply spike,combined,silver,9,-0.03484006038391468,vxo,-0.03484006038391468,0
+Oil supply spike,combined,silver,10,2.464747197651408e-4,vxo,2.464747197651408e-4,0
+Oil supply spike,combined,silver,11,0.12296787702477197,vxo,0.12296787702477194,-2.7755575615628914e-17
+Oil supply spike,combined,silver,12,-0.003720860313007489,vxo,-0.00372086031300749,-8.673617379884035e-19
+Oil supply spike,combined,silver,13,0,vxo,0,0
+Oil supply spike,combined,silver,14,0,vxo,0,0
+Oil supply spike,combined,silver,15,0,vxo,0,0
+Oil supply spike,combined,silver,16,0,vxo,0,0
+Oil supply spike,combined,silver,17,0,vxo,0,0
+Oil supply spike,combined,silver,18,0,vxo,0,0
+Oil supply spike,combined,silver,19,0,vxo,0,0
+Oil supply spike,combined,silver,20,0,vxo,0,0
+Oil supply spike,combined,silver,21,0,vxo,0,0
+Oil supply spike,combined,silver,22,0,vxo,0,0
+Oil supply spike,combined,silver,23,0,vxo,0,0
+Oil supply spike,combined,silver,24,0,vxo,0,0
+Oil supply spike,combined,soybeans,1,0,vxo,0,0
+Oil supply spike,combined,soybeans,2,0,vxo,0,0
+Oil supply spike,combined,soybeans,3,-0.15813166305557252,vxo,-0.15813166305557255,-2.7755575615628914e-17
+Oil supply spike,combined,soybeans,4,-0.3090700347618354,vxo,-0.3090700347618355,-5.551115123125783e-17
+Oil supply spike,combined,soybeans,5,0.0014176269648688996,vxo,0.0014176269648689,4.336808689942018e-19
+Oil supply spike,combined,soybeans,6,0.14447205576006764,vxo,0.1444720557600676,-2.7755575615628914e-17
+Oil supply spike,combined,soybeans,7,0.054416455634726524,vxo,0.05441645563472652,-6.938893903907228e-18
+Oil supply spike,combined,soybeans,8,0.03134863352202532,vxo,0.03134863352202532,0
+Oil supply spike,combined,soybeans,9,-0.03911325379043859,vxo,-0.03911325379043857,2.0816681711721685e-17
+Oil supply spike,combined,soybeans,10,0.1378104835549901,vxo,0.1378104835549901,0
+Oil supply spike,combined,soybeans,11,-0.06470003724692722,vxo,-0.0647000372469272,1.3877787807814457e-17
+Oil supply spike,combined,soybeans,12,-0.05047406607264997,vxo,-0.05047406607264997,0
+Oil supply spike,combined,soybeans,13,0,vxo,0,0
+Oil supply spike,combined,soybeans,14,0,vxo,0,0
+Oil supply spike,combined,soybeans,15,0,vxo,0,0
+Oil supply spike,combined,soybeans,16,0,vxo,0,0
+Oil supply spike,combined,soybeans,17,0,vxo,0,0
+Oil supply spike,combined,soybeans,18,0,vxo,0,0
+Oil supply spike,combined,soybeans,19,0,vxo,0,0
+Oil supply spike,combined,soybeans,20,0,vxo,0,0
+Oil supply spike,combined,soybeans,21,0,vxo,0,0
+Oil supply spike,combined,soybeans,22,0,vxo,0,0
+Oil supply spike,combined,soybeans,23,0,vxo,0,0
+Oil supply spike,combined,soybeans,24,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,1,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,2,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,3,-0.11048706540566662,vxo,-0.1104870654056666,1.3877787807814457e-17
+Oil supply spike,combined,sugar_wld,4,-0.1228731700961522,vxo,-0.1228731700961522,0
+Oil supply spike,combined,sugar_wld,5,-0.08936980842429616,vxo,-0.08936980842429615,1.3877787807814457e-17
+Oil supply spike,combined,sugar_wld,6,0.004087390433190219,vxo,0.00408739043319022,8.673617379884035e-19
+Oil supply spike,combined,sugar_wld,7,0.1608649675068989,vxo,0.1608649675068989,0
+Oil supply spike,combined,sugar_wld,8,0.10425317975471374,vxo,0.10425317975471374,0
+Oil supply spike,combined,sugar_wld,9,-0.005751672531517259,vxo,-0.00575167253151726,-8.673617379884035e-19
+Oil supply spike,combined,sugar_wld,10,0.044754841421152235,vxo,0.04475484142115223,-6.938893903907228e-18
+Oil supply spike,combined,sugar_wld,11,0.03188166093862144,vxo,0.03188166093862144,0
+Oil supply spike,combined,sugar_wld,12,-0.01024411433911468,vxo,-0.01024411433911468,0
+Oil supply spike,combined,sugar_wld,13,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,14,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,15,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,16,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,17,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,18,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,19,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,20,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,21,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,22,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,23,0,vxo,0,0
+Oil supply spike,combined,sugar_wld,24,0,vxo,0,0
+Oil supply spike,combined,tin,1,0,vxo,0,0
+Oil supply spike,combined,tin,2,0,vxo,0,0
+Oil supply spike,combined,tin,3,-0.03586546020250825,vxo,-0.03586546020250825,0
+Oil supply spike,combined,tin,4,0.1456126390881475,vxo,0.1456126390881475,0
+Oil supply spike,combined,tin,5,0.017428953830563084,vxo,0.01742895383056308,-3.469446951953614e-18
+Oil supply spike,combined,tin,6,0.20939118134946935,vxo,0.2093911813494694,5.551115123125783e-17
+Oil supply spike,combined,tin,7,0.09705774120565747,vxo,0.0970577412056575,2.7755575615628914e-17
+Oil supply spike,combined,tin,8,0.08350088040626939,vxo,0.08350088040626939,0
+Oil supply spike,combined,tin,9,-0.11606757505269813,vxo,-0.11606757505269812,1.3877787807814457e-17
+Oil supply spike,combined,tin,10,7.176345698253097e-4,vxo,7.176345698253097e-4,0
+Oil supply spike,combined,tin,11,0.11193936863729176,vxo,0.11193936863729172,-4.163336342344337e-17
+Oil supply spike,combined,tin,12,-0.02653651025621671,vxo,-0.02653651025621671,0
+Oil supply spike,combined,tin,13,0,vxo,0,0
+Oil supply spike,combined,tin,14,0,vxo,0,0
+Oil supply spike,combined,tin,15,0,vxo,0,0
+Oil supply spike,combined,tin,16,0,vxo,0,0
+Oil supply spike,combined,tin,17,0,vxo,0,0
+Oil supply spike,combined,tin,18,0,vxo,0,0
+Oil supply spike,combined,tin,19,0,vxo,0,0
+Oil supply spike,combined,tin,20,0,vxo,0,0
+Oil supply spike,combined,tin,21,0,vxo,0,0
+Oil supply spike,combined,tin,22,0,vxo,0,0
+Oil supply spike,combined,tin,23,0,vxo,0,0
+Oil supply spike,combined,tin,24,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,1,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,2,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,3,-0.07832284059159741,vxo,-0.0783228405915974,1.3877787807814457e-17
+Oil supply spike,combined,wheat_us_hrw,4,-0.19659440804760492,vxo,-0.1965944080476049,2.7755575615628914e-17
+Oil supply spike,combined,wheat_us_hrw,5,0.06789824206348588,vxo,0.06789824206348588,0
+Oil supply spike,combined,wheat_us_hrw,6,0.09948163974983373,vxo,0.09948163974983372,-1.3877787807814457e-17
+Oil supply spike,combined,wheat_us_hrw,7,-0.022686420976974223,vxo,-0.02268642097697422,3.469446951953614e-18
+Oil supply spike,combined,wheat_us_hrw,8,-0.03152446312691514,vxo,-0.03152446312691514,0
+Oil supply spike,combined,wheat_us_hrw,9,-0.090266436440855,vxo,-0.090266436440855,0
+Oil supply spike,combined,wheat_us_hrw,10,0.12194807932385282,vxo,0.12194807932385283,1.3877787807814457e-17
+Oil supply spike,combined,wheat_us_hrw,11,0.026822199760832655,vxo,0.02682219976083266,3.469446951953614e-18
+Oil supply spike,combined,wheat_us_hrw,12,-8.564609580822075e-4,vxo,-8.564609580822073e-4,2.168404344971009e-19
+Oil supply spike,combined,wheat_us_hrw,13,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,14,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,15,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,16,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,17,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,18,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,19,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,20,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,21,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,22,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,23,0,vxo,0,0
+Oil supply spike,combined,wheat_us_hrw,24,0,vxo,0,0
+Oil supply spike,combined,zinc,1,0,vxo,0,0
+Oil supply spike,combined,zinc,2,0,vxo,0,0
+Oil supply spike,combined,zinc,3,0.20480628779063875,vxo,0.20480628779063875,0
+Oil supply spike,combined,zinc,4,0.2440669258975624,vxo,0.2440669258975624,0
+Oil supply spike,combined,zinc,5,0.00436231276923852,vxo,0.00436231276923852,0
+Oil supply spike,combined,zinc,6,0.262832056560683,vxo,0.262832056560683,0
+Oil supply spike,combined,zinc,7,0.03247605340971541,vxo,0.03247605340971542,6.938893903907228e-18
+Oil supply spike,combined,zinc,8,0.05827775773012589,vxo,0.0582777577301259,6.938893903907228e-18
+Oil supply spike,combined,zinc,9,0.02069208620361549,vxo,0.02069208620361549,0
+Oil supply spike,combined,zinc,10,0.017161603046887935,vxo,0.01716160304688794,3.469446951953614e-18
+Oil supply spike,combined,zinc,11,-0.012454353723716232,vxo,-0.01245435372371623,1.734723475976807e-18
+Oil supply spike,combined,zinc,12,-0.0467133669069162,vxo,-0.04671336690691621,-6.938893903907228e-18
+Oil supply spike,combined,zinc,13,0,vxo,0,0
+Oil supply spike,combined,zinc,14,0,vxo,0,0
+Oil supply spike,combined,zinc,15,0,vxo,0,0
+Oil supply spike,combined,zinc,16,0,vxo,0,0
+Oil supply spike,combined,zinc,17,0,vxo,0,0
+Oil supply spike,combined,zinc,18,0,vxo,0,0
+Oil supply spike,combined,zinc,19,0,vxo,0,0
+Oil supply spike,combined,zinc,20,0,vxo,0,0
+Oil supply spike,combined,zinc,21,0,vxo,0,0
+Oil supply spike,combined,zinc,22,0,vxo,0,0
+Oil supply spike,combined,zinc,23,0,vxo,0,0
+Oil supply spike,combined,zinc,24,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,1,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,2,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,3,0.053192866140132675,vxo,0.05319286614013268,6.938893903907228e-18
+girf-ngas-1sigma,combined,aluminium,4,-0.1445477250717588,vxo,-0.14454772507175886,-5.551115123125783e-17
+girf-ngas-1sigma,combined,aluminium,5,-0.0276816777144988,vxo,-0.0276816777144988,0
+girf-ngas-1sigma,combined,aluminium,6,0.20428981647582148,vxo,0.2042898164758215,2.7755575615628914e-17
+girf-ngas-1sigma,combined,aluminium,7,0.3127613718596134,vxo,0.3127613718596133,-1.1102230246251565e-16
+girf-ngas-1sigma,combined,aluminium,8,-0.016586132738199713,vxo,-0.01658613273819971,3.469446951953614e-18
+girf-ngas-1sigma,combined,aluminium,9,-0.16543461912612992,vxo,-0.16543461912612994,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,aluminium,10,-0.1194251469676808,vxo,-0.1194251469676808,0
+girf-ngas-1sigma,combined,aluminium,11,-0.08306160645321327,vxo,-0.08306160645321327,0
+girf-ngas-1sigma,combined,aluminium,12,-0.1209412819770544,vxo,-0.12094128197705444,-4.163336342344337e-17
+girf-ngas-1sigma,combined,aluminium,13,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,14,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,15,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,16,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,17,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,18,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,19,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,20,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,21,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,22,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,23,0,vxo,0,0
+girf-ngas-1sigma,combined,aluminium,24,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,1,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,2,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,3,0.12194307464948943,vxo,0.12194307464948945,1.3877787807814457e-17
+girf-ngas-1sigma,combined,cocoa,4,-0.027134240407891516,vxo,-0.02713424040789151,6.938893903907228e-18
+girf-ngas-1sigma,combined,cocoa,5,0.023215460996294953,vxo,0.02321546099629495,-3.469446951953614e-18
+girf-ngas-1sigma,combined,cocoa,6,-0.2541080528902963,vxo,-0.25410805289029637,-5.551115123125783e-17
+girf-ngas-1sigma,combined,cocoa,7,-0.08120603542386083,vxo,-0.0812060354238608,2.7755575615628914e-17
+girf-ngas-1sigma,combined,cocoa,8,-0.06988991737015204,vxo,-0.06988991737015203,1.3877787807814457e-17
+girf-ngas-1sigma,combined,cocoa,9,-0.15006702196013794,vxo,-0.150067021960138,-5.551115123125783e-17
+girf-ngas-1sigma,combined,cocoa,10,-0.03241693662537666,vxo,-0.03241693662537666,0
+girf-ngas-1sigma,combined,cocoa,11,0.21157125509620217,vxo,0.21157125509620217,0
+girf-ngas-1sigma,combined,cocoa,12,0.20803354614364727,vxo,0.20803354614364725,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,cocoa,13,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,14,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,15,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,16,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,17,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,18,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,19,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,20,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,21,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,22,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,23,0,vxo,0,0
+girf-ngas-1sigma,combined,cocoa,24,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,1,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,2,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,3,-0.006141066281371498,vxo,-0.0061410662813715,-1.734723475976807e-18
+girf-ngas-1sigma,combined,coffee_arabic,4,-0.0409333993673413,vxo,-0.04093339936734129,6.938893903907228e-18
+girf-ngas-1sigma,combined,coffee_arabic,5,0.039271502235966746,vxo,0.03927150223596673,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,coffee_arabic,6,-0.038555077525393514,vxo,-0.03855507752539351,6.938893903907228e-18
+girf-ngas-1sigma,combined,coffee_arabic,7,-0.10257369299762951,vxo,-0.10257369299762951,0
+girf-ngas-1sigma,combined,coffee_arabic,8,-0.04661670295449443,vxo,-0.04661670295449443,0
+girf-ngas-1sigma,combined,coffee_arabic,9,0.06517364541127729,vxo,0.06517364541127728,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,coffee_arabic,10,-0.01982194160104524,vxo,-0.01982194160104524,0
+girf-ngas-1sigma,combined,coffee_arabic,11,-0.06669457065572502,vxo,-0.06669457065572501,1.3877787807814457e-17
+girf-ngas-1sigma,combined,coffee_arabic,12,0.033165086971338145,vxo,0.03316508697133814,-6.938893903907228e-18
+girf-ngas-1sigma,combined,coffee_arabic,13,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,14,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,15,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,16,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,17,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,18,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,19,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,20,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,21,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,22,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,23,0,vxo,0,0
+girf-ngas-1sigma,combined,coffee_arabic,24,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,1,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,2,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,3,-0.04259133231673787,vxo,-0.04259133231673787,0
+girf-ngas-1sigma,combined,copper,4,-0.1206054989573451,vxo,-0.1206054989573451,0
+girf-ngas-1sigma,combined,copper,5,0.07267297106874522,vxo,0.07267297106874523,1.3877787807814457e-17
+girf-ngas-1sigma,combined,copper,6,0.1503124617111065,vxo,0.1503124617111065,0
+girf-ngas-1sigma,combined,copper,7,0.2019904484734161,vxo,0.20199044847341605,-5.551115123125783e-17
+girf-ngas-1sigma,combined,copper,8,-0.053629686624159165,vxo,-0.05362968662415918,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,copper,9,-0.19004098110521073,vxo,-0.1900409811052107,2.7755575615628914e-17
+girf-ngas-1sigma,combined,copper,10,-0.22074111589833909,vxo,-0.2207411158983391,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,copper,11,-0.12209185649866096,vxo,-0.12209185649866096,0
+girf-ngas-1sigma,combined,copper,12,0.017651519054515563,vxo,0.01765151905451556,-3.469446951953614e-18
+girf-ngas-1sigma,combined,copper,13,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,14,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,15,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,16,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,17,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,18,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,19,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,20,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,21,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,22,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,23,0,vxo,0,0
+girf-ngas-1sigma,combined,copper,24,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,1,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,2,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,3,0.32729294241370993,vxo,0.3272929424137099,-5.551115123125783e-17
+girf-ngas-1sigma,combined,cotton_a_indx,4,0.23631030645351062,vxo,0.23631030645351067,5.551115123125783e-17
+girf-ngas-1sigma,combined,cotton_a_indx,5,-0.0939064256699675,vxo,-0.09390642566996754,-4.163336342344337e-17
+girf-ngas-1sigma,combined,cotton_a_indx,6,-0.1812746748622295,vxo,-0.1812746748622295,0
+girf-ngas-1sigma,combined,cotton_a_indx,7,0.07835309405535965,vxo,0.07835309405535966,1.3877787807814457e-17
+girf-ngas-1sigma,combined,cotton_a_indx,8,0.061804931852219525,vxo,0.06180493185221953,6.938893903907228e-18
+girf-ngas-1sigma,combined,cotton_a_indx,9,-0.14226197434452847,vxo,-0.14226197434452845,2.7755575615628914e-17
+girf-ngas-1sigma,combined,cotton_a_indx,10,-0.028904705027199773,vxo,-0.02890470502719978,-6.938893903907228e-18
+girf-ngas-1sigma,combined,cotton_a_indx,11,0.06548058620734701,vxo,0.065480586207347,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,cotton_a_indx,12,0.01674000561999099,vxo,0.01674000561999099,0
+girf-ngas-1sigma,combined,cotton_a_indx,13,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,14,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,15,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,16,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,17,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,18,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,19,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,20,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,21,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,22,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,23,0,vxo,0,0
+girf-ngas-1sigma,combined,cotton_a_indx,24,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,1,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,2,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,3,-0.20262106479182293,vxo,-0.2026210647918229,2.7755575615628914e-17
+girf-ngas-1sigma,combined,crude_wti,4,-0.18537086121480564,vxo,-0.18537086121480567,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,crude_wti,5,0.1151266709142833,vxo,0.11512667091428332,1.3877787807814457e-17
+girf-ngas-1sigma,combined,crude_wti,6,0.17751831628270168,vxo,0.1775183162827017,2.7755575615628914e-17
+girf-ngas-1sigma,combined,crude_wti,7,0.3471174966789145,vxo,0.34711749667891445,-5.551115123125783e-17
+girf-ngas-1sigma,combined,crude_wti,8,0.1489020956115006,vxo,0.1489020956115006,0
+girf-ngas-1sigma,combined,crude_wti,9,-0.15029178730613385,vxo,-0.15029178730613385,0
+girf-ngas-1sigma,combined,crude_wti,10,-0.29805519504624184,vxo,-0.2980551950462419,-5.551115123125783e-17
+girf-ngas-1sigma,combined,crude_wti,11,-0.14953955120532542,vxo,-0.14953955120532544,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,crude_wti,12,0.00432073605819366,vxo,0.00432073605819366,0
+girf-ngas-1sigma,combined,crude_wti,13,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,14,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,15,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,16,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,17,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,18,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,19,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,20,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,21,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,22,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,23,0,vxo,0,0
+girf-ngas-1sigma,combined,crude_wti,24,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,1,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,2,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,3,-0.21781445889012002,vxo,-0.21781445889012005,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,gold,4,-0.02647116222687695,vxo,-0.02647116222687695,0
+girf-ngas-1sigma,combined,gold,5,0.2918685242072994,vxo,0.2918685242072995,5.551115123125783e-17
+girf-ngas-1sigma,combined,gold,6,0.04859672855490711,vxo,0.04859672855490712,6.938893903907228e-18
+girf-ngas-1sigma,combined,gold,7,-0.14087124969190035,vxo,-0.14087124969190035,0
+girf-ngas-1sigma,combined,gold,8,-0.01068527110821808,vxo,-0.01068527110821808,0
+girf-ngas-1sigma,combined,gold,9,-0.023561251764169965,vxo,-0.02356125176416997,-3.469446951953614e-18
+girf-ngas-1sigma,combined,gold,10,-0.060254013279598215,vxo,-0.0602540132795982,1.3877787807814457e-17
+girf-ngas-1sigma,combined,gold,11,-0.07393581971622167,vxo,-0.07393581971622168,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,gold,12,0.052303788830620035,vxo,0.05230378883062003,-6.938893903907228e-18
+girf-ngas-1sigma,combined,gold,13,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,14,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,15,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,16,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,17,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,18,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,19,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,20,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,21,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,22,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,23,0,vxo,0,0
+girf-ngas-1sigma,combined,gold,24,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,1,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,2,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,3,-0.010758499283905253,vxo,-0.01075849928390525,3.469446951953614e-18
+girf-ngas-1sigma,combined,lead,4,-0.28672102808568317,vxo,-0.28672102808568317,0
+girf-ngas-1sigma,combined,lead,5,0.02382030410971182,vxo,0.02382030410971182,0
+girf-ngas-1sigma,combined,lead,6,-0.005152448163301231,vxo,-0.00515244816330123,8.673617379884035e-19
+girf-ngas-1sigma,combined,lead,7,0.08913321442585635,vxo,0.08913321442585637,1.3877787807814457e-17
+girf-ngas-1sigma,combined,lead,8,-0.03938276937721012,vxo,-0.03938276937721012,0
+girf-ngas-1sigma,combined,lead,9,0.05296654138800498,vxo,0.05296654138800499,6.938893903907228e-18
+girf-ngas-1sigma,combined,lead,10,-0.017601370801646494,vxo,-0.01760137080164649,3.469446951953614e-18
+girf-ngas-1sigma,combined,lead,11,-0.12279484337687943,vxo,-0.1227948433768794,2.7755575615628914e-17
+girf-ngas-1sigma,combined,lead,12,-0.07100035722783132,vxo,-0.07100035722783132,0
+girf-ngas-1sigma,combined,lead,13,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,14,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,15,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,16,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,17,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,18,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,19,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,20,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,21,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,22,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,23,0,vxo,0,0
+girf-ngas-1sigma,combined,lead,24,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,1,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,2,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,3,0.17510643971698123,vxo,0.17510643971698123,0
+girf-ngas-1sigma,combined,maize,4,0.15001125292034703,vxo,0.150011252920347,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,maize,5,-0.14665067655314742,vxo,-0.14665067655314742,0
+girf-ngas-1sigma,combined,maize,6,-0.24266468108707095,vxo,-0.24266468108707095,0
+girf-ngas-1sigma,combined,maize,7,0.08319932165699412,vxo,0.08319932165699412,0
+girf-ngas-1sigma,combined,maize,8,0.12587259655304994,vxo,0.12587259655304991,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,maize,9,-0.050407935082981754,vxo,-0.05040793508298175,6.938893903907228e-18
+girf-ngas-1sigma,combined,maize,10,-0.11408189155316517,vxo,-0.11408189155316514,2.7755575615628914e-17
+girf-ngas-1sigma,combined,maize,11,0.11424607143179394,vxo,0.11424607143179392,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,maize,12,0.08014669788473515,vxo,0.08014669788473515,0
+girf-ngas-1sigma,combined,maize,13,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,14,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,15,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,16,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,17,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,18,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,19,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,20,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,21,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,22,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,23,0,vxo,0,0
+girf-ngas-1sigma,combined,maize,24,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,1,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,2,1,vxo,1,0
+girf-ngas-1sigma,combined,ngas_us,3,0.09675434426952643,vxo,0.09675434426952642,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,ngas_us,4,-0.056576980443825794,vxo,-0.05657698044382579,6.938893903907228e-18
+girf-ngas-1sigma,combined,ngas_us,5,0.04998222930407005,vxo,0.04998222930407005,0
+girf-ngas-1sigma,combined,ngas_us,6,-0.033239738199237784,vxo,-0.03323973819923779,-6.938893903907228e-18
+girf-ngas-1sigma,combined,ngas_us,7,0.19395669281471115,vxo,0.19395669281471117,2.7755575615628914e-17
+girf-ngas-1sigma,combined,ngas_us,8,0.06442857666411661,vxo,0.06442857666411661,0
+girf-ngas-1sigma,combined,ngas_us,9,-0.1229387743448594,vxo,-0.1229387743448594,0
+girf-ngas-1sigma,combined,ngas_us,10,-0.09635805831586193,vxo,-0.09635805831586194,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,ngas_us,11,0.03031497042624586,vxo,0.03031497042624586,0
+girf-ngas-1sigma,combined,ngas_us,12,0.06585846508122414,vxo,0.06585846508122413,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,ngas_us,13,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,14,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,15,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,16,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,17,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,18,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,19,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,20,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,21,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,22,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,23,0,vxo,0,0
+girf-ngas-1sigma,combined,ngas_us,24,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,1,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,2,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,3,-0.018958397431200417,vxo,-0.01895839743120042,-3.469446951953614e-18
+girf-ngas-1sigma,combined,nickel,4,-0.07449430263868038,vxo,-0.07449430263868038,0
+girf-ngas-1sigma,combined,nickel,5,0.10784165129770443,vxo,0.10784165129770446,2.7755575615628914e-17
+girf-ngas-1sigma,combined,nickel,6,0.05810049484502847,vxo,0.05810049484502848,6.938893903907228e-18
+girf-ngas-1sigma,combined,nickel,7,-0.0041329890751806205,vxo,-0.00413298907518062,8.673617379884035e-19
+girf-ngas-1sigma,combined,nickel,8,-0.0712403945279798,vxo,-0.0712403945279798,0
+girf-ngas-1sigma,combined,nickel,9,0.08425423383383376,vxo,0.08425423383383376,0
+girf-ngas-1sigma,combined,nickel,10,0.012959586747091748,vxo,0.01295958674709175,1.734723475976807e-18
+girf-ngas-1sigma,combined,nickel,11,-0.17321986916672455,vxo,-0.17321986916672452,2.7755575615628914e-17
+girf-ngas-1sigma,combined,nickel,12,-0.14099404906836388,vxo,-0.14099404906836388,0
+girf-ngas-1sigma,combined,nickel,13,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,14,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,15,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,16,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,17,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,18,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,19,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,20,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,21,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,22,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,23,0,vxo,0,0
+girf-ngas-1sigma,combined,nickel,24,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,1,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,2,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,3,0.16188495786648927,vxo,0.16188495786648924,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,platinum,4,0.10225851821306582,vxo,0.10225851821306586,4.163336342344337e-17
+girf-ngas-1sigma,combined,platinum,5,0.1354911061176834,vxo,0.13549110611768336,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,platinum,6,-0.18904211366536805,vxo,-0.18904211366536808,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,platinum,7,-0.01692738155615349,vxo,-0.01692738155615349,0
+girf-ngas-1sigma,combined,platinum,8,0.0215133970238034,vxo,0.0215133970238034,0
+girf-ngas-1sigma,combined,platinum,9,-0.11425777760552218,vxo,-0.1142577776055222,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,platinum,10,-0.1899738307061837,vxo,-0.18997383070618373,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,platinum,11,-0.06246470728413458,vxo,-0.06246470728413458,0
+girf-ngas-1sigma,combined,platinum,12,0.16500873456959597,vxo,0.16500873456959597,0
+girf-ngas-1sigma,combined,platinum,13,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,14,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,15,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,16,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,17,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,18,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,19,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,20,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,21,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,22,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,23,0,vxo,0,0
+girf-ngas-1sigma,combined,platinum,24,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,1,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,2,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,3,-0.08554305258328478,vxo,-0.08554305258328479,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,silver,4,0.08774637638966272,vxo,0.0877463763896627,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,silver,5,0.1590741250668405,vxo,0.15907412506684046,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,silver,6,-0.29257736607114826,vxo,-0.29257736607114826,0
+girf-ngas-1sigma,combined,silver,7,-0.1976069767674971,vxo,-0.1976069767674971,0
+girf-ngas-1sigma,combined,silver,8,0.11908239846322131,vxo,0.11908239846322131,0
+girf-ngas-1sigma,combined,silver,9,0.041139103506493274,vxo,0.04113910350649327,-6.938893903907228e-18
+girf-ngas-1sigma,combined,silver,10,-0.11711950405858298,vxo,-0.11711950405858298,0
+girf-ngas-1sigma,combined,silver,11,-0.06684526951157316,vxo,-0.06684526951157316,0
+girf-ngas-1sigma,combined,silver,12,0.12781036433440765,vxo,0.1278103643344077,5.551115123125783e-17
+girf-ngas-1sigma,combined,silver,13,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,14,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,15,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,16,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,17,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,18,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,19,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,20,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,21,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,22,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,23,0,vxo,0,0
+girf-ngas-1sigma,combined,silver,24,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,1,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,2,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,3,-0.05220697066540472,vxo,-0.05220697066540472,0
+girf-ngas-1sigma,combined,soybeans,4,-2.4230144001482525e-4,vxo,-2.4230144001482525e-4,0
+girf-ngas-1sigma,combined,soybeans,5,-0.11331328153252347,vxo,-0.11331328153252349,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,soybeans,6,-0.03684483225682592,vxo,-0.03684483225682592,0
+girf-ngas-1sigma,combined,soybeans,7,0.20091966217977736,vxo,0.2009196621797774,2.7755575615628914e-17
+girf-ngas-1sigma,combined,soybeans,8,0.05659915301207343,vxo,0.05659915301207344,6.938893903907228e-18
+girf-ngas-1sigma,combined,soybeans,9,-0.025694207963274485,vxo,-0.02569420796327448,3.469446951953614e-18
+girf-ngas-1sigma,combined,soybeans,10,-0.08372792136294671,vxo,-0.08372792136294675,-4.163336342344337e-17
+girf-ngas-1sigma,combined,soybeans,11,0.03840798709099826,vxo,0.03840798709099826,0
+girf-ngas-1sigma,combined,soybeans,12,-0.06712190746324058,vxo,-0.06712190746324058,0
+girf-ngas-1sigma,combined,soybeans,13,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,14,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,15,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,16,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,17,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,18,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,19,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,20,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,21,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,22,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,23,0,vxo,0,0
+girf-ngas-1sigma,combined,soybeans,24,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,1,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,2,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,3,0.14860246854659728,vxo,0.14860246854659726,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,sugar_wld,4,-0.04817308402202927,vxo,-0.04817308402202927,0
+girf-ngas-1sigma,combined,sugar_wld,5,-0.37624748221579907,vxo,-0.376247482215799,5.551115123125783e-17
+girf-ngas-1sigma,combined,sugar_wld,6,-0.2294540629358938,vxo,-0.22945406293589377,2.7755575615628914e-17
+girf-ngas-1sigma,combined,sugar_wld,7,0.2745121504106389,vxo,0.274512150410639,5.551115123125783e-17
+girf-ngas-1sigma,combined,sugar_wld,8,0.27299670524077235,vxo,0.2729967052407723,-5.551115123125783e-17
+girf-ngas-1sigma,combined,sugar_wld,9,-0.13712481217282874,vxo,-0.13712481217282874,0
+girf-ngas-1sigma,combined,sugar_wld,10,-0.2225169536774199,vxo,-0.2225169536774198,8.326672684688674e-17
+girf-ngas-1sigma,combined,sugar_wld,11,0.05670964214347528,vxo,0.05670964214347528,0
+girf-ngas-1sigma,combined,sugar_wld,12,0.049121473556659384,vxo,0.04912147355665938,-6.938893903907228e-18
+girf-ngas-1sigma,combined,sugar_wld,13,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,14,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,15,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,16,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,17,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,18,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,19,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,20,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,21,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,22,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,23,0,vxo,0,0
+girf-ngas-1sigma,combined,sugar_wld,24,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,1,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,2,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,3,0.25432909156800426,vxo,0.2543290915680042,-5.551115123125783e-17
+girf-ngas-1sigma,combined,tin,4,0.10024016276068082,vxo,0.1002401627606808,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,tin,5,-0.06896992929000118,vxo,-0.06896992929000118,0
+girf-ngas-1sigma,combined,tin,6,-0.14041915925430282,vxo,-0.14041915925430284,-2.7755575615628914e-17
+girf-ngas-1sigma,combined,tin,7,0.29482930017092035,vxo,0.2948293001709204,5.551115123125783e-17
+girf-ngas-1sigma,combined,tin,8,0.09422234983424874,vxo,0.09422234983424874,0
+girf-ngas-1sigma,combined,tin,9,-0.2823421423232884,vxo,-0.2823421423232884,0
+girf-ngas-1sigma,combined,tin,10,-0.2103242008368149,vxo,-0.2103242008368149,0
+girf-ngas-1sigma,combined,tin,11,0.049581031753157624,vxo,0.04958103175315763,6.938893903907228e-18
+girf-ngas-1sigma,combined,tin,12,0.03700484736545697,vxo,0.03700484736545698,6.938893903907228e-18
+girf-ngas-1sigma,combined,tin,13,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,14,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,15,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,16,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,17,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,18,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,19,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,20,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,21,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,22,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,23,0,vxo,0,0
+girf-ngas-1sigma,combined,tin,24,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,1,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,2,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,3,-0.08493214940666574,vxo,-0.08493214940666574,0
+girf-ngas-1sigma,combined,wheat_us_hrw,4,0.08558655728929877,vxo,0.08558655728929876,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,wheat_us_hrw,5,-0.045906222680376106,vxo,-0.0459062226803761,6.938893903907228e-18
+girf-ngas-1sigma,combined,wheat_us_hrw,6,-0.1879230894825596,vxo,-0.18792308948255956,2.7755575615628914e-17
+girf-ngas-1sigma,combined,wheat_us_hrw,7,-0.07103133724176741,vxo,-0.07103133724176741,0
+girf-ngas-1sigma,combined,wheat_us_hrw,8,-0.0433463637152711,vxo,-0.04334636371527109,6.938893903907228e-18
+girf-ngas-1sigma,combined,wheat_us_hrw,9,0.023035202699212134,vxo,0.02303520269921213,-3.469446951953614e-18
+girf-ngas-1sigma,combined,wheat_us_hrw,10,-0.05383370624283578,vxo,-0.05383370624283579,-6.938893903907228e-18
+girf-ngas-1sigma,combined,wheat_us_hrw,11,0.00902497814640073,vxo,0.00902497814640073,0
+girf-ngas-1sigma,combined,wheat_us_hrw,12,0.028520381514086153,vxo,0.02852038151408615,-3.469446951953614e-18
+girf-ngas-1sigma,combined,wheat_us_hrw,13,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,14,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,15,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,16,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,17,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,18,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,19,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,20,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,21,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,22,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,23,0,vxo,0,0
+girf-ngas-1sigma,combined,wheat_us_hrw,24,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,1,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,2,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,3,-0.00554084059171593,vxo,-0.00554084059171593,0
+girf-ngas-1sigma,combined,zinc,4,-0.1401569892174775,vxo,-0.1401569892174775,0
+girf-ngas-1sigma,combined,zinc,5,0.10680727062548696,vxo,0.10680727062548696,0
+girf-ngas-1sigma,combined,zinc,6,-0.09179801146303443,vxo,-0.0917980114630344,2.7755575615628914e-17
+girf-ngas-1sigma,combined,zinc,7,-0.03424744082054523,vxo,-0.03424744082054524,-6.938893903907228e-18
+girf-ngas-1sigma,combined,zinc,8,0.04897841985091411,vxo,0.04897841985091412,6.938893903907228e-18
+girf-ngas-1sigma,combined,zinc,9,0.05921111976840163,vxo,0.05921111976840163,0
+girf-ngas-1sigma,combined,zinc,10,-0.10218541815184426,vxo,-0.10218541815184427,-1.3877787807814457e-17
+girf-ngas-1sigma,combined,zinc,11,-0.15646215208775124,vxo,-0.15646215208775124,0
+girf-ngas-1sigma,combined,zinc,12,0.014421318631138852,vxo,0.01442131863113885,-1.734723475976807e-18
+girf-ngas-1sigma,combined,zinc,13,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,14,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,15,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,16,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,17,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,18,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,19,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,20,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,21,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,22,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,23,0,vxo,0,0
+girf-ngas-1sigma,combined,zinc,24,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,1,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,2,0.5,vxo,0.5,0
+one_sigma_supply_shock,combined,aluminium,3,0.3603805195061829,vxo,0.3603805195061827,-1.6653345369377348e-16
+one_sigma_supply_shock,combined,aluminium,4,-0.11212492287468287,vxo,-0.1121249228746829,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,aluminium,5,0.1633082388510293,vxo,0.1633082388510293,0
+one_sigma_supply_shock,combined,aluminium,6,0.3704818106613188,vxo,0.37048181066131886,5.551115123125783e-17
+one_sigma_supply_shock,combined,aluminium,7,0.22394653548997429,vxo,0.2239465354899743,2.7755575615628914e-17
+one_sigma_supply_shock,combined,aluminium,8,-0.030119577208503234,vxo,-0.03011957720850323,3.469446951953614e-18
+one_sigma_supply_shock,combined,aluminium,9,-0.14075724878237778,vxo,-0.14075724878237778,0
+one_sigma_supply_shock,combined,aluminium,10,-0.1130790590812612,vxo,-0.1130790590812612,0
+one_sigma_supply_shock,combined,aluminium,11,-0.08577240655147284,vxo,-0.08577240655147284,0
+one_sigma_supply_shock,combined,aluminium,12,0.13441458137788634,vxo,0.13441458137788637,2.7755575615628914e-17
+one_sigma_supply_shock,combined,aluminium,13,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,14,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,15,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,16,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,17,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,18,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,19,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,20,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,21,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,22,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,23,0,vxo,0,0
+one_sigma_supply_shock,combined,aluminium,24,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,1,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,2,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,3,-0.061117260739597924,vxo,-0.06111726073959794,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,cocoa,4,-0.036955929279599994,vxo,-0.03695592927959999,6.938893903907228e-18
+one_sigma_supply_shock,combined,cocoa,5,0.0016801485559333404,vxo,0.00168014855593334,-4.336808689942018e-19
+one_sigma_supply_shock,combined,cocoa,6,-0.2312455284644263,vxo,-0.23124552846442628,2.7755575615628914e-17
+one_sigma_supply_shock,combined,cocoa,7,0.236151017289621,vxo,0.23615101728962096,-5.551115123125783e-17
+one_sigma_supply_shock,combined,cocoa,8,-0.03606919310610993,vxo,-0.03606919310610995,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,cocoa,9,0.012703101345798795,vxo,0.0127031013457988,5.204170427930421e-18
+one_sigma_supply_shock,combined,cocoa,10,0.16374374632212094,vxo,0.16374374632212096,2.7755575615628914e-17
+one_sigma_supply_shock,combined,cocoa,11,0.05479679908000437,vxo,0.05479679908000438,6.938893903907228e-18
+one_sigma_supply_shock,combined,cocoa,12,0.07400332207345661,vxo,0.07400332207345661,0
+one_sigma_supply_shock,combined,cocoa,13,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,14,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,15,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,16,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,17,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,18,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,19,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,20,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,21,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,22,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,23,0,vxo,0,0
+one_sigma_supply_shock,combined,cocoa,24,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,1,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,2,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,3,0.015433702643861324,vxo,0.01543370264386133,5.204170427930421e-18
+one_sigma_supply_shock,combined,coffee_arabic,4,0.14839449397327867,vxo,0.1483944939732786,-5.551115123125783e-17
+one_sigma_supply_shock,combined,coffee_arabic,5,-0.0181487346291197,vxo,-0.0181487346291197,0
+one_sigma_supply_shock,combined,coffee_arabic,6,-0.04874491664481903,vxo,-0.04874491664481903,0
+one_sigma_supply_shock,combined,coffee_arabic,7,-0.12823576636053283,vxo,-0.12823576636053283,0
+one_sigma_supply_shock,combined,coffee_arabic,8,0.1706982266805129,vxo,0.17069822668051288,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,coffee_arabic,9,0.18180345399274778,vxo,0.1818034539927478,2.7755575615628914e-17
+one_sigma_supply_shock,combined,coffee_arabic,10,-0.11893691560574633,vxo,-0.11893691560574632,1.3877787807814457e-17
+one_sigma_supply_shock,combined,coffee_arabic,11,-0.07916246210448175,vxo,-0.07916246210448172,2.7755575615628914e-17
+one_sigma_supply_shock,combined,coffee_arabic,12,0.05321789266007591,vxo,0.0532178926600759,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,coffee_arabic,13,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,14,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,15,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,16,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,17,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,18,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,19,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,20,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,21,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,22,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,23,0,vxo,0,0
+one_sigma_supply_shock,combined,coffee_arabic,24,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,1,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,2,1,vxo,1,0
+one_sigma_supply_shock,combined,copper,3,0.4803999714543893,vxo,0.48039997145438934,5.551115123125783e-17
+one_sigma_supply_shock,combined,copper,4,-0.07414249410261924,vxo,-0.07414249410261924,0
+one_sigma_supply_shock,combined,copper,5,0.18983017726519574,vxo,0.18983017726519577,2.7755575615628914e-17
+one_sigma_supply_shock,combined,copper,6,0.14922046400450864,vxo,0.14922046400450867,2.7755575615628914e-17
+one_sigma_supply_shock,combined,copper,7,0.20652028013125498,vxo,0.206520280131255,2.7755575615628914e-17
+one_sigma_supply_shock,combined,copper,8,-0.03151866332691872,vxo,-0.03151866332691872,0
+one_sigma_supply_shock,combined,copper,9,-0.19647744475631065,vxo,-0.19647744475631063,2.7755575615628914e-17
+one_sigma_supply_shock,combined,copper,10,-0.10743301315255173,vxo,-0.10743301315255176,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,copper,11,-0.02173090296116034,vxo,-0.02173090296116034,0
+one_sigma_supply_shock,combined,copper,12,0.23973152236219958,vxo,0.23973152236219952,-5.551115123125783e-17
+one_sigma_supply_shock,combined,copper,13,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,14,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,15,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,16,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,17,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,18,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,19,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,20,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,21,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,22,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,23,0,vxo,0,0
+one_sigma_supply_shock,combined,copper,24,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,1,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,2,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,3,0.38442253054983955,vxo,0.38442253054983955,0
+one_sigma_supply_shock,combined,cotton_a_indx,4,-0.039241695067355774,vxo,-0.03924169506735578,-6.938893903907228e-18
+one_sigma_supply_shock,combined,cotton_a_indx,5,0.045849097455520196,vxo,0.04584909745552022,2.0816681711721685e-17
+one_sigma_supply_shock,combined,cotton_a_indx,6,0.13053888153117338,vxo,0.13053888153117338,0
+one_sigma_supply_shock,combined,cotton_a_indx,7,-0.011900182955874198,vxo,-0.0119001829558742,-1.734723475976807e-18
+one_sigma_supply_shock,combined,cotton_a_indx,8,0.06136003609731745,vxo,0.06136003609731746,6.938893903907228e-18
+one_sigma_supply_shock,combined,cotton_a_indx,9,0.00150018313665117,vxo,0.00150018313665117,0
+one_sigma_supply_shock,combined,cotton_a_indx,10,0.1889440393771048,vxo,0.18894403937710483,2.7755575615628914e-17
+one_sigma_supply_shock,combined,cotton_a_indx,11,0.03702396000698741,vxo,0.03702396000698741,0
+one_sigma_supply_shock,combined,cotton_a_indx,12,-0.11569357735435093,vxo,-0.11569357735435092,1.3877787807814457e-17
+one_sigma_supply_shock,combined,cotton_a_indx,13,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,14,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,15,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,16,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,17,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,18,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,19,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,20,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,21,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,22,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,23,0,vxo,0,0
+one_sigma_supply_shock,combined,cotton_a_indx,24,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,1,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,2,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,3,0.29727828350174,vxo,0.29727828350174,0
+one_sigma_supply_shock,combined,crude_wti,4,0.09010733322706799,vxo,0.090107333227068,1.3877787807814457e-17
+one_sigma_supply_shock,combined,crude_wti,5,0.11281023679369338,vxo,0.1128102367936934,1.3877787807814457e-17
+one_sigma_supply_shock,combined,crude_wti,6,0.0695453404412773,vxo,0.0695453404412773,0
+one_sigma_supply_shock,combined,crude_wti,7,0.39235693776460856,vxo,0.39235693776460856,0
+one_sigma_supply_shock,combined,crude_wti,8,0.010743762437421794,vxo,0.01074376243742179,-3.469446951953614e-18
+one_sigma_supply_shock,combined,crude_wti,9,-0.21609071950262904,vxo,-0.21609071950262904,0
+one_sigma_supply_shock,combined,crude_wti,10,-0.2183690015465433,vxo,-0.2183690015465433,0
+one_sigma_supply_shock,combined,crude_wti,11,-0.15684054500630834,vxo,-0.1568405450063083,2.7755575615628914e-17
+one_sigma_supply_shock,combined,crude_wti,12,0.2175685105808928,vxo,0.2175685105808928,0
+one_sigma_supply_shock,combined,crude_wti,13,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,14,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,15,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,16,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,17,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,18,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,19,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,20,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,21,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,22,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,23,0,vxo,0,0
+one_sigma_supply_shock,combined,crude_wti,24,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,1,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,2,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,3,-0.10954768573863263,vxo,-0.10954768573863265,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,gold,4,0.04068578332332923,vxo,0.04068578332332923,0
+one_sigma_supply_shock,combined,gold,5,0.14369843334805485,vxo,0.14369843334805485,0
+one_sigma_supply_shock,combined,gold,6,0.17047407706556,vxo,0.17047407706556006,5.551115123125783e-17
+one_sigma_supply_shock,combined,gold,7,-0.02110377662008245,vxo,-0.02110377662008245,0
+one_sigma_supply_shock,combined,gold,8,-0.10927444713054621,vxo,-0.10927444713054624,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,gold,9,-0.14498335595349676,vxo,-0.14498335595349676,0
+one_sigma_supply_shock,combined,gold,10,0.0416315836262643,vxo,0.0416315836262643,0
+one_sigma_supply_shock,combined,gold,11,0.06319326260555272,vxo,0.0631932626055527,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,gold,12,0.11869523204662957,vxo,0.11869523204662956,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,gold,13,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,14,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,15,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,16,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,17,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,18,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,19,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,20,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,21,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,22,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,23,0,vxo,0,0
+one_sigma_supply_shock,combined,gold,24,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,1,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,2,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,3,0.3165933425259205,vxo,0.31659334252592025,-2.220446049250313e-16
+one_sigma_supply_shock,combined,lead,4,-0.4161870194363415,vxo,-0.4161870194363415,0
+one_sigma_supply_shock,combined,lead,5,0.3064315600436949,vxo,0.3064315600436949,0
+one_sigma_supply_shock,combined,lead,6,-0.03440410418183753,vxo,-0.03440410418183753,0
+one_sigma_supply_shock,combined,lead,7,0.19398209619458565,vxo,0.19398209619458567,2.7755575615628914e-17
+one_sigma_supply_shock,combined,lead,8,0.11822905690215492,vxo,0.1182290569021549,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,lead,9,-0.06482633839216828,vxo,-0.0648263383921683,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,lead,10,-0.04417071362989866,vxo,-0.04417071362989865,1.3877787807814457e-17
+one_sigma_supply_shock,combined,lead,11,-0.18420712396367062,vxo,-0.1842071239636706,2.7755575615628914e-17
+one_sigma_supply_shock,combined,lead,12,0.09907685537566636,vxo,0.09907685537566636,0
+one_sigma_supply_shock,combined,lead,13,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,14,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,15,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,16,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,17,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,18,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,19,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,20,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,21,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,22,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,23,0,vxo,0,0
+one_sigma_supply_shock,combined,lead,24,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,1,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,2,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,3,0.06653214170044607,vxo,0.06653214170044608,1.3877787807814457e-17
+one_sigma_supply_shock,combined,maize,4,0.04712820962980257,vxo,0.04712820962980257,0
+one_sigma_supply_shock,combined,maize,5,-0.09625089390349642,vxo,-0.09625089390349642,0
+one_sigma_supply_shock,combined,maize,6,-3.7596255454469546e-4,vxo,-3.759625545446954e-4,5.421010862427522e-20
+one_sigma_supply_shock,combined,maize,7,0.11433812832680165,vxo,0.11433812832680164,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,maize,8,-0.0493081300425623,vxo,-0.0493081300425623,0
+one_sigma_supply_shock,combined,maize,9,0.07701563668264978,vxo,0.07701563668264977,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,maize,10,0.07474308396148399,vxo,0.07474308396148396,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,maize,11,0.04007076152868226,vxo,0.04007076152868225,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,maize,12,-0.07519645840729354,vxo,-0.07519645840729354,0
+one_sigma_supply_shock,combined,maize,13,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,14,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,15,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,16,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,17,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,18,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,19,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,20,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,21,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,22,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,23,0,vxo,0,0
+one_sigma_supply_shock,combined,maize,24,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,1,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,2,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,3,0.29047315889137204,vxo,0.290473158891372,-5.551115123125783e-17
+one_sigma_supply_shock,combined,ngas_us,4,-0.1458256426217321,vxo,-0.14582564262173206,2.7755575615628914e-17
+one_sigma_supply_shock,combined,ngas_us,5,0.08171864893721421,vxo,0.08171864893721423,1.3877787807814457e-17
+one_sigma_supply_shock,combined,ngas_us,6,-0.005577189492106478,vxo,-0.00557718949210648,-2.6020852139652106e-18
+one_sigma_supply_shock,combined,ngas_us,7,0.2561851237795139,vxo,0.25618512377951386,-5.551115123125783e-17
+one_sigma_supply_shock,combined,ngas_us,8,-0.03643230310782318,vxo,-0.03643230310782317,6.938893903907228e-18
+one_sigma_supply_shock,combined,ngas_us,9,-0.024931344796008253,vxo,-0.02493134479600825,3.469446951953614e-18
+one_sigma_supply_shock,combined,ngas_us,10,0.06392375535543579,vxo,0.06392375535543579,0
+one_sigma_supply_shock,combined,ngas_us,11,-0.10663889449361183,vxo,-0.10663889449361186,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,ngas_us,12,0.08238606805775721,vxo,0.0823860680577572,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,ngas_us,13,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,14,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,15,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,16,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,17,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,18,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,19,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,20,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,21,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,22,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,23,0,vxo,0,0
+one_sigma_supply_shock,combined,ngas_us,24,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,1,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,2,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,3,0.043884838313315466,vxo,0.04388483831331547,6.938893903907228e-18
+one_sigma_supply_shock,combined,nickel,4,-0.01768765286692685,vxo,-0.01768765286692685,0
+one_sigma_supply_shock,combined,nickel,5,0.3483244056546302,vxo,0.34832440565463024,5.551115123125783e-17
+one_sigma_supply_shock,combined,nickel,6,0.06900767178735967,vxo,0.06900767178735967,0
+one_sigma_supply_shock,combined,nickel,7,-0.12567044568357494,vxo,-0.12567044568357497,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,nickel,8,0.01156062921995134,vxo,0.01156062921995134,0
+one_sigma_supply_shock,combined,nickel,9,0.10671670675022887,vxo,0.10671670675022887,0
+one_sigma_supply_shock,combined,nickel,10,0.05551526638547137,vxo,0.05551526638547138,6.938893903907228e-18
+one_sigma_supply_shock,combined,nickel,11,-0.1384570872002007,vxo,-0.1384570872002007,0
+one_sigma_supply_shock,combined,nickel,12,-0.017935643189017036,vxo,-0.01793564318901704,-3.469446951953614e-18
+one_sigma_supply_shock,combined,nickel,13,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,14,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,15,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,16,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,17,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,18,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,19,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,20,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,21,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,22,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,23,0,vxo,0,0
+one_sigma_supply_shock,combined,nickel,24,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,1,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,2,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,3,0.5368185197534248,vxo,0.5368185197534248,0
+one_sigma_supply_shock,combined,platinum,4,-0.018320567469653663,vxo,-0.01832056746965367,-6.938893903907228e-18
+one_sigma_supply_shock,combined,platinum,5,0.10967138455954512,vxo,0.10967138455954512,0
+one_sigma_supply_shock,combined,platinum,6,-0.16814762704092584,vxo,-0.16814762704092587,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,platinum,7,0.06723087180259485,vxo,0.06723087180259485,0
+one_sigma_supply_shock,combined,platinum,8,0.08371468441000178,vxo,0.08371468441000178,0
+one_sigma_supply_shock,combined,platinum,9,-0.04856041773413396,vxo,-0.04856041773413396,0
+one_sigma_supply_shock,combined,platinum,10,0.15764250048852474,vxo,0.15764250048852474,0
+one_sigma_supply_shock,combined,platinum,11,-0.08507017417028785,vxo,-0.08507017417028784,1.3877787807814457e-17
+one_sigma_supply_shock,combined,platinum,12,0.0966723711594408,vxo,0.0966723711594408,0
+one_sigma_supply_shock,combined,platinum,13,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,14,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,15,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,16,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,17,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,18,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,19,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,20,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,21,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,22,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,23,0,vxo,0,0
+one_sigma_supply_shock,combined,platinum,24,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,1,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,2,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,3,0.28695155869356265,vxo,0.2869515586935627,5.551115123125783e-17
+one_sigma_supply_shock,combined,silver,4,0.22898328993934236,vxo,0.2289832899393424,2.7755575615628914e-17
+one_sigma_supply_shock,combined,silver,5,-0.06497783117205805,vxo,-0.06497783117205805,0
+one_sigma_supply_shock,combined,silver,6,-0.057654598448857,vxo,-0.05765459844885701,-6.938893903907228e-18
+one_sigma_supply_shock,combined,silver,7,0.029952569186376458,vxo,0.02995256918637645,-6.938893903907228e-18
+one_sigma_supply_shock,combined,silver,8,0.14242327267170046,vxo,0.14242327267170046,0
+one_sigma_supply_shock,combined,silver,9,0.011507813241284163,vxo,0.01150781324128416,-3.469446951953614e-18
+one_sigma_supply_shock,combined,silver,10,0.06073930037882602,vxo,0.06073930037882601,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,silver,11,-0.05717504178928492,vxo,-0.05717504178928492,0
+one_sigma_supply_shock,combined,silver,12,0.020372856225958087,vxo,0.02037285622595809,3.469446951953614e-18
+one_sigma_supply_shock,combined,silver,13,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,14,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,15,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,16,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,17,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,18,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,19,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,20,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,21,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,22,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,23,0,vxo,0,0
+one_sigma_supply_shock,combined,silver,24,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,1,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,2,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,3,-0.13882838909043538,vxo,-0.1388283890904354,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,soybeans,4,-0.03540669469634766,vxo,-0.03540669469634767,-6.938893903907228e-18
+one_sigma_supply_shock,combined,soybeans,5,-0.00358697619635639,vxo,-0.00358697619635639,0
+one_sigma_supply_shock,combined,soybeans,6,0.1981409934784442,vxo,0.19814099347844416,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,soybeans,7,0.122761508624067,vxo,0.12276150862406704,4.163336342344337e-17
+one_sigma_supply_shock,combined,soybeans,8,-0.10988135856057293,vxo,-0.10988135856057296,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,soybeans,9,0.10135273838365955,vxo,0.10135273838365952,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,soybeans,10,-0.06635551633523469,vxo,-0.0663555163352347,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,soybeans,11,0.013175120680717961,vxo,0.01317512068071796,-1.734723475976807e-18
+one_sigma_supply_shock,combined,soybeans,12,-0.019945776536266235,vxo,-0.01994577653626623,3.469446951953614e-18
+one_sigma_supply_shock,combined,soybeans,13,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,14,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,15,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,16,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,17,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,18,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,19,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,20,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,21,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,22,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,23,0,vxo,0,0
+one_sigma_supply_shock,combined,soybeans,24,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,1,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,2,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,3,0.32326028027256415,vxo,0.3232602802725641,-5.551115123125783e-17
+one_sigma_supply_shock,combined,sugar_wld,4,0.01730196872336758,vxo,0.01730196872336758,0
+one_sigma_supply_shock,combined,sugar_wld,5,-0.40754554361201345,vxo,-0.4075455436120134,5.551115123125783e-17
+one_sigma_supply_shock,combined,sugar_wld,6,0.2043899415365018,vxo,0.20438994153650183,2.7755575615628914e-17
+one_sigma_supply_shock,combined,sugar_wld,7,0.2563277818514934,vxo,0.2563277818514934,0
+one_sigma_supply_shock,combined,sugar_wld,8,0.15943727173316694,vxo,0.1594372717331669,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,sugar_wld,9,0.05179258888445798,vxo,0.05179258888445798,0
+one_sigma_supply_shock,combined,sugar_wld,10,-0.21015298263245574,vxo,-0.21015298263245571,2.7755575615628914e-17
+one_sigma_supply_shock,combined,sugar_wld,11,-0.09064835514684932,vxo,-0.09064835514684932,0
+one_sigma_supply_shock,combined,sugar_wld,12,-0.09651547476416575,vxo,-0.09651547476416576,-1.3877787807814457e-17
+one_sigma_supply_shock,combined,sugar_wld,13,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,14,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,15,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,16,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,17,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,18,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,19,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,20,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,21,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,22,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,23,0,vxo,0,0
+one_sigma_supply_shock,combined,sugar_wld,24,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,1,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,2,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,3,0.604790306618407,vxo,0.6047903066184069,-1.1102230246251565e-16
+one_sigma_supply_shock,combined,tin,4,-0.01229361642969972,vxo,-0.01229361642969972,0
+one_sigma_supply_shock,combined,tin,5,0.05133274835347942,vxo,0.05133274835347942,0
+one_sigma_supply_shock,combined,tin,6,0.06825185018086076,vxo,0.06825185018086077,1.3877787807814457e-17
+one_sigma_supply_shock,combined,tin,7,0.11081585848255009,vxo,0.11081585848255011,2.7755575615628914e-17
+one_sigma_supply_shock,combined,tin,8,-0.025137423891005702,vxo,-0.0251374238910057,3.469446951953614e-18
+one_sigma_supply_shock,combined,tin,9,-0.03495437563650902,vxo,-0.03495437563650903,-6.938893903907228e-18
+one_sigma_supply_shock,combined,tin,10,0.09641286341045592,vxo,0.09641286341045592,0
+one_sigma_supply_shock,combined,tin,11,-0.08526791548447954,vxo,-0.08526791548447953,1.3877787807814457e-17
+one_sigma_supply_shock,combined,tin,12,0.0021485583696567705,vxo,0.00214855836965677,-4.336808689942018e-19
+one_sigma_supply_shock,combined,tin,13,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,14,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,15,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,16,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,17,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,18,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,19,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,20,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,21,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,22,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,23,0,vxo,0,0
+one_sigma_supply_shock,combined,tin,24,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,1,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,2,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,3,-0.1016972312926837,vxo,-0.10169723129268368,1.3877787807814457e-17
+one_sigma_supply_shock,combined,wheat_us_hrw,4,0.2300720499827241,vxo,0.23007204998272412,2.7755575615628914e-17
+one_sigma_supply_shock,combined,wheat_us_hrw,5,0.03839606614535799,vxo,0.03839606614535798,-6.938893903907228e-18
+one_sigma_supply_shock,combined,wheat_us_hrw,6,-0.11796341375328984,vxo,-0.11796341375328984,0
+one_sigma_supply_shock,combined,wheat_us_hrw,7,-0.01713395791708503,vxo,-0.01713395791708503,0
+one_sigma_supply_shock,combined,wheat_us_hrw,8,-0.12225969204512646,vxo,-0.12225969204512646,0
+one_sigma_supply_shock,combined,wheat_us_hrw,9,0.2643660845878776,vxo,0.26436608458787764,5.551115123125783e-17
+one_sigma_supply_shock,combined,wheat_us_hrw,10,-0.0038746542144880197,vxo,-0.00387465421448802,-4.336808689942018e-19
+one_sigma_supply_shock,combined,wheat_us_hrw,11,-0.025287522235109015,vxo,-0.02528752223510902,-3.469446951953614e-18
+one_sigma_supply_shock,combined,wheat_us_hrw,12,-0.043456851401792784,vxo,-0.04345685140179278,6.938893903907228e-18
+one_sigma_supply_shock,combined,wheat_us_hrw,13,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,14,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,15,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,16,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,17,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,18,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,19,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,20,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,21,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,22,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,23,0,vxo,0,0
+one_sigma_supply_shock,combined,wheat_us_hrw,24,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,1,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,2,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,3,0.4281332823464655,vxo,0.4281332823464655,0
+one_sigma_supply_shock,combined,zinc,4,0.04799136363565221,vxo,0.04799136363565221,0
+one_sigma_supply_shock,combined,zinc,5,0.21572346069818424,vxo,0.2157234606981842,-2.7755575615628914e-17
+one_sigma_supply_shock,combined,zinc,6,-0.15443217130037057,vxo,-0.15443217130037054,2.7755575615628914e-17
+one_sigma_supply_shock,combined,zinc,7,0.16055262674654303,vxo,0.16055262674654305,2.7755575615628914e-17
+one_sigma_supply_shock,combined,zinc,8,0.1481631376256803,vxo,0.14816313762568034,2.7755575615628914e-17
+one_sigma_supply_shock,combined,zinc,9,-0.05560530955423999,vxo,-0.05560530955423999,0
+one_sigma_supply_shock,combined,zinc,10,-0.05287100057080274,vxo,-0.05287100057080275,-6.938893903907228e-18
+one_sigma_supply_shock,combined,zinc,11,-0.15291014216405985,vxo,-0.15291014216405985,0
+one_sigma_supply_shock,combined,zinc,12,0.10776464670595395,vxo,0.10776464670595395,0
+one_sigma_supply_shock,combined,zinc,13,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,14,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,15,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,16,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,17,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,18,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,19,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,20,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,21,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,22,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,23,0,vxo,0,0
+one_sigma_supply_shock,combined,zinc,24,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,1,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,2,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,3,0.12691097289387968,vxo,0.12691097289387968,0
+unit-shock-crude_wti,combined,aluminium,4,-0.042891779142441924,vxo,-0.04289177914244194,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,aluminium,5,-0.05229319053137305,vxo,-0.05229319053137304,1.3877787807814457e-17
+unit-shock-crude_wti,combined,aluminium,6,-0.29807992132434386,vxo,-0.2980799213243439,-5.551115123125783e-17
+unit-shock-crude_wti,combined,aluminium,7,-0.22318951025058723,vxo,-0.22318951025058725,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,aluminium,8,-0.10718548685497256,vxo,-0.10718548685497252,4.163336342344337e-17
+unit-shock-crude_wti,combined,aluminium,9,0.03532440245864624,vxo,0.03532440245864624,0
+unit-shock-crude_wti,combined,aluminium,10,-0.03335259422616513,vxo,-0.03335259422616513,0
+unit-shock-crude_wti,combined,aluminium,11,0.029626535042857595,vxo,0.0296265350428576,3.469446951953614e-18
+unit-shock-crude_wti,combined,aluminium,12,0.090440321573424,vxo,0.09044032157342403,2.7755575615628914e-17
+unit-shock-crude_wti,combined,aluminium,13,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,14,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,15,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,16,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,17,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,18,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,19,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,20,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,21,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,22,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,23,0,vxo,0,0
+unit-shock-crude_wti,combined,aluminium,24,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,1,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,2,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,3,-0.06951378193300776,vxo,-0.06951378193300778,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,cocoa,4,-0.035601871439675956,vxo,-0.03560187143967595,6.938893903907228e-18
+unit-shock-crude_wti,combined,cocoa,5,0.03573759615104388,vxo,0.03573759615104387,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,cocoa,6,-0.1392757384732097,vxo,-0.13927573847320973,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,cocoa,7,0.15925214090701859,vxo,0.15925214090701856,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,cocoa,8,0.013763012909637998,vxo,0.013763012909638,1.734723475976807e-18
+unit-shock-crude_wti,combined,cocoa,9,-0.009967551252717267,vxo,-0.00996755125271727,-3.469446951953614e-18
+unit-shock-crude_wti,combined,cocoa,10,-0.09535751145700293,vxo,-0.09535751145700296,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,cocoa,11,-0.10864668788829654,vxo,-0.10864668788829658,-4.163336342344337e-17
+unit-shock-crude_wti,combined,cocoa,12,-0.030241125444549502,vxo,-0.0302411254445495,3.469446951953614e-18
+unit-shock-crude_wti,combined,cocoa,13,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,14,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,15,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,16,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,17,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,18,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,19,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,20,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,21,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,22,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,23,0,vxo,0,0
+unit-shock-crude_wti,combined,cocoa,24,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,1,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,2,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,3,0.052889075052486315,vxo,0.05288907505248632,6.938893903907228e-18
+unit-shock-crude_wti,combined,coffee_arabic,4,0.0755890088898577,vxo,0.0755890088898577,0
+unit-shock-crude_wti,combined,coffee_arabic,5,0.015871466936492214,vxo,0.01587146693649221,-3.469446951953614e-18
+unit-shock-crude_wti,combined,coffee_arabic,6,-0.1014721913172119,vxo,-0.10147219131721189,1.3877787807814457e-17
+unit-shock-crude_wti,combined,coffee_arabic,7,-0.00406866137527591,vxo,-0.00406866137527591,0
+unit-shock-crude_wti,combined,coffee_arabic,8,0.06518519199646372,vxo,0.06518519199646369,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,coffee_arabic,9,0.0032888841521669303,vxo,0.00328888415216693,-4.336808689942018e-19
+unit-shock-crude_wti,combined,coffee_arabic,10,-0.10944269389616551,vxo,-0.10944269389616552,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,coffee_arabic,11,0.005038894945600911,vxo,0.0050388949456009104,-8.673617379884035e-19
+unit-shock-crude_wti,combined,coffee_arabic,12,0.020358075242278298,vxo,0.02035807524227829,-6.938893903907228e-18
+unit-shock-crude_wti,combined,coffee_arabic,13,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,14,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,15,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,16,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,17,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,18,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,19,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,20,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,21,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,22,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,23,0,vxo,0,0
+unit-shock-crude_wti,combined,coffee_arabic,24,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,1,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,2,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,3,0.0200139779194014,vxo,0.0200139779194014,0
+unit-shock-crude_wti,combined,copper,4,-0.18317147459873143,vxo,-0.18317147459873143,0
+unit-shock-crude_wti,combined,copper,5,-0.12365089148338891,vxo,-0.12365089148338892,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,copper,6,-0.3046574049811767,vxo,-0.3046574049811767,0
+unit-shock-crude_wti,combined,copper,7,-0.1732921054386584,vxo,-0.17329210543865836,2.7755575615628914e-17
+unit-shock-crude_wti,combined,copper,8,-0.08825162438274081,vxo,-0.08825162438274081,0
+unit-shock-crude_wti,combined,copper,9,0.08608684968500241,vxo,0.08608684968500241,0
+unit-shock-crude_wti,combined,copper,10,0.013245398002732518,vxo,0.01324539800273252,1.734723475976807e-18
+unit-shock-crude_wti,combined,copper,11,0.017693381425773324,vxo,0.01769338142577332,-3.469446951953614e-18
+unit-shock-crude_wti,combined,copper,12,0.05722862800130221,vxo,0.05722862800130222,6.938893903907228e-18
+unit-shock-crude_wti,combined,copper,13,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,14,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,15,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,16,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,17,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,18,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,19,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,20,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,21,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,22,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,23,0,vxo,0,0
+unit-shock-crude_wti,combined,copper,24,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,1,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,2,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,3,0.019364593741073126,vxo,0.01936459374107313,3.469446951953614e-18
+unit-shock-crude_wti,combined,cotton_a_indx,4,-0.07079391194440542,vxo,-0.07079391194440542,0
+unit-shock-crude_wti,combined,cotton_a_indx,5,-0.006407309020752357,vxo,-0.00640730902075236,-2.6020852139652106e-18
+unit-shock-crude_wti,combined,cotton_a_indx,6,-0.12648505281369732,vxo,-0.12648505281369732,0
+unit-shock-crude_wti,combined,cotton_a_indx,7,-0.08397742468132978,vxo,-0.08397742468132978,0
+unit-shock-crude_wti,combined,cotton_a_indx,8,0.02005414974908392,vxo,0.02005414974908392,0
+unit-shock-crude_wti,combined,cotton_a_indx,9,-0.0091455934588178,vxo,-0.0091455934588178,0
+unit-shock-crude_wti,combined,cotton_a_indx,10,-0.027753360252837308,vxo,-0.02775336025283731,-3.469446951953614e-18
+unit-shock-crude_wti,combined,cotton_a_indx,11,-0.08851821276389416,vxo,-0.08851821276389414,1.3877787807814457e-17
+unit-shock-crude_wti,combined,cotton_a_indx,12,-0.01104482523976922,vxo,-0.01104482523976922,0
+unit-shock-crude_wti,combined,cotton_a_indx,13,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,14,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,15,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,16,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,17,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,18,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,19,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,20,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,21,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,22,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,23,0,vxo,0,0
+unit-shock-crude_wti,combined,cotton_a_indx,24,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,1,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,2,2,vxo,2,0
+unit-shock-crude_wti,combined,crude_wti,3,0.3079404218853978,vxo,0.3079404218853978,0
+unit-shock-crude_wti,combined,crude_wti,4,-0.23248198954266558,vxo,-0.23248198954266555,2.7755575615628914e-17
+unit-shock-crude_wti,combined,crude_wti,5,0.055278481842854964,vxo,0.05527848184285497,6.938893903907228e-18
+unit-shock-crude_wti,combined,crude_wti,6,-0.14670174388707086,vxo,-0.14670174388707083,2.7755575615628914e-17
+unit-shock-crude_wti,combined,crude_wti,7,-0.22567290354379288,vxo,-0.2256729035437928,8.326672684688674e-17
+unit-shock-crude_wti,combined,crude_wti,8,-0.2131762681059444,vxo,-0.2131762681059443,8.326672684688674e-17
+unit-shock-crude_wti,combined,crude_wti,9,0.09980268072172824,vxo,0.09980268072172822,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,crude_wti,10,0.08285632746148815,vxo,0.08285632746148815,0
+unit-shock-crude_wti,combined,crude_wti,11,0.012102198325699138,vxo,0.01210219832569914,1.734723475976807e-18
+unit-shock-crude_wti,combined,crude_wti,12,0.07017825719250584,vxo,0.07017825719250584,0
+unit-shock-crude_wti,combined,crude_wti,13,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,14,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,15,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,16,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,17,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,18,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,19,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,20,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,21,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,22,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,23,0,vxo,0,0
+unit-shock-crude_wti,combined,crude_wti,24,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,1,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,2,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,3,-0.18712258334023735,vxo,-0.18712258334023735,0
+unit-shock-crude_wti,combined,gold,4,0.11436975615356526,vxo,0.11436975615356525,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,gold,5,0.10731564754650372,vxo,0.10731564754650372,0
+unit-shock-crude_wti,combined,gold,6,-0.11798005020691796,vxo,-0.117980050206918,-4.163336342344337e-17
+unit-shock-crude_wti,combined,gold,7,-0.17741079590448078,vxo,-0.1774107959044808,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,gold,8,0.0318514028633789,vxo,0.0318514028633789,0
+unit-shock-crude_wti,combined,gold,9,0.11153809370310462,vxo,0.11153809370310463,1.3877787807814457e-17
+unit-shock-crude_wti,combined,gold,10,0.03881599247718821,vxo,0.03881599247718822,6.938893903907228e-18
+unit-shock-crude_wti,combined,gold,11,-0.11011181662499663,vxo,-0.11011181662499664,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,gold,12,0.05372239782935636,vxo,0.05372239782935634,-2.0816681711721685e-17
+unit-shock-crude_wti,combined,gold,13,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,14,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,15,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,16,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,17,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,18,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,19,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,20,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,21,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,22,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,23,0,vxo,0,0
+unit-shock-crude_wti,combined,gold,24,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,1,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,2,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,3,-0.026803055844030664,vxo,-0.02680305584403066,3.469446951953614e-18
+unit-shock-crude_wti,combined,lead,4,-0.2463339845038953,vxo,-0.2463339845038953,0
+unit-shock-crude_wti,combined,lead,5,0.17832569971208584,vxo,0.1783256997120858,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,lead,6,-0.13266037134499292,vxo,-0.13266037134499298,-5.551115123125783e-17
+unit-shock-crude_wti,combined,lead,7,-0.03874316188682278,vxo,-0.03874316188682279,-6.938893903907228e-18
+unit-shock-crude_wti,combined,lead,8,-0.15593589767705207,vxo,-0.15593589767705207,0
+unit-shock-crude_wti,combined,lead,9,0.0400657882753951,vxo,0.0400657882753951,0
+unit-shock-crude_wti,combined,lead,10,-0.042152099219989976,vxo,-0.04215209921998997,6.938893903907228e-18
+unit-shock-crude_wti,combined,lead,11,-0.04016814700925203,vxo,-0.04016814700925203,0
+unit-shock-crude_wti,combined,lead,12,0.0741172170029357,vxo,0.0741172170029357,0
+unit-shock-crude_wti,combined,lead,13,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,14,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,15,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,16,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,17,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,18,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,19,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,20,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,21,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,22,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,23,0,vxo,0,0
+unit-shock-crude_wti,combined,lead,24,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,1,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,2,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,3,0.011307012225441698,vxo,0.0113070122254417,1.734723475976807e-18
+unit-shock-crude_wti,combined,maize,4,-0.015785360110044114,vxo,-0.01578536011004411,3.469446951953614e-18
+unit-shock-crude_wti,combined,maize,5,0.08774227429407769,vxo,0.08774227429407769,0
+unit-shock-crude_wti,combined,maize,6,-0.051071886261944074,vxo,-0.05107188626194407,6.938893903907228e-18
+unit-shock-crude_wti,combined,maize,7,-0.06488495302568421,vxo,-0.0648849530256842,1.3877787807814457e-17
+unit-shock-crude_wti,combined,maize,8,-0.01187467209320656,vxo,-0.01187467209320656,0
+unit-shock-crude_wti,combined,maize,9,0.09549673611633563,vxo,0.09549673611633562,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,maize,10,-0.09081891511951155,vxo,-0.09081891511951153,2.7755575615628914e-17
+unit-shock-crude_wti,combined,maize,11,-0.08232389431734881,vxo,-0.08232389431734878,2.7755575615628914e-17
+unit-shock-crude_wti,combined,maize,12,-0.004840612340535611,vxo,-0.00484061234053561,8.673617379884035e-19
+unit-shock-crude_wti,combined,maize,13,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,14,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,15,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,16,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,17,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,18,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,19,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,20,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,21,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,22,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,23,0,vxo,0,0
+unit-shock-crude_wti,combined,maize,24,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,1,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,2,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,3,0.12634579893834025,vxo,0.12634579893834022,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,ngas_us,4,0.3254173292752872,vxo,0.32541732927528727,5.551115123125783e-17
+unit-shock-crude_wti,combined,ngas_us,5,0.12585155962639571,vxo,0.12585155962639571,0
+unit-shock-crude_wti,combined,ngas_us,6,-0.15400506249153587,vxo,-0.1540050624915359,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,ngas_us,7,-0.021156385335166054,vxo,-0.02115638533516605,3.469446951953614e-18
+unit-shock-crude_wti,combined,ngas_us,8,-0.0969872263255816,vxo,-0.0969872263255816,0
+unit-shock-crude_wti,combined,ngas_us,9,0.06305389101735001,vxo,0.06305389101735001,0
+unit-shock-crude_wti,combined,ngas_us,10,0.010955117543645842,vxo,0.01095511754364584,-1.734723475976807e-18
+unit-shock-crude_wti,combined,ngas_us,11,-0.11798513725645221,vxo,-0.1179851372564522,1.3877787807814457e-17
+unit-shock-crude_wti,combined,ngas_us,12,0.00362702521160995,vxo,0.00362702521160995,0
+unit-shock-crude_wti,combined,ngas_us,13,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,14,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,15,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,16,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,17,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,18,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,19,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,20,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,21,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,22,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,23,0,vxo,0,0
+unit-shock-crude_wti,combined,ngas_us,24,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,1,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,2,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,3,0.009709257643316297,vxo,0.0097092576433163,3.469446951953614e-18
+unit-shock-crude_wti,combined,nickel,4,-0.07124244998616108,vxo,-0.07124244998616108,0
+unit-shock-crude_wti,combined,nickel,5,-0.0032934958125293195,vxo,-0.00329349581252932,-4.336808689942018e-19
+unit-shock-crude_wti,combined,nickel,6,-0.2516737723359531,vxo,-0.2516737723359531,0
+unit-shock-crude_wti,combined,nickel,7,-0.1168742891145433,vxo,-0.11687428911454328,1.3877787807814457e-17
+unit-shock-crude_wti,combined,nickel,8,-0.006594608493824171,vxo,-0.00659460849382417,8.673617379884035e-19
+unit-shock-crude_wti,combined,nickel,9,0.07823821782937916,vxo,0.07823821782937915,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,nickel,10,-0.07255391560995014,vxo,-0.07255391560995016,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,nickel,11,-0.026263468067168318,vxo,-0.02626346806716832,-3.469446951953614e-18
+unit-shock-crude_wti,combined,nickel,12,0.053312453907093535,vxo,0.05331245390709354,6.938893903907228e-18
+unit-shock-crude_wti,combined,nickel,13,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,14,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,15,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,16,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,17,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,18,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,19,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,20,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,21,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,22,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,23,0,vxo,0,0
+unit-shock-crude_wti,combined,nickel,24,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,1,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,2,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,3,-0.10443928434772003,vxo,-0.10443928434772004,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,platinum,4,-0.1971961118704813,vxo,-0.19719611187048136,-5.551115123125783e-17
+unit-shock-crude_wti,combined,platinum,5,0.08439409876325646,vxo,0.08439409876325646,0
+unit-shock-crude_wti,combined,platinum,6,-0.20185791401436884,vxo,-0.20185791401436887,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,platinum,7,-0.05062612874635156,vxo,-0.05062612874635157,-6.938893903907228e-18
+unit-shock-crude_wti,combined,platinum,8,-0.054299366653909754,vxo,-0.05429936665390976,-6.938893903907228e-18
+unit-shock-crude_wti,combined,platinum,9,0.10335112990838899,vxo,0.10335112990838898,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,platinum,10,0.041107403098139476,vxo,0.04110740309813947,-6.938893903907228e-18
+unit-shock-crude_wti,combined,platinum,11,-0.1335648806000087,vxo,-0.1335648806000087,0
+unit-shock-crude_wti,combined,platinum,12,-0.042616854881364394,vxo,-0.0426168548813644,-6.938893903907228e-18
+unit-shock-crude_wti,combined,platinum,13,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,14,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,15,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,16,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,17,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,18,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,19,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,20,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,21,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,22,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,23,0,vxo,0,0
+unit-shock-crude_wti,combined,platinum,24,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,1,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,2,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,3,-0.3395610008467846,vxo,-0.3395610008467846,0
+unit-shock-crude_wti,combined,silver,4,-0.0771008200587985,vxo,-0.07710082005879848,1.3877787807814457e-17
+unit-shock-crude_wti,combined,silver,5,0.04785029237928055,vxo,0.04785029237928054,-6.938893903907228e-18
+unit-shock-crude_wti,combined,silver,6,-0.10983386022392323,vxo,-0.10983386022392325,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,silver,7,-0.09146305684002481,vxo,-0.0914630568400248,1.3877787807814457e-17
+unit-shock-crude_wti,combined,silver,8,-0.048262725327886676,vxo,-0.04826272532788667,6.938893903907228e-18
+unit-shock-crude_wti,combined,silver,9,0.03484006038391468,vxo,0.03484006038391468,0
+unit-shock-crude_wti,combined,silver,10,-2.464747197651408e-4,vxo,-2.464747197651408e-4,0
+unit-shock-crude_wti,combined,silver,11,-0.12296787702477197,vxo,-0.12296787702477194,2.7755575615628914e-17
+unit-shock-crude_wti,combined,silver,12,0.003720860313007489,vxo,0.00372086031300749,8.673617379884035e-19
+unit-shock-crude_wti,combined,silver,13,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,14,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,15,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,16,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,17,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,18,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,19,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,20,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,21,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,22,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,23,0,vxo,0,0
+unit-shock-crude_wti,combined,silver,24,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,1,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,2,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,3,0.15813166305557252,vxo,0.15813166305557255,2.7755575615628914e-17
+unit-shock-crude_wti,combined,soybeans,4,0.3090700347618354,vxo,0.3090700347618355,5.551115123125783e-17
+unit-shock-crude_wti,combined,soybeans,5,-0.0014176269648688996,vxo,-0.0014176269648689,-4.336808689942018e-19
+unit-shock-crude_wti,combined,soybeans,6,-0.14447205576006764,vxo,-0.1444720557600676,2.7755575615628914e-17
+unit-shock-crude_wti,combined,soybeans,7,-0.054416455634726524,vxo,-0.05441645563472652,6.938893903907228e-18
+unit-shock-crude_wti,combined,soybeans,8,-0.03134863352202532,vxo,-0.03134863352202532,0
+unit-shock-crude_wti,combined,soybeans,9,0.03911325379043859,vxo,0.03911325379043857,-2.0816681711721685e-17
+unit-shock-crude_wti,combined,soybeans,10,-0.1378104835549901,vxo,-0.1378104835549901,0
+unit-shock-crude_wti,combined,soybeans,11,0.06470003724692722,vxo,0.0647000372469272,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,soybeans,12,0.05047406607264997,vxo,0.05047406607264997,0
+unit-shock-crude_wti,combined,soybeans,13,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,14,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,15,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,16,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,17,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,18,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,19,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,20,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,21,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,22,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,23,0,vxo,0,0
+unit-shock-crude_wti,combined,soybeans,24,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,1,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,2,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,3,0.11048706540566662,vxo,0.1104870654056666,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,sugar_wld,4,0.1228731700961522,vxo,0.1228731700961522,0
+unit-shock-crude_wti,combined,sugar_wld,5,0.08936980842429616,vxo,0.08936980842429615,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,sugar_wld,6,-0.004087390433190219,vxo,-0.00408739043319022,-8.673617379884035e-19
+unit-shock-crude_wti,combined,sugar_wld,7,-0.1608649675068989,vxo,-0.1608649675068989,0
+unit-shock-crude_wti,combined,sugar_wld,8,-0.10425317975471374,vxo,-0.10425317975471374,0
+unit-shock-crude_wti,combined,sugar_wld,9,0.005751672531517259,vxo,0.00575167253151726,8.673617379884035e-19
+unit-shock-crude_wti,combined,sugar_wld,10,-0.044754841421152235,vxo,-0.04475484142115223,6.938893903907228e-18
+unit-shock-crude_wti,combined,sugar_wld,11,-0.03188166093862144,vxo,-0.03188166093862144,0
+unit-shock-crude_wti,combined,sugar_wld,12,0.01024411433911468,vxo,0.01024411433911468,0
+unit-shock-crude_wti,combined,sugar_wld,13,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,14,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,15,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,16,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,17,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,18,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,19,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,20,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,21,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,22,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,23,0,vxo,0,0
+unit-shock-crude_wti,combined,sugar_wld,24,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,1,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,2,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,3,0.03586546020250825,vxo,0.03586546020250825,0
+unit-shock-crude_wti,combined,tin,4,-0.1456126390881475,vxo,-0.1456126390881475,0
+unit-shock-crude_wti,combined,tin,5,-0.017428953830563084,vxo,-0.01742895383056308,3.469446951953614e-18
+unit-shock-crude_wti,combined,tin,6,-0.20939118134946935,vxo,-0.2093911813494694,-5.551115123125783e-17
+unit-shock-crude_wti,combined,tin,7,-0.09705774120565747,vxo,-0.0970577412056575,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,tin,8,-0.08350088040626939,vxo,-0.08350088040626939,0
+unit-shock-crude_wti,combined,tin,9,0.11606757505269813,vxo,0.11606757505269812,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,tin,10,-7.176345698253097e-4,vxo,-7.176345698253097e-4,0
+unit-shock-crude_wti,combined,tin,11,-0.11193936863729176,vxo,-0.11193936863729172,4.163336342344337e-17
+unit-shock-crude_wti,combined,tin,12,0.02653651025621671,vxo,0.02653651025621671,0
+unit-shock-crude_wti,combined,tin,13,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,14,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,15,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,16,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,17,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,18,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,19,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,20,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,21,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,22,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,23,0,vxo,0,0
+unit-shock-crude_wti,combined,tin,24,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,1,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,2,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,3,0.07832284059159741,vxo,0.0783228405915974,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,wheat_us_hrw,4,0.19659440804760492,vxo,0.1965944080476049,-2.7755575615628914e-17
+unit-shock-crude_wti,combined,wheat_us_hrw,5,-0.06789824206348588,vxo,-0.06789824206348588,0
+unit-shock-crude_wti,combined,wheat_us_hrw,6,-0.09948163974983373,vxo,-0.09948163974983372,1.3877787807814457e-17
+unit-shock-crude_wti,combined,wheat_us_hrw,7,0.022686420976974223,vxo,0.02268642097697422,-3.469446951953614e-18
+unit-shock-crude_wti,combined,wheat_us_hrw,8,0.03152446312691514,vxo,0.03152446312691514,0
+unit-shock-crude_wti,combined,wheat_us_hrw,9,0.090266436440855,vxo,0.090266436440855,0
+unit-shock-crude_wti,combined,wheat_us_hrw,10,-0.12194807932385282,vxo,-0.12194807932385283,-1.3877787807814457e-17
+unit-shock-crude_wti,combined,wheat_us_hrw,11,-0.026822199760832655,vxo,-0.02682219976083266,-3.469446951953614e-18
+unit-shock-crude_wti,combined,wheat_us_hrw,12,8.564609580822075e-4,vxo,8.564609580822073e-4,-2.168404344971009e-19
+unit-shock-crude_wti,combined,wheat_us_hrw,13,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,14,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,15,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,16,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,17,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,18,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,19,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,20,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,21,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,22,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,23,0,vxo,0,0
+unit-shock-crude_wti,combined,wheat_us_hrw,24,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,1,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,2,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,3,-0.20480628779063875,vxo,-0.20480628779063875,0
+unit-shock-crude_wti,combined,zinc,4,-0.2440669258975624,vxo,-0.2440669258975624,0
+unit-shock-crude_wti,combined,zinc,5,-0.00436231276923852,vxo,-0.00436231276923852,0
+unit-shock-crude_wti,combined,zinc,6,-0.262832056560683,vxo,-0.262832056560683,0
+unit-shock-crude_wti,combined,zinc,7,-0.03247605340971541,vxo,-0.03247605340971542,-6.938893903907228e-18
+unit-shock-crude_wti,combined,zinc,8,-0.05827775773012589,vxo,-0.0582777577301259,-6.938893903907228e-18
+unit-shock-crude_wti,combined,zinc,9,-0.02069208620361549,vxo,-0.02069208620361549,0
+unit-shock-crude_wti,combined,zinc,10,-0.017161603046887935,vxo,-0.01716160304688794,-3.469446951953614e-18
+unit-shock-crude_wti,combined,zinc,11,0.012454353723716232,vxo,0.01245435372371623,-1.734723475976807e-18
+unit-shock-crude_wti,combined,zinc,12,0.0467133669069162,vxo,0.04671336690691621,6.938893903907228e-18
+unit-shock-crude_wti,combined,zinc,13,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,14,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,15,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,16,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,17,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,18,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,19,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,20,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,21,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,22,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,23,0,vxo,0,0
+unit-shock-crude_wti,combined,zinc,24,0,vxo,0,0

@@ -20,3 +20,10 @@ data/models/tvar/tvar_errors.csv
 
 # Binary model files anywhere
 *.rds
+
+# Build artifacts
+output/
+figures/
+logs/
+*.zip
+*.tar.gz

@@ -1,0 +1,13 @@
+type: path
+name: Oil supply spike
+description: Exogenous negative supply shock to crude oil; compare vs baseline.
+horizon: 24
+seed: 20250101
+identification:
+  method: chol
+  ordering: []
+shocks:
+  crude_wti: -2.0
+bands:
+  ci_level: 0.9
+  draws: 2000

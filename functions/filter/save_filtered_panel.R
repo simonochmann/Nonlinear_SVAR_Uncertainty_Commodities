@@ -41,7 +41,6 @@ save_filtered_panel <- function(df,
   
   # Convert to Wide Format
   df_wide <- df %>%
-    dplyr::select(date, commodity, price) %>%
     tidyr::pivot_wider(names_from = commodity, values_from = price)
   
   readr::write_csv(df_wide, wide_path)

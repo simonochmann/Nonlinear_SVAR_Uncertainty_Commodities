@@ -1,0 +1,13 @@
+name: "one_sigma_supply_shock"
+type: "path"         # or "girf"
+regime: "combined"
+horizon: 24
+# schedule: impulse over horizons (path-mode)
+schedule:
+  - impulse: "copper"
+    t_start: 1
+    t_end: 1
+    size: 1
+# shocks: quick single-t impulse
+shocks:
+  aluminium: 0.5

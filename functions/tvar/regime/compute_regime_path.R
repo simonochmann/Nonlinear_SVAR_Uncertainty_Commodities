@@ -1,91 +1,118 @@
-#' Compute Regime Path from Threshold Rule in TVAR Model
-#'
-#' This function classifies each observation into a regime (1 = low, 2 = high)
-#' based on the regime variable and threshold value stored in the TVAR model.
-#'
-#' @param model A fitted TVAR model with threshold_value, regime_variable, and metadata$input_df.
-#' @param verbose Logical, whether to print diagnostics to console.
-#' @param return_full Logical, whether to return full metadata or only the regime path vector.
-#' @param inject Logical, whether to inject the regime_path into the model object (for chaining).
-#'
-#' @return If return_full = TRUE: A list with regime_path, metadata, summary.
-#'         If return_full = FALSE: Just the regime_path vector.
-#'
-#' @export
-compute_regime_path <- function(model, verbose = TRUE, return_full = TRUE, inject = FALSE) {
+# functions/tvar/regime/compute_regime_path.R
+# Compute Regime Path from Threshold Rule in TVAR Model (robust, side‑effect friendly)
+# Order of truth:
+#   1) model$metadata$regime_index (already present)
+#   2) metadata$threshold_series + threshold_value
+#   3) metadata$input_df[[regime_variable]] (or metadata$threshold_var) + threshold_value
+#   4) best‑guess column in input_df (common names) + threshold_value
+#   5) fallback: concatenate low/high block sizes from regimes
+#
+# Returns the MODEL (not a vector). If inject=TRUE, writes model$metadata$regime_index
+# and model$regime_path.
+
+compute_regime_path <- function(model, inject = TRUE, verbose = TRUE) {
+  stopifnot(is.list(model))
   
-  # 1. Input Validation
-  if (is.null(model$threshold_value) || is.na(model$threshold_value[[1]])) {
-    cli::cli_abort("Missing or invalid {.field threshold_value} in model.")
-  }
-  if (is.null(model$regime_variable) || !is.character(model$regime_variable)) {
-    cli::cli_abort("Missing or invalid {.field regime_variable} in model.")
-  }
-  if (is.null(model$metadata$input_df)) {
-    cli::cli_abort("Missing {.field metadata$input_df} in model.")
+  vmessage <- function(...) if (isTRUE(verbose)) message(...)
+  
+  # 0) Already present 
+  if (!is.null(model$metadata$regime_index)) {
+    vmessage("[regime_path] Using existing metadata$regime_index (n=",
+             length(model$metadata$regime_index), ")")
+    if (isTRUE(inject)) model$regime_path <- model$metadata$regime_index
+    return(model)
   }
   
-  threshold <- model$threshold_value[[1]]
-  var       <- model$regime_variable
-  df        <- model$metadata$input_df
-  
-  if (!(var %in% colnames(df))) {
-    cli::cli_abort("Threshold variable {.val {var}} not found in input data.")
+  # helper: normalize threshold value (can be list or scalar; ignore NA)
+  get_threshold_value <- function(m) {
+    tv <- NULL
+    if (!is.null(m$threshold_value)) {
+      tv <- if (is.list(m$threshold_value)) m$threshold_value[[1]] else m$threshold_value
+    } else if (!is.null(m$model) && !is.null(m$model$Thresh)) {
+      tv <- as.numeric(m$model$Thresh)
+    }
+    if (length(tv) == 0 || is.na(tv)) return(NULL)
+    as.numeric(tv)
   }
   
-  x <- df[[var]]
-  total_obs <- length(x)
+  thr_value <- get_threshold_value(model)
   
-  # 2. Compute Regime Path
-  regime_path <- dplyr::case_when(
-    is.na(x)           ~ NA_integer_,
-    x <= threshold     ~ 1L,
-    x > threshold      ~ 2L,
-    TRUE               ~ NA_integer_
-  )
+  # 1) metadata$threshold_series + threshold_value 
+  thr_series <- NULL
+  if (!is.null(model$metadata$threshold_series)) thr_series <- model$metadata$threshold_series
+  if (is.null(thr_series) && !is.null(model$threshold_series)) thr_series <- model$threshold_series
   
-  # 3. Build Metadata
-  summary_tbl <- tibble::tibble(
-    regime = as.character(1:2),
-    count = purrr::map_int(1:2, ~sum(regime_path == .x, na.rm = TRUE)),
-    pct   = purrr::map_dbl(1:2, ~round(100 * mean(regime_path == .x, na.rm = TRUE), 2))
-  )
-  
-  full_metadata <- list(
-    threshold_value     = threshold,
-    threshold_variable  = var,
-    total_observations  = total_obs,
-    missing_values      = sum(is.na(x)),
-    timestamp           = format(Sys.time(), "%Y-%m-%d %H:%M:%S"),
-    model_hash          = tryCatch(digest::digest(model), error = function(e) NA),
-    summary             = summary_tbl
-  )
-  
-  # 4. Optional Verbose Diagnostics
-  if (verbose) {
-    cli::cli_h1("TVAR Regime Path Computation")
-    cli::cli_text("Variable used     : {.strong {var}}")
-    cli::cli_text("Threshold value   : {.strong {round(threshold, 6)}}")
-    cli::cli_text("Total observations: {.strong {total_obs}}")
-    cli::cli_text("Missing values    : {.strong {sum(is.na(x))}}")
-    print(summary_tbl)
+  if (!is.null(thr_series) && !is.null(thr_value)) {
+    x <- as.numeric(thr_series)
+    idx <- ifelse(is.na(x), NA_integer_, ifelse(x <= thr_value, 1L, 2L))
+    vmessage("[regime_path] Derived from metadata threshold_series vs threshold_value = ",
+             signif(thr_value, 6))
+    if (isTRUE(inject)) {
+      model$metadata$regime_index <- idx
+      model$regime_path <- idx
+    }
+    return(model)
   }
   
-  # 5. Injection into Model
-  if (inject) {
-    model$regime_path <- regime_path
-    if (return_full) {
-      model$regime_metadata <- full_metadata
+  # 2) input_df + regime_variable (or metadata$threshold_var) 
+  df <- NULL
+  if (!is.null(model$metadata$input_df)) df <- model$metadata$input_df
+  if (is.null(df) && !is.null(model$input_df)) df <- model$input_df
+  
+  regime_var <- NULL
+  if (!is.null(model$regime_variable) && is.character(model$regime_variable)) {
+    regime_var <- model$regime_variable
+  } else if (!is.null(model$metadata$threshold_var)) {
+    regime_var <- model$metadata$threshold_var
+  }
+  
+  if (!is.null(df) && !is.null(regime_var) && regime_var %in% colnames(df) && !is.null(thr_value)) {
+    x <- df[[regime_var]]
+    x <- as.numeric(x)
+    idx <- ifelse(is.na(x), NA_integer_, ifelse(x <= thr_value, 1L, 2L))
+    vmessage("[regime_path] Built from input_df[['", regime_var,
+             "']] using threshold_value = ", signif(thr_value, 6))
+    if (isTRUE(inject)) {
+      model$metadata$regime_index <- idx
+      model$regime_path <- idx
+    }
+    return(model)
+  }
+  
+  # 3) Best‑guess column in input_df
+  if (!is.null(df) && !is.null(thr_value)) {
+    candidates <- c("value_L1", "uncertainty_idx", "VIX", "VXO", "vix", "vxo", "jln", "ciss")
+    pick <- intersect(candidates, colnames(df))
+    if (length(pick) >= 1) {
+      gvar <- pick[1]
+      x <- as.numeric(df[[gvar]])
+      idx <- ifelse(is.na(x), NA_integer_, ifelse(x <= thr_value, 1L, 2L))
+      vmessage("[regime_path] Best‑guess input_df[['", gvar, "']] used (threshold = ",
+               signif(thr_value, 6), ")")
+      if (isTRUE(inject)) {
+        model$metadata$threshold_var <- gvar
+        model$metadata$regime_index <- idx
+        model$regime_path <- idx
+      }
+      return(model)
     }
   }
   
-  # 6. Return
-  if (return_full) {
-    return(list(
-      regime_path = regime_path,
-      metadata = full_metadata
-    ))
-  } else {
-    return(regime_path)
+  # 4) Fallback: concatenate low/high block sizes 
+  n_low  <- if (!is.null(model$regimes$low$Y))  nrow(model$regimes$low$Y)  else 0L
+  n_high <- if (!is.null(model$regimes$high$Y)) nrow(model$regimes$high$Y) else 0L
+  if ((n_low + n_high) > 0) {
+    idx <- c(rep(1L, n_low), rep(2L, n_high))
+    vmessage("[regime_path] Fallback from block sizes: low=", n_low,
+             ", high=", n_high, " (no threshold series/var available)")
+    if (isTRUE(inject)) {
+      model$metadata$regime_index <- idx
+      model$regime_path <- idx
+    }
+    return(model)
   }
+  
+  # Give up 
+  stop("Could not infer regime path: no regime_index, no usable threshold series/value, ",
+       "no input_df match, and no regime block sizes.")
 }

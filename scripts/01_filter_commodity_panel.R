@@ -16,7 +16,7 @@ source(here::here("functions/filter/logs/log_retained_commodities.R"))
 source(here::here("functions/filter/logs/log_filtering_activity.R"))
 source(here::here("functions/filter/logs/log_filtering_metadata_json.R"))
 
-source(here::here("functions/data/validate/validate_filtered_panel.R"))
+source(here::here("functions/filter/validate/validate_filtered_panel.R"))
 
 # Parameters
 INPUT_FILE   <- here::here("data","raw","commodity_prices_long.csv")

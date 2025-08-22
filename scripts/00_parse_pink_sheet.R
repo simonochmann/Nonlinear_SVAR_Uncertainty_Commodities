@@ -53,12 +53,17 @@ run_parse_pipeline <- function(
   # 3. Standardize names
   df_named <- standardize_commodity_names(df_valid, verbose = verbose)
   
-  # 4. Reshape to long format
-  df_long <- readr::read_csv(here::here("data","raw","commodity_prices_long.csv"), show_col_types = FALSE)
-  targets <- c("crude_wti","ngas_us","gold","platinum","silver",
-               "cocoa","coffee_arabic","maize","cotton_a_indx","soybeans","sugar_wld","wheat_us_hrw",
-               "aluminium","copper","lead","nickel","tin","zinc")
+  # 4. Reshape to long format (no external CSV dependency)
+  df_long <- tryCatch(
+    reshape_to_long_format(df_named, verbose = verbose),
+    error = function(e) stop("reshape_to_long_format() failed: ", conditionMessage(e))
+  )
   
+  # Optionally check study-set coverage (keep this nice reporting)
+  targets <- c("crude_wti","ngas_us","gold","platinum","silver",
+               "cocoa","coffee_arabic","maize","cotton_a_indx","soybeans",
+               "sugar_wld","wheat_us_hrw","aluminium","copper","lead",
+               "nickel","tin","zinc")
   missing <- setdiff(targets, tolower(unique(df_long$commodity)))
   cat("Missing targets:", paste(missing, collapse = ", "), "\n")
   

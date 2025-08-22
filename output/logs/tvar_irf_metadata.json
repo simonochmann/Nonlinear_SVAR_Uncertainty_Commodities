@@ -1,110 +1,28 @@
 {
-  "horizon": {},
-  "n_draws": {},
-  "ci_level": {},
-  "shock_type": {},
-  "shock_size": {},
-  "timestamp": "2025-08-07 13:08:46",
-  "irf_pairs": [
-    {
-      "regime": "low",
-      "impulse": "oil",
-      "response": "oil"
+  "created_at": "2025-08-22 15:14:42.084095",
+  "settings": {
+    "horizon": "NA",
+    "n_draws": "NA",
+    "ci_level": "NA",
+    "shock_type": null,
+    "shock_size": "NA",
+    "seed": "NA"
+  },
+  "variables": {
+    "impulses": [],
+    "responses": []
+  },
+  "regimes": {
+    "low": {
+      "n": 318,
+      "spectral_radius": 0.5783,
+      "has_summary": false
     },
-    {
-      "regime": "low",
-      "impulse": "oil",
-      "response": "value"
-    },
-    {
-      "regime": "low",
-      "impulse": "value",
-      "response": "oil"
-    },
-    {
-      "regime": "low",
-      "impulse": "value",
-      "response": "value"
-    },
-    {
-      "regime": "low",
-      "impulse": "oil",
-      "response": "oil"
-    },
-    {
-      "regime": "low",
-      "impulse": "oil",
-      "response": "value"
-    },
-    {
-      "regime": "low",
-      "impulse": "oil",
-      "response": "oil"
-    },
-    {
-      "regime": "low",
-      "impulse": "oil",
-      "response": "value"
-    },
-    {
-      "regime": "low",
-      "impulse": "value",
-      "response": "oil"
-    },
-    {
-      "regime": "low",
-      "impulse": "value",
-      "response": "value"
-    },
-    {
-      "regime": "high",
-      "impulse": "oil",
-      "response": "oil"
-    },
-    {
-      "regime": "high",
-      "impulse": "oil",
-      "response": "value"
-    },
-    {
-      "regime": "high",
-      "impulse": "value",
-      "response": "oil"
-    },
-    {
-      "regime": "high",
-      "impulse": "value",
-      "response": "value"
-    },
-    {
-      "regime": "high",
-      "impulse": "oil",
-      "response": "oil"
-    },
-    {
-      "regime": "high",
-      "impulse": "oil",
-      "response": "value"
-    },
-    {
-      "regime": "high",
-      "impulse": "oil",
-      "response": "oil"
-    },
-    {
-      "regime": "high",
-      "impulse": "oil",
-      "response": "value"
-    },
-    {
-      "regime": "high",
-      "impulse": "value",
-      "response": "oil"
-    },
-    {
-      "regime": "high",
-      "impulse": "value",
-      "response": "value"
+    "high": {
+      "n": 59,
+      "spectral_radius": 0.9704,
+      "has_summary": false
     }
-  ]
+  },
+  "pairs": []
 }
