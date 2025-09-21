@@ -1,5 +1,4 @@
 # scripts/01_filter_commodity_panel.R
-# Filter the Pink Sheet long panel to your study set,
 # compute log returns & a volatility proxy, and save outputs.
 # Uses case-insensitive matching for commodity names.
 
@@ -58,7 +57,7 @@ df_keep <- df %>%
 
 if (nrow(df_keep) == 0) {
   stop("After case-insensitive filtering, no study-set commodities were found. ",
-       "Check names in data/raw/commodity_prices_long.csv.")
+       "Check data/raw/commodity_prices_long.csv.")
 }
 
 cat("\nStudy-set presence (case-insensitive):\n")
@@ -99,7 +98,7 @@ df_returns <- df_returns %>%
   dplyr::select(date, commodity, price, ln_price, ret, log_return) %>%
   dplyr::arrange(commodity, date)
 
-# Compute volatility proxy (requires log_return present)
+# Compute volatility proxy 
 df_vol <- compute_volatility_proxy(df_returns, method = VOL_METHOD)
 
 # Canonicalize to downstream schema 
@@ -130,7 +129,7 @@ paths <- save_filtered_panel(
   return_paths = TRUE
 )
 
-# Retained vs dropped (from canonical object) 
+# Retained vs dropped 
 retained <- sort(unique(filtered_panel$commodity_name))
 dropped  <- setdiff(sort(unique(df_keep$commodity)), retained)
 
@@ -210,13 +209,13 @@ if (!file.exists(schema_path)) {
 } else {
   # validate against existing snapshot
   snap <- jsonlite::read_json(schema_path, simplifyVector = TRUE)
-  # column check (order-insensitive)
+  # column check
   if (!setequal(names(filtered_panel), snap$columns)) {
     stop("Schema drift: columns differ from snapshot.\n",
          "Expected: ", paste(snap$columns, collapse=", "),
          "\nGot:      ", paste(names(filtered_panel), collapse=", "))
   }
-  # light type guard (coerces R classes to short labels for comparison)
+  # light type guard 
   to_short <- function(x) {
     if (inherits(x, "Date")) "Date"
     else if (is.numeric(x)) "num"

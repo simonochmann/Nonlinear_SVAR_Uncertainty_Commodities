@@ -1,17 +1,21 @@
 ---
-title: ""
+title: ""     
 author: ""
 date: ""
-
-bibliography: bibtex/references.bib
+bibliography:
+  - bibtex/references.bib
+  - bibtex/software.bib
 csl: bibtex/apa.csl
+link-citations: true
+citeproc: true
 
 output:
-  pdf_document:
+  bookdown::pdf_document2:
     number_sections: true
     fig_caption: true
     latex_engine: xelatex
     keep_tex: true
+    toc: false     
 
 fontsize: 11pt
 mainfont: Arial
@@ -19,11 +23,39 @@ geometry: margin=2.5cm
 linestretch: 1.5
 
 header-includes:
+  - \AtBeginDocument{\let\maketitle\relax}
   - \usepackage{graphicx}
   - \usepackage{setspace}
   - \usepackage{titlesec}
   - \usepackage{fancyhdr}
   - \usepackage{tocloft}
+  - \usepackage{caption}
+  - \captionsetup{font={normalsize,stretch=1.5}, labelfont=bf}
+  - \captionsetup{font={small}, labelfont=bf}
+  - \captionsetup[table]{position=bottom,skip=6pt}
+  - \usepackage{subcaption}
+  - \usepackage[titletoc,title]{appendix}
+  - \usepackage{chngcntr} 
+  - \usepackage{amsmath}
+  - \usepackage[hidelinks]{hyperref}
+  - \usepackage{acro}
+  - \usepackage{booktabs}
+  - \usepackage{float}
+  - \usepackage[section]{placeins}
+  - \usepackage{threeparttable}
+  - \usepackage[dvipsnames]{xcolor}
+  - \usepackage{amssymb}   
+  - \usepackage{pifont}
+  - \usepackage{etoolbox}
+  - \AtBeginEnvironment{equation}{\setlength{\abovedisplayskip}{8pt}\setlength{\belowdisplayskip}{8pt}}
+  - \AtBeginEnvironment{align}{\setlength{\abovedisplayskip}{8pt}\setlength{\belowdisplayskip}{8pt}}
+  - \AtBeginEnvironment{subequations}{\setlength{\abovedisplayskip}{8pt}\setlength{\belowdisplayskip}{8pt}}
+  - \newcommand{\robstrong}{\textcolor{ForestGreen}{\checkmark}}
+  - \newcommand{\robmixed}{\textcolor{BurntOrange}{\(\triangle\)}}
+  - \newcommand{\robweak}{\textcolor{BrickRed}{\ding{55}}} 
+  - \acsetup{first-style=long-short}
+  - \acsetup{list/heading=section*, make-links=true}
+  - \acsetup{make-links=true}
   - \pagestyle{plain}
   - \renewcommand{\cftsecfont}{\normalfont}
   - \renewcommand{\cftsecpagefont}{\normalfont}
@@ -32,141 +64,1962 @@ header-includes:
   - \cftsetrmarg{3em}
   - \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
   - \renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
----
+  - \renewcommand{\cftloftitlefont}{\Large\bfseries\raggedright}
+  - \renewcommand{\cftafterloftitle}{\par}
+  - \DeclareAcronym{vix}{  short = VIX,  long = CBOE Volatility Index, tag = abbrev }
+  - \DeclareAcronym{vxo}{  short = VXO,  long = CBOE S\&P100 Implied-Volatility Index, tag = abbrev }
+  - \DeclareAcronym{jln}{  short = JLN,  long = Jurado–Ludvigson–Ng Macroeconomic Uncertainty Index, tag = abbrev }
+  - \DeclareAcronym{tvar}{ short = TVAR, long = Threshold Vector Autoregression, tag = abbrev }
+  - \DeclareAcronym{var}{  short = VAR,  long = Vector Autoregression, tag = abbrev }
+  - \DeclareAcronym{svar}{ short = SVAR, long = Structural Vector Autoregression, tag = abbrev }
+  - \DeclareAcronym{irf}{  short = IRF,  long = Impulse Response Function, tag = abbrev }
+  - \DeclareAcronym{girf}{ short = GIRF, long = Generalized Impulse Response Function, tag = abbrev }
+  - \DeclareAcronym{fevd}{ short = FEVD, long = Forecast-Error Variance Decomposition, tag = abbrev }
+  - \DeclareAcronym{gfevd}{short = GFEVD,long = Generalized Forecast-Error Variance Decomposition, tag = abbrev }
+  - \DeclareAcronym{bic}{  short = BIC,  long = Bayesian Information Criterion, tag = abbrev }
+  - \DeclareAcronym{ols}{  short = OLS,  long = Ordinary Least Squares, tag = abbrev }
+  - \DeclareAcronym{gfc}{  short = GFC,  long = Global Financial Crisis, tag = abbrev}
+  - \DeclareAcronym{ltcm}{  short = LCTM,  long = Long-Term Capital Management, tag = abbrev}
+  - \DeclareAcronym{sigma}{short = \ensuremath{\sigma},long  = volatility (std. dev.),tag = symbols}
+  - \DeclareAcronym{tau}{short = \ensuremath{\tau},long  = threshold parameter,tag = symbols}
+  - \DeclareAcronym{cstar}{short = \ensuremath{c^{*}},long  = BIC-optimal threshold,tag = symbols}
+  - \DeclareAcronym{R_t}{short = \ensuremath{\mathcal{R}_t},long  = regime indicator at time $t$,tag = symbols}
+  - \DeclareAcronym{Hmax}{short = \ensuremath{H_{\max}},long  = maximum IRF horizon,tag = symbols}
+  - \DeclareAcronym{r_it}{short=\ensuremath{r_{i,t}}, long=percent log return of commodity $i$ at time $t$, tag=symbols}
+  - \DeclareAcronym{P_it}{short=\ensuremath{P_{i,t}}, long=price level of commodity $i$ at time $t$, tag=symbols}
+  - \DeclareAcronym{q_t}{short=\ensuremath{q_t}, long=raw uncertainty proxy (volatility or JLN) at time $t$, tag=symbols}
+  - \DeclareAcronym{qbar}{short=\ensuremath{\bar q}, long=in-sample mean of the uncertainty proxy, tag=symbols}
+  - \DeclareAcronym{s_q}{short=\ensuremath{s_q}, long=normalization scale,   tag=symbols}
+  - \DeclareAcronym{qtilde_t}{short=\ensuremath{\tilde q_t}, long=standardized uncertainty proxy, tag=symbols}
+  - \DeclareAcronym{qtilde_tm}{short=\ensuremath{\tilde q_t^{(m)}}, long=$m$-month moving average, tag=symbols}
+  - \DeclareAcronym{m_win}{short=\ensuremath{m}, long=length of the smoothing window (months), tag=symbols}
+  - \DeclareAcronym{d_delay}{short=\ensuremath{d}, long=threshold delay used in regime assignment, tag=symbols}
+  - \DeclareAcronym{c_thr}{short=\ensuremath{c}, long=candidate threshold value, tag=symbols}
+  - \DeclareAcronym{C_tau}{short=\ensuremath{C_{\tau}}, long=search interval for the threshold, tag=symbols}
+  - \DeclareAcronym{Q_alpha}{short=\ensuremath{Q_{\alpha}(\cdot)}, long=quantile operator at probability $\alpha$, tag=symbols}
+  - \DeclareAcronym{s_t}{short=\ensuremath{s_t}, long=binary regime state, tag=symbols}
+  - \DeclareAcronym{dtc}{short=\ensuremath{d_t(c)}, long=indicator, tag=symbols}
+  - \DeclareAcronym{Tset}{short=\ensuremath{\mathcal T}, long=time-index set of the sample, tag=symbols}
+  - \DeclareAcronym{Trep}{short=\ensuremath{\mathcal T^{\mathrm{rep}}}, long=replication-window index set, tag=symbols}
+  - \DeclareAcronym{Text}{short=\ensuremath{\mathcal T^{\mathrm{ext}}}, long=extended-window index set, tag=symbols}
+  - \DeclareAcronym{Tlen}{short=\ensuremath{T}, long=number of observations in $\mathcal T$, tag=symbols}
+  - \DeclareAcronym{Tone}{short=\ensuremath{T_{1}}, long=observations in the high-uncertainty regime, tag=symbols}
+  - \DeclareAcronym{Hc}{short=\ensuremath{H(c)}, long=index set of high-regime times given threshold $c$, tag=symbols}
+  - \DeclareAcronym{Lc}{short=\ensuremath{L(c)}, long=complement set $\mathcal T \setminus H(c)$, tag=symbols}
+  - \DeclareAcronym{sH}{short=\ensuremath{s_H}, long=share of high-regime observations, tag=symbols}
+  - \DeclareAcronym{dsH}{short=\ensuremath{\delta s_H}, long=difference in $s_H$ across uncertainty proxies, tag=symbols}
+  - \DeclareAcronym{y_vec}{short=\ensuremath{\mathbf y_t}, long=vector of endogenous variables at time $t$, tag=symbols}
+  - \DeclareAcronym{alpha_st}{short=\ensuremath{\boldsymbol{\alpha}(s_t)}, long=regime-dependent intercept vector, tag=symbols}
+  - \DeclareAcronym{Aks}{short=\ensuremath{A_k(s_t)}, long=regime-dependent VAR coefficient matrix at lag $k$, tag=symbols}
+  - \DeclareAcronym{p_ord}{short=\ensuremath{p}, long=VAR lag order, tag=symbols}
+  - \DeclareAcronym{eps_t}{short=\ensuremath{\boldsymbol{\varepsilon}_t}, long=innovation (reduced-form shock) at time $t$, tag=symbols}
+  - \DeclareAcronym{Sigma_st}{short=\ensuremath{\Sigma(s_t)}, long=regime-dependent covariance matrix of $\boldsymbol{\varepsilon}_t$, tag=symbols}
+  - \DeclareAcronym{Zs}{short=\ensuremath{Z_s}, long=regime-$s$ regressor matrix in OLS, tag=symbols}
+  - \DeclareAcronym{Ys}{short=\ensuremath{Y_s}, long=regime-$s$ stacked dependent variable matrix, tag=symbols}
+  - \DeclareAcronym{Bs}{short=\ensuremath{B^{(s)}(c)}, long=OLS coefficient matrix estimated in regime $s$ at threshold $c$, tag=symbols}
+  - \DeclareAcronym{Ts}{short=\ensuremath{T_s}, long=number of observations in regime $s$, tag=symbols}
+  - \DeclareAcronym{kcpd}{short=\ensuremath{k(c,p,d)}, long=parameter count, tag=symbols}
+  - \DeclareAcronym{eta_is}{short=\ensuremath{\eta_i^{(s)}}, long=shock to variable $i$ normalized by its s.d. in regime $s$, tag=symbols}
+  - \DeclareAcronym{sig_is}{short=\ensuremath{\sigma_i^{(s)}}, long=standard deviation of innovation $i$ in regime $s$, tag=symbols}
+  - \DeclareAcronym{e_i}{short=\ensuremath{e_i}, long=$i$-th unit vector, tag=symbols}
+  - \DeclareAcronym{i_idx}{short=\ensuremath{i}, long=index of the shocked variable, tag=symbols}
+  - \DeclareAcronym{ell_idx}{short=\ensuremath{\ell}, long=index of the responding variable, tag=symbols}
+  - \DeclareAcronym{h_hor}{short=\ensuremath{h}, long=impulse-response horizon (periods), tag=symbols}
+  - \DeclareAcronym{Hcap}{short=\ensuremath{H}, long=horizon cutoff used for cumulative measures, tag=symbols}
+  - \DeclareAcronym{Hmax2}{short=\ensuremath{H_{\max}}, long=maximum horizon, tag=symbols}
+  - \DeclareAcronym{n_dim}{short=\ensuremath{n}, long=VAR dimension (number of variables), tag=symbols}
+  - \DeclareAcronym{B_boot}{short=\ensuremath{B}, long=number of Monte Carlo/boostrap draws, tag=symbols}
+  - \DeclareAcronym{info_tm1}{short=\ensuremath{\mathcal I_{t-1}}, long=information set, tag=symbols}
+  - \DeclareAcronym{s_set}{short=\ensuremath{s\in\{0,1\}}, long=regime label, tag=symbols}
+  - \DeclareAcronym{GIRFsym}{short=\ensuremath{\mathrm{GIRF}^{\,i\to \ell,(s)}(h)}, long=generalized impulse response, tag=symbols}
+  - \DeclareAcronym{GIRFhat}{short=\ensuremath{\widehat{\mathrm{GIRF}}_{i\to \ell}^{(s)}(h)}, long=Monte Carlo estimate of the GIRF, tag=symbols}
+  - \DeclareAcronym{DeltaIRF}{short=\ensuremath{\Delta\mathrm{IRF}^{\,i\to \ell}(h)}, long=difference in GIRFs between high and low regimes, tag=symbols}
+  - \DeclareAcronym{hhalf}{short=\ensuremath{h_{1/2}^{(s)}(i\to \ell)}, long=half-life (time to half the peak response) in regime $s$, tag=symbols}
+  - \DeclareAcronym{Deltahhalf}{short=\ensuremath{\Delta h_{1/2}(g)}, long=group-level difference in half-life between proxies, tag=symbols}
+  - \DeclareAcronym{GFEVDhat}{short=\ensuremath{\widehat{\mathrm{GFEVD}}_{\ell,i}^{(s)}(H)}, long=generalized FEVD share of shock, tag=symbols}
+  - \DeclareAcronym{GFEVDg}{short=\ensuremath{\mathrm{GFEVD}_g^{(\cdot,\cdot)}(H)}, long=group-aggregated GFEVD, tag=symbols}
+  - \DeclareAcronym{Ramp}{short=\ensuremath{R_{\mathrm{amp}}^{\,i\to \ell}}, long=amplitude ratio (low vs high regime peak), tag=symbols}
+  - \DeclareAcronym{AreaDiff}{short=\ensuremath{A^{\,i\to \ell}(H)}, long=area difference of responses (high minus low), tag=symbols}
+  - \DeclareAcronym{Jacc}{short=\ensuremath{J}, long=overlap index (Jaccard) of volatility and JLN high regimes, tag=symbols}
+  - \DeclareAcronym{DDg}{short=\ensuremath{\Delta\Delta_g(H)}, long=double difference of group GFEVDs across proxies and regimes, tag=symbols}
+  - \DeclareAcronym{UgP}{short=\ensuremath{U_g^{(p)}}, long=percentile-based group contrast (volatility minus JLN), tag=symbols}
+  - \DeclareMathOperator*{\argmin}{arg\,min}
+  - \DeclareMathOperator{\diag}{diag}
+  - \newcommand{\E}{\mathbb{E}}
 
+
+---
+\begin{titlepage}
+\thispagestyle{empty}
 \begin{center}
 \vspace*{2cm}
-{\LARGE \textbf{The Nonlinear Effects of Macroeconomic Uncertainty on\\ Commodity Price Volatility: A Replication and Extension of Joëts et al. (2017)}}\\[2cm]
+{\LARGE \textbf{The Nonlinear Effects of Macroeconomic Uncertainty on\\
+Commodity Price Returns: A Replication and Extension of Joets \& Mignon (2016)}}\\[2cm]
 
 {\large Simon Ochmann}\\
 REDACTED\\
 REDACTED\\
 REDACTED\\
-REDACTED\\[0.8cm]
+Prof. Dr. Christian R. Proa\~{n}o and Maybrit W\"achter, MSc\\[0.8cm]
 
 Matriculation Number: REDACTED\\
 Address: REDACTED\\
-Place of Birth: REDACTED\\[1.5cm]
+Place of Birth: Ha\ss{}furt, Germany\\[1.5cm]
 
 \today
 \end{center}
+\end{titlepage}
 
-\thispagestyle{empty}
-\newpage
 \pagenumbering{Roman}
 \setcounter{page}{2}
 
-\tableofcontents
+\begin{center}\bfseries Abstract\end{center}
+\noindent
+This paper investigates how the transmission of shocks to commodity-market return depends on the level and type of macroeconomic uncertainty by replicating and extending @joetsDoesVolatilityCommodity2016. The replication estimates a two-regime \ac{tvar} over 1986–2015 using the \ac{vxo}. To extend the sample through June 2025, the \ac{vix} is employed from 1990 onward, for 1986–1989, when VIX is unavailable, VXO is used. To capture broader, predictability-based uncertainty, the \ac{jln} macroeconomic uncertainty index is incorporated across the full 1986–2025 period. Robustness is benchmarked against linear VAR and structural VAR specifications while varying lag length, threshold selection, and bootstrap confidence intervals. Sensitivity analyses contrast volatility-based (VXO/VIX) with predictability-based (JLN) proxies to assess proxy dependence. This design isolates state-dependent transmission of shocks to the commodity system conditional on the uncertainty.
 
-\newpage
+\clearpage
+
+\phantomsection
+\addcontentsline{toc}{section}{Contents}
+\tableofcontents
+\clearpage
+
+\phantomsection
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+\clearpage
+
+\phantomsection
+\addcontentsline{toc}{section}{List of Tables}
+\listoftables
+\clearpage
+
+\phantomsection
+\addcontentsline{toc}{section}{List of Symbols}
+\small
+\printacronyms[
+  name=List of Symbols,
+  include=symbols,
+  heading=section*,
+  display=all,
+  pages={display=first, fill=\dotfill, name=false, seq/use=false}
+]
+\clearpage
+
+\phantomsection
+\addcontentsline{toc}{section}{List of Abbreviations}
+\small
+\printacronyms[
+  name=List of Abbreviations,
+  include=abbrev,
+  heading=section*,
+  display=used,
+  pages={display=first, name=false, seq/use=false}
+]
+\acresetall
+\clearpage
+
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-# Abstract
-This project revisits the nonlinear relationship between macroeconomic uncertainty and commodity price volatility by replicating and extending Joëts et al. (2017).This study replicates Joëts et al. (2017) by estimating a threshold VAR model over 1986–2015 using the CBOE S&P 100 Volatility Index (VXO), which covers the full replication sample. To extend the analysis through April 2025, the CBOE Volatility Index (VIX), based on the S&P 500, is employed from 1990 onward due to the discontinuation of VXO after August 2020 and the broader market coverage of VIX. For the 1986–1989 period, only VXO is available and used. Additionally, the Jurado-Ludvigson-Ng (JLN) macroeconomic uncertainty index and the ECB’s Composite Indicator of Systemic Stress (CISS) are incorporated over the full 1986–2025 sample to capture broader systemic uncertainty.To evaluate model robustness, results are benchmarked across linear and structural VAR frameworks, varying lag lengths, threshold parameters, and bootstrap confidence intervals. Furthermore, sensitivity analyses contrast volatility-based and predictability-based measures of uncertainty to ensure findings hold under alternative proxies. This approach clarifies the influence of uncertainty shocks on commodity markets in contemporary macro-financial conditions, enhancing the reliability of stress testing, risk management, and policy calibration frameworks.
+```{r here_root, include=FALSE}
+suppressPackageStartupMessages({library(here); library(fs)})
+# Always anchor 'here' to the folder that contains THIS file.
+here::i_am(knitr::current_input())
+```
 
-# Introduction and Motivation
-Understanding how macroeconomic uncertainty propagates through commodity markets is critical for modeling risk in today’s structurally shifted macro-financial environment. Joëts et al. (2017) examine this relationship using a threshold VAR (TVAR) model applied to 19 monthly commodity return series across energy, precious metals, agriculture, and industrial sectors. While the full dataset spans 1976 to 2015, the empirical analysis is restricted to the post-1986 period due to data availability for their primary uncertainty proxy—the implied volatility index on the CBOE S&P 100 Volatility Index (VXO). Robustness checks are conducted using macro uncertainty indices from Jurado, Ludvigson, and Ng’s dataset.
+```{r sanitize_unicode, include=FALSE, eval=FALSE}
+suppressPackageStartupMessages({library(fs); library(readr); library(here)})
 
-This study utilizes a comprehensive dataset comprising monthly returns on 19 commodity price series across energy, precious metals, agricultural, and industrial metals markets, thereby capturing a wide spectrum of commodity asset classes sensitive to macroeconomic uncertainty.
+# Candidate paths to this very file (no hard-coded "paper/")
+cand <- c(
+  knitr::current_input(),                             # what knitr thinks it's knitting
+  here::here(basename(knitr::current_input())),       # same file under current here()
+  here::here("nonlinear_svar_draft.Rmd")              # fallback in case basename differs
+)
+cand <- cand[fs::file_exists(cand)]
 
-Traditional linear VAR models assume symmetric responses across economic states, limiting their ability to capture risk asymmetries during turbulent periods. As a result, they may underestimate downside risk and obscure key transmission channels. In contrast, TVAR models allow for regime shifts based on threshold variables. When combined with generalized impulse response functions (GIRFs), they permit the estimation of state-contingent responses to uncertainty shocks—better reflecting real-world volatility dynamics.
+if (!length(cand)) {
+  message("sanitize_unicode: Rmd path not found — skipping.")
+} else {
+  f <- cand[1]
+  x <- readr::read_file(f)
+  # Replace non-breaking hyphen/space variants
+  x <- gsub("\u2011", "-", x, fixed = TRUE)  # NB hyphen → hyphen
+  x <- gsub("\u202F", " ", x, fixed = TRUE)  # narrow NB space → space
+  x <- gsub("\u00A0", " ", x, fixed = TRUE)  # NB space → space
+  readr::write_file(x, f)
+}
+```
 
-Three key extensions are introduced to the original TVAR framework. First, the sample is extended through April 2025 to incorporate recent macro-financial volatility. Second, regime identification is refined using updated uncertainty proxies: the Jurado-Ludvigson-Ng (JLN) index, the ECB’s Composite Indicator of Systemic Stress (CISS), and a hybrid volatility-based measure that uses VXO from 1986 to 1989 and VIX from 1990 onward—ensuring continuous coverage beyond the original study’s period. Third, TVAR results are benchmarked against linear and structural VAR models, with robustness tests conducted across lag orders, threshold values, and bootstrap intervals.
+```{r setup, include=FALSE}
+suppressPackageStartupMessages({
+  library(fs); library(here); library(readr); library(dplyr); library(knitr); library(kableExtra)
+})
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "center", dev = if (capabilities("cairo")) "cairo_pdf" else "pdf", dev.args = list(family = "Arial"))
+if (file.exists("../.here")) {
+  here::i_am("../.here")    
+} else if (file.exists(".here")) {
+  here::i_am(".here")
+}
+```
 
-The hypothesis is that uncertainty shocks—particularly those identified through macroeconomic and systemic stress proxies—have become more asymmetric and persistent since 2015, amplifying commodity price volatility more strongly in high-uncertainty regimes. This nonlinear propagation is expected to vary across commodity groups and may reveal structural shifts not captured by linear models or volatility-based proxies alone.
+```{r artifact, include=FALSE}
+suppressPackageStartupMessages({
+  library(fs); library(here); library(readr)
+})
 
-# Methodology
+# 1) Ensure artifacts folders exist
+art_root <- here::here("artifacts")   # NOT here::here("paper","artifacts")
+fs::dir_create(art_root, recurse = TRUE)
+fs::dir_create(fs::path(art_root, "tables"), recurse = TRUE)
+fs::dir_create(fs::path(art_root, "figures","decomposition"), recurse = TRUE)
 
-The empirical strategy follows Joëts et al. (2017) and is structured around three modules: replication, extension, and validation.
+# 2) Optional auto-seed (copies first match it finds into artifacts/)
+.find_first <- function(fname, roots) {
+  for (r in roots) {
+    if (!fs::dir_exists(r)) next
+    files <- tryCatch(fs::dir_ls(r, recurse = TRUE, type = "file"), error=function(e) character(0))
+    hit   <- files[fs::path_file(files) == fname]
+    if (length(hit)) return(hit[1])
+  }
+  NA_character_
+}
 
-## Replication
+seed_artifacts <- function() {
+  # Expected tables (add 'robustness_matrix_table4.csv' if you want Table 4)
+  tbls <- c(
+    "model_selection_summary.csv",
+    "linear_vs_tvar_uplifts.csv",
+    "regime_flags.csv",
+    "fevd_regime_shares.csv",
+    "half_life_summary.csv",
+    "persistence_index_summary.csv",
+    "appendix_commodities_coverage.csv",
+    "robustness_matrix_table4.csv"
+  )
+  figs <- c("waterfall_tH_vix.png","waterfall_tH_jln.png","delta_lines.png")
 
-The first step replicates the nonlinear framework of Joëts et al. (2017), who estimate a threshold vector autoregressive (TVAR) model to analyze how uncertainty shocks affect commodity price volatility in different regimes. The TVAR allows for distinct autoregressive dynamics depending on whether an uncertainty measure crosses an estimated threshold value. The model is defined as:
+  table_roots <- c(
+    here::here("paper","artifacts","tables"),
+    here::here("models","tvar","artifacts","tables"),
+    here::here("..","models","tvar","artifacts","tables"),
+    here::here("output","releases"),
+    here::here("..","output","releases")
+  )
+  fig_roots <- c(
+    here::here("paper","artifacts","figures","decomposition"),
+    here::here("output","releases"),
+    here::here("..","output","releases")
+  )
 
-$$
-\mathbf{y}_t =
-\begin{cases}
-\mathbf{A}_1 \mathbf{y}_{t-1} + \dots + \mathbf{A}_p \mathbf{y}_{t-p} + \boldsymbol{\epsilon}_t, & \text{if } q_{t-d} \leq \theta \\\\
-\mathbf{B}_1 \mathbf{y}_{t-1} + \dots + \mathbf{B}_p \mathbf{y}_{t-p} + \boldsymbol{\epsilon}_t, & \text{if } q_{t-d} > \theta
-\end{cases}
-$$
+  for (nm in tbls) {
+    dest <- fs::path(art_root, "tables", nm)
+    if (!fs::file_exists(dest)) {
+      src <- .find_first(nm, table_roots)
+      if (is.character(src) && length(src) && !is.na(src)) {
+        fs::file_copy(src, dest, overwrite = FALSE)
+      }
+    }
+  }
+  for (nm in figs) {
+    dest <- fs::path(art_root, "figures","decomposition", nm)
+    if (!fs::file_exists(dest)) {
+      src <- .find_first(nm, fig_roots)
+      if (is.character(src) && length(src) && !is.na(src)) {
+        fs::file_copy(src, dest, overwrite = FALSE)
+      }
+    }
+  }
+}
 
-Here, $\mathbf{y}_t$ is a vector of monthly log returns on 19 globally traded commodities, covering the energy, precious metals, agricultural, and industrial metals sectors. This matches the full cross-sectional scope of Joëts et al. (2017) and allows for sector-specific analysis of regime-dependent volatility transmission. The commodities and their data spans are as follows:
+# Run once; harmless if everything already copied
+seed_artifacts()
+
+# 3) Artifacts-first file finders (used below)
+# --- REPLACE your previous find_file() with this robust version ---
+if (!exists("art_root")) art_root <- here::here("paper","artifacts")
+
+find_file <- function(rel, extra_dirs = character(0)) {
+  rel <- as.character(rel)
+
+  # Build candidates:
+  #  - artifacts/<rel>
+  #  - for each extra_dir that is a directory: extra_dir/<basename(rel)>
+  #  - rel itself (absolute/relative file path)
+  cand <- c(
+    fs::path(art_root, rel),
+    unlist(lapply(extra_dirs, function(d) {
+      if (fs::dir_exists(d)) fs::path(d, fs::path_file(rel)) else d
+    }), use.names = FALSE),
+    rel
+  )
+  cand <- unique(cand)
+
+  # Keep only existing *files* (not directories)
+  cand <- cand[fs::file_exists(cand)]
+  if (length(cand)) {
+    info <- fs::file_info(cand)
+    cand <- cand[info$type == "file"]
+  }
+
+  if (!length(cand)) return(NA_character_)
+  normalizePath(cand[1], winslash = "/")
+}
+
+find_image <- function(names_or_regex,
+                       extra_dirs = c(fs::path(art_root,"figures","decomposition"),
+                                      here::here("output","releases"),
+                                      here::here("..","output","releases"))) {
+  # names_or_regex can be a vector of filenames or a single regex
+  # 1) artifacts exact-name search
+  if (length(names_or_regex) > 1L) {
+    for (nm in names_or_regex) {
+      p <- fs::path(extra_dirs[1], nm)
+      if (fs::file_exists(p)) return(normalizePath(p, winslash="/"))
+    }
+  }
+  # 2) artifacts regex search
+  files <- tryCatch(fs::dir_ls(extra_dirs[1], recurse = TRUE, type = "file"), error=function(e) character(0))
+  if (length(files)) {
+    pat <- if (length(names_or_regex)==1L) names_or_regex else paste0("(", paste(names_or_regex, collapse="|"), ")")
+    hit <- files[grepl(pat, fs::path_file(files), ignore.case = TRUE)]
+    if (length(hit)) return(normalizePath(hit[1], winslash="/"))
+  }
+  # 3) releases recursive search (names first, then regex)
+  for (root in extra_dirs[-1]) {
+    if (!fs::dir_exists(root)) next
+    files <- tryCatch(fs::dir_ls(root, recurse = TRUE, type = "file"), error=function(e) character(0))
+    if (length(files)) {
+      if (length(names_or_regex) > 1L) {
+        for (nm in names_or_regex) {
+          hit <- files[fs::path_file(files) == nm]
+          if (length(hit)) return(normalizePath(hit[1], winslash="/"))
+        }
+      }
+      pat <- if (length(names_or_regex)==1L) names_or_regex else paste0("(", paste(names_or_regex, collapse="|"), ")")
+      hit <- files[grepl(pat, fs::path_file(files), ignore.case = TRUE)]
+      if (length(hit)) return(normalizePath(hit[1], winslash="/"))
+    }
+  }
+  NA_character_
+}
+
+```
+
+```{r irf, include=FALSE}
+suppressPackageStartupMessages({
+  library(fs); library(here); library(readr); library(dplyr); library(tidyr); library(rlang)
+})
+
+# Ensure target folder exists
+data_dir <- here::here("paper","artifacts","data")
+fs::dir_create(data_dir, recurse = TRUE)
+dest <- fs::path(data_dir, "returns_wide.csv")
+
+# Helper: search recursively for a filename under likely roots
+.find_first_file <- function(fname, roots) {
+  for (r in roots) {
+    if (!fs::dir_exists(r)) next
+    files <- tryCatch(fs::dir_ls(r, recurse = TRUE, type = "file"), error=function(e) character(0))
+    hit   <- files[fs::path_file(files) == fname]
+    if (length(hit)) return(hit[1])
+  }
+  NA_character_
+}
+
+# Helper: search for a CSV whose name matches a regex pattern
+.find_first_csv_by_pattern <- function(pattern, roots) {
+  for (r in roots) {
+    if (!fs::dir_exists(r)) next
+    files <- tryCatch(fs::dir_ls(r, recurse = TRUE, type = "file"), error=function(e) character(0))
+    hit   <- files[grepl(pattern, fs::path_file(files), ignore.case = TRUE) &
+                   grepl("\\.csv$", files, ignore.case = TRUE)]
+    if (length(hit)) return(hit[1])
+  }
+  NA_character_
+}
+
+# Candidate roots we’ll scan
+roots_exact <- c(
+  here::here("paper","artifacts","data"),
+  here::here("models","tvar","artifacts","data"),
+  here::here("..","models","tvar","artifacts","data"),
+  here::here("output","releases"),
+  here::here("..","output","releases"),
+  here::here("data"),
+  here::here("..","data")
+)
+roots_pattern <- c(
+  here::here("paper","artifacts","tables"),
+  here::here("models","tvar","artifacts","tables"),
+  here::here("..","models","tvar","artifacts","tables"),
+  here::here("output","releases"),
+  here::here("..","output","releases"),
+  here::here("data"),
+  here::here("..","data")
+)
+
+build_success <- FALSE
+
+# --- Route 1: directly copy returns_wide.csv if it exists somewhere
+if (!fs::file_exists(dest)) {
+  src <- .find_first_file("returns_wide.csv", roots_exact)
+  if (is.character(src) && !is.na(src)) {
+    fs::file_copy(src, dest, overwrite = TRUE)
+    build_success <- TRUE
+    message("Copied existing returns_wide.csv from: ", src)
+  }
+}
+
+# --- Route 2: construct from a returns-long CSV
+if (!build_success) {
+  ret_long <- .find_first_csv_by_pattern("returns?_long|panel_?returns|returns?_tidy|ret_long|ret_tidy", roots_pattern)
+  if (is.character(ret_long) && !is.na(ret_long)) {
+    RL <- readr::read_csv(ret_long, show_col_types = FALSE)
+    nm <- setNames(tolower(names(RL)), names(RL)); names(RL) <- nm
+    date_col <- names(RL)[grepl("date", names(RL))][1]; if (is.na(date_col)) date_col <- names(RL)[1]
+    ser_col  <- names(RL)[names(RL) %in% c("series","series_id","id","name","symbol","commodity")][1]
+    val_col  <- names(RL)[names(RL) %in% c("return","ret","r","value","val")][1]
+    if (!is.na(date_col) && !is.na(ser_col) && !is.na(val_col)) {
+      W <- RL %>%
+        mutate(!!date_col := as.Date(!!sym(date_col))) %>%
+        select(all_of(c(date_col, ser_col, val_col))) %>%
+        tidyr::pivot_wider(names_from = !!sym(ser_col), values_from = !!sym(val_col)) %>%
+        arrange(!!sym(date_col))
+      readr::write_csv(W, dest)
+      build_success <- TRUE
+      message("Built returns_wide.csv from returns-long file: ", ret_long)
+    }
+  }
+}
+
+# --- Route 3: construct from a prices-long CSV (compute 100*Δlog P)
+if (!build_success) {
+  px_long <- .find_first_csv_by_pattern("price|pink|worldbank|wb_?prices|panel_prices|commodity_prices", roots_pattern)
+  if (is.character(px_long) && !is.na(px_long)) {
+    PL <- readr::read_csv(px_long, show_col_types = FALSE)
+    nm <- setNames(tolower(names(PL)), names(PL)); names(PL) <- nm
+    date_col  <- names(PL)[grepl("date", names(PL))][1]; if (is.na(date_col)) date_col <- names(PL)[1]
+    ser_col   <- names(PL)[names(PL) %in% c("series","series_id","id","name","symbol","commodity")][1]
+    price_col <- names(PL)[names(PL) %in% c("price","value","p","close","px")][1]
+    if (!is.na(date_col) && !is.na(ser_col) && !is.na(price_col)) {
+      W <- PL %>%
+        mutate(!!date_col := as.Date(!!sym(date_col))) %>%
+        arrange(!!sym(date_col)) %>%
+        group_by(!!sym(ser_col)) %>%
+        mutate(ret = 100 * (log(!!sym(price_col)) - dplyr::lag(log(!!sym(price_col))))) %>%
+        ungroup() %>%
+        select(all_of(c(date_col, ser_col)), ret) %>%
+        tidyr::pivot_wider(names_from = !!sym(ser_col), values_from = ret) %>%
+        arrange(!!sym(date_col))
+      readr::write_csv(W, dest)
+      build_success <- TRUE
+      message("Built returns_wide.csv from prices-long file (computed 100*Δlog P): ", px_long)
+    }
+  }
+}
+
+if (fs::file_exists(dest)) {
+  message("returns_wide.csv ready at: ", fs::path_rel(dest, start = here::here()))
+} else {
+  message("Could not create returns_wide.csv automatically.\n",
+          "Please drop a CSV at paper/artifacts/data/returns_wide.csv with columns:\n",
+          "date (YYYY-MM-DD), plus one column per commodity containing monthly returns in percent.")
+}
+```
+
+```{r numbers, include=FALSE}
+suppressPackageStartupMessages({
+  library(dplyr); library(readr); library(tidyr); library(fs); library(here); library(scales)
+})
+
+# ---- helper: robust artifacts finder (files only) ----
+if (!exists("art_root")) art_root <- here::here("paper","artifacts")
+find_file <- function(rel, extra_dirs = character(0)) {
+  rel <- as.character(rel)
+  cand <- c(
+    fs::path(art_root, rel),
+    unlist(lapply(extra_dirs, function(d) if (fs::dir_exists(d)) fs::path(d, fs::path_file(rel)) else d), use.names = FALSE),
+    rel
+  )
+  cand <- unique(cand)
+  cand <- cand[fs::file_exists(cand)]
+  if (length(cand)) {
+    info <- fs::file_info(cand)
+    cand <- cand[info$type == "file"]
+  }
+  if (!length(cand)) return(NA_character_)
+  normalizePath(cand[1], winslash = "/")
+}
+
+# ---- helper formatters ----
+fmt2  <- function(x) ifelse(is.na(x), "n/a", sprintf("%.2f", as.numeric(x)))
+fmt3  <- function(x) ifelse(is.na(x), "n/a", sprintf("%.3f", as.numeric(x)))
+fmt_i <- function(x) ifelse(is.na(x), "n/a", as.integer(round(as.numeric(x))))
+fmt_p <- function(x) ifelse(is.na(x), "n/a", percent(as.numeric(x), accuracy = 0.1))
+fmt_e <- function(x) ifelse(is.na(x), "n/a",
+                            ifelse(as.numeric(x) < 1e-12, "<1e-12",
+                                   formatC(as.numeric(x), format="e", digits=2)))
+
+# ---- containers for all numbers ----
+NUM <- new.env(parent = emptyenv())
+
+# ====================== Table 1: selection/diagnostics ======================
+p_tbl1 <- find_file("tables/model_selection_summary.csv",
+                    extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                   here::here("..","models","tvar","artifacts","tables")))
+
+# init defaults (so inline text never errors)
+empty_sel <- list(p=NA,d=NA,cstar=NA,TL=NA,TH=NA,sH=NA,lamL=NA,lamH=NA,lbL=NA,lbH=NA,sup=NA,supp=NA)
+NUM$sel_rep_vol <- NUM$sel_rep_jln <- NUM$sel_ext_vol <- NUM$sel_ext_jln <- empty_sel
+
+if (!is.na(p_tbl1)) {
+  DF <- readr::read_csv(p_tbl1, show_col_types = FALSE)
+
+  # ---- normalize names to lower-case for robustness
+  names(DF) <- tolower(names(DF))
+
+  # harmonize expected columns
+  if ("delay" %in% names(DF) && !("d" %in% names(DF))) DF$d <- DF$delay
+  if (!"c_star" %in% names(DF) && "c*" %in% names(DF))  DF$c_star <- DF[["c*"]]
+
+  # ---- proxy canon: vol vs jln
+  canon_proxy <- function(z) {
+    z0 <- tolower(as.character(z))
+    dplyr::case_when(
+      grepl("jln", z0)                           ~ "jln",
+      grepl("vol|vix|vxo|vxo_vix|vxo->vix", z0) ~ "vol",
+      TRUE ~ z0
+    )
+  }
+  DF$proxy_type <- canon_proxy(DF$proxy)
+
+  # ---- window canon: rep (1986–2015) vs ext (1986–2025)
+  # 1) parse 4-digit years from any "window" text
+  extract_end_year <- function(s) {
+    s <- as.character(s)
+    yrs <- regmatches(s, gregexpr("(19|20)\\d{2}", s))[[1]]
+    if (length(yrs)) suppressWarnings(max(as.numeric(yrs))) else NA_real_
+  }
+  # if "window" not present, try "run" or "label"
+  wcol <- if ("window" %in% names(DF)) "window" else {
+    if ("run" %in% names(DF)) "run" else if ("label" %in% names(DF)) "label" else NA_character_
+  }
+  DF$win_raw <- if (is.na(wcol)) NA_character_ else DF[[wcol]]
+  DF$end_year <- vapply(DF$win_raw, extract_end_year, numeric(1))
+
+  # 2) heuristic classification
+  wraw <- tolower(as.character(DF$win_raw))
+  DF$win_type <- dplyr::case_when(
+    grepl("2015|rep", wraw)                                  ~ "rep",
+    grepl("2025|2024|2023|2022|2021|2020|ext", wraw)         ~ "ext",
+    is.finite(DF$end_year) & DF$end_year <= 2017             ~ "rep",
+    is.finite(DF$end_year) & DF$end_year >= 2019             ~ "ext",
+    TRUE                                                     ~ "ext"
+  )
+
+  # ---- pick rows per proxy & window (rep: closest to 2015; ext: latest end_year)
+  pick_row <- function(df, prox, want) {
+    sub <- df %>% dplyr::filter(proxy_type == prox)
+    if (!nrow(sub)) return(NULL)
+    cand <- sub
+    if (any(cand$win_type == want, na.rm=TRUE)) {
+      cand <- cand %>% dplyr::filter(win_type == want)
+    }
+    if (want == "rep") {
+      if (any(is.finite(cand$end_year))) {
+        cand <- cand %>% dplyr::arrange(abs(end_year - 2015))
+      }
+    } else { # ext
+      if (any(is.finite(cand$end_year))) {
+        cand <- cand %>% dplyr::arrange(dplyr::desc(end_year))
+      }
+    }
+    cand %>% dplyr::slice(1)
+  }
+
+  make_sel <- function(row) {
+    if (is.null(row) || !nrow(row)) return(empty_sel)
+    list(
+      p    = fmt_i(row$p),
+      d    = fmt_i(row$d),
+      cstar= fmt3(row$c_star),
+      TL   = fmt_i(row$`t_l` %||% row$t_l %||% row$tl %||% row$t_low %||% row$`t (low)` %||% row$t_low),  # robust capture
+      TH   = fmt_i(row$`t_h` %||% row$t_h %||% row$th %||% row$t_high %||% row$`t (high)` %||% row$t_high),
+      sH   = if ("s_h" %in% names(row)) fmt_p(row$s_h) else if ("s(h)" %in% names(row)) as.character(row[["s(h)"]]) else "n/a",
+      lamL = fmt3(row$lambda_max_l %||% row$`lambda max (l)` %||% row$lambda_max_L),
+      lamH = fmt3(row$lambda_max_h %||% row$`lambda max (h)` %||% row$lambda_max_H),
+      lbL  = fmt3(row$lb_p_l %||% row$`lb p (l)` %||% row$lb_p_L),
+      lbH  = fmt3(row$lb_p_h %||% row$`lb p (h)` %||% row$lb_p_H),
+      sup  = if ("suplm_stat" %in% names(row)) formatC(as.numeric(row$suplm_stat), big.mark=",", digits=0, format="f")
+             else if ("sup-lm stat" %in% names(row)) formatC(as.numeric(row$`sup-lm stat`), big.mark=",", digits=0, format="f")
+             else if ("supLM_stat" %in% names(DF)) {
+               # fall back to whole DF if only one sup value exists
+               formatC(as.numeric(DF$suplm_stat[1]), big.mark=",", digits=0, format="f")
+             } else "n/a",
+      supp = if ("suplm_p" %in% names(row)) fmt_e(row$suplm_p)
+             else if ("sup-lm p" %in% names(row)) fmt_e(row$`sup-lm p`)
+             else if ("supLM_p" %in% names(DF)) fmt_e(DF$suplm_p[1]) else "n/a"
+    )
+  }
+
+  # safe null-coalescing helper
+  `%||%` <- function(a, b) if (!is.null(a)) a else b
+
+  # build selections
+  r_vol <- pick_row(DF, "vol", "rep")
+  e_vol <- pick_row(DF, "vol", "ext")
+  r_jln <- pick_row(DF, "jln", "rep")
+  e_jln <- pick_row(DF, "jln", "ext")
+
+  NUM$sel_rep_vol <- make_sel(r_vol)
+  NUM$sel_ext_vol <- make_sel(e_vol)
+  NUM$sel_rep_jln <- make_sel(r_jln)
+  NUM$sel_ext_jln <- make_sel(e_jln)
+}
+
+# ====================== Table 3: uplifts (peaks and Δ half-life) ======================
+p_upl <- find_file("tables/linear_vs_tvar_uplifts.csv",
+                   extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                  here::here("..","models","tvar","artifacts","tables")))
+if (!is.na(p_upl)) {
+  U <- readr::read_csv(p_upl, show_col_types = FALSE) %>%
+    mutate(proxy = case_when(grepl("^JLN", proxy, ignore.case=TRUE) ~ "JLN", TRUE ~ "Volatility"),
+           group = factor(group, levels=c("Energy","Industrial","Precious","Agriculture")))
+  get_upl <- function(prox, grp, col) {
+    x <- U %>% filter(proxy==prox, group==grp) %>% pull({{col}})
+    if (!length(x)) return("n/a")
+    fmt2(median(x, na.rm=TRUE))
+  }
+  grps <- levels(U$group)
+  for (g in grps) {
+    NUM[[paste0("pk_vol_",substr(g,1,1))]]  <- get_upl("Volatility", g, peak_ratio)
+    NUM[[paste0("dhl_vol_",substr(g,1,1))]] <- get_upl("Volatility", g, d_half_life)
+    NUM[[paste0("pk_jln_",substr(g,1,1))]]  <- get_upl("JLN",        g, peak_ratio)
+    NUM[[paste0("dhl_jln_",substr(g,1,1))]] <- get_upl("JLN",        g, d_half_life)
+  }
+} else {
+  for (g in c("E","I","P","A")) {
+    NUM[[paste0("pk_vol_",g)]] <- NUM[[paste0("dhl_vol_",g)]] <- 
+    NUM[[paste0("pk_jln_",g)]] <- NUM[[paste0("dhl_jln_",g)]] <- "n/a"
+  }
+}
+
+# ====================== FEVD: high-minus-low and ΔΔ at H=12,24 ======================
+p_fevd <- find_file("tables/fevd_regime_shares.csv",
+                    extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                   here::here("..","models","tvar","artifacts","tables")))
+if (!is.na(p_fevd)) {
+  FE <- readr::read_csv(p_fevd, show_col_types = FALSE) %>%
+    mutate(proxy = case_when(tolower(proxy) %in% c("vix","vxo","vxo_vix","volatility") ~ "Volatility",
+                             tolower(proxy) == "jln" ~ "JLN", TRUE ~ proxy),
+           regime = toupper(regime),
+           group  = factor(group, levels=c("Energy","Industrial","Precious","Agriculture")))
+  pickH <- function(h) { hs <- sort(unique(FE$horizon)); hs[which.min(abs(hs - h))] }
+  HL <- function(prox, grp, H) {
+    h <- pickH(H)
+    sub <- FE %>% filter(proxy==prox, group==grp, horizon==h, regime %in% c("H","L")) %>%
+      distinct(regime, .keep_all = TRUE)
+    if (!all(c("H","L") %in% sub$regime)) return(NA_real_)
+    (sub$share[sub$regime=="H"] - sub$share[sub$regime=="L"])
+  }
+  for (g in levels(FE$group)) {
+    # Volatility and JLN high-minus-low at H=12,24
+    h12v <- HL("Volatility", g, 12); h24v <- HL("Volatility", g, 24)
+    h12j <- HL("JLN",        g, 12); h24j <- HL("JLN",        g, 24)
+    NUM[[paste0("HL12_vol_",substr(g,1,1))]] <- ifelse(is.na(h12v),"n/a", fmt2(100*h12v)) # % points
+    NUM[[paste0("HL24_vol_",substr(g,1,1))]] <- ifelse(is.na(h24v),"n/a", fmt2(100*h24v))
+    NUM[[paste0("HL12_jln_",substr(g,1,1))]] <- ifelse(is.na(h12j),"n/a", fmt2(100*h12j))
+    NUM[[paste0("HL24_jln_",substr(g,1,1))]] <- ifelse(is.na(h24j),"n/a", fmt2(100*h24j))
+    # ΔΔ = (Vol_HL - JLN_HL)
+    dd12 <- (h12v - h12j); dd24 <- (h24v - h24j)
+    NUM[[paste0("DD12_",substr(g,1,1))]] <- ifelse(is.na(dd12),"n/a", fmt2(100*dd12))
+    NUM[[paste0("DD24_",substr(g,1,1))]] <- ifelse(is.na(dd24),"n/a", fmt2(100*dd24))
+  }
+} else {
+  for (g in c("E","I","P","A")) {
+    for (s in c("HL12_vol_","HL24_vol_","HL12_jln_","HL24_jln_","DD12_","DD24_"))
+      NUM[[paste0(s,g)]] <- "n/a"
+  }
+}
+
+# ====================== Jaccard overlap (Vol vs JLN) ======================
+p_reg <- find_file("tables/regime_flags.csv",
+                   extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                  here::here("..","models","tvar","artifacts","tables")))
+if (!is.na(p_reg)) {
+  REG <- readr::read_csv(p_reg, show_col_types = FALSE)
+  canon_proxy2 <- function(z) dplyr::case_when(
+    tolower(z) %in% c("vix","vxo","volatility","vxo_vix") ~ "Volatility",
+    tolower(z) == "jln" ~ "JLN", TRUE ~ z)
+  REG <- REG %>% mutate(proxy = canon_proxy2(proxy)) %>%
+    select(date, proxy, high) %>% filter(!is.na(high))
+  Rv <- REG %>% filter(proxy=="Volatility") %>% select(date, high) %>% rename(high_vol=high)
+  Rj <- REG %>% filter(proxy=="JLN")        %>% select(date, high) %>% rename(high_jln=high)
+  RJ <- inner_join(Rv,Rj,by="date")
+  if (nrow(RJ)) {
+    inter <- sum(RJ$high_vol==1 & RJ$high_jln==1, na.rm=TRUE)
+    union <- sum((RJ$high_vol==1) | (RJ$high_jln==1), na.rm=TRUE)
+    NUM$Jaccard <- if (union>0) fmt3(inter/union) else "n/a"
+  } else NUM$Jaccard <- "n/a"
+} else NUM$Jaccard <- "n/a"
+
+# ====================== Δ half-life (Vol - JLN), Δ PI at H=24 ======================
+p_hl  <- find_file("tables/half_life_summary.csv",
+                   extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                  here::here("..","models","tvar","artifacts","tables")))
+p_pi  <- find_file("tables/persistence_index_summary.csv",
+                   extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                  here::here("..","models","tvar","artifacts","tables")))
+
+if (!is.na(p_hl)) {
+  HL <- readr::read_csv(p_hl, show_col_types = FALSE) %>%
+    mutate(proxy = case_when(tolower(proxy) %in% c("vix","vxo","volatility","vxo_vix") ~ "Volatility",
+                             tolower(proxy) == "jln" ~ "JLN", TRUE ~ proxy),
+           regime = toupper(regime),
+           group  = factor(group, levels=c("Energy","Industrial","Precious","Agriculture"))) %>%
+    filter(regime=="H")
+  for (g in levels(HL$group)) {
+    v <- median(HL$half_life[HL$group==g & HL$proxy=="Volatility"], na.rm=TRUE)
+    j <- median(HL$half_life[HL$group==g & HL$proxy=="JLN"],       na.rm=TRUE)
+    NUM[[paste0("DH_",substr(g,1,1))]] <- ifelse(is.finite(v-j), fmt2(v-j), "n/a")
+  }
+} else { for (g in c("E","I","P","A")) NUM[[paste0("DH_",g)]] <- "n/a" }
+
+if (!is.na(p_pi)) {
+  PI <- readr::read_csv(p_pi, show_col_types = FALSE) %>%
+    mutate(proxy = case_when(tolower(proxy) %in% c("vix","vxo","volatility","vxo_vix") ~ "Volatility",
+                             tolower(proxy) == "jln" ~ "JLN", TRUE ~ proxy),
+           regime = toupper(regime),
+           group  = factor(group, levels=c("Energy","Industrial","Precious","Agriculture")))
+  # choose H closest to 24
+  if ("H" %in% names(PI)) {
+    Hs <- sort(unique(PI$H)); h <- Hs[which.min(abs(Hs-24L))]
+    PI <- PI %>% filter(regime=="H", H==h)
+  } else {
+    PI <- PI %>% filter(regime=="H")
+  }
+  for (g in levels(PI$group)) {
+    v <- median(PI$PI[PI$group==g & PI$proxy=="Volatility"], na.rm=TRUE)
+    j <- median(PI$PI[PI$group==g & PI$proxy=="JLN"],       na.rm=TRUE)
+    NUM[[paste0("DPI_",substr(g,1,1))]] <- ifelse(is.finite(v-j), fmt3(v-j), "n/a")
+  }
+} else { for (g in c("E","I","P","A")) NUM[[paste0("DPI_",g)]] <- "n/a" }
+
+# convenience: shorthands for text
+pct <- function(x) ifelse(x=="n/a","n/a", x)    # already formatted
+pp  <- function(x) ifelse(x=="n/a","n/a", paste0(x, " pp"))
+```
+
+```{r global, include=FALSE}
+# Global knobs for captions
+CI_LEVEL <- 95L
+H_LIST   <- c(12, 24, 36)
+FIG_SRC  <- "Source: own calculations based on World Bank Pink Sheet; VIX/VXO and JLN (FRED)."
+
+FIG_NOTES <- function(extra = NULL, ci = CI_LEVEL, h = H_LIST) {
+  # Avoid LaTeX; use Unicode: σ, →, ∈
+  base <- paste0(
+    "Notes: GIRFs normalized by regime-specific σ; ", ci, "% bootstrap percentile bands; ",
+    "monthly horizons H ∈ {", paste(h, collapse = ", "), "}."
+  )
+  txt <- if (!is.null(extra) && nzchar(extra)) paste(base, extra, sep = " ") else base
+  # Add a newline before the source to avoid overflow
+  paste(txt, "\n", FIG_SRC)
+}
+
+# One-liner to attach a source to kables
+add_kable_source <- function(kbl_obj, extra = NULL) {
+  note <- if (!is.null(extra) && nzchar(extra)) paste0(extra, " — ", FIG_SRC) else FIG_SRC
+  kableExtra::footnote(kbl_obj, general = note, threeparttable = TRUE)
+}
+```
+
+```{r fig_helper, include=FALSE}
+# Old release-scanning logic removed on purpose.
+# All consumers should use find_file()/find_image() defined in artifacts_setup.
+NULL
+```
+
+```{r, include=FALSE}
+# Optional: anchor to repo root if you have a sentinel ".here" at root
+if (file.exists("../.here")) {
+  here::i_am("../.here")    
+} else if (file.exists(".here")) {
+  here::i_am(".here")
+}
+
+get_latest_release <- function() {
+  cand <- c(here::here("output","releases"), here::here("..","output","releases"))
+  cand <- cand[fs::dir_exists(cand)]
+  if (!length(cand)) return(NA_character_)
+  rels <- fs::dir_ls(cand[1], type="directory", recurse=FALSE)
+  rels <- rels[grepl("^release_", fs::path_file(rels))]
+  if (!length(rels)) return(NA_character_)
+  rels[order(fs::file_info(rels)$modification_time, decreasing=TRUE)][1]
+}
+REL <- if (exists("REL") && fs::dir_exists(REL)) REL else get_latest_release()
+
+.list_all_files_tbl1 <- function() {
+  dirs <- unique(c(if (!is.na(REL)) REL else character(0),
+                   here::here("models","tvar"),
+                   here::here("..","models","tvar")))
+  dirs <- dirs[fs::dir_exists(dirs)]
+  unlist(lapply(dirs, function(d) fs::dir_ls(d, recurse=TRUE, type="file")), use.names=FALSE)
+}
+
+# NEW name to avoid any collisions elsewhere in your Rmd
+csv_find_tbl1 <- function(regex) {
+  explicit <- c(
+    here::here("models","tvar","artifacts","tables","model_selection_summary.csv"),
+    here::here("..","models","tvar","artifacts","tables","model_selection_summary.csv")
+  )
+  hits <- explicit[file.exists(explicit)]
+  if (!length(hits)) {
+    files <- .list_all_files_tbl1()
+    hits  <- files[grepl(regex, fs::path_file(files), ignore.case=TRUE)]
+  }
+  if (length(hits)) {
+    message("Table 1 CSV found at: ", fs::path_rel(hits[1]))
+    return(normalizePath(hits[1], winslash="/"))
+  } else {
+    message("Table 1 CSV not found in models/tvar or release paths.")
+    return(NA_character_)
+  }
+}
+
+# helpers used by fallback/formatting
+spectral_radius <- function(A_list) {
+  if (is.null(A_list) || !length(A_list)) return(NA_real_)
+  k <- nrow(A_list[[1]])
+  p <- length(A_list)
+  if (p == 1L) return(max(Mod(eigen(A_list[[1]], only.values=TRUE)$values)))
+  Ctop <- do.call(cbind, A_list)
+  Cbot <- cbind(diag(k*(p-1)), matrix(0, nrow=k*(p-1), ncol=k))
+  C    <- rbind(Ctop, Cbot)
+  max(Mod(eigen(C, only.values=TRUE)$values))
+}
+lb_p_min <- function(E, lag=12L) {
+  if (is.null(E)) return(NA_real_)
+  M <- as.matrix(E)
+  if (!is.matrix(M) || nrow(M)==0) return(NA_real_)
+  ps <- apply(M, 2, function(z) if (all(is.finite(z))) stats::Box.test(z, lag=lag, type="Ljung-Box")$p.value else NA_real_)
+  suppressWarnings(min(ps, na.rm=TRUE))
+}
+```
+
+# Introduction
+Macroeconomic uncertainty can reshape how shocks propagate to commodity markets, with consequences for risk management, asset allocation, and policy design. Because commodity returns load on real-side disturbances and on financial conditions, the mapping from uncertainty to volatility is unlikely to be linear. When uncertainty is elevated, transmission may switch regimes, amplifying variance and tail risk in ways a pooled linear model cannot capture. Building on the nonlinear evidence in @joetsDoesVolatilityCommodity2016, this paper studies such state-dependent transmission in a two-regime Threshold VAR for 18 monthly commodities spanning energy, precious metals, industrial metals, and agriculture. The replication window covers 1986–2015, as in the original study, and the analysis is extended through June 2025.
+
+The analysis is organized around three research questions: (i) does the original state-contingent amplification result replicate on the 1986–2015 window, (ii) how do findings change when the sample is extended through June 2025, and (iii) to what extent does proxy choice volatility-based VXO/VIX versus macro based Jurado Ludvigson Ng (JLN) uncertainty alter regime identification and the measured size and persistence of volatility spillovers?
+To ensure continuous coverage, the study implements a proxy handover from the CBOE S&P100 Volatility Index VXO (1986–1989) to the CBOE S&P500 Volatility Index (VIX) from 1990 onward. In parallel, the JLN macroeconomic uncertainty index is incorporated over the full 1986–2025 sample to represent a conceptually distinct, predictability based measure of uncertainty.
+
+Methodologically, the paper estimates two-regime TVARs in which the smoothed, lagged proxy governs the regime indicator. Lag order and delay are selected using by pooled information criteria and stability constraints to avoid overfitting and spurious thresholds. Regime-specific dynamics are quantified via \ac{girf}, which allow for history dependent paths, and \ac{fevd}, which attribute volatility to commodity-system shocks conditional on uncertainty state. For discipline, a pooled linear VAR and a recursive \ac{svar} benchmark  provide counterfactuals in which responses are constrained to be state-invariant [@stockVectorAutoregressions2001, @kilianStructuralVectorAutoregressive2017]. This setup delivers a transparent contrast between linear and nonlinear propagation without over-interpreting formal linearity tests in small samples.
+
+The empirical design is motivated by two considerations that matter for both academic inference and decision use. First, different uncertainty proxies encode different information sets and investor beliefs. Option-implied volatility (VXO/VIX) is a forward-looking, market-priced gauge that can spike rapidly and embed risk-neutral probabilities, whereas the JLN index extracts macroeconomic predictability from large datasets under the physical measure and evolves more smoothly. If regime classification depends on the proxy, estimated responses and half-lives may diverge, especially around events such as the COVID-19 shock and the 2022–24 tightening cycle. Second, commodity markets are heterogeneous: energy and industrial metals tend to exhibit larger and more persistent responses than precious metals or agriculture. A multi-sector panel helps separate common uncertainty effects from sector-specific dynamics.
+
+The contributions are twofold. First, the paper recovers the core nonlinear result of @joetsDoesVolatilityCommodity2016, high-uncertainty regimes exhibit larger and longer-lived responses, while documenting stability and residual diagnostics (Table 1). Second, the paper extends the analysis through June 2025 and performs a proxy-comparison that demonstrates how volatility based (VXO/VIX) versus predictability-based (JLN) measures materially affect regime timing and the magnitude and persistence of volatility responses. This proxy dependence is not a technical footnote: it has first order implications for stress testing and risk management, where relying on a single proxy can under- or over-state commodity-market risk.
+
+All results are generated from a packaged release with a frozen R environment (4.4.3), scripted data ingestion and transformations, deterministic random-seed control for simulation and bootstrap routines, and automated exports of figures and CSV artifacts. The full pipeline data, estimation, diagnostics, and output, runs end-to-end from a single orchestration script, enabling replication and facilitating extensions.
+
+The remainder of the paper proceeds as follows. Section \@ref(sec:data) describes the data, transformations, and uncertainty proxies. Section \@ref(sec:econometric) details the econometric framework, threshold selection, and inference procedures. Section \@ref(sec:replication) reports replication results for 1986–2015. Section \@ref(sec:extension) presents the 1986–2025 extension and the proxy comparison. Section \@ref(sec:validation) provides validation and robustness analyses. Section \@ref(sec:discussion) discusses implications for stress testing, risk management, and policy calibration. Section \@ref(sec:conclusion) concludes.
+
+## Literature Review
+TVARs capture state-dependent dynamics via observed regime splitters [@tsayTestingModelingMultivariate1998, @tongNonlinearTimeSeries1990]. Nonlinear impulse responses are computed with the Koop–Pesaran–Potter generalized method, averaging over future innovation paths [@koopImpulseResponseAnalysis1996], while order-invariant normalizations follow @pesaranGeneralizedImpulseResponse1998. For linear benchmarks and identification, standard VAR/SVAR expositions and practice are followed [ @stockVectorAutoregressions2001; @lutkepohlNewIntroducitonMultiple2005; @kilianStructuralVectorAutoregressive2017]. As uncertainty measures, option-implied volatility (VXO/VIX) with macro-predictability JLN are used, reflecting distinct information sets. On commodities, the replication target is @joetsDoesVolatilityCommodity2016, who emphasize nonlinear propagation to commodity markets in high-uncertainty states.
+
+# Data & Measurement {#sec:data}
+This section documents the panel construction, uncertainty proxies, and preprocessing choices. The analysis relies on two families of inputs exported by the codebase in the frozen release consumed by this paper: (i) a monthly commodity-price panel transformed into returns, and (ii) the uncertainty proxies used as threshold variables. All paths resolve inside the selected release directory: figures are stored in /figures/decomposition/ or /artifacts/figures/decomposition/, and tidy CSV artifacts in /artifacts/data/. The analysis contrasts a volatility-based splitter (VXO/VIX) with a macro-predictability splitter (JLN).
+
+## Commodity panel {#sec:dataone}
+The dependent block comprises 18 benchmark commodities spanning energy, precious metals, industrial metals, and agriculture. Table A.1 lists the series and coverage. For each $i = 1,\ldots,18$, a continuous monthly series is constructed from the World Bank Pink Sheet Commodity Markets, aligned to month-end and merged on the intersection of timestamps to ensure a balanced panel over the estimation window. Following @joetsDoesVolatilityCommodity2016, the replication window begins in January 1986 to ensure availability of an implied volatility threshold, the extension carries the panel to June 2025.
+
+For commodity $i$ at month $t$, returns are constructed as in Appendix \ref{app-formulas}, Eq. \eqref{eq:r-log-returns}.
+Where indicated, series are standardized to $z$-scores within the relevant estimation window to equalize scale across commodities. No winsorization is applied: large moves around the \ac{gfc}, COVID-19, and the 2022–24 tightening are retained to preserve stressed-state information. Two file shapes are maintained, a long panel {date, series ID, group, value} for tidy summaries and decompositions, and a wide matrix with commodities as columns for VAR/TVAR estimation. Appendix A provides an inventory table documenting coverage by group.
+
+## Uncertainty proxies and threshold design {#sec:datatwo}
+Regimes are defined by an observed threshold variable $q_t$. The design uses two conceptually distinct measures: (i) use a proxy available over the replication window (1986–2015) to make replication meaningful, (ii) use a conceptually distinct proxy to test measurement robustness on the 1986–2025 extension.
+The replication uses the CBOE S&P100 implied volatility index VXO (1986–2015). For the extension, a handover to the CBOE S&P500 implied-volatility index VIX is implemented from January 1990 onward, 1986–1989 continues to use VXO. Because the underlyings differ (S&P100 vs S&P500), the splice is treated as a measurement switch, not a literal continuation. The Jurado–Ludvigson–Ng (JLN) index summarizes the expected forecast variance of a large macroeconomic panel at monthly frequency, offering a predictability-based view of uncertainty that can evolve more smoothly than option-implied risk.
+Let $q_t$ denote either VXO/VIX or JLN. The regime driver fed into the TVAR is constructed as:
+
+\begin{subequations}\label{eq:tilde-q}
+\begin{align}
+\tilde{q}_t &= \frac{q_t - \bar{q}}{s_q}, \label{eq:tilde-q-level}\\
+\tilde{q}_t^{(m)} &= \frac{1}{m}\sum_{j=0}^{m-1}\tilde{q}_{t-j}, \label{eq:tilde-q-smooth}\\
+\mathcal{R}_t &= \mathbf{1}\!\left\{ \tilde{q}_t^{(m)} \ge \tau \right\}. \label{eq:tilde-q-regime}
+\end{align}
+\end{subequations}
+
+Standardization is carried out within the relevant estimation window 1986–2015 for the replication and 1986–2025 for the extension. The baseline employs a 3 month smoother ($m=3$) and a one month delay ($d=1$) to temper event-month spikes and reduce simultaneity with commodity returns. For fixed $p$ and $d$, the selected threshold $c^*$ minimizes \ac{bic}.
+
+\begin{equation}\label{eq:c-star-argmin}
+c^{*} = \arg\min_{c \in C_{\tau}} \mathrm{BIC}(c).
+\end{equation}
+
+Using both a volatility-based and a macro-based splitter makes proxy risk explicit: if VXO/VIX and JLN identify different high-uncertainty months, measured amplification is proxy-dependent. Regime incidence is therefore reported via regime-share diagnostics, and the high-state share $s_H$ is defined in Appendix \ref{app-formulas}, Eq. \eqref{eq:s-h-big}.
+A non-zero $\delta_{s_H}$ signals economically meaningful differences in regime timing and foreshadows differences in the size and half-life of volatility spillovers critical for stress testing and drawdown protection.
+```{r figsetup, include=FALSE}
+# Keep here() anchoring (harmless), but do not assert any release directories
+here::i_am(knitr::current_input())
+# No REL_FIG, no img_path; figures are resolved via find_image()
+NULL
+```
+
+## Samples, alignment, and diagnostics {#sec:datathree}
+Because VXO (S&P100) and VIX (S&P500) are distinct option markets, the 1990 handover is treated as a measurement switch rather than a literal continuation. Two safeguards govern the splice: (i) standardization within each estimation window so thresholding depends on relative $z$-levels; and (ii) smoothing and lagging to mute event-month spikes and align information sets. The regime driver entering the TVAR is given by Appendix \ref{app-formulas}, Eq. \eqref{eq:tilde-q-t-2}. Replication and extension windows follow Appendix \ref{app-formulas}, Eq. \eqref{eq:mathcal-t}), the volatility specification uses VXO for 1986–1989 and VIX from 1990 onward, while JLN spans 1986–2025. All inputs are monthly and aligned to month-end.
+
+Daily uncertainty measures are not mixed into the monthly TVAR to avoid timing conventions and aggregation artifacts. For any candidate threshold $c$, the regime sets are $H(c)$ and $L(c)$ in Appendix \ref{app-formulas}, Eq. \eqref{eq:H-L-sets}. The grid search is trimmed so each regime contains at least 15% of observations (see Appendix \ref{app-formulas}, Eq. \eqref{eq:c-in}). Post thresholding, each commodity must satisfy minimum coverage in both regimes (see Appendix \ref{app-formulas}, Eq. \eqref{eq:s-h}), the proxy differences $\delta_{s_H}$ flags proxy-dependent timing.
+
+Standardization within $\mathcal{T}^{rep}$ and $\mathcal{T}^{ext}$ ensures that any level shift at January 1990 does not mechanically change regime assignment. Diagnostics inspect (i) the distribution of $\tilde{q_t}$ around the handover, (ii) local stability of $s_H$ when perturbing $c^*$ on a fine grid, and (iii) commodity-by-regime coverage. These checks, together with the regime-share figures and decomposition tables ingested from the release, make the sampling, alignment, and thresholding transparent and auditable.
+
+# Econometric Framework {#sec:econometric}
+The empirical strategy mirrors @joetsDoesVolatilityCommodity2016: a replication on 1986–2015, an extension to 1986–2025, and validation against linear benchmarks and robustness grids. Nonlinearity is captured with a two-regime threshold VAR (TVAR) in which regime switches are governed by an observed uncertainty proxy. Shocks are analyzed with generalized impulse responses (GIRFs) suited to nonlinear dynamics, and contribution analysis proceeds via a state-contingent analogue of the forecast-error variance decomposition (FEVD).
+
+## TVAR specification and regime definition {#sec:econometricone}
+Let $y_t \in \mathbb{R}^n$ stack monthly standardized returns for $n=18$ commodities constructed in Section \@ref(sec:data). Define $x_t$ as in Appendix \ref{app-formulas}, Eq. \eqref{eq:x-t} and the binary state $s_t(c)$ as in Appendix \ref{app-formulas}, Eq. \eqref{eq:s-t-c}. Conditional on $s_t$, a TVAR$(p)$ evolves as in Eq. \eqref{eq:y-t} [@tsayTestingModelingMultivariate1998, @tongNonlinearTimeSeries1990].
+
+\begin{equation}\label{eq:y-t}
+\begin{aligned}
+\mathbf{y}_t &= \boldsymbol{\alpha}(s_t)
++ \sum_{k=1}^{p} A_k(s_t)\,\mathbf{y}_{t-k}
++ \boldsymbol{\varepsilon}_t, \\
+\boldsymbol{\varepsilon}_t &\sim \mathcal{N}\!\bigl(\mathbf{0},\, \Sigma(s_t)\bigr).
+\end{aligned}
+\end{equation}
+
+Estimation proceeds by regime-wise \ac{ols} after splitting the sample according to $s_t(c)$. Let $Z_t = [1,y_{t-1}^{\top},..., y_{t-p}^{\top}]^{\top}$. Stacking observations withing regime $s$ yields the estimators in Appendix \ref{app-formulas}, Eq. \eqref{eq:b-s-c}, where $T_s$ is the number of observations in regime $s$. The search over $c$ as restricted to the trimmed interval described in Section \@ref(sec:datatwo) ensures adequate balance across regimes.
+
+The triple $(c^*,p^*, d^* )$ minimizes a pooled \ac{bic} based on Gaussian likelihoods (see Appendix \ref{app-formulas}, Eq. \eqref{eq:bic}), see also [@lutkepohlNewIntroducitonMultiple2005]. Stability requires the spectral radius of each regime’s companion matrix to lie inside the unit circle, $ρ(A^{(s)})<1$. As a descriptive contrast, a pooled VAR vs. TVAR comparison indicates materially different coefficients, we therefore proceed with the state-dependent specification [@tsayTestingModelingMultivariate1998].
+
+## Shocks, GIRFs, and state-contingent FEVD {#sec:econometrictwo}
+In nonlinear systems, the effect of a shock depends on the state in which it hits. Accordingly, impulse responses are computed using the Koop–Pesaran–Potter GIRF [@koopImpulseResponseAnalysis1996], which conditions on the pre-shock regime and averages over future innovation paths.To ensure order-invariant normalization and comparability within regime $s$, a one-sigma generalized shock to variable $i$ is 
+
+\begin{equation}\label{eq:n-i}
+\begin{aligned}
+\sigma_i^{(s)} &\equiv \sqrt{\Sigma_{ii}^{(s)}}, \\
+\eta_i^{(s)}   &\equiv \frac{\Sigma^{(s)} e_i}{\sigma_i^{(s)}},
+\end{aligned}
+\end{equation}
+
+where $e_i$ is the $i$-th canonical unit vector and $\Sigma^{(s)}$ is the regime-specific innovation covariance [@pesaranGeneralizedImpulseResponse1998].For responsible variable $\ell$ and horizon $h$, the GIRF at pre-shock state $s$ is
+
+\begin{equation}\label{eq:girf}
+\mathrm{GIRF}^{\,i \to \ell,(s)}(h)
+=
+\mathbb{E}\!\left[\, y_{\ell,t+h} \;\middle|\; \varepsilon_t=\eta_i^{(s)},\, s_t=s,\, \mathcal{I}_{t-1} \right]
+-
+\mathbb{E}\!\left[\, y_{\ell,t+h} \;\middle|\; \varepsilon_t=0,\, s_t=s,\, \mathcal{I}_{t-1} \right].
+\end{equation}
+
+with $\mathcal{I}_{t-1}$ the observed pre-shock history. The Monte-Carlo estimator draws vector residuals within regime $s$ the and averages over $B$ replications(see Appendix \ref{app-formulas}, Eq. \eqref{eq:hatgirf}). Amplification is summarized by regime differences curves $\Delta IRF$ (Eq. \eqref{eq:delta-irf}).
+
+\begin{equation}\label{eq:delta-irf}
+\Delta \mathrm{IRF}^{\,i \to \ell}(h)
+=
+\mathrm{GIRF}^{\,i \to \ell,(H)}(h)
+-
+\mathrm{GIRF}^{\,i \to \ell,(L)}(h).
+\end{equation}
+
+and regime-specific half-lives,
+
+\begin{equation}\label{eq:h-1-2}
+h_{1/2}^{(s)}(i \to \ell)
+=
+\min\left\{\, h \ge 0 \;:\;
+\left|\mathrm{GIRF}^{\,i \to \ell,(s)}(h)\right|
+\le
+\frac{1}{2}\,
+\max_{0 \le j \le H_{\max}}
+\left|\mathrm{GIRF}^{\,i \to \ell,(s)}(j)\right|
+\right\}.
+\end{equation}
+
+Because a nonlinear model has no single moving-average representation, the FEVD must also be computed state-contingently. Using the GIRFs, the generalized FEVD share contributed by shock $i$ to variable $\ell$ over Horizon $H$ in regime $s$ is
+
+\begin{equation}\label{eq:gfevd}
+\widehat{\mathrm{GFEVD}}_{\ell,i}^{(s)}(H)
+=
+\frac{\sum_{h=0}^{H} \bigl(\widehat{\mathrm{GIRF}}_{i \to \ell}^{(s)}(h)\bigr)^2}
+     {\sum_{j=1}^{n}\sum_{h=0}^{H} \bigl(\widehat{\mathrm{GIRF}}_{j \to \ell}^{(s)}(h)\bigr)^2}.
+\end{equation}
+
+Group-level contributions for energy, precious, industrial, agriculture are obtained by summing the numerator across shocks $i$ within each group and then normalizing. This construction mirrors generalized variance decompositions in linear VARs [@pesaranGeneralizedImpulseResponse1998], but the conditioning on regime $s$ makes it informative about stress-state transmission, precisely the object of interest for risk management. For readability, Section \@ref(sec:replicationtwo) visualizes responses using regime‑split linear VARs. These plots are for qualitative orientation, direction and persistence only. All quantitative objects—TVAR GIRFs, ΔIRFs, and state‑contingent GFEVDs are computed from the TVAR per [@koopImpulseResponseAnalysis1996;@pesaranGeneralizedImpulseResponse1998].
+
+## Estimation, inference, benchmarks, and robustness {#sec:econometricthree}
+Inference uses a regime-aware residual bootstrap [@kilianStructuralVectorAutoregressive2017]. Fix $(c^*, p^*, d^*)$ resample vector residuals within each regime, simulate paths under the estimated TVAR, recompute GIRFs, $\Delta{IRFs}$, and GFEVDs, and form percentile confidence bands. Seeds are fixed in the release for deterministic replication.
+Two linear benchmarks anchor the nonlinear results. A pooled VAR $(p^*)$ on $y_t$ delivers order-invariant generalized IRFs and closed-form GFEVDs [@lutkepohlNewIntroducitonMultiple2005]. A recursive SVAR augments the VAR with the uncertainty proxy ordered last to identify a structural uncertainty shock under linear dynamics [@kilianStructuralVectorAutoregressive2017]. The comparison is intentional: the TVAR quantifies state-contingent responses to generic shocks in the commodity system, whereas the SVAR isolates a linear uncertainty shock. Agreement in signs but larger magnitudes and longer half-lives in the TVAR’s high-uncertainty regime indicate precisely what linear models miss.
+Robustness is evaluated along four axes. (i) Lag/delay: $(p,d)\in\{2,\ldots,6\}$, with selections reported by proxy and sample window.(ii) Threshold perturbations: local moves around $c^*$ within the trimmed set, documenting stability of sign, relative size, and half-life.(iii) Horizon:$H\in\{12,24,36\}$ ensuring narratives do not hinge on a single horizon. (iv) Coverage and diagnostics: minimum observations by regime and commodity (Section \@ref(sec:datathree)), regime-wise residual whiteness/heteroskedasticity checks, and companion-matrix stability. A compact table aggregates outcomes with $✓/△/✗$ flags for sign, relative magnitude, and half-life stability, figures in Section 5 visualize regime-specific GIRFs, GFEVD stacks, and $\Delta{IRFs}$.
+
+### Model selection & diagnostics {#sec:econometricthreeone}
+
+Table 1 reports the selected $(p, d, c^*)$, regime balance, stability $(\lambda max)$, residual whiteness (LB$p$), and a descriptive sup-LM contrast versus a pooled VAR [@lutkepohlNewIntroducitonMultiple2005; @kilianStructuralVectorAutoregressive2017]
+```{r tbl1render, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+# Fallback: define find_file() locally if not already created in artifacts_setup
+if (!exists("find_file")) {
+  if (!exists("art_root")) art_root <- here::here("paper","artifacts")
+  find_file <- function(rel, extra_dirs = character(0)) {
+    cand <- c(fs::path(art_root, rel), extra_dirs, rel)
+    cand <- cand[fs::file_exists(cand)]
+    if (length(cand)) return(normalizePath(cand[1], winslash="/"))
+    NA_character_
+  }
+}
+
+path_tbl <- find_file(
+  fs::path("tables","model_selection_summary.csv"),
+  extra_dirs = c(
+    here::here("models","tvar","artifacts","tables"),
+    here::here("..","models","tvar","artifacts","tables")
+  )
+)
+
+if (is.na(path_tbl)) {
+  cat("**Table 1 not rendered — artifact missing (paper/artifacts/tables/model_selection_summary.csv)**")
+} else {
+  DF <- readr::read_delim(
+    path_tbl,
+    delim = ifelse(grepl("\\.tsv$", path_tbl), "\t", ","),
+    show_col_types = FALSE
+  )
+
+  # Harmonize columns if needed
+  if ("delay" %in% names(DF) && !("d" %in% names(DF))) DF$d <- DF$delay
+  if (!"run_at" %in% names(DF)) DF$run_at <- NA_character_
+
+  # Formatting helpers
+  key_diag <- intersect(names(DF), c("lambda_max_L","lambda_max_H","lb_p_L","lb_p_H","supLM_stat","supLM_p"))
+  lb_fmt  <- function(x) ifelse(is.na(x), "NA", formatC(as.numeric(x), format="f", digits=3))
+  p_sci   <- function(x) ifelse(is.na(x), "NA",
+                         ifelse(as.numeric(x) < 1e-12, "<1e-12",
+                                formatC(as.numeric(x), format="e", digits=2)))
+  sup_fmt <- function(x) ifelse(is.na(x), "NA", formatC(as.numeric(x), big.mark=",", digits=0, format="f"))
+
+  DF <- DF |>
+    dplyr::mutate(
+      .na_score = if (length(key_diag)) rowSums(is.na(dplyr::pick(dplyr::all_of(key_diag)))) else 0L,
+      .tstamp   = suppressWarnings(as.POSIXct(run_at, tz = "UTC"))
+    ) |>
+    dplyr::arrange(window, proxy, .na_score, dplyr::desc(.tstamp)) |>
+    dplyr::distinct(window, proxy, .keep_all = TRUE) |>
+    dplyr::select(-.na_score, -.tstamp)
+
+  OUT <- DF |>
+    dplyr::mutate(
+      window = dplyr::case_when(
+        grepl("1986.*2015", window) ~ "Replication (1986–2015)",
+        grepl("1986.*2025", window) ~ "Extension (1986–2025)",
+        TRUE ~ window
+      ),
+      proxy = dplyr::case_when(
+        proxy %in% c("vol","vxo_vix","vix","VXO_VIX") ~ "Volatility (VXO->VIX)",
+        proxy %in% c("jln","JLN") ~ "JLN (macro uncertainty)",
+        TRUE ~ proxy
+      ),
+      p = as.integer(p), d = as.integer(d),
+      c_star = round(as.numeric(c_star), 3),
+      T_L = as.integer(T_L), T_H = as.integer(T_H),
+      s_H = scales::percent(as.numeric(s_H), accuracy = 0.1),
+      lambda_max_L = ifelse(is.na(lambda_max_L), NA, sprintf("%.3f", as.numeric(lambda_max_L))),
+      lambda_max_H = ifelse(is.na(lambda_max_H), NA, sprintf("%.3f", as.numeric(lambda_max_H))),
+      lb_p_L = lb_fmt(lb_p_L),
+      lb_p_H = lb_fmt(lb_p_H),
+      supLM_stat = sup_fmt(supLM_stat),
+      supLM_p    = p_sci(supLM_p)
+    ) |>
+    dplyr::select(
+      window, proxy, p, d, c_star, T_L, T_H, s_H,
+      lambda_max_L, lambda_max_H, lb_p_L, lb_p_H, supLM_stat, supLM_p
+    )
+
+  colnames(OUT) <- c(
+    "Window","Proxy","p","d","c*","T (low)","T (high)","s(H)",
+    "lambda max (L)","lambda max (H)","LB p (L)","LB p (H)","sup-LM stat","sup-LM p"
+  )
+
+  cap_long  <- "Model selection and diagnostics by window and proxy: selected lag $p$, delay $d$, threshold $c^*$, regime counts/shares, stability (spectral radius), Ljung–Box residual whiteness (min $p$ across variables), and descriptive sup-LM linearity contrast."
+  cap_short <- "Model selection \\& diagnostics"
+
+  kableExtra::kbl(
+    OUT, format = "latex", booktabs = TRUE, escape = TRUE,
+    caption = sprintf("(\\#tab:%s) %s", "tblX", cap_long),
+    caption.short = cap_short
+  ) |>
+    kableExtra::kable_styling(latex_options = c("hold_position","striped","scale_down"),
+                              font_size = 9) |>
+    kableExtra::footnote(
+      general = "Source: own calculations based on World Bank Pink Sheet; VIX/VXO and JLN (FRED).",
+      threeparttable = TRUE
+    ) |>
+    print()
+}
+```
+Ljung–Box tests flag serial correlation for JLN (min LB p‑value across variables = 0.002 (low), 0.001 (high)) and borderline evidence in the volatility high regime (0.009). Inference relies on a regime‑aware residual bootstrap and interpret significance cautiously where serial correlation persists. The pooled-VAR linearity contrast remains decisively rejected (sup-LM $p < 10^{-12}$).
+
+Replication (1986–2015) 
+Volatility (VXO): \(p=`r NUM$sel_rep_vol$p`\), \(d=`r NUM$sel_rep_vol$d`\), \(c^{*}=`r NUM$sel_rep_vol$cstar`\); regime counts \(T_L=`r NUM$sel_rep_vol$TL`\), \(T_H=`r NUM$sel_rep_vol$TH`\) with \(s(H)=`r NUM$sel_rep_vol$sH`\). Stability: \(\lambda_{\max}^{(L)}=`r NUM$sel_rep_vol$lamL`\), \(\lambda_{\max}^{(H)}=`r NUM$sel_rep_vol$lamH`\). Residual whiteness (min LB \(p\)): \(L=`r NUM$sel_rep_vol$lbL`\), \(H=`r NUM$sel_rep_vol$lbH`\). Linearity contrast: sup-LM=`r NUM$sel_rep_vol$sup` (p=`r NUM$sel_rep_vol$supp`).
+JLN: \(p=`r NUM$sel_rep_jln$p`\), \(d=`r NUM$sel_rep_jln$d`\), \(c^{*}=`r NUM$sel_rep_jln$cstar`\); \(T_L=`r NUM$sel_rep_jln$TL`\), \(T_H=`r NUM$sel_rep_jln$TH`\), \(s(H)=`r NUM$sel_rep_jln$sH`\). \(\lambda_{\max}^{(L)}=`r NUM$sel_rep_jln$lamL`\), \(\lambda_{\max}^{(H)}=`r NUM$sel_rep_jln$lamH`\). LB \(p\): \(L=`r NUM$sel_rep_jln$lbL`\), \(H=`r NUM$sel_rep_jln$lbH`\).
+
+Extension (1986–2025) 
+Volatility (VXO/VIX): \(p=`r NUM$sel_ext_vol$p`\), \(d=`r NUM$sel_ext_vol$d`\), \(c^{*}=`r NUM$sel_ext_vol$cstar`\); \(T_L=`r NUM$sel_ext_vol$TL`\), \(T_H=`r NUM$sel_ext_vol$TH`\), \(s(H)=`r NUM$sel_ext_vol$sH`\). \(\lambda_{\max}^{(L)}=`r NUM$sel_ext_vol$lamL`\), \(\lambda_{\max}^{(H)}=`r NUM$sel_ext_vol$lamH`\). LB \(p\): \(L=`r NUM$sel_ext_vol$lbL`\), \(H=`r NUM$sel_ext_vol$lbH`\).  
+JLN: \(p=`r NUM$sel_ext_jln$p`\), \(d=`r NUM$sel_ext_jln$d`\), \(c^{*}=`r NUM$sel_ext_jln$cstar`\); \(T_L=`r NUM$sel_ext_jln$TL`\), \(T_H=`r NUM$sel_ext_jln$TH`\), \(s(H)=`r NUM$sel_ext_jln$sH`\). \(\lambda_{\max}^{(L)}=`r NUM$sel_ext_jln$lamL`\), \(\lambda_{\max}^{(H)}=`r NUM$sel_ext_jln$lamH`\). LB \(p\): \(L=`r NUM$sel_ext_jln$lbL`\), \(H=`r NUM$sel_ext_jln$lbH`\).
+
+### Linear vs TVAR uplifts {#sec:econometricthreetwo}
+
+Table 2 contrasts a pooled linear VAR with the TVAR high-regime: median peak-response ratio and the median half-life monthly difference, aggregated by commodity group across all impulse-response pairs.
+```{r tbl3render, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+library(fs); library(here); library(readr); library(dplyr); library(knitr); library(kableExtra)
+
+path <- find_file(fs::path("tables","linear_vs_tvar_uplifts.csv"),
+                  extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                 here::here("..","models","tvar","artifacts","tables")))
+if (!fs::file_exists(path)) {
+  cat("**Table 3 not rendered — artifact missing (paper/artifacts/tables/linear_vs_tvar_uplifts.csv).**")
+} else {
+  U <- readr::read_csv(path, show_col_types = FALSE) %>%
+    mutate(
+      Proxy = ifelse(grepl("^JLN", proxy), "JLN (macro uncertainty)", "Volatility (VXO->VIX)"),
+      Group = factor(group, levels = c("Energy","Industrial","Precious","Agriculture"))
+    ) %>%
+    select(Proxy, Group, peak_ratio, d_half_life) %>%
+    arrange(Proxy, Group) %>%
+    mutate(
+      `Peak ratio (×)`  = ifelse(is.na(peak_ratio), "NA", sprintf("%.2f", peak_ratio)),
+      `Δ half-life (m)` = ifelse(is.na(d_half_life), "NA", sprintf("%.2f", d_half_life))
+    ) %>%
+    select(Proxy, Group, `Peak ratio (×)`, `Δ half-life (m)`)
+
+cap_long  <- "Linear vs. TVAR uplifts in the high regime: median peak ratio and median half-life difference in months by commodity group."
+cap_short <- "Linear vs. TVAR uplifts (high regime)"
+
+kableExtra::kbl(
+  U, format = "latex", booktabs = TRUE, escape = TRUE,
+  caption = sprintf("(\\#tab:%s) %s", "tblX", cap_long),
+  caption.short = cap_short
+) |>
+  kableExtra::kable_styling(latex_options = c("hold_position","striped","scale_down"),
+                            font_size = 9) |>
+ kableExtra::footnote(general = "Source: own calculations based on World Bank Pink Sheet; VIX/VXO and JLN (FRED).",
+                        threeparttable = TRUE) |>
+  print()
+}
+```
+TVAR-H peaks exceed VAR across all groups, $\Delta h{1/2}$ shows models but consistent extra persistence where peaks are largest.
+
+# Replication Results (1986-2015) {#sec:replication}
+This section replicates @joetsDoesVolatilityCommodity2016 on 1986/01–2015/04 using VXO as the threshold variable. The TVAR is estimated as in Section \@ref(sec:econometric), with regimes defined by the lagged, smoothed, standardized VXO crossing an estimated threshold chosen on a trimmed grid (15% per regime). Evidence is organized in three layers: (i) the realized partition of the sample into low/high-uncertainty states and its time incidence, (ii) state-contingent GIRFs by commodity group direction, magnitude, and persistence, (iii) state-contingent forecast decompositions and contribution profiles. All displays below are read directly from the frozen release, the code resolves the correct release directory at knit-time.
+
+## Threshold and regime shares under VXO {#sec:replicationone}
+The threshold $c^*$ is selected on the interior grid defined in Section \@ref(sec:datatwo) with 15% trimming and evaluated using the pooled BIC described in Section \@ref(sec:econometricone). The realized high-uncertainty share $s_H$ (defined in Section 2.2) is episodic but non-rare and clusters around well-known stress episodes within 1986–2015, 1987 crash, 1990–91 recession, 1998 \ac{ltcm}/Russia, 2001–02 dot-com bust, 2008–09 GFC, 2011–12 euro-area tensions, consistent with the sanity checks in @joetsDoesVolatilityCommodity2016 and validating VXO as an informative splitter for the replication period.
+In the replication window, the realized high-state shares are \(s(H)_{\text{VXO}}=`r NUM$sel_rep_vol$sH`\) and \(s(H)_{\text{JLN}}=`r NUM$sel_rep_jln$sH`\). Regime counts: VXO \(T_L=`r NUM$sel_rep_vol$TL`\, ,\, T_H=`r NUM$sel_rep_vol$TH`\); JLN \(T_L=`r NUM$sel_rep_jln$TL`\, ,\, T_H=`r NUM$sel_rep_jln$TH`\).
+Figure 1 visualizes the realized partition: regime shares under the volatility splitter (VXO/VIX) with JLN shown as a macro-based reference. High-state incidence is similar but not identical across proxies, foreshadowing the wedges analyzed in Section \@ref(sec:extension).
+```{r figRegimeShares, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=2.6, fig.align='center',fig.cap="(\\#fig:regime-shares) Regime shares (high-state incidence) under volatility- and macro-based splitters. Construction: 3-month moving average, 1-month lag; threshold via pooled BIC on a 15\\%–85\\% trimmed grid.",fig.scap="Regime shares under volatility- and macro-based splitters"}
+library(fs); library(here); library(readr); library(dplyr); library(ggplot2); library(scales)
+
+path <- find_file(fs::path("tables","regime_flags.csv"),
+                  extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                 here::here("..","models","tvar","artifacts","tables")))
+if (!fs::file_exists(path)) {
+  grid::grid.text("Regime flags not found — expected paper/artifacts/tables/regime_flags.csv", x=.5, y=.5)
+} else {
+  REG <- readr::read_csv(path, show_col_types = FALSE) %>%
+    mutate(proxy = case_when(
+      tolower(proxy) %in% c("vix","vxo","vxo_vix") ~ "Volatility (VXO->VIX)",
+      tolower(proxy) == "jln"                      ~ "JLN (macro uncertainty)",
+      TRUE ~ proxy
+    )) %>%
+    filter(!is.na(high))
+
+  shares <- REG %>%
+    group_by(proxy) %>%
+    summarise(`High-state share` = mean(high == 1, na.rm = TRUE), .groups="drop")
+
+ggplot(shares, aes(x = proxy, y = `High-state share`)) +
+    geom_col(width = 0.6) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 0.1),
+                       limits = c(0,1), expand = expansion(mult = c(0, 0.05))) +
+labs(x = NULL, y = "High-state share",
+       caption = FIG_NOTES("Shares are mean high-state incidence by proxy")) +
+  theme_minimal(base_size = 10) +
+  theme(axis.text.x = element_text(angle = 0, hjust = 0.5),
+        plot.caption = element_text(hjust = 0, size = 8))
+
+}
+```
+
+## Responses by regime (regime-split-VAR): direction and persistence {#sec:replicationtwo}
+In a TVAR, impulse responses depend on the pre-shock state, and GIRFs are used for inference (Section \@ref(sec:econometrictwo)). For visualization in this section only, we display regime-split linear VAR IRFs. These curves approximate the TVAR-GIRF direction and persistence but are not used for inference, all ΔIRF/FEVD/half‑life statistics are built from TVAR GIRFs. State dependence is summarized by two statistics computed from the release arrays: Amplification ratio, the peak-to-peak ratio (high vs. low) for shock $i$ and response $\ell$ (see Appendix \ref{app-formulas}, Eq. \eqref{eq:r-amp}), group-level summaries report medians across $\ell$ (energy, precious, industrial, agriculture) and , when appropriate, across $i$. Regime-gap area, the integrated difference up to $H$ (see Appendix \ref{app-formulas}, Eq. \eqref{eq:a-ell}).
+Quantitatively (medians across impulse–response pairs, high regime vs VAR), peak ratios (×) and \(\Delta\) half-lives (months) under the volatility splitter are: Energy `r NUM$pk_vol_E` / `r NUM$dhl_vol_E`, Industrial `r NUM$pk_vol_I` / `r NUM$dhl_vol_I`, Precious `r NUM$pk_vol_P` / `r NUM$dhl_vol_P`, Agriculture `r NUM$pk_vol_A` / `r NUM$dhl_vol_A`.
+
+```{r figgirf, echo=FALSE, message=FALSE, warning=FALSE, fig.cap=paste0("Regime-split linear VAR IRFs with ", CI_LEVEL, "% bootstrap bands (Volatility splitter)."),fig.align='center', fig.width=7.2, fig.height=4.8}
+suppressPackageStartupMessages({
+  library(dplyr); library(readr); library(tidyr); library(ggplot2)
+})
+
+# --- find artifacts ---
+ret_path <- find_file("data/returns_wide.csv",
+                      extra_dirs = c(here::here("output","releases"),
+                                     here::here("..","output","releases"),
+                                     here::here("models","tvar","artifacts","data"),
+                                     here::here("..","models","tvar","artifacts","data")))
+reg_path <- find_file("tables/regime_flags.csv",
+                      extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                     here::here("..","models","tvar","artifacts","tables")))
+
+if (is.na(ret_path) || is.na(reg_path)) {
+  grid::grid.text("IRF data not found — need paper/artifacts/data/returns_wide.csv and regime_flags.csv", x=.5, y=.5)
+} else {
+  Y <- readr::read_csv(ret_path, show_col_types = FALSE)  # expects columns: date + series...
+  # guess date col
+  dcol <- names(Y)[1]
+  if (!grepl("date", tolower(dcol))) dcol <- names(Y)[1]
+  dates <- Y[[dcol]]
+  X <- Y %>% select(-!!dcol)
+
+
+  reps <- names(X)[1:min(4, ncol(X))]
+  X <- X[reps]
+  colnames(X) <- c("Energy","Industrial","Precious","Agriculture")[seq_along(reps)]
+
+  # regimes from Volatility proxy (you can change to JLN)
+  RF <- readr::read_csv(reg_path, show_col_types = FALSE) %>%
+    mutate(proxy = case_when(tolower(proxy) %in% c("vix","vxo","vxo_vix","volatility") ~ "Volatility",
+                             tolower(proxy)=="jln" ~ "JLN", TRUE ~ proxy)) %>%
+    filter(proxy=="Volatility") %>%
+    arrange(date)
+
+  # align dates (assumes monthly alignment)
+  RF <- RF %>% select(date, high)
+  D  <- tibble::tibble(date = dates) %>% left_join(RF, by="date")
+  if (!"high" %in% names(D)) { grid::grid.text("regime_flags.csv missing 'high' column for Volatility", x=.5, y=.5); knitr::knit_exit() }
+
+  # split indices
+  idxL <- which(D$high == 0)
+  idxH <- which(D$high == 1)
+
+  # minimal sanity
+  if (length(idxL) < 30 || length(idxH) < 30) {
+    grid::grid.text("Not enough observations per regime to estimate IRFs", x=.5, y=.5)
+  } else {
+    # pick VAR order: from Table 1 if available via NUM; else AIC (cap at 6)
+    get_p <- function(p_str) {
+      p <- suppressWarnings(as.integer(p_str))
+      if (is.finite(p)) return(p)
+      # fallback AIC on the full sample to save time
+      suppressMessages({
+        pk <- vars::VARselect(X, lag.max=6, type="const")$selection["AIC(n)"]
+      })
+      if (is.na(pk)) 2L else as.integer(pk)
+    }
+    p_use <- tryCatch(get_p(NUM$sel_ext_vol$p), error = function(e) 2L)
+
+    # helper: fit VAR in a regime subset, compute generalized IRFs with bootstrap
+    get_irf <- function(Xsub, p=p_use, horizon=24, runs=500, ci=CI_LEVEL/100) {
+      v <- vars::VAR(Xsub, p=p, type="const")
+      # generalized IRFs: ortho=FALSE; bootstrapped bands
+      ir <- vars::irf(v, impulse=colnames(Xsub), response=colnames(Xsub),
+                      n.ahead=horizon, ortho=FALSE, boot=TRUE, runs=runs, ci=ci)
+      # ir is a list of lists; we gather into a tidy frame
+      res <- list()
+      for (imp in names(ir$irf)) {
+        M  <- ir$irf[[imp]]
+        L  <- ir$Lower[[imp]]
+        U  <- ir$Upper[[imp]]
+        for (resp in colnames(M)) {
+          res[[length(res)+1]] <- tibble::tibble(
+            impulse = imp, response = resp,
+            horizon = seq_len(nrow(M))-1,
+            mid = as.numeric(M[,resp]),
+            lo  = as.numeric(L[,resp]),
+            hi  = as.numeric(U[,resp])
+          )
+        }
+      }
+      dplyr::bind_rows(res)
+    }
+
+    G_L <- get_irf(X[idxL, , drop=FALSE])
+    G_H <- get_irf(X[idxH, , drop=FALSE])
+
+    G_L$regime <- "Low"
+    G_H$regime <- "High"
+    G <- dplyr::bind_rows(G_L, G_H)
+
+    # Plot a compact panel: show response=Energy, impulse=Energy 
+    show_resp <- intersect("Energy", unique(G$response))
+    gg <- G %>% dplyr::filter(response %in% show_resp)
+
+    p <- ggplot2::ggplot(gg, ggplot2::aes(x=horizon, y=mid, colour=impulse, fill=impulse)) +
+      ggplot2::geom_hline(yintercept=0, linewidth=.3, colour="grey60") +
+      ggplot2::geom_ribbon(ggplot2::aes(ymin=lo, ymax=hi), alpha=.20, linewidth=0) +
+      ggplot2::geom_line(linewidth=.7) +
+      ggplot2::facet_wrap(~ regime, nrow = 1) +
+      ggplot2::labs(x="Horizon (months)", y=NULL,
+                    caption = FIG_NOTES("Regime-split linear VAR estimated separately within each regime; impulse colours denote shocked series")) +
+      ggplot2::theme_minimal(base_size = 10) +
+      ggplot2::theme(panel.grid.minor = ggplot2::element_blank(),
+                     legend.position = "bottom",
+                     plot.caption = ggplot2::element_text(hjust=0, size=8))
+    print(p)
+  }
+}
+```
+
+This metric remains informative even when peaks are similar but persistence differs. With VXO as the splitter, energy exhibits the strongest amplification: shocks that are modest in the low-uncertainty regime become materially larger and longer-lived in the high regime. Industrial metals rank second, amplification and half-lives are sizable, consistent with cyclicality and inventory dynamics. Precious metals exhibit attenuated but positive amplification, safe-haven behavior dampens, yet does not eliminate, state dependence. Agriculture shows the weakest amplification and the fastest decay. Signs are broadly consistent across regimes, whereas magnitudes and persistence diverge, consistent with @joetsDoesVolatilityCommodity2016. Regime-aware bootstrap percentile bands (Section \@ref(sec:econometricthree)) indicate statistically credible amplification in energy and industrial over horizons of roughly 6–18 months, while agriculture’s regime gaps often straddle zero beyond short horizons.
+
+## State-contingent FEVD and contribution profiles {#sec:replicationthree}
+Because the TVAR is nonlinear, FEVDs are computed state-contingently from GIRFs (Section \@ref(sec:econometrictwo)). Figure 2 stacks group-level FEVD shares by proxy and regime. Companion panels report within-horizon contribution profiles derived from the same GIRF-based decomposition, dashed markers at $H=12$ and $H=24$ align with Table 2.
+```{r figFEVDproxy, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=3.8,fig.cap="(\\#fig:fevd-proxy) Stacked generalized FEVD by proxy on the extended sample (1986–2025): Volatility-defined regimes (left) and JLN-defined regimes (right), each split into low vs high. Y-axis is the share of forecast variance (percent).", fig.scap="Stacked generalized FEVD"}
+
+fevd_path <- find_file(fs::path("tables","fevd_regime_shares.csv"),
+                       extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                      here::here("..","models","tvar","artifacts","tables")))
+if (!fs::file_exists(fevd_path)) {
+  grid::grid.text("FEVD shares not found — expected paper/artifacts/tables/fevd_regime_shares.csv", x=.5, y=.5)
+} else {
+  FE <- readr::read_csv(fevd_path, show_col_types = FALSE) %>%
+    dplyr::mutate(
+      proxy = dplyr::case_when(
+        tolower(proxy) %in% c("vix","vxo","vxo_vix","volatility") ~ "Volatility (VXO->VIX)",
+        tolower(proxy)=="jln" ~ "JLN (macro uncertainty)",
+        TRUE ~ proxy
+      ),
+      regime = factor(toupper(regime), levels=c("L","H"), labels=c("Low regime","High regime")),
+      group  = factor(group, levels=c("Energy","Industrial","Precious","Agriculture"))
+    ) %>%
+    dplyr::group_by(proxy, regime, horizon, group) %>%
+    dplyr::summarise(share = mean(share, na.rm=TRUE), .groups="drop")
+
+  ggplot2::ggplot(FE, ggplot2::aes(x=horizon, y=share, fill=group)) +
+    ggplot2::geom_area(position="stack", alpha=.95) +
+    ggplot2::facet_grid(regime ~ proxy) +
+    ggplot2::scale_y_continuous(labels = scales::percent_format(accuracy = 1),
+                                limits = c(0,1), expand = ggplot2::expansion(mult = c(0, .02))) +
+    ggplot2::scale_x_continuous(breaks = c(0,6,12,18,24,30,36)) +
+ ggplot2::labs(x = "Horizon (months)", y = "Share of forecast variance",
+                caption = FIG_NOTES("State-contingent generalized FEVD from GIRFs")) +
+  theme_minimal(base_size = 10) +
+  theme(panel.grid.minor = element_blank(),
+        axis.title.x = element_text(margin = margin(t=6)),
+        axis.title.y = element_text(margin = margin(r=6)),
+        legend.position = "bottom",
+        legend.title = element_blank(),
+        plot.caption = element_text(hjust = 0, size = 8))
+
+}
+```
+At \(H=12\), the high–low FEVD shifts (pp) are Volatility: Energy `r pp(NUM$HL12_vol_E)`, Industrial `r pp(NUM$HL12_vol_I)`, Precious `r pp(NUM$HL12_vol_P)`, Agriculture `r pp(NUM$HL12_vol_A)`; JLN: Energy `r pp(NUM$HL12_jln_E)`, Industrial `r pp(NUM$HL12_jln_I)`, Precious `r pp(NUM$HL12_jln_P)`, Agriculture `r pp(NUM$HL12_jln_A)`.  
+At \(H=24\), Volatility: Energy `r pp(NUM$HL24_vol_E)`, Industrial `r pp(NUM$HL24_vol_I)`, Precious `r pp(NUM$HL24_vol_P)`, Agriculture `r pp(NUM$HL24_vol_A)`; JLN: Energy `r pp(NUM$HL24_jln_E)`, Industrial `r pp(NUM$HL24_jln_I)`, Precious `r pp(NUM$HL24_jln_P)`, Agriculture `r pp(NUM$HL24_jln_A)`.
+
+In the VXO-defined high-uncertainty regime, GFEVD stacks reallocate a larger share of the group-level forecast variance toward energy and industrial metals relative to the low regime, precious metals retain a stable but secondary share, agriculture rises modestly or remains flat depending on the horizon. This composition shift is exactly what the amplified GIRFs imply: when the system is stressed, systematic responses, not merely larger residual variances, push variance attribution toward energy/industrial blocks. The normalization uses regime-specific one-sigma shocks (Section \@ref(sec:econometricthree)), so these differences reflect propagation rather than mechanical scale effects. For completeness, the release also provides waterfall and Δ-line diagnostics, that display within-horizon contributions and time-profile deltas between low and high regimes, these corroborate the stacked views.
+
+## Cross-checks and replication verdict {#sec:replicationfour}
+Two cross-checks support the replication. High-uncertainty episodes flagged by VXO align with known stress windows in 1986–2015, regime shares are comfortably above the trimming floor, providing a rich high-state subsample-consistent with @joetsDoesVolatilityCommodity2016. For energy and industrial groups, high-regime GIRFs show larger peaks and longer half-lives than low-regime responses, translating into higher GFEVD shares in the high state. Precious is milder, agriculture the least sensitive, mirroring the heterogeneity emphasized in the original study.
+As an internal benchmark Table 2 contrasts a pooled VAR with the TVAR high-regime: peak ratios exceed one and median $\Delta$ half-life is positive across groups. A recursive SVAR likewise yields smaller magnitudes and shorter persistence than TVAR-H, the qualitative ranking is unchanged. The replication therefore confirms the core stylized facts on 1986–2015: state matters, especially for energy and industrial metals—and the distribution of forecast variance is regime-dependent.
+
+# Extension to 2025 & Proxy Comparison {#sec:extension}
+This section extends the sample to 1986/01–2025/06 and quantifies how proxy choice, volatility-based (VXO/VIX) versus macro-based (JLN), alters regime identification and the measured size/persistence of volatility spillovers. The econometric framework follows Sections \@ref(sec:data)–\@ref(sec:econometric): a TVAR with GIRFs and state-contingent GFEVD. The threshold driver is standardized, smoothed with a three-month moving average, and lagged by one month. The threshold $c$ is chosen on a grid trimmed to 15% per regime using the pooled BIC. The novelty is that the regime partition itself is proxy-dependent, the chapter makes this dependence measurable, visually clear, and economically interpretable.
+
+## Design and quantitative comparison metrics {#sec:extensionone}
+The extension introduces two macro-financial episodes, COVID-19 and the 2022–24 tightening, that are ideal for testing measurement sensitivity. To compare proxy-defined regime partitions and their implications, three summary metrics complement the TVAR/GIRF machinery.
+Let $s_t^{(vol)}, s_t^{(JLN)} \in {{0,1}}$ denote high-state indicators under VXO/VIX and JLN. The overlap of "stress months" on $\mathcal{T}^{ext}$ is (see Appendix \ref{app-formulas}, Eq. \eqref{eq:j}). Let $\mathrm{GFEVD}_g^{(\mathrm{p},s)}(H)$ denote the group-level share (aggregated from Section \@ref(sec:econometrictwo)) for proxy $p \in \{vol, JLN\}$, regime $s \in \{L, H\}$, horizon $H$.
+
+\begin{equation}\label{eq:delta-gh}
+\Delta\Delta_g(H)
+=
+\Bigl[
+\mathrm{GFEVD}_g^{(\mathrm{vol},H)}(H)
+-
+\mathrm{GFEVD}_g^{(\mathrm{vol},L)}(H)
+\Bigr]
+-
+\Bigl[
+\mathrm{GFEVD}_g^{(\mathrm{JLN},H)}(H)
+-
+\mathrm{GFEVD}_g^{(\mathrm{JLN},L)}(H)
+\Bigr].
+\end{equation}
+
+Positive $\Delta_g(H)$ indicates stronger peak-month amplification under the volatility proxy, negative values indicate more persistent accumulation under JLN. With $\big( h_{1/2}^{(\mathrm{p},H)}(i \to \ell) \big)$ defined in Section \@ref(sec:econometrictwo), summarize by group medians:
+
+\begin{equation}\label{eq:delta-h}
+\Delta h_{1/2}(g)
+=
+\operatorname{median}_{\ell \in g,\, i}
+\big( h_{1/2}^{(\mathrm{vol},H)}(i \to \ell) \big)
+-
+\operatorname{median}_{\ell \in g,\, i}
+\big( h_{1/2}^{(\mathrm{JLN},H)}(i \to \ell) \big)
+\end{equation}
+
+Negative $\Delta h_{1/2}(g)$ means JLN implies longer-lived high-regime responses. These metrics quantify proxy risk and map directly to risk-budgeting by separating peak effects from persistence.
+
+## Proxy overlap & wedges {#sec:extensiontwo}
+Overlap and wedges (extended sample). 
+Jaccard overlap \(J\) (Volatility vs JLN): `r NUM$Jaccard`.  
+ΔΔ–GFEVD (Vol−JLN) at \(H=12\) (pp): Energy `r pp(NUM$DD12_E)`, Industrial `r pp(NUM$DD12_I)`, Precious `r pp(NUM$DD12_P)`, Agriculture `r pp(NUM$DD12_A)`; at \(H=24\): Energy `r pp(NUM$DD24_E)`, Industrial `r pp(NUM$DD24_I)`, Precious `r pp(NUM$DD24_P)`, Agriculture `r pp(NUM$DD24_A)`.  
+Persistence wedges (high regime): \(\Delta\) half-life in months (Vol − JLN) Energy `r NUM$DH_E`, Industrial `r NUM$DH_I`, Precious `r NUM$DH_P`, Agriculture `r NUM$DH_A`; Δ PI (H=24) Energy `r NUM$DPI_E`, Industrial `r NUM$DPI_I`, Precious `r NUM$DPI_P`, Agriculture `r NUM$DPI_A`.
+
+```{r tbl2render, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+library(fs); library(here); library(readr); library(dplyr); library(knitr); library(kableExtra)
+
+# Read the three inputs produced by 06_export_table2_artifacts.R
+base_dir <- if (fs::dir_exists(here::here("models","tvar","artifacts","tables")))
+  here::here("models","tvar","artifacts","tables") else
+  here::here("..","models","tvar","artifacts","tables")
+
+reg_path  <- find_file(fs::path("tables","regime_flags.csv"),
+                       extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                      here::here("..","models","tvar","artifacts","tables")))
+fevd_path <- find_file(fs::path("tables","fevd_regime_shares.csv"),
+                       extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                      here::here("..","models","tvar","artifacts","tables")))
+half_path <- find_file(fs::path("tables","half_life_summary.csv"),
+                       extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                      here::here("..","models","tvar","artifacts","tables")))
+pers_path <- find_file(fs::path("tables","persistence_index_summary.csv"),
+                       extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                      here::here("..","models","tvar","artifacts","tables")))
+
+REG  <- if (fs::file_exists(reg_path))  readr::read_csv(reg_path,  show_col_types = FALSE) else NULL
+FEVD <- if (fs::file_exists(fevd_path)) readr::read_csv(fevd_path, show_col_types = FALSE) else NULL
+HL   <- if (fs::file_exists(half_path)) readr::read_csv(half_path, show_col_types = FALSE) else NULL
+PERS <- if (fs::file_exists(pers_path)) readr::read_csv(pers_path, show_col_types = FALSE) else NULL
+
+# --- Jaccard J ---
+J_val <- NA_real_; J_note <- "J not computed (missing regime_flags.csv)"
+if (!is.null(REG)) {
+  Rv <- REG |> dplyr::filter(tolower(proxy) %in% c("volatility","vxo_vix","vix","vxo")) |>
+    dplyr::select(date, high) |> dplyr::rename(high_vol = high)
+  Rj <- REG |> dplyr::filter(tolower(proxy) == "jln") |>
+    dplyr::select(date, high) |> dplyr::rename(high_jln = high)
+  RJ <- dplyr::inner_join(Rv, Rj, by = "date")
+  if (nrow(RJ)) {
+    inter <- sum(RJ$high_vol == 1 & RJ$high_jln == 1, na.rm = TRUE)
+    union <- sum((RJ$high_vol == 1) | (RJ$high_jln == 1), na.rm = TRUE)
+    if (union > 0) { J_val <- inter/union; J_note <- sprintf("Jaccard overlap (Volatility vs JLN): %.3f.", J_val) }
+  }
+}
+
+# --- ΔΔ-GFEVD by group at H=12 and H=24 ---
+groups_out <- c("Energy","Industrial","Precious","Agriculture")
+fmt3 <- function(x) ifelse(is.na(x), "NA", sprintf("%.3f", x))
+dd12 <- dd24 <- setNames(rep(NA_real_, length(groups_out)), groups_out)
+
+if (!is.null(FEVD) && all(c("proxy","regime","group","horizon","share") %in% names(FEVD))) {
+  FE <- FEVD %>%
+    mutate(proxy = case_when(tolower(proxy) %in% c("volatility","vxo_vix","vix","vxo") ~ "Volatility",
+                             tolower(proxy) == "jln" ~ "JLN", TRUE ~ proxy),
+           regime = toupper(regime))
+  get_H <- function(h){ Hs <- sort(unique(FE$horizon)); Hs[which.min(abs(Hs - h))] }
+  for (H in c(12L, 24L)) {
+    h <- get_H(H)
+    for (g in groups_out) {
+      sub <- FE %>% filter(horizon == h, group == g, regime %in% c("H","L"),
+                           proxy %in% c("Volatility","JLN"))
+      if (nrow(sub)) {
+        HL_vol <- with(sub %>% filter(proxy == "Volatility"),
+                       share[regime == "H"] - share[regime == "L"])
+        HL_jln <- with(sub %>% filter(proxy == "JLN"),
+                       share[regime == "H"] - share[regime == "L"])
+        val <- as.numeric(HL_vol) - as.numeric(HL_jln)
+        if (H == 12L) dd12[g] <- val else dd24[g] <- val
+      }
+    }
+  }
+}
+
+# --- Δ half-life (H state; Vol - JLN) by group ---
+dh <- setNames(rep(NA_real_, length(groups_out)), groups_out)
+if (!is.null(HL) && all(c("proxy","group","regime","half_life") %in% names(HL))) {
+  HH <- HL %>% mutate(proxy = case_when(tolower(proxy) %in% c("volatility","vxo_vix","vix","vxo") ~ "Volatility",
+                                        tolower(proxy) == "jln" ~ "JLN", TRUE ~ proxy),
+                      regime = toupper(regime)) %>%
+    filter(regime == "H")
+  for (g in groups_out) {
+    v <- HH %>% filter(group == g, proxy == "Volatility") %>% pull(half_life)
+    j <- HH %>% filter(group == g, proxy == "JLN")        %>% pull(half_life)
+    if (length(v) && length(j)) dh[g] <- median(v, na.rm=TRUE) - median(j, na.rm=TRUE)
+  }
+}
+
+dpi <- setNames(rep(NA_real_, length(groups_out)), groups_out)
+if (!is.null(PERS) && all(c("proxy","group","regime","H","PI") %in% names(PERS))) {
+  PP <- PERS %>%
+    mutate(proxy = case_when(tolower(proxy) %in% c("volatility","vxo_vix","vix","vxo") ~ "Volatility",
+                             tolower(proxy) == "jln" ~ "JLN", TRUE ~ proxy),
+           regime = toupper(regime)) %>%
+    filter(regime == "H")
+  if ("H" %in% names(PP)) {
+    h_sel <- 24L
+    if (!any(PP$H == h_sel)) h_sel <- PP$H[which.min(abs(PP$H - 24L))]
+    PP <- PP %>% filter(H == h_sel)
+  }
+  for (g in groups_out) {
+    v <- PP %>% filter(group == g, proxy == "Volatility") %>% pull(PI)
+    j <- PP %>% filter(group == g, proxy == "JLN")        %>% pull(PI)
+    if (length(v) && length(j)) dpi[g] <- median(v, na.rm = TRUE) - median(j, na.rm = TRUE)
+  }
+}
+
+OUT <- data.frame(
+  Group                 = groups_out,
+  `DeltaDelta @H=12`    = fmt3(dd12),
+  `DeltaDelta @H=24`    = fmt3(dd24),
+  `Delta PI (H=24)`     = ifelse(is.na(dpi), "NA", sprintf("%.3f", dpi)),
+  `Delta half-life (m)` = ifelse(is.na(dh),  "NA", sprintf("%.2f", dh)),
+  check.names = FALSE
+)
+
+cap_long  <- "Proxy wedges by commodity group: $\\Delta\\Delta$-GFEVD (Volatility $-$ JLN) at $H=12$ and $H=24$, and $\\Delta$ half-life in months (Volatility $H$ $-$ JLN $H$)."
+cap_short <- "Proxy wedges by group"
+
+tab2 <- kableExtra::kbl(
+  OUT, format = "latex", booktabs = TRUE, escape = TRUE,
+  caption = sprintf("(\\#tab:%s) %s", "tblX", cap_long),
+  caption.short = cap_short
+) |>
+  kableExtra::kable_styling(latex_options = c("hold_position","striped","scale_down"), font_size = 9) |>
+  kableExtra::footnote(general = "Source: own calculations based on World Bank Pink Sheet; VIX/VXO and JLN (FRED).",
+                        threeparttable = TRUE) |>
+print(tab2)
+```
+Energy/Industrial show positive $\Delta\Delta$ at $H=12$. $\Delta PI$ is positive in 3/4 groups, $\Delta h{1/2}$ is small at monthly frequency.
+
+## Extended regime partition: incidence and timing {#sec:extensionthree}
+The extended regime partition highlights two robust stylized facts. Both proxies flag a non-trivial share of months as high-uncertainty, with greater persistence post-2020 than in the pre-2015 window. The volatility proxy (VXO/VIX) concentrates on spiky event months that reflect market-priced fear, while JLN flags broader windows that often start later and last longer, reflecting sustained macro-data unpredictability. As a result, $J\in(0,1)$: the proxies agree on the core of stress windows, such as the early pandemic peak, yet differ on onset and tails, which anticipates wedges in FEVD stacks and contribution waterfalls.
+On the extended window, realized high-state shares are \(s(H)_{\text{Vol}}=`r NUM$sel_ext_vol$sH`\) and \(s(H)_{\text{JLN}}=`r NUM$sel_ext_jln$sH`\); regime counts: Volatility \(T_L=`r NUM$sel_ext_vol$TL`\, ,\, T_H=`r NUM$sel_ext_vol$TH`\); JLN \(T_L=`r NUM$sel_ext_jln$TL`\, ,\, T_H=`r NUM$sel_ext_jln$TH`\).
+
+## Stage-contingent decompositions on the extended sample {#sec:extensionfour}
+State-contingent GFEVD stacks and contribution profiles are recomputed for the extended sample under each proxy (Section \@ref(sec:econometrictwo)). Energy and industrial metals continue to show large high-minus-low variance gains, but the magnitude and persistence are proxy-dependent. Under VIX, high-regime shares peak sharply around event months and taper faster, under JLN, high-regime shares are broader and endure. Under both proxies, precious metals show moderate amplification, safe-haven demand mitigates persistence but does not eliminate state dependence. Agriculture remains the least responsive, high-minus-low differences are smaller and shorter lived.
+
+```{r figDeltadelta, echo=FALSE, message=FALSE, warning=FALSE,fig.width=7, fig.height=3.4,fig.cap="Proxy wedges by group ΔΔ–GFEVD at H=12 and H=24.",fig.align='center'}
+fevd_path <- find_file(fs::path("tables","fevd_regime_shares.csv"),
+                       extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                      here::here("..","models","tvar","artifacts","tables")))
+if (!fs::file_exists(fevd_path)) {
+  grid::grid.text("FEVD shares not found — expected paper/artifacts/tables/fevd_regime_shares.csv", x=.5, y=.5)
+} else {
+  FE <- readr::read_csv(fevd_path, show_col_types = FALSE) %>%
+    dplyr::mutate(
+      proxy = dplyr::case_when(
+        tolower(proxy) %in% c("vix","vxo","vxo_vix","volatility") ~ "Volatility",
+        tolower(proxy) == "jln" ~ "JLN",
+        TRUE ~ proxy
+      ),
+      regime = toupper(regime),
+      group  = factor(group, levels = c("Energy","Industrial","Precious","Agriculture"))
+    )
+
+  pickH <- function(h){ hs <- sort(unique(FE$horizon)); hs[which.min(abs(hs - h))] }
+
+  drow <- function(Hsel){
+    h <- pickH(Hsel)
+    dplyr::bind_rows(lapply(levels(FE$group), function(g){
+      sub <- FE %>%
+        dplyr::filter(horizon==h, group==g, regime %in% c("H","L"),
+                      proxy %in% c("Volatility","JLN")) %>%
+        dplyr::select(proxy, regime, share) %>%
+        dplyr::distinct()
+      if (!nrow(sub)) return(tibble::tibble(group=g, dd=NA_real_, H=h))
+      v_sub <- sub %>% dplyr::filter(proxy=="Volatility") %>%
+              tidyr::pivot_wider(names_from=regime, values_from=share)
+      j_sub <- sub %>% dplyr::filter(proxy=="JLN") %>%
+              tidyr::pivot_wider(names_from=regime, values_from=share)
+      HL_vol <- if (all(c("H","L") %in% names(v_sub))) as.numeric(v_sub$H - v_sub$L) else NA_real_
+      HL_jln <- if (all(c("H","L") %in% names(j_sub))) as.numeric(j_sub$H - j_sub$L) else NA_real_
+      tibble::tibble(group=g, dd=HL_vol - HL_jln, H=h)
+    }))
+  }
+
+  DD <- dplyr::bind_rows(
+          drow(12L) %>% dplyr::mutate(H="H=12"),
+          drow(24L) %>% dplyr::mutate(H="H=24")
+        ) %>% dplyr::mutate(H=factor(H, levels=c("H=12","H=24")))
+
+  ggplot2::ggplot(DD, ggplot2::aes(x=group, y=dd)) +
+    ggplot2::geom_hline(yintercept=0, linewidth=.3, colour="grey60") +
+    ggplot2::geom_col(width=.6) +
+    ggplot2::facet_wrap(~H, nrow=1) +
+    ggplot2::scale_y_continuous(labels = scales::number_format(accuracy = 0.01)) +
+ ggplot2::labs(x=NULL, y="ΔΔ–GFEVD (share points)",
+                caption = FIG_NOTES("ΔΔ defined as (Volatility HL − JLN HL) at each H")) +
+  ggplot2::theme_minimal(base_size = 10) +
+  ggplot2::theme(panel.grid.minor = element_blank(),
+                 axis.title.y = ggplot2::element_text(margin = margin(r=6)),
+                 plot.caption = ggplot2::element_text(hjust = 0, size = 8))
+
+}
+```
+
+Where stacks show levels, waterfalls and $\Delta$-lines reveal when contributions change and by how much relative to baseline. Post-2020, amplification arrives earlier and persists longer under JLN, whereas VIX concentrates amplification in spikier windows, early-pandemic and the 2022 volatility bursts.
+
+A machine-readable summary avoids figure cherry-picking, where stacks show levels, waterfalls and $\Delta$-lines reveal when contributions change and by how much relative to baseline. At intermediate horizons $H\in[12,24]$ the DiD wedge $\Delta_g(H)$ is typically positive for energy and industrial metals, indicating sharper peak-month amplification when regimes are defined by VIX. At longer horizons,$\Delta_g(H)$ often turns negative as JLN maintains larger cumulative shares, consistent with its broader, more persistent stress windows. The persistence wedge $\Delta h_{1/2}(g)$ is commonly negative for energy/industrial, indicating longer-lived high-regime responses under JLN, precious metals are closer to zero, agriculture is smallest in absolute value.
+
+## Robustness and economic interpretation {#sec:extensionfive}
+The extended-sample conclusions are stable along the axes in Section \@ref(sec:econometricthree) :(i) Lag/delay perturbations around $(p^*, d^*)$ leave signs and relative magnitudes intact, $\Delta_g(H)$ varies smoothly.(ii) Horizon sweeps $(H=12,24,36)$ produce the expected peak-vs-persistence reversal between VIX and JLN.(iii) The VXO to VIX handover (1990/01) does not induce spurious breaks: standardization within $\mathcal{T}^{ext}$, smoothing/lagging, and trimmed threshold search keep the volatility-based partition stable around the splice. (iv) Coverage constraints (Section \@ref(sec:datathree)) ensure adequate observations in each regime for all groups; residual and stability diagnostics remain satisfactory. Three implications follow. (i) Event detection vs. persistence: a VIX-based monitor records stress early and acutely but can understate persistence, JLN captures enduring uncertainty but reacts less to instantaneous repricing. A proxy ensemble, volatility plus macro predictability, is therefore preferred. (ii) Heterogeneity: energy and industrial metals concentrate the largest amplification under both proxies, proxy choice matters most in these groups. (iii) Linear benchmarks: VAR/SVAR responses remain systematically smaller than high-regime TVAR responses in the extension, reinforcing the replication message, state dependence intensifies post-2020 and is not a pre-2015 curiosity, precisely when risk managers care most.
+
+# Validation & Robustness {#sec:validation}
+This section establishes that the nonlinear findings are statistically credible, econometrically well-posed, and insensitive to reasonable perturbations in modeling choices. The validation is organized around four pillars: (i) inference via a regime-aware bootstrap, (ii) benchmarks against linear VAR/SVAR, (iii) sensitivity to lag/delay/threshold and to the volatility-proxy splice (VXO/VIX), and (iv) stability and diagnostics-residual tests, eigenvalues, and a linearity contrast. All results are linked to release artifacts, including GIRF-based FEVD stacks, contribution files, waterfalls, $\Delta$-lines, and tidy CSV summaries.
+
+## Inference and linear benchmarks {#sec:validationone}
+Because impulse responses in a TVAR depend on the pre-shock state and because their finite-sample distribution is non-Gaussian, bootstrap uncertainty reports around all objects derived from GIRFs.
+Let $A^{(s)}$ and $\sum^{(s)}$denote the regime-specific autoregressive operator and innovation covariance, and let $s_t$denote the realized regime under the estimated threshold. Residual vectors are sampled with replacement within each regime, synthetic paths are generated under the estimated TVAR, and statistics are recomputed for each replication.
+Generate innovations from the empirical residual distribution of regime simulates and preserves the ex ante regime assignment. For each replication $b=1,…,B$ compute state-contingent GIRFs, then build the state-contingent FEVD shares from GIRF paths as in Section \@ref(sec:econometricthree). Percentile bands are then reported for (i) GIRFs, (ii) regime-difference curves (H). The code normalizes shocks regime-specifically so that a “one-sigma” innovation has comparable meaning within each state, this avoids mechanically inflating high-state responses merely because high is larger. Coverage diagnostics. For each commodity (h) for the high-regime GIRF and compute the fraction of horizons where the low-regime GIRF enters the high-regime in energy and industrial metals corroborate amplification: low-state dynamics are statistically distinct from high-state dynamics over a non-trivial share of horizons.
+
+The incremental value of nonlinearity is validated by contrasting the TVAR with (i) a linear VAR and (ii) a recursive SVAR that augments the VAR with the uncertainty proxy ordered last. Let (h) be the high-state response in the TVAR. Distance and magnitude diagnostics, summarized by the release code, show positive values clustering in energy and industrial metals, indicating that linear frameworks understate both magnitude and persistence when the system is in a stressed state. Sign concordance remains high—benchmarks and TVAR agree on direction, but shapes and durations diverge, which is precisely what a state-contingent model is expected to recover.
+
+## Sensitivity, diagnostics, and consolidated verdict {#sec:validationtwo}
+Sensitivity to the calibration of $(c^*, p^*, d^*)$ examined by local perturbations around the baseline. Stability is summarized by the maximum absolute deviation from the baseline across grid neighbors and percentile-based shifts. The deviation is small for all four groups, and both signs and relative magnitudes are preserved, indicating that amplification is not a knife-edge artifact.
+
+Two additional checks address measurement risk directly: The volatility-based splitter uses VXO through December 1989 and VIX from January 1990 onward. Because is standardized over the full sample and smoothed and lagged before thresholding, the regime assignment around 1990 is stable: there is no discrete jump in regime incidence due to the splice. The $\Delta$-lines shows no mechanical jump at 1990, amplification tracks macro-financial episodes instead.
+
+Re-estimating the TVAR with JLN as the splitter yields the expected differences in regime timing and share: VIX emphasizes peaky, market-priced fear, whereas JLN reflects broader, slower macro uncertainty. The resulting FEVD difference-in-differences is largest, in absolute value, for energy and industrial metals. Waterfalls and FEVD stacks exported in the release exhibit the same pattern. For each regime (L) has all eigenvalues strictly inside the unit circle, ensuring covariance-stationarity conditional on the state. This guards against spurious persistence from near-unit roots. Serial correlation is assessed with Ljung–Box tests on regime-specific residuals, and cross-correlations across commodities are inspected. Table 1 indicates non‑white residuals for JLN in both regimes (LB p = 0.002 and 0.001) and borderline non‑whiteness for the volatility high regime (0.009). This does not overturn the qualitative regime patterns, but it argues for caution on formal significance. Our inference uses a regime‑aware residual bootstrap, which mitigates distributional assumptions, a block bootstrap is a natural follow‑up.
+
+Across inference, benchmarks, sensitivity analyses, and diagnostics, the core messages are robust: High-regime GIRFs in energy and industrial metals exceed linear VAR/SVAR responses in magnitude and half-life, and the differences are supported by bootstrap bands. Results are not calibration-fragile. Varying θ within reasonable grids preserves signs and relative magnitudes of FEVD high–low differentials, the volatility splice at 1990 does not distort regime assignment. Proxy choice matters, predictably. VIX-based splits accentuate peaks, JLN-based splits sustain persistence. The FEVD and waterfall evidence show that the measured risk depends on what uncertainty you measure, a feature that is economically meaningful rather than a nuisance.
+
+For compact reporting, Table 4 are summarizes the grid runs in a robustness matrix, using $✓/△/x$ flags for sign, relative magnitude, and half-life by group, while the delta-lines figure documents temporal stability of amplification across subsamples. Together, these checks support the claim that the nonlinear, proxy-aware transmission documented in Sections \@ref(sec:replication)–\@ref(sec:extension) is econometrically sound and decision-relevant.
+
+### Robustness matrix {#sec:validationtwoone}
+Table 4 consolidates sign and horizon stability and key diagnostics across groups. $✓$ denotes strong evidence, $△$ denotes mixed evidence, $x$ denotes weak evidence. Threshold choices are noted below the table.
+```{r tbl4render, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+library(fs); library(here); library(readr); library(dplyr); library(knitr); library(kableExtra)
+
+path <- find_file(fs::path("tables","robustness_matrix_table4.csv"),
+                  extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                 here::here("..","models","tvar","artifacts","tables")))
+if (!fs::file_exists(path)) {
+  cat("**Table 4 not rendered — artifact missing (paper/artifacts/tables/robustness_matrix_table4.csv).**")
+} else {
+  R4 <- readr::read_csv(path, show_col_types = FALSE)
+  # swap Unicode marks for LaTeX macros; also fix the en dash placeholder
+  map_marks <- function(x) dplyr::case_when(
+    x == "✓" ~ "\\robstrong{}",
+    x == "△" ~ "\\robmixed{}",
+    x == "✗" ~ "\\robweak{}",
+    x == "–" ~ "\\textemdash{}",
+    TRUE     ~ x
+  )
+  R4 <- R4 %>% mutate(across(-Group, map_marks))
+
+  cap_long  <- "Robustness matrix (\\robstrong{} strong, \\robmixed{} mixed, \\robweak{} weak): $\\Delta\\Delta$–GFEVD sign/size at $H=12$ (and consistency at $H=24$), horizon stability ($12\\to24$), persistence wedge ($\\Delta$PI at $H=24$), fractional half-life wedge $\\Delta h_{1/2}$, pooled diagnostics ($\\lambda<1$; LB $p$ as reported in Table 1), and VXO$\\to$VIX splice stability."
+  cap_short <- "Robustness matrix"
+
+  kableExtra::kbl(
+    R4, format = "latex", booktabs = TRUE, escape = FALSE,
+  caption = sprintf("(\\#tab:%s) %s", "tblX", cap_long),
+  caption.short = cap_short
+  ) |>
+    kableExtra::kable_styling(latex_options = c("hold_position","striped","scale_down"),
+                              font_size = 9) |>
+    kableExtra::footnote(general = "Source: own calculations based on World Bank Pink Sheet; VIX/VXO and JLN (FRED).",
+                        threeparttable = TRUE) |>
+    print()
+}
+```
+
+# Discussion & Implications {#sec:discussion}
+The results from the replication and the 2025 extension jointly imply three facts. First, state dependence is economically large: high-uncertainty regimes amplify the size and persistence of commodity-market responses, especially in energy and industrial metals, with precious smaller and agriculture the weakest. Second, linear benchmarks understate stressed-state spillovers precisely when risk managers care most. Third, proxy choice is informative: a volatility-based splitter (VXO/VIX) captures acute, event-month repricing, whereas JLN captures enduring macro uncertainty, overlap is material but incomplete, so measured spillovers differ at short vs. intermediate horizons. Operational translation for surveillance and stress testing. A two-tier monitor is warranted. For event detection/nowcasting, the volatility splitter flags spikes, when the high-state share jumps and waterfalls shift mass into energy/industrial, surveillance of commodity-sensitive margins and collateral should tighten immediately. For persistence assessment, the JLN splitter informs whether elevated volatility should be carried forward into subsequent quarters, if JLN remains high while VIX normalizes, short-dated stress would under-calibrate medium-term risk.
+
+\begin{equation}\label{eq:u-g-p}
+U_g^{(p)}
+=
+\Bigl[
+\mathrm{GFEVD}_g^{(\mathrm{vol},H)}(H)
+-
+\mathrm{GFEVD}_g^{(\mathrm{vol},L)}(H)
+\Bigr]
+-
+\Bigl[
+\mathrm{GFEVD}_g^{(\mathrm{JLN},H)}(H)
+-
+\mathrm{GFEVD}_g^{(\mathrm{JLN},L)}(H)
+\Bigr].
+\end{equation}
+
+Applying $x$ linear scenario variance allocations (VAR/SVAR) yields a transparent, non-black-box stress uplift that is proxy-aware and regime-aware. For IRFs, the amplification ratio and persistence wedge (Sections 4–5) scale peak magnitudes and durations of linear responses in high states. Because GIRFs are normalized within state, these uplifts capture propagation, not residual scale. The metrics map directly to risk-budgeting and hedge tenor decisions. A positive $\Delta\Delta_g(H)$ at short horizons favors short-dated protection, a negative $\Delta\Delta_g(H)$ with magnitude rising by $H=24–36$ indicates JLN-driven persistence, arguing for longer-tenor hedged and for carrying elevated risk budgets into the medium term.
+
+The TVAR treats the proxy as an exogenous splitter, appropriate for state-contingent propagation, not for identifying a structural uncertainty shock. Proxy measurement is noisy, splice handling and JLN construction choices matter. These are mitigated via standardization, smoothing, delay, and robustness grids, but underscores why proxy-aware ranges, not single point truths, are preferred.
  
-- Energy markets: WTI crude oil and Henry Hub natural gas (NYMEX), Oct. 1978 – Apr. 2015  
-- Precious metals: Gold (COMEX), platinum (LME), silver (COMEX), Feb. 1976 – Apr. 2015  
-- Agriculture: Cocoa (ICO), coffee (UNCTAD), corn (COMEX), cotton (IMF, CIF Liverpool), lumber (IMF), soybeans (COMEX), sugar (COMEX), wheat (MGEX), Feb. 1980 – Apr. 2015  
-- Industrial metals: Aluminium (LME), copper, lead, nickel, tin, zinc (IMF/LME), Feb. 1980 – Apr. 2015
-
-All price series are transformed via first-logarithmic differences to compute monthly returns. The dataset is aligned to a common monthly frequency and standardized prior to estimation to ensure comparability across series. Where price series are discontinued or missing post-2015, proxy series or interpolated benchmarks (e.g., futures prices, UNCTAD Data Hub) will be used with proper documentation  
-
-The threshold variable $q_{t-d}$ is the lagged value of the VXO, smoothed using a three-period moving average to mitigate endogeneity. The threshold level $\theta$ is estimated endogenously via grid search, with a 15% trimming applied to ensure sufficient observations in both regimes. The lag order $p = 3$ is chosen in line with the original study, based on standard information criteria. The delay parameter $d$ is determined empirically and tested for robustness.
-
-Estimation is conducted using the `tsDyn` package in R. GIRFs, simulated via the `tvarGIRF` package, trace the average response to a one-standard-deviation shock conditional on regime. The replication sample spans January 1986 to April 2015, consistent with Joëts et al. (2017).
-
-The baseline threshold variable is the VXO, available from 1986 to 1989. From 1990 onward, it is replaced by the VIX (based on S&P 500 options) to ensure continuity in volatility-based regime identification. Both indices are obtained from the CBOE. These series are standardized and lagged with smoothing to define high-uncertainty regimes.
-
-
-## Extension
-
-The analysis extends Joëts et al. (2017) in two directions: (1) by expanding the sample and uncertainty proxies, and (2) by introducing methodological enhancements to improve robustness and interpretability.
-
-### Sample and Proxy Extension
-
-The baseline sample is extended through April 2025 to capture recent macro-financial volatility, including the COVID-19 shock and the inflation-driven tightening cycle of 2022–2024. Post-2015 data will be sourced from FRED, IMF Data, World Bank Pink Sheets, and ECB’s Data Portal, subject to availability. Updated uncertainty proxies are incorporated as threshold variables:
-- VIX (1990–2025)
-- JLN (1986–2025)
-- CISS (1986–2025)
-
-TVARs are re-estimated over the appropriate sub-samples using a grid of lag lengths ($p = 2$ to $6$) and delay parameters ($d = 1$ to $3$), with thresholds $\theta$ determined endogenously.
-
-### Methodological Enhancements (Prioritized vs. Exploratory)
-
-To balance ambition and feasibility, planned extensions are divided into core and exploratory tracks:
-
-#### Minimum Viable Enhancements (Planned Core Tasks)
-- Estimate and compare threshold regimes using VIX, JLN, and CISS.
-- Benchmark TVAR results against linear VAR and SVAR baselines.
-- Assess GIRF asymmetries across regimes for each proxy via simulation-based mean-path comparisons. Quantile-based impulse comparisons are considered exploratory
-
-#### Exploratory Extensions (Time-Permitting)
-- Estimate TVARX specifications to incorporate global spillovers or exogenous controls.
-- Experiment with alternative threshold specifications (e.g., rolling volatility windows).
-- Explore quantile-specific GIRFs to assess tail risk amplification.
-- Implement fixed-design wild bootstrap methods for GIRF inference under heteroskedasticity.
-
-These extensions will be prioritized based on feasibility within the semester’s timeframe.
-
-## Validation
-To benchmark the value of nonlinear modeling, we compare TVAR results against both linear VAR and structural VAR (SVAR) baselines. The linear VAR is estimated on the same variable set and lag order. For the SVAR, we use recursive identification via Cholesky decomposition, ordering the uncertainty proxy last to isolate its shock. Impulse responses from the linear and structural models are contrasted with regime-contingent GIRFs to assess whether linear frameworks understate volatility transmission in high-risk environments.
-
-## Implementation and Reproducibility
-All empirical work will be implemented in R using a modular codebase. Estimation, simulation, and validation procedures are structured into separate scripts to ensure full transparency. The complete codebase—including data preprocessing routines and diagnostic outputs will be archived in a publicly accessible GitHub repository and fully documented for replication and future research.
-
-The empirical implementation will proceed in stages: the core TVAR replication and VIX-based extension will be prioritized initially. Incorporation of additional proxies (JLN, CISS) and advanced methodological enhancements will depend on feasibility and time constraints.
-
-# Research Contribution
-This study extends a pre-2020 nonlinear macro-financial model by incorporating more recent high-volatility episodes and modern uncertainty measures. It examines whether volatility spillovers from macroeconomic uncertainty have become more asymmetric and persistent in the post-2020 environment and whether standard linear frameworks systematically understate such risks
-
-Methodologically, the project enhances the original threshold VAR framework by integrating alternative threshold definitions, richer cross-sectional commodity data, and regime-specific impulse response analysis. The result is a modular and reproducible empirical pipeline that can be adapted for real-time macro risk monitoring by central banks, hedge funds, and international institutions
-
-By bridging macro uncertainty, commodity volatility, and nonlinear transmission dynamics, the study delivers both an empirical update and a practical decision-support tool for financial stability analysis under elevated uncertainty.
+# Conclusion {#sec:conclusion}
+High-uncertainty states generate larger and more persistent responses, with FEVD shares reallocated toward energy and industrial metals, precious is milder, agriculture the weakest. Linear VAR/SVAR benchmarks agree on signs but understate magnitudes and half-lives, confirming that linear models miss economically meaningful state dependence.Extending to 2025 shows that what is measured as uncertainty affects when and how strongly amplification appears. VIX emphasizes acute peaks, JLN sustains persistence. Overlap is substantial yet incomplete, differences in high-state incidence and timing translate into proxy-dependent spillovers, especially in the energy/industrial complex.
+For policy surveillance, a two-tier monitor, volatility for event detection, macro predictability for persistence sizing, is recommended. For buy-side risk, the exported artifacts enable regime-aware exposure management, VaR/ES overlays, and tenor selection for hedges. Linear stress paths can be uplifted by state-contingent factors derived from TVAR outputs, transparent, auditable, and aligned with supervisory practice. Ljung–Box tests indicate residual autocorrelation for JLN (both regimes) and borderline evidence for the volatility ,defined high state, results are therefore interpreted with bootstrap‑based uncertainty and conservative claims on significance.
+Findings are stable across $(p,d,c)$ grids, threshold perturbations, and the VXO to VIX splice, regime-aware bootstrap bands support statistically credible amplification in energy/industrial groups over 6–18 month horizons. Stability and linearity diagnostics corroborate that the nonlinear, proxy-aware transmission documented here is econometrically sound and decision-useful.
 
 \clearpage
 \phantomsection
 
-# Bibliography
-```{r, include=FALSE}
-knitr::write_bib(.packages(), "bibtex/references.bib")
+```{r make_software_bib, include=FALSE}
+dir.create("bibtex", showWarnings = FALSE)
+knitr::write_bib(.packages(), "bibtex/software.bib")
+```
 
-# Software and Packages
+# Bibliography {-}
 
-- R version 4.4.3
-- Packages used:
-  - `tsDyn` – for threshold VAR estimation
-  - `tvarGIRF` – for simulating generalized impulse response functions in TVARs
-  - `svars` – for structural VAR identification
-  - `vars` – for standard VAR estimation and diagnostics
-  - `ggplot2` – for plotting and visualization
+:::{#refs}
+:::
 
+\clearpage
+\appendix
+\titleformat{\section}{\normalfont\Large\bfseries}{Appendix \thesection}{1em}{}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\numberwithin{equation}{section} 
+
+
+# Data Sources {#app-data}
+- VIX (CBOE Volatility Index) FRED series VIXCLS (monthly close). Used from 1990 onward in the volatility-based splitter (with VXO for 1986–1989). For regime construction we standardize in-sample, apply a 3-month moving average, and a 1-month lag.
+
+- VXO (CBOE S&P 100 Volatility Index) FRED series VXOCLS (monthly close). Used for 1986–1989 in the replication window (and as the pre-1990 segment of the volatility-based splitter). Same standardization, smoothing (MA(3)), and 1-month lag as VIX.
+
+- Macroeconomic uncertainty (Jurado–Ludvigson–Ng) FRED series JLNUM1M (monthly). Used as an alternative, macro-based splitter over 1986–2025. Same standardization, smoothing (MA(3)), and 1-month lag.
+
+- Commodity prices (18 series) World Bank Pink Sheet Commodity Markets (monthly USD). The panel comprises 18 benchmark commodities (energy, industrial, precious, agriculture) listed in Table A.1 with coverage ranges. Returns are constructed as \(100 \times \Delta \log P_t\) and z-standardized within the estimation window before VAR/TVAR estimation.
+
+## Commodity coverage 
+```{r appCommodities, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+library(fs); library(here); library(readr); library(dplyr); library(knitr); library(kableExtra)
+
+path <- find_file(fs::path("tables","appendix_commodities_coverage.csv"),
+                  extra_dirs = c(here::here("models","tvar","artifacts","tables"),
+                                 here::here("..","models","tvar","artifacts","tables")))
+if (!fs::file_exists(path)) {
+  cat("**Table A.1 not rendered — artifact missing (paper/artifacts/tables/appendix_commodities_coverage.csv).**")
+} else {
+  Tcov <- readr::read_csv(path, show_col_types = FALSE) |>
+    dplyr::rename(Months = months)
+
+  cap_long  <- "Commodity panel coverage: group, display name, sample start/end (YYYY--MM), and number of monthly observations."
+  cap_short <- "Commodity coverage (A.1)"
+
+  kableExtra::kbl(
+    Tcov, format = "latex", booktabs = TRUE, escape = TRUE,
+    caption = sprintf("(\\#tab:%s) %s", "tblX", cap_long),
+    caption.short = cap_short
+  ) |>
+    kableExtra::kable_styling(latex_options = c("hold_position","striped","scale_down"),
+                              font_size = 9) |>
+    kableExtra::footnote(general = "Source: own calculations based on World Bank Pink Sheet; VIX/VXO and JLN (FRED).",
+                        threeparttable = TRUE) |>
+    print()
+}
+```
+
+\FloatBarrier
+\clearpage
+
+# Additional Formulas {#app-formulas}
+
+## Regime construction details & variants
+
+\begin{subequations}\label{eq:tilde-q-t-2}
+\begin{align}
+\tilde{q}_t &= \frac{(q_t - \bar{q})}{s_q}\, \label{eq:tilde-q-level-2}\\
+\tilde{q}_t^{(m)} &= \frac{1}{m}\sum_{j=0}^{m-1}\tilde{q}_{t-j}, \label{eq:tilde-q-smooth-2}\\
+\mathcal{R}_t &= \mathbf{1}\!\left\{ \tilde{q}_t^{(m)} \ge \tau \right\} \quad \text{(regime at $t$)}. \label{eq:tilde-q-regime-2}
+\end{align}
+\end{subequations}
+
+\begin{equation}\label{eq:c-in}
+c \in \bigl[\, Q_{0.15}\!\bigl(\tilde{q}^{(m)}\bigr),\; Q_{0.85}\!\bigl(\tilde{q}^{(m)}\bigr) \,\bigr].
+\end{equation}
+
+\begin{equation}\label{eq:c-star-indicator}
+d_t(c) = \mathbf{1}\!\left\{ \tilde{q}_{t-d}^{(m)} > c \right\}.
+\end{equation}
+
+\begin{equation}\label{eq:s-t-c}
+s_t(c) = \mathbf{1}\!\left\{ x_t > c \right\} \in \{0,1\}.
+\end{equation}
+
+\begin{equation}\label{eq:s-h}
+s_H = \frac{1}{T}\sum_{t \in \mathcal{T}} \mathbf{1}\!\left\{ \tilde{q}_{t-d}^{(m)} > c^* \right\}.
+\end{equation}
+
+\begin{subequations}\label{eq:s-h-big}
+\begin{align}
+s_H &= \frac{1}{T_1}\sum_{t=1}^{T_1} \mathbf{1}\!\left\{\tilde{q}_{t-d}^{(m)} > c^*\right\}, \label{eq:s-h-share}\\
+\delta s_H &= s_H^{(\mathrm{vol})} - s_H^{(\mathrm{JLN})}. \label{eq:s-h-diff}
+\end{align}
+\end{subequations}
+
+\begin{subequations}\label{eq:H-L-sets}
+\begin{align}
+H(c) &= \left\{\, t \in \mathcal{T} \;\middle|\; \tilde{q}_{t-d}^{(m)} > c \,\right\}, \label{eq:H-set}\\
+L(c) &= \mathcal{T} \setminus H(c). \label{eq:L-set}
+\end{align}
+\end{subequations}
+
+\begin{equation}\label{eq:mathcal-t}
+\begin{aligned}
+\mathcal{T}^{\mathrm{rep}} &= [\text{1986/01}, \text{2015/04}], \\
+\mathcal{T}^{\mathrm{ext}} &= [\text{1986/01}, \text{2025/04}].
+\end{aligned}
+\end{equation}
+
+\begin{equation}\label{eq:x-t}
+x_t \equiv \tilde{q}_{t-d}^{(m)}.
+\end{equation}
+
+## Estimation mechanics
+
+\begin{subequations}\label{eq:b-s-c}
+\begin{align}
+B^{(s)}(c) &= \bigl(Z_s^{\top} Z_s\bigr)^{-1} Z_s^{\top} Y_s, \label{eq:b-s-c-beta}\\
+\Sigma^{(s)}(c) &= \frac{1}{T_s}\,\bigl(Y_s - Z_s B^{(s)}(c)\bigr)^{\top}\!\bigl(Y_s - Z_s B^{(s)}(c)\bigr). \label{eq:b-s-c-sigma}
+\end{align}
+\end{subequations}
+
+\begin{equation}\label{eq:bic}
+\mathrm{BIC}(c,p,d)
+= \sum_{s \in \{0,1\}} T_s \,\ln\!\bigl|\hat{\Sigma}^{(s)}(c)\bigr|
++ k(c,p,d)\,\ln T.
+\end{equation}
+
+\begin{equation}\label{eq:hatgirf}
+\widehat{\mathrm{GIRF}}_{i \to \ell}^{(s)}(h)
+=
+\frac{1}{B}\sum_{b=1}^{B}
+\bigl(
+y_{\ell,t+h}^{(b,\text{shock})}
+-
+y_{\ell,t+h}^{(b,\text{base})}
+\bigr).
+\end{equation}
+
+## Secondary/diagnostic summary measures
+
+\begin{equation}\label{eq:r-amp}
+R_{\mathrm{amp}}^{\,i \to \ell}
+=
+\frac{\displaystyle \max_{0 \le h \le H_{\max}} \left| \mathrm{GIRF}^{\,i \to \ell,(L)}(h) \right|}
+{\displaystyle \max_{0 \le h \le H_{\max}} \left| \mathrm{GIRF}^{\,i \to \ell,(H)}(h) \right| }.
+\end{equation}
+
+\begin{equation}\label{eq:a-ell}
+A^{\,i \to \ell}(H)
+=
+\sum_{h=0}^{H}
+\Bigl[
+\mathrm{GIRF}^{\,i \to \ell,(H)}(h)
+-
+\mathrm{GIRF}^{\,i \to \ell,(L)}(h)
+\Bigr].
+\end{equation}
+
+\begin{equation}\label{eq:j}
+J =
+\frac{\displaystyle \sum_{t \in \mathcal{T}_{\mathrm{ext}}}
+\mathbf{1}\!\left\{ s_t^{(\mathrm{vol})}=1 \wedge s_t^{(\mathrm{JLN})}=1 \right\}}
+{\displaystyle \sum_{t \in \mathcal{T}_{\mathrm{ext}}}
+\mathbf{1}\!\left\{ s_t^{(\mathrm{vol})}=1 \vee s_t^{(\mathrm{JLN})}=1 \right\}}
+\in [0,1].
+\end{equation}
+
+## Data preprocessing
+
+\begin{equation}\label{eq:r-log-returns}
+r_{i,t} = 100\,\Delta \log P_{i,t}
+= 100\big(\log P_{i,t} - \log P_{i,t-1}\big).
+\end{equation}
+
+\FloatBarrier
+\clearpage
+
+# Additional Figures {#app-figs}
+```{r waterfalls-vix, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Within-horizon waterfalls on the extended sample: volatility splitter.",fig.align='center', fig.show='hold', out.width='49%', out.extra='trim=60pt 0pt 10pt 0pt,clip'}
+wf_vix <- find_image(c("waterfall_tH_vix.png","waterfall-tH-vix.png","waterfall-tH_vix.pdf","waterfall_tH_vix.pdf"))
+if (!is.na(wf_vix)) {
+  knitr::include_graphics(wf_vix)
+} else {
+  grid::grid.text("waterfall_tH_vix not found — expected under paper/artifacts/figures/decomposition", x=.5, y=.5)
+    ggplot2::ggplot(DD, ggplot2::aes(x=group, y=dd)) +
+    ggplot2::geom_hline(yintercept=0, linewidth=.3, colour="grey60") +
+    ggplot2::geom_col(width=.6) +
+    ggplot2::facet_wrap(~H, nrow=1) +
+    ggplot2::scale_y_continuous(labels = scales::number_format(accuracy = 0.01)) +
+    ggplot2::labs(x=NULL, y="ΔΔ–GFEVD (share points)",
+                  caption = "Source: own calculations based on World Bank Pink Sheet; VIX/VXO and JLN (FRED).") +
+    ggplot2::theme_minimal(base_size = 10) +
+    ggplot2::theme(panel.grid.minor = ggplot2::element_blank(),
+                   axis.title.y = ggplot2::element_text(margin = margin(r=6)),
+                   plot.caption = ggplot2::element_text(hjust = 0, size = 8))
+}
+```
+
+```{r waterfalls-jln, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Within-horizon waterfalls on the extended sample: JLN splitter.",fig.align='center', fig.show='hold', out.width='49%', out.extra='trim=60pt 0pt 10pt 0pt,clip'}
+wf_jln <- find_image(c("waterfall_tH_jln.png","waterfall-tH-jln.png","waterfall-tH_jln.pdf","waterfall_tH_jln.pdf"))
+if (!is.na(wf_jln)) {
+  knitr::include_graphics(wf_jln)
+} else {
+  grid::grid.text("waterfall_tH_jln not found — expected under paper/artifacts/figures/decomposition", x=.5, y=.5)
+    ggplot2::ggplot(DD, ggplot2::aes(x=group, y=dd)) +
+    ggplot2::geom_hline(yintercept=0, linewidth=.3, colour="grey60") +
+    ggplot2::geom_col(width=.6) +
+    ggplot2::facet_wrap(~H, nrow=1) +
+    ggplot2::scale_y_continuous(labels = scales::number_format(accuracy = 0.01)) +
+    ggplot2::labs(x=NULL, y="ΔΔ–GFEVD (share points)",
+                  caption = "Source: own calculations based on World Bank Pink Sheet; VIX/VXO and JLN (FRED).") +
+    ggplot2::theme_minimal(base_size = 10) +
+    ggplot2::theme(panel.grid.minor = ggplot2::element_blank(),
+                   axis.title.y = ggplot2::element_text(margin = margin(r=6)),
+                   plot.caption = ggplot2::element_text(hjust = 0, size = 8))
+}
+```
+
+```{r delta-lines, echo=FALSE, message=FALSE, warning=FALSE,    fig.cap="Δ-lines on the extended sample.", fig.align='center', out.width='100%'}
+# robust image finder (files only)
+if (!exists("find_image")) {
+  find_image <- function(names_or_regex,
+                         extra_dirs = c(fs::path(here::here("paper","artifacts"),"figures","decomposition"),
+                                        here::here("output","releases"),
+                                        here::here("..","output","releases"))) {
+    # artifacts exact
+    for (nm in names_or_regex) {
+      p <- fs::path(extra_dirs[1], nm)
+      if (fs::file_exists(p) && fs::file_info(p)$type == "file")
+        return(normalizePath(p, winslash="/"))
+    }
+    # artifacts regex
+    files <- tryCatch(fs::dir_ls(extra_dirs[1], recurse = TRUE, type = "file"), error=function(e) character(0))
+    if (length(files)) {
+      pat <- paste0("(", paste(names_or_regex, collapse="|"), ")")
+      hit <- files[grepl(pat, fs::path_file(files), ignore.case = TRUE)]
+      if (length(hit)) return(normalizePath(hit[1], winslash="/"))
+    }
+    # releases search
+    for (root in extra_dirs[-1]) {
+      if (!fs::dir_exists(root)) next
+      files <- tryCatch(fs::dir_ls(root, recurse = TRUE, type = "file"), error=function(e) character(0))
+      if (!length(files)) next
+      # exact
+      for (nm in names_or_regex) {
+        hit <- files[fs::path_file(files) == nm]
+        if (length(hit)) return(normalizePath(hit[1], winslash="/"))
+      }
+      # regex
+      pat <- paste0("(", paste(names_or_regex, collapse="|"), ")")
+      hit <- files[grepl(pat, fs::path_file(files), ignore.case = TRUE)]
+      if (length(hit)) return(normalizePath(hit[1], winslash="/"))
+    }
+    NA_character_
+  }
+}
+
+deltas <- find_image(c("delta_lines.png","delta-lines.png","delta_lines.pdf","delta-lines.pdf"))
+if (!is.na(deltas)) {
+  knitr::include_graphics(deltas)
+} else {
+  grid::grid.text("Δ-lines artifact not found — expected under paper/artifacts/figures/decomposition", x=.5, y=.5)
+}
+```
+
+\clearpage
+\thispagestyle{empty}
+\section*{Declaration}
+I hereby declare, in accordance with § 5 para. 3 PuStO, that I have written the above term paper
+independently and have not used any sources or aids other than those specified.
+
+\vspace{2cm}
+\noindent Bamberg, \today \hfill \makebox[6cm]{\dotfill}\
+\hspace*{\fill}\footnotesize Signature

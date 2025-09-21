@@ -1,16 +1,11 @@
-#!/usr/bin/env Rscript
 # scripts/05_analyze_tvar_model.R
 # Purpose: Analyze a fitted (multivariate) TVAR model with diagnostics, IRFs, and logging
-# Notes:
-# - Works for vix, vxo, jln (robust IRF discovery + name normalization)
-# - Guarantees: aligned threshold metadata, regime_index, canonical IRFs, horizon clamp
-# - Safe plotting: tries plot_tvar_irf_regimes(); if it fails, uses a robust base-graphics fallback
 
 suppressPackageStartupMessages({
   library(here); library(glue); library(dplyr); library(fs); library(readr)
   library(jsonlite); library(purrr); library(yaml)
 })
-# -----------------------------------------------------------------------------
+
 `%||%` <- function(x, y) if (is.null(x)) y else x
 
 .normalize_id <- function(x) tolower(gsub("[^a-z0-9]+", "_", x))
@@ -23,9 +18,8 @@ suppressPackageStartupMessages({
   }
   list(theta = theta, theta_pct = if (is.finite(tpct)) tpct else NA_real_)
 }
-# -----------------------------------------------------------------------------
+
 # Sources
-# -----------------------------------------------------------------------------
 source(here("scripts/setup.R"))
 
 # logs
@@ -45,9 +39,7 @@ source(here("functions/tvar/validate/validate_tvar_coefficient_matrix.R"))
 source(here("functions/tvar/simulate/compute_tvar_irf.R"))
 source(here("functions/tvar/run/run_tvar_irf_analysis.R"))
 
-# -----------------------------------------------------------------------------
 # Config & paths
-# -----------------------------------------------------------------------------
 cfg <- yaml::read_yaml(here("config/paths.yml"))
 `%||%` <- function(a,b) if (is.null(a)) b else a
 ts_tag <- function() format(Sys.time(), "%Y%m%d_%H%M%S")
@@ -64,9 +56,7 @@ fs::dir_create(c(output_dir, log_dir, plots_dir, irf_plot_dir, irf_obj_dir, meta
 
 active_unc <- tolower(cfg$uncertainty$active %||% "vix")
 
-# -----------------------------------------------------------------------------
 # Helpers
-# -----------------------------------------------------------------------------
 has_regimes <- function(x) {
   is.list(x) && ((!is.null(x$regimes) && is.list(x$regimes)) ||
                    (!is.null(x$model) && !is.null(x$model$regimes) && is.list(x$model$regimes)))
@@ -156,7 +146,7 @@ h_from_canonical <- function(m) {
   if (is.null(x)) return(0L) else length(x)
 }
 
-# --------------------------- PATCH 1: Smarter CSV Harvest ---------------------
+# Smarter CSV Harvest 
 .is_integerish_seq <- function(v) {
   v <- as.numeric(v)
   if (!length(v) || any(!is.finite(v))) return(FALSE)
@@ -232,7 +222,7 @@ harvest_irf_from_csv <- function(m, csv_dir, Hreq = NA_integer_) {
 .norm_name <- function(x) { x <- tolower(x); gsub("[^a-z0-9]+", "", x) }
 .strip_regime_prefix <- function(x) sub("^(tvar_)?irf_(low|high)_", "", x, perl = TRUE)
 
-# Build plot-ready item AND return raw vectors (for fallback)
+# Build plot-ready item and return raw vectors
 build_plot_ready_irf <- function(irf, H, verbose = TRUE) {
   stopifnot(is.list(irf$low), is.list(irf$high))
   imps_low  <- names(irf$low);  imps_high <- names(irf$high)
@@ -267,7 +257,7 @@ build_plot_ready_irf <- function(irf, H, verbose = TRUE) {
   NULL
 }
 
-# ----------------------- PATCH 2: Robust fallback plotter ---------------------
+# Robust fallback plotter
 plot_irf_regimes_fallback <- function(v_low, v_high, impulse, response, horizon, save_path) {
   v_low  <- as.numeric(v_low)
   v_high <- as.numeric(v_high)
@@ -346,9 +336,7 @@ save_model_variants <- function(model, cfg, notes = NULL, verbose = TRUE) {
   invisible(list(stamped = stamped_path, latest = latest_path, analysis_ready = ar_latest))
 }
 
-# -----------------------------------------------------------------------------
 # Load newest compatible TVAR model
-# -----------------------------------------------------------------------------
 pattern <- sprintf("^%s_tvar_model_.*\\.rds$|^%s_tvar_model_latest\\.rds$", active_unc, active_unc)
 candidate_paths <- list.files(model_dir, pattern = pattern, full.names = TRUE)
 if (!length(candidate_paths)) stop("No TVAR model found for active=", active_unc, " in models/tvar.")
@@ -368,9 +356,7 @@ if (length(skipped)) message("[05] Skipped incompatible: ", paste(skipped, colla
 
 tvar_model <- raw_obj
 
-# -----------------------------------------------------------------------------
 # Normalize schema, names, dates
-# -----------------------------------------------------------------------------
 model_core <- if (!is.null(tvar_model$regimes)) tvar_model else tvar_model$model
 wish_names <- first_nonempty(tvar_model$variables, model_core$variables)
 
@@ -418,9 +404,7 @@ if (is.null(model_core$metadata$dates) || length(model_core$metadata$dates) != n
 }
 time_index <- model_core$metadata$dates
 
-# -----------------------------------------------------------------------------
 # Threshold metadata
-# -----------------------------------------------------------------------------
 lowX  <- if (!is.null(model_core$regimes$low$X))  as_df_preserve(model_core$regimes$low$X)  else NULL
 highX <- if (!is.null(model_core$regimes$high$X)) as_df_preserve(model_core$regimes$high$X) else NULL
 X_all <- bind_rows(lowX, highX)
@@ -503,9 +487,7 @@ if (!is.null(thr_series)) {
 tvar_model$threshold_value <- model_core$threshold_value
 tvar_model$regime_variable <- model_core$metadata$threshold_var
 
-# -----------------------------------------------------------------------------
 # Log model summary
-# -----------------------------------------------------------------------------
 log_tvar_model_summary(
   model     = tvar_model,
   log_path  = fs::path(log_dir, "tvar_model_summary.md"),
@@ -514,9 +496,7 @@ log_tvar_model_summary(
   verbose   = TRUE
 )
 
-# -----------------------------------------------------------------------------
 # Core diagnostics
-# -----------------------------------------------------------------------------
 names_low  <- if (!is.null(model_core$regimes$low$Y))  colnames(model_core$regimes$low$Y)  else character(0)
 names_high <- if (!is.null(model_core$regimes$high$Y)) colnames(model_core$regimes$high$Y) else character(0)
 common_vars <- intersect(names_low, names_high)
@@ -545,9 +525,7 @@ ok_low <- try({
 }, silent = TRUE)
 if (inherits(ok_low, "try-error")) message("[05] Coefficient matrix check (low) failed (non-fatal).") else message("[05] Coefficient matrix check (low) passed.")
 
-# -----------------------------------------------------------------------------
-# IRFs (prefer orchestrator) + canonicalize + clamp + plot
-# -----------------------------------------------------------------------------
+# IRFs + canonicalize + clamp + plot
 HORIZON  <- 12L
 N_DRAWS  <- 1000L
 CI_LEVEL <- 0.90
@@ -588,7 +566,7 @@ if (H_now < 2L) {
   H_now <- h_from_canonical(model_core)
 }
 
-# --------------------------- PATCH 3: Quick audit line ------------------------
+# Quick audit line 
 if (is.list(model_core$irf$low) && length(model_core$irf$low)) {
   imp0 <- names(model_core$irf$low)[1]
   rsp0 <- names(model_core$irf$low[[imp0]])[1]
@@ -648,7 +626,7 @@ if (is.null(plot_pkg)) {
   }
 }
 
-# ---- Export ALL impulse/response pairs with safe fallback ----
+# Export all impulse/response pairs with safe fallback
 export_all_irf_pairs_safe <- function(irf, horizon, ci_level, out_dir) {
   stopifnot(is.list(irf$low), is.list(irf$high))
   .strip <- function(x) sub("^(tvar_)?irf_(low|high)_", "", x, perl = TRUE)
@@ -731,9 +709,7 @@ invisible(export_all_irf_pairs_safe(
   out_dir  = irf_plot_dir
 ))
 
-# -----------------------------------------------------------------------------
 # Readiness stamp + persist normalized / analysis-ready model
-# -----------------------------------------------------------------------------
 validate_irf_h <- function(irf) {
   if (is.null(irf)) return(0L)
   any_resp <- tryCatch(irf[[1]][[1]], error = function(e) NULL)

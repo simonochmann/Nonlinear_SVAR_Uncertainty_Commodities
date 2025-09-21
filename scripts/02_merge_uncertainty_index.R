@@ -17,11 +17,10 @@ source(here("functions/merge/save/save_merged_dataset.R"))
 source(here("functions/merge/logs/log_merge_activity.R"))
 source(here("functions/merge/logs/log_merge_metadata_json.R"))
 
-# Global choices so runs are reproducible/auditable
-MONTH_ANCHOR <- "start"   # "start" or "end" (date to stamp monthly values)
-AGG_METHOD   <- "mean"    # "mean", "median", "last", "first"
+MONTH_ANCHOR <- "start"   
+AGG_METHOD   <- "mean"    
 
-# Normalize a cleaned index to with deterministic monthly roll-up
+# Normalize a cleaned index 
 normalize_index <- function(df, index_canonical) {
   # Date column
   date_candidates <- intersect(names(df), c("date","Date","DATE","period","month"))
@@ -38,7 +37,7 @@ normalize_index <- function(df, index_canonical) {
   }
   stopifnot(inherits(df$date, "Date"))
   
-  # Value column → index_canonical
+  # Value column to index_canonical
   if (!index_canonical %in% names(df)) {
     cand <- names(df)[vapply(df, is.numeric, logical(1))]
     cand <- setdiff(cand, "date")
@@ -49,14 +48,13 @@ normalize_index <- function(df, index_canonical) {
     df <- dplyr::rename(df, !!index_canonical := !!rlang::sym(best))
   }
   
-  # Daily → Monthly (deterministic)
-  # Anchor date either to month start or month end
+  # Daily and Monthly
   anchor_date <- function(x) {
     if (tolower(MONTH_ANCHOR) == "end") {
       # last calendar day of the month
       lubridate::ceiling_date(x, unit = "month") - lubridate::days(1)
     } else {
-      # first calendar day of the month (default)
+      # first calendar day of the month
       lubridate::floor_date(x, unit = "month")
     }
   }
@@ -99,7 +97,7 @@ normalize_index <- function(df, index_canonical) {
   df
 }
 
-# Quick post-merge validator (no merge explosions; coverage report)
+# Quick post-merge validator 
 validate_merged <- function(merged_df, index_canonical) {
   need <- c("date", "commodity_id", index_canonical)
   stopifnot(all(need %in% names(merged_df)))
@@ -112,7 +110,7 @@ validate_merged <- function(merged_df, index_canonical) {
   # Overall coverage
   cov_overall <- mean(!is.na(merged_df[[index_canonical]]))
   
-  # Per-commodity coverage (optional warning for very sparse series)
+  # Per-commodity coverage
   by_commodity <- merged_df |>
     dplyr::group_by(commodity_id) |>
     dplyr::summarise(coverage = mean(!is.na(.data[[index_canonical]])), .groups = "drop")
@@ -155,11 +153,11 @@ run_merge_index <- function(index_raw_name,
   index_df_clean  <- clean_uncertainty_index(index_df_raw, index_canonical)
   index_df_clean  <- normalize_index(index_df_clean, index_canonical)
   
-  # validate expects (date, value)
+  # validate expects
   val_df <- dplyr::rename(index_df_clean, value = !!rlang::sym(index_canonical))
   validate_uncertainty_index(val_df)
   
-  # optional trim of main panel to index overlap
+  # trim of main panel to index overlap
   ix_start <- min(index_df_clean$date, na.rm = TRUE)
   ix_end   <- max(index_df_clean$date, na.rm = TRUE)
   if (trim_to_overlap) {
@@ -184,7 +182,7 @@ run_merge_index <- function(index_raw_name,
   # post-merge quick checks
   validate_merged(merged_df, index_canonical)
   
-  # per-index preview plot (no globals)
+  # per-index preview plot 
   if (isTRUE(make_timeline_plot)) {
     try(
       plot_merge_timeline(
@@ -236,7 +234,7 @@ run_merge_index <- function(index_raw_name,
   list(index = index_canonical, cleaned = index_df_clean, merged = merged_df, coverage = coverage)
 }
 
-# Driver: VIX, VXO, JLN 
+# VIX, VXO, JLN 
 main_panel_path <- here("data/clean/commodity_panel.csv")
 
 inputs <- list(
@@ -257,7 +255,7 @@ cov_tbl$index <- vapply(results, `[[`, character(1), "index")
 cov_tbl <- cov_tbl %>% dplyr::select(index, dplyr::everything())
 print(cov_tbl)
 
-# Combined timeline (z-scale on common overlap) 
+# Combined timeline 
 dir.create(here("figures"), recursive = TRUE, showWarnings = FALSE)
 index_list_all <- rlang::set_names(
   lapply(results, `[[`, "cleaned"),

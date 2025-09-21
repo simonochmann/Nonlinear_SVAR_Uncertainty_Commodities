@@ -17,7 +17,7 @@ data:
   merged_dataset_csv: data/processed/merged_panel.csv
   tvar_input_rds: data/tvar/tvar_input_dataset.rds
 uncertainty:
-  active: vxo
+  active: vix
   sources:
     vix: data/parsed/fred/vix.csv
     vxo: data/parsed/fred/vxo.csv

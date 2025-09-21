@@ -35,7 +35,7 @@ source(here("functions/tvar/logs/log_regime_dynamics_summary.R"))
 
 `%||%` <- function(a,b) if (is.null(a)) b else a
 
-# ------------------------------ Config toggles --------------------------------
+# Config toggles 
 cfg <- yaml::read_yaml(here("config/paths.yml"))
 active <- tolower(cfg$uncertainty$active %||% "vix")
 
@@ -43,13 +43,13 @@ active <- tolower(cfg$uncertainty$active %||% "vix")
 CI_BOOTSTRAP_B <- getOption("tvar06.bootstrap_B", 2000L)
 CI_BLOCK_LEN   <- getOption("tvar06.block_len",   NULL)   # if NULL, set from median spell length
 
-# New: regime smoothing options
+# regime smoothing options
 HYS_ON    <- isTRUE(getOption("tvar06.hysteresis_on", FALSE))
 HYS_BAND  <- as.numeric(getOption("tvar06.hysteresis_band", 0.15))  # in SD units
 MS_ON     <- isTRUE(getOption("tvar06.min_spell_on", FALSE))
 MS_LEN    <- as.integer(getOption("tvar06.min_spell_len", 2L))
 
-# ------------------------------ Paths -----------------------------------------
+# Paths 
 root_dir   <- here::here()
 model_dir  <- file.path(root_dir, "models", "tvar")
 output_dir <- file.path(root_dir, "output")
@@ -58,7 +58,7 @@ plot_dir   <- file.path(output_dir, "plots", "tvar")
 log_dir    <- file.path(output_dir, "logs")
 fs::dir_create(c(output_dir, reg_dir, plot_dir, log_dir))
 
-# ------------------------------ Internal helpers ------------------------------
+# Internal helpers 
 unwrap_model <- function(x) {
   if (!is.list(x)) return(NULL)
   if (!is.null(x$regimes)) return(x)
@@ -115,7 +115,7 @@ enforce_min_spell_length <- function(idx, min_len = 2L) {
   inverse.rle(r)
 }
 
-# --- Rebuild TM directly from regime_index when needed ---
+# Rebuild TM directly from regime_index when needed 
 rebuild_transition_from_index <- function(idx) {
   lv <- c(1L, 2L)
   x <- as.integer(idx)
@@ -153,12 +153,8 @@ is_bad_tm <- function(M) {
   is.null(M) || any(!is.finite(M)) || any(abs(rowSums(M) - 1) > 1e-6)
 }
 
-# ---- Transition-matrix coercion & QC-safe access ----
+# Transition-matrix coercion & QC-safe access
 coerce_transition_matrix <- function(P) {
-  # Accepts:
-  #  - 2x2 matrix/data.frame (with/without dimnames)
-  #  - tidy data.frame with columns: from, to, p
-  # Returns a 2x2 numeric matrix with dimnames c("low","high")
   if (is.null(P)) return(NULL)
   
   as_mat <- function(x) {
@@ -167,10 +163,8 @@ coerce_transition_matrix <- function(P) {
     m
   }
   
-  # Tidy long-form?
   if (is.data.frame(P) && all(c("from","to","p") %in% names(P))) {
     lv <- c("low","high")
-    # normalize labels
     norm <- function(v) {
       v <- tolower(as.character(v))
       v[v %in% c("1","low","l","regime1")]  <- "low"
@@ -188,10 +182,9 @@ coerce_transition_matrix <- function(P) {
     return(M)
   }
   
-  # Already matrix-like?
   if (is.matrix(P) || (is.data.frame(P) && ncol(P) == 2L && nrow(P) == 2L) ||
       (is.data.frame(P) && ncol(P) == 2L && nrow(P) >= 2L)) {
-    M <- as_mat(P)[1:2, 1:2, drop = FALSE]  # ensure 2x2
+    M <- as_mat(P)[1:2, 1:2, drop = FALSE]  
     rn <- rownames(M); cn <- colnames(M)
     
     fix_labels <- function(nms) {
@@ -204,17 +197,14 @@ coerce_transition_matrix <- function(P) {
     
     rn2 <- fix_labels(rn); cn2 <- fix_labels(cn)
     
-    # If either side is still NULL or not recognizable, assume order 1=low,2=high
     if (is.null(rn2) || !all(rn2 %in% c("low","high"))) rn2 <- c("low","high")
     if (is.null(cn2) || !all(cn2 %in% c("low","high"))) cn2 <- c("low","high")
     
     rownames(M) <- rn2; colnames(M) <- cn2
-    # Reorder to standard layout
     M <- M[c("low","high"), c("low","high"), drop = FALSE]
     return(M)
   }
   
-  # Unknown type → try best-effort coercion
   M <- suppressWarnings(as.matrix(P))
   if (is.null(dim(M)) || any(dim(M) < 2)) return(NULL)
   M <- M[1:2, 1:2, drop = FALSE]
@@ -241,7 +231,7 @@ report_tm <- function(P) {
   invisible(P)
 }
 
-# ------------------------------ Load model ------------------------------------
+# Load model
 prefer_path <- fs::path(model_dir, sprintf("%s_tvar_model_analysis_ready_latest.rds", active))
 stamped <- list.files(model_dir, pattern = sprintf("^%s_tvar_model_.*\\.rds$", active), full.names = TRUE)
 
@@ -264,7 +254,7 @@ for (p in candidate_paths) {
 if (is.na(picked_path)) stop("[06] No compatible TVAR model found for active = ", active)
 message("[06] Using model: ", fs::path_file(picked_path))
 
-# ------------------------------ Normalize dates -------------------------------
+# Normalize dates
 n_total <- (if (!is.null(model$regimes$low$Y))  nrow(model$regimes$low$Y)  else 0L) +
   (if (!is.null(model$regimes$high$Y)) nrow(model$regimes$high$Y) else 0L)
 
@@ -282,8 +272,7 @@ if (!is.null(model$metadata$regime_index)) {
   }
 }
 
-# ------------------------------ Build regime path -----------------------------
-# compute_regime_path uses threshold_series + threshold_value (median fallback)
+# Build regime path 
 model <- compute_regime_path(model, inject = TRUE, verbose = TRUE)
 
 # Guard against leftover length mismatches
@@ -314,8 +303,7 @@ if (length(model$metadata$regime_index) != n_total) {
 }
 stopifnot(length(model$metadata$regime_index) == n_total)
 
-# ------------------------------ Enhancements: Hysteresis & Min-Spell ----------
-# Start from baseline regime_index and optionally refine
+# Hysteresis & Min-Spell
 if (HYS_ON) {
   thr_series <- model$metadata$threshold_series %||% numeric()
   thr_value  <- tryCatch(as.numeric(unlist(model$threshold_value)[1]), error = function(e) NA_real_)
@@ -326,7 +314,7 @@ if (HYS_ON) {
       message(glue("[06] Applied hysteresis split (band = {HYS_BAND} × SD)."))
     }
   } else {
-    message("[06] Hysteresis requested but missing threshold series/value; skipping.")
+    message("[06] Hysteresis requested but missing threshold series/value, skipping.")
   }
 }
 
@@ -337,7 +325,7 @@ if (MS_ON && MS_LEN > 1L) {
   message(glue("[06] Enforced minimum spell length = {MS_LEN}."))
 }
 
-# ------------------------------ Persist run metadata --------------------------
+# Persist run metadata 
 stamp <- format(Sys.time(), "%Y%m%d_%H%M%S")
 run_meta <- list(
   active        = active,
@@ -354,18 +342,18 @@ run_meta <- list(
 jsonlite::write_json(run_meta, file.path(reg_dir, glue("regime_runmeta_{active}_{stamp}.json")),
                      auto_unbox = TRUE, pretty = TRUE)
 
-# ------------------------------ Durations / Transitions -----------------------
+# Durations / Transitions 
 dur_out   <- compute_regime_durations(model = model, verbose = TRUE)
 
 reg_trans_raw <- compute_transition_matrix(model = model)
 reg_trans     <- coerce_transition_matrix(reg_trans_raw)
 
 if (is_bad_tm(reg_trans)) {
-  message("[06] Transition matrix malformed/empty — rebuilding from regime_index.")
+  message("[06] Transition matrix malformed/empty, rebuilding from regime_index.")
   reg_trans <- rebuild_transition_from_index(model$metadata$regime_index)
 }
 
-# Final sanity (force exact row-stochastic form)
+# Final sanity 
 reg_trans[,"low"]  <- pmax(0, reg_trans[,"low"])
 reg_trans[,"high"] <- pmax(0, reg_trans[,"high"])
 reg_trans <- sweep(reg_trans, 1, rowSums(reg_trans), FUN = "/")
@@ -376,12 +364,9 @@ reg_prob <- compute_regime_probabilities(transition_matrix = reg_trans)
 # QC report
 report_tm(reg_trans)
 
-# ------------------------------ Bootstrap CIs --------------------------------
+# Bootstrap CIs 
 boot <- NULL
 if (!is.null(model$metadata$regime_index)) {
-  # Choose block length:
-  #  - If user supplied CI_BLOCK_LEN, use it.
-  #  - Else set to median spell length (at least 2) for persistence-aware bootstrap.
   block_len_auto <- tryCatch(
     {
       dt <- dur_out$durations_tbl %||% dur_out$spells
@@ -400,7 +385,7 @@ if (!is.null(model$metadata$regime_index)) {
   )
 }
 
-# ------------------------------ One-row summary -------------------------------
+# One-row summary 
 reg_sum <- summarize_regime_statistics(
   model                 = model,
   durations             = list(spells = dur_out$durations_tbl %||% dur_out$spells),
@@ -408,8 +393,7 @@ reg_sum <- summarize_regime_statistics(
   regime_probabilities  = reg_prob
 )
 
-# ------------------------------ Exports ---------------------------------------
-# 1) Transition matrix (tidy)
+# Exports
 if (!is.null(boot)) {
   readr::write_csv(boot$tm_tidy, file.path(reg_dir, glue("transition_matrix_{active}_{stamp}.csv")))
 } else if (!is.null(reg_trans)) {
@@ -418,7 +402,7 @@ if (!is.null(boot)) {
   readr::write_csv(trans_df, file.path(reg_dir, glue("transition_matrix_{active}_{stamp}.csv")))
 }
 
-# 2) Transition CIs
+# Transition CIs
 if (!is.null(boot)) {
   readr::write_csv(boot$ci, file.path(reg_dir, glue("transition_ci_{active}_{stamp}.csv")))
   try(plot_transition_ci(boot$ci,
@@ -426,10 +410,10 @@ if (!is.null(boot)) {
       silent = TRUE)
 }
 
-# 3) One-row summary
+# One-row summary
 readr::write_csv(reg_sum, file.path(reg_dir, glue("regime_summary_{active}_{stamp}.csv")))
 
-# ------------------------------ Plots -----------------------------------------
+# Plots
 try(plot_regime_duration_histogram(
   (dur_out$durations_tbl %||% dur_out$spells),
   save_path = file.path(plot_dir, glue("regime_duration_hist_{active}_{stamp}.png"))
@@ -447,7 +431,7 @@ if (!is.null(boot) && !is.null(reg_trans)) {
   ), silent = TRUE)
 }
 
-# Overlay timeseries (pick a safe variable from the multivariate set)
+# Overlay timeseries
 try({
   series_name <- model$variables[1]
   low_df  <- as.data.frame(model$regimes$low$Y)
@@ -462,7 +446,7 @@ try({
   )
 }, silent = TRUE)
 
-# ------------------------------ Log (Markdown) --------------------------------
+# Log (Markdown)
 log_regime_dynamics_summary(
   output_dir        = log_dir,
   filename_md       = glue("regime_dynamics_{active}_{stamp}.md"),
@@ -471,9 +455,9 @@ log_regime_dynamics_summary(
   transition_matrix = reg_trans
 )
 
-# ------------------------------ Persist model ---------------------------------
+# Persist model 
 short <- substr(tools::file_path_sans_ext(fs::path_file(picked_path)), 1, 50)
 out_norm <- file.path(model_dir, glue("{short}_regdyn_{active}_{stamp}.rds"))
 saveRDS(model, out_norm)
 
-message("[06] Regime dynamics complete → ", reg_dir)
+message("[06] Regime dynamics complete ", reg_dir)

@@ -1,8 +1,5 @@
-#!/usr/bin/env Rscript
 # scripts/07_shock_scenario_simulations.R
 # Orchestrates scenario simulations using precomputed TVAR IRFs and/or GIRFs.
-# FAST mode: first YAML, clamped horizon, no bands, no plots (seconds).
-# FULL mode: all YAMLs, configured horizon, optional bands & plots, rich logs.
 
 suppressPackageStartupMessages({
   library(here); library(fs); library(yaml); library(readr)
@@ -11,14 +8,14 @@ suppressPackageStartupMessages({
 
 `%||%` <- function(x, y) if (is.null(x)) y else x
 
-# ------------------------------ Runtime switches ------------------------------
-FAST_MODE      <- FALSE        # set FALSE for full batch
-MAX_SCENARIOS  <- 1L          # only used in FAST_MODE
-HARD_H         <- 8L          # only used in FAST_MODE
-MAKE_PLOTS     <- TRUE       # plotting in FULL mode only
-COMPUTE_BANDS  <- TRUE       # path-mode only (if tensor has lo/hi)
+# Runtime switches 
+FAST_MODE      <- FALSE        
+MAX_SCENARIOS  <- 1L          
+HARD_H         <- 8L          
+MAKE_PLOTS     <- TRUE       
+COMPUTE_BANDS  <- TRUE       
 
-# ------------------------------ Setup & config --------------------------------
+# Setup & config
 setup_path <- here::here("scripts", "setup.R")
 if (fs::file_exists(setup_path)) source(setup_path)
 
@@ -30,17 +27,15 @@ fig_dir  <- cfg$scenarios$fig_dir %||% here::here("figures","scenarios")
 log_dir  <- cfg$scenarios$log_dir %||% here::here("logs","scenarios")
 fs::dir_create(c(out_dir, fig_dir, log_dir))
 
-# seeds
 SEED_MASTER <- as.integer(cfg$seeds$master %||% 20240817)
 set.seed(SEED_MASTER)
 
-# ------------------------------ Sources ---------------------------------------
-# TVAR GIRF
+# Sources 
 source(here::here("functions/tvar/irf/compute_tvar_girf.R"))
-# config & validation
+
 source(here::here("functions/scenarios/config/load_scenario_yaml.R"))
 source(here::here("functions/scenarios/config/validate_scenario_spec.R"))
-# path-mode (tensor + fast sim)
+
 source(here::here("functions/scenarios/simulate/simulate_structural_shock_fast.R"))
 source(here::here("functions/scenarios/simulate/prepare_irf_tensor.R"))
 
@@ -54,7 +49,6 @@ safe_source(here::here("functions","tvar","sim","generate_counterfactual_baselin
 safe_source(here::here("functions","tvar","sim","choose_initial_regimes.R"))
 safe_source(here::here("functions","tvar","stats","attach_confidence_bands.R"))
 
-# optional plots
 if (!FAST_MODE && MAKE_PLOTS) {
   safe_source(here::here("functions/scenarios/diagnostics/plot_scenario_paths.R"))
   safe_source(here::here("functions/scenarios/diagnostics/plot_counterfactual_vs_baseline.R"))
@@ -62,15 +56,15 @@ if (!FAST_MODE && MAKE_PLOTS) {
   safe_source(here::here("functions/scenarios/diagnostics/plot_irf_envelope_vs_scenario.R"))
 }
 
-# ------------------------------ Model resolver --------------------------------
+# Model resolver
 get_active_uncertainties <- function(cfg) {
-  act <- cfg$uncertainty$active %||% "jln"
+  act <- cfg$uncertainty$active %||% "vix"
   if (identical(tolower(act), "all")) return(names(cfg$uncertainty$sources))
   if (is.character(act)) return(as.character(unlist(act)))
   stop("Unrecognized cfg$uncertainty$active")
 }
 
-# Prefer analysis_ready model; fallback to latest if needed
+# Prefer analysis_ready model, fallback to latest if needed
 get_active_model <- function(active) {
   base <- cfg$models$dir %||% here::here("models","tvar")
   active <- tolower(active)
@@ -85,7 +79,7 @@ get_active_model <- function(active) {
   if (is.null(mdl$variables) || is.null(mdl$irf)) {
     stop("[07] Model '", active, "' missing $variables or $irf. Run step 05 to enrich and save again.")
   }
-  # IRF preflight: refuse if empty/zero
+  # refuse if empty/zero
   has_nonzero_irf <- FALSE
   try({
     # quick scan across common placements
@@ -107,7 +101,7 @@ get_active_model <- function(active) {
 
 active_uncerts <- get_active_uncertainties(cfg)
 
-# ------------------------------ Helpers (shared) ------------------------------
+#  Helpers  
 hash_file <- function(path) if (fs::file_exists(path)) digest::digest(file = path, algo = "sha256") else NA_character_
 
 # collect impulses mentioned in a spec (path or girf)
@@ -135,7 +129,7 @@ convolve_causal <- function(u, k) {
   y
 }
 
-# ------------------------------ PATH-MODE engine ------------------------------
+# PATH-MODE
 simulate_with_tensor <- function(scenario, tensor, drop_h0 = FALSE, include_bands = FALSE) {
   H <- tensor$H
   U <- matrix(0, nrow = H, ncol = length(tensor$impulses),
@@ -191,10 +185,9 @@ simulate_with_tensor <- function(scenario, tensor, drop_h0 = FALSE, include_band
   tb
 }
 
-# ------------------------------ IRF helpers (for GIRF fallback) ---------------
-# ------------------------------ IRF helpers (for GIRF fallback) ---------------
+# IRF helpers (for GIRF fallback) 
 
-# Fuzzy translator: map arbitrary names onto model$variables using edit distance.
+# Fuzzy translator: map arbitrary names onto model$variables using edit distance
 .make_name_translator <- function(vars) {
   vars <- as.character(vars)
   function(nm) {
@@ -224,7 +217,7 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
   
   translate <- .make_name_translator(vars)
   
-  # -------- 0) LONG DATA-FRAME / TIBBLE --------
+  # LONG DATA-FRAME / TIBBLE 
   if (is.data.frame(obj) && nrow(obj)) {
     nm <- tolower(names(obj))
     col_resp <- which(nm %in% c("response","resp","variable","var","y"))
@@ -262,7 +255,7 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
     NULL
   }
   
-  # -------- 1) 4D SUMMARY [stat, h, resp, imp] (names optional) --------
+  # 4D SUMMARY [stat, h, resp, imp]
   if (is.array(obj) && length(dim(obj)) == 4) {
     dn <- dimnames(obj)
     if (!is.null(dn)) {
@@ -298,7 +291,7 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
     }
   }
   
-  # -------- 2) 4D DRAWS [h, resp, imp, draw] (names optional) --------
+  # 4D DRAWS [h, resp, imp, draw] 
   if (is.array(obj) && length(dim(obj)) == 4) {
     dn <- dimnames(obj); d <- dim(obj)
     if (!is.null(dn)) {
@@ -306,7 +299,6 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
       inames <- translate(dn[[3]] %||% character())
       ok_r <- which(!is.na(rnames)); ok_i <- which(!is.na(inames))
       if (length(ok_r) && length(ok_i)) {
-        # assume already [h,resp,imp,draw] or close enough
         x <- obj
         m <- apply(x, c(1,2,3), mean, na.rm = TRUE) # avg draws
         for (ri in ok_r) for (ii in ok_i) {
@@ -332,7 +324,7 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
     }
   }
   
-  # -------- 3) 3D array (names optional) --------
+  # 3D array
   if (is.array(obj) && length(dim(obj)) == 3) {
     dn <- dimnames(obj); d <- dim(obj)
     if (!is.null(dn)) {
@@ -349,12 +341,12 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
         if (any(IRF != 0)) return(IRF)
       }
     }
-    # Unnamed & two k-dims → assume order == model$variables
+    # Unnamed & two k-dims assume order == model$variables
     k_dims <- which(d == k)
     if (length(k_dims) >= 2) {
       h_dim   <- setdiff(1:3, k_dims)[1]
       respdim <- k_dims[1]; impdim <- k_dims[2]
-      x <- aperm(obj, c(respdim, impdim, h_dim))                # [k, k, h]
+      x <- aperm(obj, c(respdim, impdim, h_dim))                
       L <- min(H, dim(x)[3])
       for (r in seq_len(k)) for (i in seq_len(k)) {
         vec <- x[r, i, seq_len(L), drop = TRUE]
@@ -364,11 +356,10 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
     }
   }
   
-  # -------- 4) Per‑impulse lists: names like "irf_low_<impulse>" --------
+  # Per‑impulse lists
   if (is.list(obj) && length(names(obj))) {
     irf_nodes <- grep("^irf_", names(obj), value = TRUE)
     if (length(irf_nodes)) {
-      # Regex to pull impulse out of "irf_(low|high|combined|anything)_<impulse>"
       get_impulse <- function(node_name) {
         m <- regexec("^irf_(?:low|high|combined|[A-Za-z0-9]+)_([A-Za-z0-9_]+)$", node_name)
         mm <- regmatches(node_name, m)[[1]]
@@ -379,7 +370,7 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
         imp <- translate(imp_raw)
         if (is.na(imp)) next
         x <- obj[[node]]
-        # Case A: named numeric vector like "aluminium1", "cocoa_2", "lead-10"
+        # A: named numeric vector 
         if (is.numeric(x) && length(names(x))) {
           nms <- names(x)
           for (j in seq_along(x)) {
@@ -392,7 +383,7 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
             }
           }
         }
-        # Case B: list of named numeric vectors, same naming rule inside
+        # B: list of named numeric vectors
         if (is.list(x)) {
           for (el_name in names(x)) {
             v <- x[[el_name]]
@@ -420,8 +411,6 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
       if (any(IRF != 0)) return(IRF)
     }
     
-    # Two-level lists resp->imp or imp->resp (classic)
-    # resp -> imp
     rmap <- translate(names(obj))
     if (any(!is.na(rmap))) {
       out <- as_cube()
@@ -439,7 +428,6 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
       }
       if (any(out != 0)) return(out)
     }
-    # imp -> resp
     imap <- translate(names(obj))
     if (any(!is.na(imap))) {
       out <- as_cube()
@@ -458,7 +446,6 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
       if (any(out != 0)) return(out)
     }
     
-    # Deeply-nested: recurse into likely children
     kids <- intersect(names(obj) %||% character(), c(
       "regimes","combined","low","high","summary","draws",
       "median","mean","p50","point","central","irf","IRF","data","df","tbl","envelope","central_tendency"
@@ -472,7 +459,7 @@ build_irf_cube_any <- function(obj, vars, H, .depth = 0L) {
   IRF
 }
 
-# Build a tensor for a named regime; if regime="combined" and only low/high exist, average them.
+# a tensor for a named regime
 irf_tensor_for_regime <- function(model, regime, H) {
   vars <- model$variables
   make_ten <- function(IRF, regime_used) {
@@ -517,8 +504,7 @@ girf_from_irf <- function(model, impulse, H, regime, shock_size_sigma = 1) {
   out
 }
 
-# ------------------------------ GIRF-MODE helpers ------------------------------
-# Optional helper to convert absolute-size shocks to sigma units if YAML uses units: abs
+# GIRF-MODE helpers 
 get_sigma_for_impulse <- function(model, impulse) {
   if (!is.null(model$shock_sigma) && !is.null(model$shock_sigma[impulse])) return(as.numeric(model$shock_sigma[impulse]))
   if (!is.null(model$residuals) && impulse %in% colnames(model$residuals)) return(stats::sd(model$residuals[, impulse], na.rm = TRUE))
@@ -532,14 +518,13 @@ run_girf_once <- function(model, sp, impulse, H, regime_label) {
   id$method   <- id$method   %||% "chol"
   id$ordering <- canonicalize_ordering(id$ordering, model$variables)
   
-  # map regime label used in logs to GIRF start_state
   start_state <- switch(tolower(regime_label),
                         "low"  = "low",
                         "high" = "high",
                         "combined" = "mix",
                         "mix")
   
-  # shock size handling (compute_tvar_girf expects sigma units)
+  # shock size handling 
   raw_size <- (if (!is.null(sp$shocks) && !is.null(sp$shocks[[impulse]])) sp$shocks[[impulse]] else sp$size) %||% 1
   units <- sp$units %||% (if (!is.null(sp$scale) && isTRUE(sp$scale$by_sigma)) "sigma" else NULL)
   if (!is.null(units) && identical(tolower(units), "abs")) {
@@ -551,7 +536,6 @@ run_girf_once <- function(model, sp, impulse, H, regime_label) {
   
   B <- as.integer((sp$bands %||% list())$draws %||% 100L)
   
-  # Try MC GIRF first; if it fails due to IRF cube issues, fall back to deterministic IRF convolution.
   tryCatch(
     {
       compute_tvar_girf(
@@ -569,7 +553,6 @@ run_girf_once <- function(model, sp, impulse, H, regime_label) {
       message("[07] GIRF Monte-Carlo failed (", e$message, "). Falling back to IRF convolution.")
       g <- girf_from_irf(model, impulse = impulse, H = as.integer(H),
                          regime = regime_label, shock_size_sigma = shock_size)
-      # emulate compute_tvar_girf() minimal return shape
       list(girf = g, ci = NULL, dpaths = NULL,
            impulse = impulse, shock_size = shock_size,
            start_state = start_state, A = NULL, identification = id)
@@ -577,9 +560,8 @@ run_girf_once <- function(model, sp, impulse, H, regime_label) {
   )
 }
 
-# Takes a GIRF spec and returns a tidy tibble (non-baseline paths only)
+# Takes a GIRF spec and returns a tidy tibble 
 run_girf_scenario <- function(model, sp, H, regime_label) {
-  # support either a single impulse (sp$impulse) or a list of sub-scenarios sp$scenarios[[i]]$impulse
   subs <- sp$scenarios %||% list(list(impulse = sp$impulse))
   out  <- vector("list", length(subs))
   for (i in seq_along(subs)) {
@@ -605,7 +587,7 @@ run_girf_scenario <- function(model, sp, H, regime_label) {
   dplyr::bind_rows(out)
 }
 
-# ------------------------------ Load scenarios --------------------------------
+# Load scenarios 
 ymls  <- fs::dir_ls(scen_dir, regexp = "\\.(yml|yaml)$", type = "file")
 if (!length(ymls)) stop("No scenario YAMLs found in ", scen_dir)
 if (FAST_MODE && length(ymls) > MAX_SCENARIOS) ymls <- ymls[seq_len(MAX_SCENARIOS)]
@@ -619,7 +601,7 @@ if (FAST_MODE) {
   specs <- purrr::map(specs, function(sp) { sp$horizon <- min(as.integer(sp$horizon %||% H_cfg), H_cfg); sp })
 }
 
-# ------------------------------ Prepare & run ---------------------------------
+# Prepare & run 
 t_start <- Sys.time()
 tidy_list   <- list()
 meta_events <- list()
@@ -629,7 +611,7 @@ for (unc in active_uncerts) {
   model_path <- mdl$model_path
   tvar_model <- mdl$model
 
-  # reload YAMLs (if FAST, clamp again)
+  # reload YAMLs 
   ymls  <- fs::dir_ls(scen_dir, regexp = "\\.(yml|yaml)$", type = "file")
   if (!length(ymls)) stop("No scenario YAMLs found in ", scen_dir)
   if (FAST_MODE && length(ymls) > MAX_SCENARIOS) ymls <- ymls[seq_len(MAX_SCENARIOS)]
@@ -641,8 +623,6 @@ for (unc in active_uncerts) {
     purrr::map(specs, function(sp){ sp$horizon <- min(as.integer(sp$horizon %||% H_cfg), H_cfg); sp })
   }
 
-  # regimes + tensor cache (path-mode)
-  # regimes + tensor cache (path-mode)
   get_regimes_for_spec <- function(sp) {
     rg <- tolower(sp$regime %||% "combined")
     if (rg %in% c("all","*")) unique(cfg$irf$regimes %||% c("combined","low","high")) else rg
@@ -657,7 +637,6 @@ for (unc in active_uncerts) {
     
     vars <- tvar_model$variables
     
-    # 1) Try the standard helper first (fast path)
     ten <- try(
       prepare_irf_tensor(
         model          = tvar_model,
@@ -670,12 +649,10 @@ for (unc in active_uncerts) {
       silent = TRUE
     )
     
-    # 2) If it failed or returned an all-zero cube, fall back to robust builder
     need_fallback <- inherits(ten, "try-error") || is.null(ten$IRF) || .all_zero(ten$IRF)
     if (need_fallback) {
       fb <- irf_tensor_for_regime(tvar_model, regime, H)  # uses build_irf_cube_any + avg(low,high)
       if (is.null(fb) || .all_zero(fb$IRF)) {
-        # give a clear, non-fatal error with actionable hint
         stop(paste0(
           "[07/path] Could not assemble a non-zero IRF tensor.\n",
           "- regime requested: '", regime, "'\n",
@@ -769,7 +746,7 @@ bundle_h <- digest::digest(paste(sort(vapply(ymls_final, hash_file, "")), collap
 
 out_csv <- fs::path(out_dir, glue("scenario_results_tidy_{run_id}.csv"))
 
-# Write the CSV (fail loudly if the write fails)
+# Write the csv
 tryCatch({
   readr::write_csv(tidy_all, out_csv)
   message(sprintf("[07] Wrote: %s (%d rows)", fs::path_rel(out_csv), nrow(tidy_all)))
@@ -777,7 +754,7 @@ tryCatch({
   stop("[07] Failed to write scenario CSV: ", conditionMessage(e))
 })
 
-# Stable alias (always AFTER write; don't abort the run if copy fails)
+# Stable alias 
 alias_csv <- fs::path(out_dir, "scenario_results_tidy_latest.csv")
 if (fs::file_exists(out_csv)) {
   ok <- try(fs::file_copy(out_csv, alias_csv, overwrite = TRUE), silent = TRUE)
@@ -790,7 +767,6 @@ if (fs::file_exists(out_csv)) {
   warning("[07] Skipped alias copy: source missing: ", fs::path_rel(out_csv))
 }
 
-# (fast mode convenience alias)
 if (isTRUE(FAST_MODE)) {
   out_fast <- fs::path(out_dir, "scenario_results_tidy_fast.csv")
   if (fs::file_exists(out_csv)) {
@@ -826,7 +802,6 @@ message(sprintf("[07] Meta: %s", fs::path_rel(meta_json)))
 
 # plots 
 if (!FAST_MODE && MAKE_PLOTS) {
-  # try custom plotting functions if present
   if (exists("plot_scenario_paths")) {
     try(plot_scenario_paths(tidy_all, out_dir = fig_dir), silent = TRUE)
   }
@@ -840,7 +815,7 @@ if (!FAST_MODE && MAKE_PLOTS) {
     try(plot_irf_envelope_vs_scenario(tidy_all, model = tvar_model, out_dir = fig_dir), silent = TRUE)
   }
   
-  # fallback: make 2 basic ggplots if custom fns are missing
+  # fallback: 2 basic ggplots if custom fns are missing
   if (!exists("plot_scenario_paths") && !exists("plot_scenario_fan")) {
     suppressPackageStartupMessages(require(ggplot2))
     
@@ -880,5 +855,3 @@ if (!FAST_MODE && MAKE_PLOTS) {
 message(sprintf("[07] OK: %s (%d rows)", fs::path_rel(out_csv), nrow(tidy_all)))
 message(sprintf("[07] Meta: %s", fs::path_rel(meta_json)))
 message("Done.")
-
-

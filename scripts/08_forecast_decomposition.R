@@ -1,27 +1,26 @@
-#!/usr/bin/env Rscript
 # scripts/08_forecast_decomposition.R
 # Orchestrates forecast decomposition (Δ = shocked - baseline), exports, diagnostics, logs.
 # Enhancements A–E:
 #  A) Real FEVD from IRFs (optional switch)
 #  B) Optional Shapley path attribution scaffold
 #  C) Regime-aware contributions + per-uncertainty slicing
-#  D) Diagnostics pack (mass balance per-uncertainty; figures; optional signal metrics)
+#  D) Diagnostics pack (mass balance per-uncertainty, figures, optional signal metrics)
 #  E) Reproducible exports (FEVD CSVs, per-uncertainty outputs, logs)
 
 suppressPackageStartupMessages({
   library(here); library(fs); library(readr); library(dplyr); library(tidyr); library(glue)
 })
 
-# --- Project setup (packages, options, etc.) ----------------------------------
-source("scripts/setup.R")  # prints "All packages loaded successfully." on success
+# Project setup
+source("scripts/setup.R")  
 
 suppressMessages(here::i_am("scripts/08_forecast_decomposition.R"))
 
 # sanity check
-here::here()  # should print /Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities
+here::here()  
 fs::file_exists(here::here("functions","decomposition","setup","build_forecast_baseline.R"))
 
-# --- Load decomposition modules ------------------------------------------------
+# Load decomposition modules
 # setup
 source(here::here("functions","decomposition","setup","build_forecast_baseline.R"))
 source(here::here("functions","decomposition","setup","build_forecast_with_shocks.R"))
@@ -33,14 +32,15 @@ source(here::here("functions","decomposition","decompose","decompose_by_regime.R
 source(here::here("functions","decomposition","decompose","compute_tvar_fevd.R"))
 source(here::here("functions","decomposition","decompose","reconcile_additivity.R"))
 
-# Shapley (optional)
+# Shapley
 source(here::here("functions","decomposition","shapley","shapley_contributions.R"))
 
-# diagnostics (plots)
+# diagnostics
 source(here::here("functions","decomposition","diagnostics","plot_decomp_waterfall.R"))
 source(here::here("functions","decomposition","diagnostics","plot_decomp_stacked_area.R"))
 source(here::here("functions","decomposition","diagnostics","plot_regime_share_bars.R"))
 source(here::here("functions","decomposition","diagnostics","plot_fevd_stacked_area.R"))
+source(here::here("functions","decomposition","diagnostics","_plot_utils.R"))
 
 # exports
 source(here::here("functions","decomposition","export","write_decomp_tables_csv.R"))
@@ -57,35 +57,37 @@ source(here::here("functions","decomposition","validate","validate_decomposition
 
 # FEVD from IRFs (A)
 source(here::here("functions","decomposition","fevd","build_fevd_from_irf.R"))
-# Optional metrics helper (D) – only used if present
+source(here::here("functions","decomposition","fevd","dedupe_normalise_fevd.R"))
+
+# Optional metrics helper (D) 
 if (file.exists(here::here("functions","decomposition","metrics","compute_signal_metrics.R"))) {
   source(here::here("functions","decomposition","metrics","compute_signal_metrics.R"))
 }
 
-# --- Orchestration toggles / config -------------------------------------------
+# Orchestration toggles / config 
 CFG <- list(
   # INPUT
-  INPUT_TIDY_PATH   = NULL,  # auto-resolve to *_latest.csv; fallback to *_fast.csv
+  INPUT_TIDY_PATH   = NULL,  
   OUT_DIR           = here::here("data","scenarios"),
   FIG_DIR           = here::here("figures","decomposition"),
   LOG_DIR           = here::here("logs","decomposition"),
   
   # FEATURES
-  FEVD_MODE         = "irf",   # "trivial" or "irf" (A)
+  FEVD_MODE         = "irf",   
   FEVD_REGIMES      = c("combined"),
-  USE_SHAPLEY       = FALSE,       # (B)
+  USE_SHAPLEY       = FALSE,       
   WRITE_TEX_TABLES  = TRUE,
   MAKE_PLOTS        = TRUE,
-  COMPUTE_METRICS   = TRUE,        # (D) if compute_signal_metrics() is available
+  COMPUTE_METRICS   = TRUE,        
   
   # plot/export sizing
-  DPI               = 220,
+  DPI               = 400,
   
   # reconciliation/validation
-  RECONCILE_METHOD  = "residual_bucket",  # or "proportional_scale"
+  RECONCILE_METHOD  = "residual_bucket",  
   MASS_TOL          = 1e-10,
   
-  # Shapley controls (used only if USE_SHAPLEY)
+  # Shapley controls
   SHAP_N_PERM       = 512L,
   SHAP_EXACT_IF_KLE = 7L,
   SHAP_SEED         = 42L
@@ -93,7 +95,7 @@ CFG <- list(
 
 `%||%` <- function(x,y) if (is.null(x)) y else x
 
-# --- Helpers ------------------------------------------------------------------
+# Helpers 
 ensure_dirs <- function(...) fs::dir_create(c(...))
 
 resolve_tidy_input <- function() {
@@ -119,13 +121,13 @@ build_trivial_fevd_shares <- function(delta_tbl) {
     )
 }
 
-# --- Paths / dirs --------------------------------------------------------------
+# Paths / dirs 
 ensure_dirs(CFG$OUT_DIR, CFG$FIG_DIR, CFG$LOG_DIR)
 
-# --- Stopwatch ----------------------------------------------------------------
+# Stopwatch 
 t_start <- proc.time()[["elapsed"]]
 
-# --- Load cached scenario tidy & build baseline/shocked ------------------------
+# Load cached scenario tidy & build baseline/shocked 
 tidy_path <- CFG$INPUT_TIDY_PATH %||% resolve_tidy_input()
 message("[08] Using tidy input: ", fs::path_rel(tidy_path))
 
@@ -135,19 +137,19 @@ shck_res <- build_forecast_with_shocks(scenario_tidy = tidy_path) # scenario, re
 baseline <- base_res$data
 shocked  <- shck_res$data
 
-# join keys: add 'uncertainty' if present in both inputs
+# add uncertainty if present in both inputs
 join_keys <- c("regime","variable","t")
 if ("uncertainty" %in% names(baseline) && "uncertainty" %in% names(shocked)) {
   join_keys <- c("uncertainty", join_keys)
 }
 
-# --- Δ table (single source of truth for deltas) ------------------------------
+#  Δ table
 delta_tbl <- shocked %>%
   dplyr::left_join(baseline %>% dplyr::rename(baseline = value), by = join_keys) %>%
   dplyr::mutate(delta = value - dplyr::coalesce(baseline, 0)) %>%
   dplyr::select(dplyr::any_of(c("uncertainty")), scenario, regime, variable, t, delta)
 
-# Minimal lines plot / delta CSV (quick look; CPU-light)
+# Minimal lines plot / delta CSV
 if (CFG$MAKE_PLOTS) {
   plot_path <- here::here("figures","decomposition","delta_lines.png")
   fs::dir_create(dirname(plot_path))
@@ -186,16 +188,16 @@ if (CFG$MAKE_PLOTS) {
   readr::write_csv(sum_tbl, here::here("data","scenarios","forecast_decomposition_summary.csv"))
 }
 
-# --- Decompose (per-uncertainty, then bind) -----------------------------------
+# Decompose (per-uncertainty, then bind) 
 do_one <- function(unc = NULL) {
   b <- if (!is.null(unc) && "uncertainty" %in% names(baseline)) dplyr::filter(baseline, uncertainty == unc) else baseline
   s <- if (!is.null(unc) && "uncertainty" %in% names(shocked))  dplyr::filter(shocked,  uncertainty == unc) else shocked
   d <- if (!is.null(unc) && "uncertainty" %in% names(delta_tbl)) dplyr::filter(delta_tbl, uncertainty == unc) else delta_tbl
   
-  # validate each uncertainty slice (no duplicates now)
+  # validate each uncertainty slice
   validate_decomposition_inputs(b, s, require_same_horizon = TRUE)
   
-  # ---- FEVD shares (A) ----
+  # FEVD shares 
   fevd_mode <- tolower(CFG$FEVD_MODE %||% "trivial")
   if (identical(fevd_mode, "trivial")) {
     fevd_shares <- build_trivial_fevd_shares(d)
@@ -205,6 +207,7 @@ do_one <- function(unc = NULL) {
     H_target <- max(d$t, na.rm = TRUE)
     fevd_tbl <- build_fevd_from_irf(d, H = H_target, regimes = CFG$FEVD_REGIMES)
     if (!is.null(unc)) fevd_tbl <- dplyr::filter(fevd_tbl, uncertainty == unc)
+    fevd_tbl <- dedupe_normalise_fevd(fevd_tbl)
     # Persist FEVD CSVs (E)
     fevd_dir <- fs::path(CFG$OUT_DIR, "fevd"); fs::dir_create(fevd_dir)
     fevd_path <- fs::path(fevd_dir, if (!is.null(unc)) glue("{unc}_fevd_shares.csv") else "fevd_shares.csv")
@@ -215,11 +218,11 @@ do_one <- function(unc = NULL) {
     fevd_info   <- list(mode = "irf", path = fevd_path)
   }
   
-  # ---- Decomposition core ----
+  # Decomposition core 
   out <- decompose_forecast(
     baseline    = b,
     shocked     = s,
-    fevd_shares = fevd_shares,                   # if trivial -> single "total"; if IRF -> per impulse
+    fevd_shares = fevd_shares,                   
     method      = if (identical(fevd_mode,"trivial")) "fevd" else "fevd",
     reconcile   = CFG$RECONCILE_METHOD
   )
@@ -250,8 +253,36 @@ if ("uncertainty" %in% names(delta_tbl)) {
   res <- do_one(NULL)
 }
 
-# --- Optional metrics (D) -----------------------------------------------------
-metrics_paths <- character(0)  # <- keep as character vector, not list
+# Detail one-pagers for the top response variables per scenario
+export_detail_waterfalls <- function(ct, out_dir, unc, per_scenario_top = 6, top_n = 12) {
+  dir <- fs::path(out_dir, glue::glue("detail_{unc}")); fs::dir_create(dir)
+  
+  topv <- ct %>%
+    dplyr::group_by(scenario, variable) %>%
+    dplyr::summarise(l1 = sum(abs(contribution), na.rm = TRUE), .groups = "drop") %>%
+    dplyr::group_by(scenario) %>%
+    dplyr::slice_max(order_by = l1, n = per_scenario_top, with_ties = FALSE) %>%
+    dplyr::ungroup()
+  
+  for (sc in unique(topv$scenario)) {
+    vars <- topv |> dplyr::filter(scenario == sc) |> dplyr::pull(variable)
+    for (v in vars) {
+      plot_decomp_waterfall(
+        contrib_tbl    = dplyr::filter(ct, scenario == sc, variable == v),
+        horizon        = "auto_max_abs",
+        variable_top_k = 99,          # no reduction inside single facet
+        top_n          = top_n,
+        style          = "waterfall", # classic waterfall for detail
+        label_top      = 99,          # not used in waterfall mode
+        save_path      = fs::path(dir, glue::glue("waterfall_detail_{sc}_{v}.png")),
+        dpi            = CFG$DPI
+      )
+    }
+  }
+}
+
+# Optional metrics (D) 
+metrics_paths <- character(0)  
 if (isTRUE(CFG$COMPUTE_METRICS) && exists("compute_signal_metrics", mode = "function")) {
   met_dir <- fs::path(CFG$OUT_DIR, "metrics"); fs::dir_create(met_dir)
   if ("uncertainty" %in% names(res$reconciled_tbl)) {
@@ -260,27 +291,27 @@ if (isTRUE(CFG$COMPUTE_METRICS) && exists("compute_signal_metrics", mode = "func
       mt <- compute_signal_metrics(ct)
       p  <- fs::path(met_dir, glue("signal_metrics_{unc}.csv"))
       readr::write_csv(mt, p)
-      metrics_paths[unc] <- p          # named character
+      metrics_paths[unc] <- p          
     }
   } else {
     mt <- compute_signal_metrics(res$reconciled_tbl)
     p  <- fs::path(met_dir, "signal_metrics.csv")
     readr::write_csv(mt, p)
-    metrics_paths["all"] <- p          # named character
+    metrics_paths["all"] <- p          
   }
 }
 
-# --- Exports (CSV) ------------------------------------------------------------
+# Exports (CSV) 
 csv_paths <- write_decomp_tables_csv(
   delta_tbl   = res$delta_tbl,
   contrib_tbl = res$reconciled_tbl,
   out_dir     = CFG$OUT_DIR
 )
 
-# Also write a simple contributions CSV for packager (combined)
+# Also write a simple contributions CSV for packager
 readr::write_csv(res$reconciled_tbl, fs::path(CFG$OUT_DIR, "decomposition_contributions.csv"))
 
-# --- LaTeX tables (optional) --------------------------------------------------
+# LaTeX tables
 if (CFG$WRITE_TEX_TABLES) {
   tex_dir <- here::here("output","tables"); fs::dir_create(tex_dir)
   if ("uncertainty" %in% names(res$reconciled_tbl)) {
@@ -317,7 +348,7 @@ if (CFG$WRITE_TEX_TABLES) {
   }
 }
 
-# --- Diagnostics (plots) ------------------------------------------------------
+# Diagnostics (plots) 
 if (CFG$MAKE_PLOTS) {
   if ("uncertainty" %in% names(res$reconciled_tbl)) {
     for (unc in sort(unique(res$reconciled_tbl$uncertainty))) {
@@ -326,23 +357,36 @@ if (CFG$MAKE_PLOTS) {
       
       plot_decomp_waterfall(
         contrib_tbl = ct,
-        horizon     = max(ct$t, na.rm = TRUE),
+        horizon     = "auto_max_abs",
+        variable_top_k = 12,
+        top_n = 8,
+        label_top = 0,
+        style = "auto",
         save_path   = fs::path(CFG$FIG_DIR, glue("waterfall_tH_{unc}.png")),
         dpi         = CFG$DPI
       )
+      
       plot_decomp_stacked_area(
         contrib_tbl = ct,
+        variable_top_k = 12,
+        top_k = 8,
         save_path   = fs::path(CFG$FIG_DIR, glue("stacked_contributions_{unc}.png")),
         dpi         = CFG$DPI
       )
-      plot_regime_share_bars(
-        delta_tbl   = dt,
-        metric      = "abs",
-        save_path   = fs::path(CFG$FIG_DIR, glue("regime_shares_abs_{unc}.png")),
-        dpi         = CFG$DPI
-      )
       
-      # If real FEVD was produced, emit stacked FEVD (A/D)
+      dt <- dplyr::filter(res$delta_tbl, uncertainty == unc)
+      if (dplyr::n_distinct(dt$regime) > 1) {
+        plot_regime_share_bars(
+          delta_tbl   = dt, metric = "abs",
+          save_path   = fs::path(CFG$FIG_DIR, glue("regime_shares_abs_{unc}.png")),
+          dpi         = CFG$DPI
+        )
+      } else {
+        message("[diag] skipped regime shares for {unc}: only 'combined' regime present.")
+      }
+      
+      export_detail_waterfalls(ct, CFG$FIG_DIR, unc, per_scenario_top = 6, top_n = 12)
+      
       if (!is.null(res$.__fevd__[[unc]]) && identical(res$.__fevd__[[unc]]$mode, "irf")) {
         fevd_path <- res$.__fevd__[[unc]]$path
         if (!is.null(fevd_path) && fs::file_exists(fevd_path)) {
@@ -351,6 +395,7 @@ if (CFG$MAKE_PLOTS) {
             plot_fevd_stacked_area(
               fevd_tbl   = fevd_tbl,
               save_path  = fs::path(CFG$FIG_DIR, glue("fevd_stacked_{unc}.png")),
+              top_responses = 12,
               dpi        = CFG$DPI
             )
           }
@@ -360,7 +405,7 @@ if (CFG$MAKE_PLOTS) {
   } else {
     plot_decomp_waterfall(
       contrib_tbl = res$reconciled_tbl,
-      horizon     = max(res$reconciled_tbl$t, na.rm = TRUE),
+      horizon     = "auto_max_abs",   
       save_path   = fs::path(CFG$FIG_DIR, "waterfall_tH.png"),
       dpi         = CFG$DPI
     )
@@ -378,14 +423,12 @@ if (CFG$MAKE_PLOTS) {
   }
 }
 
-# --- Shapley (optional; OFF by default) ---------------------------------------
+# Shapley
 if (isTRUE(CFG$USE_SHAPLEY)) {
-  # Minimal placeholder map: treat each scenario as one primitive shock (weight 1)
   scenario_shock_map <- shocked %>%
     dplyr::distinct(dplyr::across(dplyr::any_of(c("uncertainty", "scenario")))) %>%
     dplyr::mutate(shock_id = scenario, weight = 1)
   
-  # Superposition fallback for Shapley (each primitive path = that scenario's shocked path)
   single_shock_paths <- shocked %>%
     dplyr::transmute(
       dplyr::across(dplyr::any_of(c("uncertainty"))),
@@ -393,19 +436,18 @@ if (isTRUE(CFG$USE_SHAPLEY)) {
     ) %>%
     dplyr::distinct()
   
-  path_fun <- NULL  # use fallback; replace with a model-callback for exact nonlinear Shapley
+  path_fun <- NULL
   
   shap_tbl <- shapley_contributions(
     baseline            = baseline,
     scenario_shock_map  = scenario_shock_map,
-    single_shock_paths  = single_shock_paths,    # <-- must NOT be NULL when path_fun is NULL
+    single_shock_paths  = single_shock_paths,   
     path_fun            = path_fun,
     n_perm              = CFG$SHAP_N_PERM,
     exact_if_k_le       = CFG$SHAP_EXACT_IF_KLE,
     seed                = CFG$SHAP_SEED
   )
   
-  # (optional) reconcile to Δ for display parity
   reconciled_shap <- reconcile_additivity(
     contrib_tbl = shap_tbl %>% dplyr::rename(contribution = shapley),
     delta_tbl   = delta_tbl,
@@ -416,8 +458,7 @@ if (isTRUE(CFG$USE_SHAPLEY)) {
   readr::write_csv(reconciled_shap, fs::path(CFG$OUT_DIR, "decomposition_shapley_contributions.csv"))
 }
 
-# --- Validation: mass balance -------------------------------------------------
-# Validate per uncertainty (avoids accidental cross-mixing)
+# Validation: mass balance 
 if ("uncertainty" %in% names(res$reconciled_tbl)) {
   mass_ok <- TRUE
   for (unc in sort(unique(res$reconciled_tbl$uncertainty))) {
@@ -449,10 +490,10 @@ if ("uncertainty" %in% names(res$reconciled_tbl)) {
   }
 }
 
-# --- Logging ------------------------------------------------------------------
+# Logging 
 elapsed <- proc.time()[["elapsed"]] - t_start
 
-# Collect FEVD CSV paths if any (character vector)
+# Collect FEVD CSV paths
 fevd_paths <- character(0)
 if (!is.null(res$.__fevd__)) {
   if (is.list(res$.__fevd__) && !is.null(names(res$.__fevd__))) {
@@ -463,13 +504,13 @@ if (!is.null(res$.__fevd__)) {
   fevd_paths <- fevd_paths[!is.na(fevd_paths) & nzchar(fevd_paths)]
 }
 
-# Build output_paths as a pure character vector (names optional)
+# Build output_paths as a pure character vector 
 output_paths <- c(
   delta_csv   = fs::path(CFG$OUT_DIR, "forecast_decomposition_delta.csv"),
   summary_csv = fs::path(CFG$OUT_DIR, "forecast_decomposition_summary.csv"),
   contrib_csv = fs::path(CFG$OUT_DIR, "decomposition_contributions.csv")
 )
-# append FEVD + metrics (keep names if you want)
+# append FEVD + metrics
 if (length(fevd_paths)) {
   names(fevd_paths) <- paste0("fevd_", seq_along(fevd_paths))
   output_paths <- c(output_paths, fevd_paths)
@@ -513,7 +554,7 @@ meta <- list(
     "; SHAPLEY=", CFG$USE_SHAPLEY, "."
   ),
   input_paths     = c(tidy_path),
-  output_paths    = output_paths     # <- CHARACTER VECTOR ONLY
+  output_paths    = output_paths    
 )
 
 log_decomp_run_md(meta, save_dir = CFG$LOG_DIR)

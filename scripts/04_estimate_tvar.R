@@ -1,11 +1,11 @@
-# scripts/04_estimate_tvar.R  — MULTIVARIATE (ALL COMMODITIES) PER INDEX
+# scripts/04_estimate_tvar.R
 
 suppressPackageStartupMessages({
   library(here); library(readr); library(dplyr); library(tidyr)
   library(glue); library(fs); library(yaml)
 })
 
-source("scripts/setup.R")  # prints "All packages loaded successfully."
+source("scripts/setup.R")  
 
 source(here("functions/tvar/estimate/select_tvar_threshold.R"), local = TRUE)
 source(here("functions/tvar/estimate/estimate_tvar_model.R"),   local = TRUE)
@@ -13,9 +13,92 @@ source(here("functions/tvar/validate/validate_estimated_tvar.R"), local = TRUE)
 
 `%||%` <- function(a, b) if (!is.null(a)) a else b
 
-# -------------------------------------------------------------------
-# 0) Load BOTH configs: custom (tvar_estimate.yaml) + paths.yml
-# -------------------------------------------------------------------
+pluck_or <- function(x, path, default = NULL) {
+  out <- tryCatch({
+    for (nm in path) x <- x[[nm]]
+    x
+  }, error = function(e) NULL)
+  if (is.null(out)) default else out
+}
+
+# Rebuild residuals
+get_residuals <- function(est, reg = c("low","high")){
+  reg <- match.arg(reg)
+  E <- pluck_or(est, c("regimes", reg, "residuals"), NULL)
+  if (!is.null(E)) return(as.matrix(E))
+  Y <- pluck_or(est, c("regimes", reg, "Y"), NULL)
+  F <- pluck_or(est, c("regimes", reg, "fitted"), NULL)
+  if (!is.null(Y) && !is.null(F)) return(as.matrix(Y) - as.matrix(F))
+  NULL
+}
+
+# Conservative Ljung–Box p (min across series) with smart lag and guards
+lb_p_min <- function(E, lag = NULL) {
+  if (is.null(E)) return(NA_real_)
+  M <- as.matrix(E); n <- nrow(M)
+  if (n < 10) return(NA_real_)
+  if (is.null(lag)) lag <- max(4L, min(12L, floor(n/4)))
+  ps <- apply(M, 2, function(z) {
+    z <- as.numeric(z)
+    if (!all(is.finite(z)) || var(z) == 0 || length(z) <= (lag + 1)) return(NA_real_)
+    suppressWarnings(stats::Box.test(z, lag = lag, type = "Ljung-Box")$p.value)
+  })
+  ps <- ps[is.finite(ps)]
+  if (length(ps)) min(ps) else NA_real_
+}
+
+safe_logdet <- function(S, ridge = 1e-10) {
+  if (is.null(S)) return(NA_real_)
+  ev <- suppressWarnings(eigen(S, symmetric = TRUE, only.values = TRUE)$values)
+  if (!length(ev)) return(NA_real_)
+  ev[ev < ridge] <- ridge
+  sum(log(ev))
+}
+
+# Helpers for Table 1 metrics 
+spectral_radius_companion <- function(A_list){
+  if (is.null(A_list) || !length(A_list)) return(NA_real_)
+  k <- nrow(A_list[[1]]); p <- length(A_list)
+  if (p == 1L) return(max(Mod(eigen(A_list[[1]], only.values=TRUE)$values)))
+  Ctop <- do.call(cbind, A_list)
+  Cbot <- cbind(diag(k*(p-1)), matrix(0, nrow=k*(p-1), ncol=k))
+  C    <- rbind(Ctop, Cbot)
+  max(Mod(eigen(C, only.values=TRUE)$values))
+}
+
+normalize_A_list <- function(A, K){
+  if (is.null(A)) return(NULL)
+  if (is.list(A)) return(A)
+  dims <- dim(A)
+  if (length(dims)==3) return(lapply(seq_len(dims[3]), function(j) A[,,j,drop=FALSE]))
+  if (length(dims)==2){
+    nr <- dims[1]; nc <- dims[2]
+    if (nr==K && (nc %% K)==0){           
+      p <- nc %/% K
+      return(lapply(seq_len(p), function(j) A[, ((j-1)*K+1):(j*K), drop=FALSE]))
+    }
+    if ((nr %% K)==0 && nc==K){           
+      p <- nr %/% K
+      return(lapply(seq_len(p), function(j) A[((j-1)*K+1):(j*K), , drop=FALSE]))
+    }
+  }
+  NULL
+}
+
+estimate_var_ols <- function(Y, p){
+  Y <- as.matrix(Y); Tn <- nrow(Y); K <- ncol(Y)
+  Z <- NULL
+  for (lag in 1:p) Z <- cbind(Z, Y[(p-lag+1):(Tn-lag), , drop=FALSE])
+  Z  <- cbind(1, Z)
+  Yt <- Y[(p+1):Tn, , drop=FALSE]
+  B  <- solve(crossprod(Z), crossprod(Z, Yt))          # (1+Kp) x K
+  E  <- Yt - Z %*% B
+  Sigma <- crossprod(E) / (nrow(E) - (1 + K*p))
+  A_list <- lapply(seq_len(p), function(k) t(B[(2 + (k-1)*K):(1 + k*K), , drop=FALSE]))
+  list(A_list=A_list, Sigma=Sigma, E=E)
+}
+
+# Load configs: custom (tvar_estimate.yaml) + paths.yml
 cfg_est_path <- here("config","tvar_estimate.yaml")
 cfg_est <- list(
   indexes                 = c("VIX","VXO","JLN"),
@@ -51,7 +134,7 @@ cfg_est$standardize_y           <- isTRUE(cfg_est$standardize_y)
 cfg_est$report_theta_percentile <- isTRUE(cfg_est$report_theta_percentile)
 cfg_est$require_both_stable     <- isTRUE(cfg_est$require_both_stable)
 
-# paths.yml (authoritative for model dir & inputs used elsewhere)
+# paths.yml
 cfg_paths <- if (file.exists(here("config","paths.yml"))) {
   yaml::read_yaml(here("config","paths.yml"))
   } else {
@@ -102,18 +185,15 @@ ensure_csv_schema(error_path,   ERROR_COLS)
 
 roll_mean_right <- function(x, n=1L) { if (n<=1L) return(as.numeric(x)); as.numeric(stats::filter(x, rep(1/n,n), sides=1)) }
 
-# -------------------------------------------------------------------
-# 1) Driver: ONE multivariate TVAR per index (VIX / VXO / JLN)
-#    Input: data/tvar/tvar_input_<index>.csv (LONG panel)
-#    Required columns: date, commodity_id, ret, <index> (VIX/VXO/JLN)
-# -------------------------------------------------------------------
+# one multivariate TVAR per index
+
 for (IDX in cfg_est$indexes) {
   tag <- tolower(IDX)
   in_file <- here("data","tvar", sprintf("tvar_input_%s.csv", tag))
   message(glue("\n=== {IDX}: looking for {fs::path_rel(in_file)}"))
   if (!file.exists(in_file)) {
     append_error(IDX, NA, "load_input", paste0("Missing TVAR input: ", in_file))
-    message("  ✗ Missing input → logged to tvar_errors.csv"); next
+    message("Missing input → logged to tvar_errors.csv"); next
   }
   
   df <- readr::read_csv(in_file, show_col_types = FALSE)
@@ -141,30 +221,27 @@ for (IDX in cfg_est$indexes) {
   
   if (length(commod_sel) < 2L) {
     append_error(IDX, "PANEL", "precheck", "Need at least 2 commodities for a VAR.")
-    message("  ✗ Too few commodities → logged"); next
+    message("Too few commodities → logged"); next
   }
   
   # Audit list
   fs::dir_create(here("logs","tvar"))
   writeLines(sort(commod_sel), here("logs","tvar", sprintf("commodities_selected_%s.txt", tag)))
   
-  # ---- BUILD WIDE PANEL + ATTACH INDEX COLUMN ----
-  # 1) long -> wide returns (one col per commodity)
   df_wide <- df |>
     dplyr::filter(commodity_id %in% commod_sel) |>
     dplyr::select(date, commodity_id, ret) |>
     tidyr::pivot_wider(names_from = commodity_id, values_from = ret) |>
     dplyr::arrange(date)
   
-  # 2) grab the index series (VIX/VXO/JLN) by date and join
+  # grab the index series (VIX/VXO/JLN) by date and join
   idx_tbl <- df[, c("date", idx_col), drop = FALSE] |> dplyr::distinct()
   df_wide <- dplyr::left_join(df_wide, idx_tbl, by = "date")
   
-  # sanity: ensure the index column is present after joining
+  # ensure the index column is present after joining
   stopifnot(idx_col %in% names(df_wide))
   
-  # ---- CLEAN & PREP Y ----
-  # 1) choose Y columns and filter complete cases jointly with index
+  # CLEAN & PREP Y 
   y_cols <- setdiff(names(df_wide), c("date", idx_col))
   stopifnot(length(y_cols) >= 2)
   
@@ -172,25 +249,25 @@ for (IDX in cfg_est$indexes) {
   df_use <- df_wide[keep, c("date", y_cols), drop = FALSE]
   th_use <- df_wide[[idx_col]][keep]
   
-  # 2) enforce numeric + safe names
+  # enforce numeric + safe names
   df_use[y_cols] <- lapply(df_use[y_cols], function(v) as.numeric(v))
   names(df_use)[match(y_cols, names(df_use))] <- make.names(y_cols, unique = TRUE)
-  y_cols <- setdiff(names(df_use), "date")  # refresh after rename
+  y_cols <- setdiff(names(df_use), "date")  
   
-  # 3) drop zero-variance series
+  # drop zero-variance series
   nzv <- vapply(df_use[y_cols], function(v) stats::var(v, na.rm = TRUE) > 0, logical(1))
   if (!all(nzv)) {
-    message("  • Dropping zero-variance: ", paste(y_cols[!nzv], collapse=", "))
+    message("Dropping zero-variance: ", paste(y_cols[!nzv], collapse=", "))
     y_cols <- y_cols[nzv]
     df_use <- df_use[, c("date", y_cols), drop = FALSE]
   }
   
-  # 4) drop exact duplicates (SAFE LOOP BOUNDS)
+  # drop exact duplicates
   if (length(y_cols) >= 2) {
     keep_idx <- rep(TRUE, length(y_cols))
-    for (i in seq_len(length(y_cols) - 1L)) {           # <= safe upper bound
+    for (i in seq_len(length(y_cols) - 1L)) {           # safe upper bound
       if (!keep_idx[i]) next
-      for (j in seq.int(i + 1L, length(y_cols))) {      # <= safe sequence
+      for (j in seq.int(i + 1L, length(y_cols))) {      # safe sequence
         if (!keep_idx[j]) next
         if (isTRUE(all.equal(df_use[[ y_cols[i] ]],
                              df_use[[ y_cols[j] ]],
@@ -200,38 +277,38 @@ for (IDX in cfg_est$indexes) {
       }
     }
     if (any(!keep_idx)) {
-      message("  • Dropping duplicates: ", paste(y_cols[!keep_idx], collapse=", "))
+      message("Dropping duplicates: ", paste(y_cols[!keep_idx], collapse=", "))
       y_cols <- y_cols[keep_idx]
       df_use <- df_use[, c("date", y_cols), drop = FALSE]
     }
   }
   
-  # 5) optional standardization
+  # standardization
   if (isTRUE(cfg_est$standardize_y)) {
     df_use[y_cols] <- lapply(df_use[y_cols], scale)
   }
   
-  # 5.1) optional smoothing of threshold series
+  # smoothing of threshold series
   if (isTRUE(cfg_est$smooth_ma > 1)) {
     th_use <- roll_mean_right(th_use, n = cfg_est$smooth_ma)
   }
   
-  # 6) final Y-only for estimator
+  # final Y-only for estimator
   df_est <- df_use[, y_cols, drop = FALSE]
   
-  # 7) guards
+  # guards
   stopifnot(ncol(df_est) >= 2)
   stopifnot(!anyNA(df_est))
   stopifnot(sum(!is.finite(as.matrix(df_est))) == 0)
   message("  final K = ", ncol(df_est), " | T = ", nrow(df_est))
   
-  # THRESHOLD: fixed median split for balance 
+  # fixed median split for balance 
   theta_val <- stats::median(th_use, na.rm = TRUE)
   threshold_info <- list(threshold_value = theta_val, percentile = 0.5, variable = paste0(idx_col, "_L1"))
   
   message(glue("  Using fixed threshold θ={round(theta_val,3)} (median)"))
   
-  # Sanity prints (remove later)
+  # Sanity prints
   message("  df_est dims: ", paste(dim(df_est), collapse=" x "))
   message("  any NA in Y? ", anyNA(df_est))
   message("  non-finite count: ", sum(!is.finite(as.matrix(df_est))))
@@ -246,7 +323,7 @@ for (IDX in cfg_est$indexes) {
   
   est <- tryCatch(
     estimate_tvar_model(
-      df               = df_use,       # includes 'date'
+      df               = df_use,       
       th_series        = th_use,
       threshold_info   = list(threshold_value = theta_val,
                               percentile = 0.5,
@@ -257,7 +334,7 @@ for (IDX in cfg_est$indexes) {
       ngrid            = cfg_est$ngrid,
       criterion        = cfg_est$criterion,
       min_regime_share = cfg_est$min_regime_share,
-      use_given_split  = FALSE,        # <-- change this
+      use_given_split  = FALSE,        
       standardize_y    = FALSE,
       require_both_stable = cfg_est$require_both_stable,
       verbose          = cfg_est$verbose
@@ -267,10 +344,10 @@ for (IDX in cfg_est$indexes) {
   
   if (inherits(est, "try-error")) {
     append_error(IDX, "PANEL", "estimate_all", as.character(est))
-    message("  ✗ Estimation failed → logged"); next
+    message("Estimation failed → logged"); next
   }
   
-  # enrich metadata (keep as you had it)
+  # enrich metadata 
   est$metadata <- est$metadata %||% list()
   est$metadata$dates            <- df_use$date
   est$metadata$threshold_var    <- paste0(idx_col, "_L1")
@@ -282,7 +359,99 @@ for (IDX in cfg_est$indexes) {
   }
   est$variables <- y_cols
   
-  # Save (STAMPED + LATEST) into MODELS_DIR from paths.yml
+  # Build Table 1 summary row from `est` (robust)
+  K <- length(y_cols)
+  
+  p_star <- as.integer(pluck_or(est, c("spec","p"), NA_integer_))
+  d_star <- as.integer(pluck_or(est, c("spec","delay"), NA_integer_))
+  
+  # threshold
+  c_star <- pluck_or(est, c("threshold_value"), NA_real_)
+  if (is.list(c_star)) c_star <- as.numeric(c_star[[1]])
+  c_star <- as.numeric(c_star)
+  
+  # regime counts/shares
+  T_L <- as.integer(pluck_or(est, c("regimes","low","n_obs"),  NA_integer_))
+  T_H <- as.integer(pluck_or(est, c("regimes","high","n_obs"), NA_integer_))
+  s_H <- suppressWarnings(as.numeric(pluck_or(est, c("regime_share","high"), NA_real_)))
+  if (!is.finite(s_H) && is.finite(T_L) && is.finite(T_H) && (T_L+T_H)>0) s_H <- T_H/(T_L+T_H)
+  
+  # Stability: use A (stacked) OR Ak (list), normalize to list and use it 
+  K <- length(y_cols)
+  A_obj_L <- pluck_or(est, c("regimes","low","Ak"), NULL) %||% pluck_or(est, c("regimes","low","A"), NULL)
+  A_obj_H <- pluck_or(est, c("regimes","high","Ak"),NULL) %||% pluck_or(est, c("regimes","high","A"),NULL)
+  A_list_L <- normalize_A_list(A_obj_L, K)
+  A_list_H <- normalize_A_list(A_obj_H, K)
+  lambda_max_L <- tryCatch(spectral_radius_companion(A_list_L), error = function(e) NA_real_)
+  lambda_max_H <- tryCatch(spectral_radius_companion(A_list_H), error = function(e) NA_real_)
+  
+  # Residual whiteness: conservative min Ljung–Box p across series
+  res_L <- get_residuals(est, "low")
+  res_H <- get_residuals(est, "high")
+  lb_p_L <- lb_p_min(res_L)   
+  lb_p_H <- lb_p_min(res_H)
+  
+  # Descriptive sup-LM (likelihood-ratio) vs pooled VAR
+  supLM_stat <- NA_real_; supLM_p <- NA_real_
+  try({
+    Ymat <- as.matrix(df_est[, y_cols, drop = FALSE])
+    var_lin <- estimate_var_ols(Ymat, p = p_star)
+    
+    SigL <- pluck_or(est, c("regimes","low","Sigma"),  NULL)
+    SigH <- pluck_or(est, c("regimes","high","Sigma"), NULL)
+    if (is.null(SigL) && !is.null(res_L)) SigL <- stats::cov(res_L)
+    if (is.null(SigH) && !is.null(res_H)) SigH <- stats::cov(res_H)
+    
+    if (!is.null(SigL) && !is.null(SigH)) {
+      LL_pool  <- -(nrow(var_lin$E)) * safe_logdet(var_lin$Sigma)
+      LL_split <- -T_L * safe_logdet(SigL) - T_H * safe_logdet(SigH)
+      supLM_stat <- 2 * (LL_split - LL_pool)
+      
+      df_diff <- K * (K * p_star + 1)  # rough df for contrast
+      if (is.finite(supLM_stat) && supLM_stat >= 0 && df_diff > 0) {
+        supLM_p <- stats::pchisq(supLM_stat, df = df_diff, lower.tail = FALSE)
+        # avoid printing exact 0 due to underflow
+        supLM_p <- max(supLM_p, .Machine$double.xmin)
+      }
+    }
+  }, silent = TRUE)
+  
+  # window label
+  end_date <- max(df_use$date, na.rm=TRUE)
+  window_label <- if (end_date <= as.Date("2015-04-30")) "1986-2015"
+  else if (end_date <= as.Date("2025-04-30")) "1986-2025"
+  else paste0(format(min(df_use$date), "%Y-%m"), " to ", format(end_date, "%Y-%m"))
+  
+  # proxy label
+  proxy_label <- if (IDX %in% c("VIX","VXO")) "vxo_vix" else "jln"
+  
+  summ_row <- tibble::tibble(
+    window = window_label, proxy = proxy_label,
+    p = p_star, d = d_star, c_star = c_star,
+    T_L = T_L, T_H = T_H, s_H = s_H,
+    lambda_max_L = lambda_max_L, lambda_max_H = lambda_max_H,
+    lb_p_L = lb_p_L, lb_p_H = lb_p_H,
+    supLM_stat = supLM_stat, supLM_p = supLM_p
+  )
+  
+  # Write summary row where the Rmd can find it (models/tvar/artifacts/tables)
+  out_csv <- fs::path(MODELS_DIR, "artifacts", "tables", "model_selection_summary.csv")
+  fs::dir_create(fs::path_dir(out_csv))
+  
+  # add a timestamp 
+  summ_row$run_at <- Sys.time()
+  
+  if (fs::file_exists(out_csv)) {
+    old <- readr::read_csv(out_csv, show_col_types = FALSE)
+    old <- dplyr::filter(old, !(window == window_label & proxy == proxy_label))
+    new <- dplyr::bind_rows(old, summ_row)
+    readr::write_csv(new, out_csv)            
+  } else {
+    readr::write_csv(summ_row, out_csv)
+  }
+  message(glue("Table 1 metrics updated in {fs::path_rel(out_csv)}"))
+  
+  # Save into MODELS_DIR from paths.yml
   ts <- format(Sys.time(), "%Y%m%d_%H%M%S")
   stamped <- fs::path(MODELS_DIR, sprintf("%s_tvar_model_%s_%s.rds",
                                           tolower(IDX), ts,
@@ -293,7 +462,7 @@ for (IDX in cfg_est$indexes) {
   if (fs::file_exists(latest)) try(fs::file_delete(latest), silent = TRUE)
   fs::file_copy(stamped, latest)
   
-  message(glue("  ✓ saved ALL‑COMMODITIES TVAR for {IDX} → {fs::path_rel(stamped)} (K={length(y_cols)})"))
+  message(glue("saved ALL‑COMMODITIES TVAR for {IDX} → {fs::path_rel(stamped)} (K={length(y_cols)})"))
   append_summary(data.frame(
     index        = as.character(IDX),
     commodity_id = "PANEL",

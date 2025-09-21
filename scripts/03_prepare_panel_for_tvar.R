@@ -22,7 +22,7 @@ cfg <- list(
   indexes           = c("VIX","VXO","JLN"),
   expected_frequency= "monthly",
   required_vars     = c("ret","vol_proxy"),
-  missing_allowed   = 0,                # 0 = strict complete-case on drivers
+  missing_allowed   = 0,                
   window            = list(start = NULL, end = NULL),
   out_dir           = here::here("data","tvar")
 )
@@ -71,7 +71,7 @@ build_tvar_input <- function(input_path, index_name, cfg, out_dir) {
   df_clean     <- standardized$data
   std_meta     <- standardized$meta
   
-  # Restore ID columns exactly as in the input (avoid coercion-to-NA warnings)
+  # Restore ID columns
   for (nm in c("commodity_id","commodity_name","unit")) {
     if (nm %in% names(df_raw)) df_clean[[nm]] <- df_raw[[nm]]
   }
@@ -138,7 +138,7 @@ build_tvar_input <- function(input_path, index_name, cfg, out_dir) {
   cov_path <- here::here(out_dir, paste0("tvar_input_", tag, "_coverage_by_commodity.csv"))
   readr::write_csv(df_cov, cov_path)
   
-  # Strict validation after filtering: cadence on distinct dates with ≥2 numeric cols
+  # Strict validation after filtering
   val_dates <- df_tvar |>
     dplyr::group_by(date) |>
     dplyr::summarise(
@@ -181,7 +181,7 @@ build_tvar_input <- function(input_path, index_name, cfg, out_dir) {
     tag              = tag
   )
   
-  message(sprintf("✓ TVAR input panel for '%s' written to: %s", tag, out_file))
+  message(sprintf(" TVAR input panel for '%s' written to: %s", tag, out_file))
   
   list(
     index         = IDX,

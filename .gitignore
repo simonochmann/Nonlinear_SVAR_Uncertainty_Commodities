@@ -27,3 +27,23 @@ figures/
 logs/
 *.zip
 *.tar.gz
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# generated artifacts
+logs/
+models/
+output/
+artifacts/
+data/scenarios/
+paper/*_files/
+submission/
+
+# LaTeX build byproducts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.tex

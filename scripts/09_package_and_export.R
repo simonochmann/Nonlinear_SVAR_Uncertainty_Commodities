@@ -1,13 +1,12 @@
-#!/usr/bin/env Rscript
 # scripts/09_package_export.R
-# Packages artifacts from 07/08 into output/releases/<stamp>/, writes manifest & README,
+# Packages artifacts from 07/08 into output/releases/, writes manifest & README,
 # renders a Quarto appendix, merges .bib, then zips.
 
 suppressPackageStartupMessages({
   library(here); library(fs); library(glue); library(jsonlite); library(digest); library(tibble); library(purrr)
 })
 
-# --- Load helpers --------------------------------------------------------------
+# Load helpers 
 source(here::here("functions","export","collect_artifacts.R"))
 source(here::here("functions","export","render_appendix_qmd.R"))
 source(here::here("functions","export","synthesize_bibliography.R"))
@@ -15,7 +14,7 @@ source(here::here("functions","export","write_release_readme.R"))
 
 `%||%` <- function(x,y) if (is.null(x)) y else x
 
-# --- Config -------------------------------------------------------------------
+# Config 
 CFG <- list(
   # identity
   ROOT          = here::here(),
@@ -40,7 +39,7 @@ CFG <- list(
   OUT_REL_ROOT  = here::here("output","releases")
 )
 
-# --- Read active uncertainty index --------------------------------------------
+# Read active uncertainty index 
 get_active_ix <- function(paths_yml, fallback = "vix") {
   if (!file.exists(paths_yml)) return(fallback)
   if (!requireNamespace("yaml", quietly = TRUE)) return(fallback)
@@ -54,7 +53,7 @@ rel_name  <- glue("release_{active_ix}_{stamp}")
 rel_dir   <- fs::path(CFG$OUT_REL_ROOT, rel_name)
 fs::dir_create(rel_dir)
 
-# --- Collect artifacts ---------------------------------------------------------
+# Collect artifacts 
 art <- collect_artifacts(
   release_dir   = rel_dir,
   data_dir      = CFG$DATA_DIR,
@@ -65,7 +64,7 @@ art <- collect_artifacts(
   renv_lock     = CFG$RENV_LOCK
 )
 
-# --- Optional: render appendix (.qmd/.Rmd) ------------------------------------
+# render appendix (.qmd/.Rmd)
 app_out <- NULL
 if (CFG$RENDER_APPENDIX && file.exists(CFG$APPENDIX_QMD)) {
   app_out <- render_appendix_qmd(
@@ -74,7 +73,7 @@ if (CFG$RENDER_APPENDIX && file.exists(CFG$APPENDIX_QMD)) {
   )
 }
 
-# --- Optional: synthesize bibliography ----------------------------------------
+# synthesize bibliography 
 bib_out <- NULL
 if (CFG$MERGE_BIB && fs::dir_exists(CFG$MERGE_BIB_DIR)) {
   bib_out <- synthesize_bibliography(
@@ -83,7 +82,7 @@ if (CFG$MERGE_BIB && fs::dir_exists(CFG$MERGE_BIB_DIR)) {
   )
 }
 
-# --- README_RELEASE.md ---------------------------------------------------------
+# README_RELEASE.md 
 readme_path <- write_release_readme(
   release_dir   = rel_dir,
   active_ix     = active_ix,
@@ -93,7 +92,7 @@ readme_path <- write_release_readme(
   bib_info      = bib_out
 )
 
-# --- Zip / tarball -------------------------------------------------------------
+# Zip / tarball 
 safe_zip <- function(zip_path, dir_to_zip) {
   old <- getwd(); on.exit(setwd(old), add = TRUE)
   setwd(fs::path_dir(dir_to_zip))
@@ -114,7 +113,6 @@ safe_tar <- function(tar_path, dir_to_tar) {
       }
     tar_bin <- Sys.which("tar")
     if (nzchar(tar_bin)) {
-        ## Use system tar with -C to avoid wd/quoting surprises
           args <- c("-C", shQuote(parent), "-czf", shQuote(tar_path), shQuote(base))
           status <- suppressWarnings(system2(tar_bin, args = args))
           if (is.na(status) || status != 0L) {
