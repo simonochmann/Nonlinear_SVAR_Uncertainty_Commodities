@@ -1,3 +1,5 @@
+### TEMP-TEST So 21 Sep 2025 23:17:22 CEST
+
 # Nonlinear SVAR: The Effects of Macroeconomic Uncertainty on Commodity Price Volatility
 
 This project revisits and extends the nonlinear macro-financial framework of Joëts et al. (2017) to analyze how uncertainty shocks impact commodity price volatility across different regimes. It was developed as a master's-level research paper for the course *REDACTED* at the REDACTED.
