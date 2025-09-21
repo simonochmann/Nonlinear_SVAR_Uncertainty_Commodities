@@ -1,39 +1,32 @@
-# R / RStudio
-.Rhistory
-.RData
-.Rproj.user/
-.Ruserdata
-
-# macOS
+# OS / editor
 .DS_Store
-
-# Backups & logs
-*.bak
-*.log
-
-# Generated TVAR artifacts (don’t version)
-data/models/**
-!data/models/README.md
-# Explicitly ignore run-time CSV logs too
-data/models/tvar/tvar_summary.csv
-data/models/tvar/tvar_errors.csv
-
-# Binary model files anywhere
-*.rds
-
-# Build artifacts
-output/
-figures/
-logs/
-*.zip
-*.tar.gz
-.DS_Store
+Thumbs.db
 .Rhistory
 .RData
 .Rproj.user/
 *.Rproj
 
-# generated artifacts
+# R / Quarto / knitr caches
+*_cache/
+_cache/
+*.utf8.md
+*.knit.md
+
+# LaTeX build byproducts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/*.lof
+paper/*.lot
+paper/*.tex
+
+# Generated artifacts (keep curated figures/)
 logs/
 models/
 output/
@@ -41,9 +34,3 @@ artifacts/
 data/scenarios/
 paper/*_files/
 submission/
-
-# LaTeX build byproducts
-paper/*.aux
-paper/*.log
-paper/*.out
-paper/*.tex
