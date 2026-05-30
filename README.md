@@ -95,20 +95,10 @@ TVAR high-regime peaks exceed linear VAR responses across all commodity groups:
 | Volatility (VXO/VIX) | Precious | 1.16 | −0.07 |
 | Volatility (VXO/VIX) | Agriculture | 1.32 | +0.12 |
 
-### Regime-split impulse responses (Volatility splitter)
-![IRFs — Volatility splitter](figures/decomposition/regime_split_irf_vix.png)
-
-Energy exhibits the strongest amplification; industrial metals rank second. Precious metals show attenuated but positive state dependence; agriculture is least responsive.
-
 ### State-contingent Variance Decomposition (GFEVD)
 ![FEVD — both proxies](figures/decomposition/fevd_stacked_vix.png)
 
 In high-uncertainty states, forecast-variance shares shift toward **Energy** and away from **Industrial** under the Volatility proxy. Under JLN the shift is partly reversed, illustrating the proxy wedge.
-
-### Proxy wedges: ΔΔ–GFEVD at H=12 and H=24
-![Proxy wedges](figures/decomposition/proxy_wedges_h12_h24.png)
-
-The Volatility proxy drives sharper **event-month peaks**; JLN sustains **broader persistence**. ΔΔ–GFEVD (Volatility − JLN) at H=24: Energy +7.26 pp, Industrial −10.04 pp, Precious −3.59 pp, Agriculture +6.37 pp.
 
 ---
 
@@ -168,7 +158,7 @@ The Volatility proxy drives sharper **event-month peaks**; JLN sustains **broade
 
 ## References
 
-- Joëts, M., & Mignon, V. (2016). Does the Volatility of Commodity Prices Reflect Macroeconomic Uncertainty? *SSRN Electronic Journal*. https://doi.org/10.2139/ssrn.2866908
+- Joëts, M., & Mignon, V. (2016). Does the Volatility of Commodity Prices Reflect Macroeconomic Uncertainty? *SSRN Electronic Journal*. 
 - Jurado, K., Ludvigson, S. C., & Ng, S. (2015). Measuring Uncertainty. *American Economic Review*, 105(3), 1177–1216.
 - Koop, G., Pesaran, M. H., & Potter, S. M. (1996). Impulse response analysis in nonlinear multivariate models. *Journal of Econometrics*, 74(1), 119–147.
 - Pesaran, M. H., & Shin, Y. (1998). Generalized impulse response analysis in linear multivariate models. *Economics Letters*, 58(1), 17–29.
@@ -189,5 +179,3 @@ The Volatility proxy drives sharper **event-month peaks**; JLN sustains **broade
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-
