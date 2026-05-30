@@ -2,11 +2,6 @@
 
 ### A Replication and Extension of Joëts & Mignon (2016)
 
-![R version](https://img.shields.io/badge/R-4.4.3-blue)
-![Status](https://img.shields.io/badge/status-complete-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Context](https://img.shields.io/badge/University%20of%20Bamberg-Term%20Paper%202025-lightgrey)
-
 This project builds a nonlinear macro-financial framework to study how **macroeconomic uncertainty** shapes shock transmission to **commodity returns** across economic regimes. It replicates and extends **Joëts & Mignon (2016)** using a two-regime **Threshold VAR (TVAR)** estimated on **18 monthly commodities** (energy, industrial metals, precious metals, agriculture) over **1986–2025**.
 
 Regimes are defined by two conceptually distinct uncertainty proxies — a **volatility-based** measure (VXO→VIX) and a **macro-predictability** measure (JLN) — enabling a direct comparison of how proxy choice shapes identified transmission dynamics. **Generalized Impulse Response Functions (GIRFs)** and **state-contingent Forecast-Error Variance Decompositions (FEVDs)** quantify amplification and persistence in high-uncertainty states and benchmark them against linear VAR/SVAR counterfactuals.
@@ -19,7 +14,7 @@ The pipeline is fully modular and reproducible: frozen R 4.4.3 via `renv`, scrip
 
 This paper was submitted in August 2025 as a term paper for the seminar **REDACTED** at the **REDACTED** (REDACTED), supervised by REDACTED.
 
-**[Read the full term paper (PDF)](paper/Ochmann_NonlinearSVAR.pdf)**
+**[Read the full term paper (PDF)](https://github.com/simonochmann/Nonlinear_SVAR_Uncertainty_Commodities/blob/main/paper/nonlinear_svar_draft.pdf)**
 
 ---
 
