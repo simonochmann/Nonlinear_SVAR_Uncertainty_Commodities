@@ -1,8 +1,0 @@
-load("/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/models/tvar/vix_tvar_model_20250801_190432.rds")
-load("/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/models/tvar/vix_tvar_model_20250801_192041.rds")
-load("/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/models/tvar/all_tvar_model_20250820_210641_withRegim_wr.rds")
-load("/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/models/tvar/jln_tvar_model_20250820_211414_withRegim_wr.rds")
-load("/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/models/tvar/vix_tvar_model_20250820_211557_withRegim_wr.rds")
-load("/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/models/tvar/vix_tvar_model_20250820_211557_withRegim_wr.rds")
-load("/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/models/tvar/jln_tvar_model_20250820_221904_withRegim_wr.rds")
-load("/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/models/tvar/vix_tvar_model_20250820_224856_withRegim_wr.rds")
