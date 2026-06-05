@@ -1,7 +1,0 @@
-{
-  "timestamp": "2025-08-09 12:17:49.442367",
-  "inputs": ["/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/raw/vix.csv", "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/raw/vxo.csv", "/Users/simonochmann/Projects/Nonlinear_SVAR_Uncertainty_Commodities/data/raw/jln_macro_uncertainty.csv"],
-  "date_start": "1960-07-01",
-  "date_end": "2025-07-01",
-  "columns": ["date", "jln", "vxo", "vix", "jln_z", "vxo_z", "vix_z"]
-}
