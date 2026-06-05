@@ -156,17 +156,9 @@ header-includes:
 {\LARGE \textbf{The Nonlinear Effects of Macroeconomic Uncertainty on\\
 Commodity Price Returns: A Replication and Extension of Joets \& Mignon (2016)}}\\[2cm]
 
-{\large Simon Ochmann}\\
-REDACTED\\
-REDACTED\\
-REDACTED\\
-Prof. Dr. Christian R. Proa\~{n}o and Maybrit W\"achter, MSc\\[0.8cm]
+{\large Simon Ochmann}\\[1.5cm]
 
-Matriculation Number: REDACTED\\
-Address: REDACTED\\
-Place of Birth: Ha\ss{}furt, Germany\\[1.5cm]
-
-\today
+30 August 2025
 \end{center}
 \end{titlepage}
 
@@ -1377,34 +1369,50 @@ fevd_path <- find_file(fs::path("tables","fevd_regime_shares.csv"),
 if (!fs::file_exists(fevd_path)) {
   grid::grid.text("FEVD shares not found — expected paper/artifacts/tables/fevd_regime_shares.csv", x=.5, y=.5)
 } else {
-  FE <- readr::read_csv(fevd_path, show_col_types = FALSE) %>%
+ FE <- readr::read_csv(fevd_path, show_col_types = FALSE) %>%
     dplyr::mutate(
       proxy = dplyr::case_when(
         tolower(proxy) %in% c("vix","vxo","vxo_vix","volatility") ~ "Volatility (VXO->VIX)",
-        tolower(proxy)=="jln" ~ "JLN (macro uncertainty)",
+        tolower(proxy) == "jln" ~ "JLN (macro uncertainty)",
         TRUE ~ proxy
       ),
-      regime = factor(toupper(regime), levels=c("L","H"), labels=c("Low regime","High regime")),
-      group  = factor(group, levels=c("Energy","Industrial","Precious","Agriculture"))
+      group = factor(group, levels = c("Energy","Industrial","Precious","Agriculture"))
     ) %>%
     dplyr::group_by(proxy, regime, horizon, group) %>%
-    dplyr::summarise(share = mean(share, na.rm=TRUE), .groups="drop")
+    dplyr::summarise(share = mean(share, na.rm = TRUE), .groups = "drop") %>%
+    dplyr::mutate(
+      regime = factor(toupper(regime), levels = c("L","H"), labels = c("Low regime","High regime"))
+    )
 
-  ggplot2::ggplot(FE, ggplot2::aes(x=horizon, y=share, fill=group)) +
-    ggplot2::geom_area(position="stack", alpha=.95) +
+ggplot2::ggplot(FE, ggplot2::aes(x = factor(horizon), y = share, fill = group)) +
+    ggplot2::geom_col(position = "stack", alpha = .95, width = 0.6) +
     ggplot2::facet_grid(regime ~ proxy) +
-    ggplot2::scale_y_continuous(labels = scales::percent_format(accuracy = 1),
-                                limits = c(0,1), expand = ggplot2::expansion(mult = c(0, .02))) +
-    ggplot2::scale_x_continuous(breaks = c(0,6,12,18,24,30,36)) +
- ggplot2::labs(x = "Horizon (months)", y = "Share of forecast variance",
-                caption = FIG_NOTES("State-contingent generalized FEVD from GIRFs")) +
-  theme_minimal(base_size = 10) +
-  theme(panel.grid.minor = element_blank(),
-        axis.title.x = element_text(margin = margin(t=6)),
-        axis.title.y = element_text(margin = margin(r=6)),
-        legend.position = "bottom",
-        legend.title = element_blank(),
-        plot.caption = element_text(hjust = 0, size = 8))
+    ggplot2::scale_y_continuous(
+      labels = scales::percent_format(accuracy = 1),
+      limits = c(0, 1),
+      expand = ggplot2::expansion(mult = c(0, .02))
+    ) +
+    ggplot2::scale_fill_manual(
+      values = c("Energy"      = "#E07B39",
+                 "Industrial"  = "#4C8CB5",
+                 "Precious"    = "#8FAF5A",
+                 "Agriculture" = "#9B6BB5")
+    ) +
+    ggplot2::labs(
+      x       = "Horizon (months)",
+      y       = "Share of forecast variance",
+      caption = FIG_NOTES("State-contingent generalized FEVD from GIRFs")
+    ) +
+    theme_minimal(base_size = 10) +
+    theme(
+      panel.grid.minor  = element_blank(),
+      panel.grid.major.x = element_blank(),
+      axis.title.x      = element_text(margin = margin(t = 6)),
+      axis.title.y      = element_text(margin = margin(r = 6)),
+      legend.position   = "bottom",
+      legend.title      = element_blank(),
+      plot.caption      = element_text(hjust = 0, size = 8)
+    )
 
 }
 ```
