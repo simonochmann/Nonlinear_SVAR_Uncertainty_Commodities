@@ -4,7 +4,7 @@
 
 This project builds a nonlinear macro-financial framework to study how **macroeconomic uncertainty** shapes shock transmission to **commodity returns** across economic regimes. It replicates and extends **Joëts & Mignon (2016)** using a two-regime **Threshold VAR (TVAR)** estimated on **18 monthly commodities** (energy, industrial metals, precious metals, agriculture) over **1986–2025**.
 
-Regimes are defined by two conceptually distinct uncertainty proxies, a **volatility-based** measure (VXO→VIX) and a **macro-predictability** measure (JLN) — enabling a direct comparison of how proxy choice shapes identified transmission dynamics. **Generalized Impulse Response Functions (GIRFs)** and **state-contingent Forecast-Error Variance Decompositions (FEVDs)** quantify amplification and persistence in high-uncertainty states and benchmark them against linear VAR/SVAR counterfactuals.
+Regimes are defined by two conceptually distinct uncertainty proxies, a **volatility-based** measure (VXO→VIX) and a **macro-predictability** measure (JLN), enabling a direct comparison of how proxy choice shapes identified transmission dynamics. **Generalized Impulse Response Functions (GIRFs)** and **state-contingent Forecast-Error Variance Decompositions (FEVDs)** quantify amplification and persistence in high-uncertainty states and benchmark them against linear VAR/SVAR counterfactuals.
 
 The pipeline is fully modular and reproducible: frozen R 4.4.3 via `renv`, scripted data ingestion, deterministic seeds, and automated figure/table exports.
 
@@ -69,7 +69,7 @@ renv::restore()
 source("scripts/run_all.R")
 ```
 
-All outputs — figures, CSVs, tables — are written to `figures/` and `output/`. See `scripts/12_export_run_info.R` for the session info and seed log. Each script in the pipeline is self-contained and can be sourced individually for targeted runs.
+All outputs figures, CSVs, tables are written to `figures/` and `output/`. See `scripts/12_export_run_info.R` for the session info and seed log. Each script in the pipeline is self-contained and can be sourced individually for targeted runs.
 
 ---
 
