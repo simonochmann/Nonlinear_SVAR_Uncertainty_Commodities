@@ -14,7 +14,7 @@ The pipeline is fully modular and reproducible: frozen R 4.4.3 via `renv`, scrip
 
 This paper was submitted in August 2025 as a term paper for the seminar **REDACTED** at the **REDACTED** (REDACTED), supervised by REDACTED.
 
-**[Read the full term paper (PDF)](https://github.com/simonochmann/Nonlinear_SVAR_Uncertainty_Commodities/blob/main/paper/nonlinear_svar_draft.pdf)**
+**[Read the full term paper (PDF)](https://github.com/simonochmann/Nonlinear_SVAR_Uncertainty_Commodities/blob/main/paper/Ochmann_NonlinearSVAR.pdf)**
 
 ---
 
