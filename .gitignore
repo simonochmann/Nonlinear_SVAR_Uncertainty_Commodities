@@ -34,3 +34,7 @@ artifacts/
 data/scenarios/
 paper/*_files/
 submission/
+models/**/.DS_Store
+models/**/.RData
+models/**/.Rhistory
+models/**/.Rapp.history
