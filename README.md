@@ -4,7 +4,7 @@
 
 This project builds a nonlinear macro-financial framework to study how **macroeconomic uncertainty** shapes shock transmission to **commodity returns** across economic regimes. It replicates and extends **Joëts & Mignon (2016)** using a two-regime **Threshold VAR (TVAR)** estimated on **18 monthly commodities** (energy, industrial metals, precious metals, agriculture) over **1986–2025**.
 
-Regimes are defined by two conceptually distinct uncertainty proxies — a **volatility-based** measure (VXO→VIX) and a **macro-predictability** measure (JLN) — enabling a direct comparison of how proxy choice shapes identified transmission dynamics. **Generalized Impulse Response Functions (GIRFs)** and **state-contingent Forecast-Error Variance Decompositions (FEVDs)** quantify amplification and persistence in high-uncertainty states and benchmark them against linear VAR/SVAR counterfactuals.
+Regimes are defined by two conceptually distinct uncertainty proxies, a **volatility-based** measure (VXO→VIX) and a **macro-predictability** measure (JLN) — enabling a direct comparison of how proxy choice shapes identified transmission dynamics. **Generalized Impulse Response Functions (GIRFs)** and **state-contingent Forecast-Error Variance Decompositions (FEVDs)** quantify amplification and persistence in high-uncertainty states and benchmark them against linear VAR/SVAR counterfactuals.
 
 The pipeline is fully modular and reproducible: frozen R 4.4.3 via `renv`, scripted data ingestion, deterministic seeds, and automated figure/table exports.
 
@@ -46,7 +46,7 @@ The analysis is organized around three research questions:
 
 ## Data Sources
 
-Raw data is **not committed** to the repository. All series are freely available; ingestion is fully scripted.
+Processed data inputs are committed to the repository. All series are freely available; ingestion is fully scripted.
 
 | Series | Source | Access | Ingestion script |
 |---|---|---|---|
